@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                color: #333;
+            }
+            html {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            #head {
+                background-color: #f7d707;
+                margin: 0 auto;
+                height: 100vh;
+                width: 100%;
+            }
+            #head > h1 {
+                margin: 0 10%;
+                padding-top: 20vh;
+                padding-bottom: 5vh;
+                font-size: 10vh;
+                font-family: "Gill Sans", sans-serif;
+            }
+            #head > p {
+                font-size: 5vh;
+                font-family: "Gill Sans", sans-serif;
+                margin: 1em 20%;
+            }
+            #social {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                text-align: right;
+                font-size: 2vh;
+                background: repeating-linear-gradient(-45deg, #f7d707 0px, #f7d707 5px, #e7c707 6px, #e7c707 11px, #f7d707 12px);
+                margin: 0;
+                padding: 10vh 10px 5vh 10px;
+                width: 100%;
+            }
+            #social ul {
+                margin: 3px;
+            }
+            #social ul li {
+                display: inline;
+                margin: 5px;
+            }
+            #social ul a, #social ul a:hover {
+                text-decoration: none;
+            }
+            .fab, .far, .fas {
+                padding: 0 2px;
+            }
+
+            @media screen and (max-width: 550px) {
+                .cond-sep {
+                    display: block;
+                    clear: both;
+                    width: 1px;
+                }
+                #head > h1 {
+                    font-size: 7vh;
+                }
+            }
+            @media screen and (max-width: 900px) {
+                #head > h1 {
+                    font-size: 6vh;
+                }
+                #head > p {
+                    font-size: 4vh;
+                }
+            }
+        </style>
+        <script src="https://kit.fontawesome.com/f242fbc6b8.js"></script>
+    </head>
+    <body>
+        <div id="head">
+            <h1><span class="cond-sep">Rafael</span><span class="cond-sep">Jeffman.com</span></h1>
+            <p>Time for a change.</p>
+            <p>And it is comming fast...</p>
+        </div>
+        <div id="social">
+        <ul>
+            <li><a target="_blank" href="https://instagram.com/rafaeljeffman.fotografia"><span class="fab fa-instagram"></span></a></li>
+            <li><a target="_blank" href="https://twitter.com/rafasgj"><span class="fab fa-twitter"></span></a></li>
+            <li><a target="_blank" href="https://telegram.me/rafasgj"><span class="fab fa-telegram"></span></a></li>
+            <li><a target="_blank" href="https://api.whatsapp.com/send?phone=51992358775"><span class="fab fa-whatsapp"></span></a></li>
+            <li><a target="_blank" href="https://m.me/rafael.jeffman"><span class="fab fa-facebook-messenger"></span></a></li>
+        </ul>
+        <ul>
+            <li><a href="tel:+5551992358775"><span class="fas fa-phone"></span>(51) 99235-8775</a></li>
+        </ul>
+        <ul>
+            <li><a href="mailto:rafasgj@gmail.com"><span class="far fa-envelope"></span>rafasgj@gmail.com</a></li>
+        </ul>
+        </div>
+    </body>
+</html>
