@@ -23,23 +23,31 @@
                 margin: 0 10%;
                 padding-top: 20vh;
                 padding-bottom: 5vh;
-                font-size: 10vh;
                 font-family: "Gill Sans", sans-serif;
+                font-size: 150px;
             }
             #head > p {
-                font-size: 5vh;
                 font-family: "Gill Sans", sans-serif;
                 margin: 1em 20%;
+                font-size: 75px;
+            }
+            .cond-sep {
+                display: block;
+                clear: both;
+                width: 1px;
+            }
+            .cond-view {
+                display: none;
             }
             #social {
                 position: absolute;
                 bottom: 0;
                 right: 0;
                 text-align: right;
-                font-size: 2vh;
+                font-size: 30px;
                 background: repeating-linear-gradient(-45deg, #f7d707 0px, #f7d707 5px, #e7c707 6px, #e7c707 11px, #f7d707 12px);
                 margin: 0;
-                padding: 10vh 10px 5vh 10px;
+                padding: 5vh 2vh;
                 width: 100%;
             }
             #social ul {
@@ -56,30 +64,67 @@
                 padding: 0 2px;
             }
 
-            @media screen and (max-width: 550px) {
+            @media (max-aspect-ratio: 5/3) {
+                #head > h1 {
+                    font-size: 90px;
+                    padding-top: 10vh;
+                }
+                #head > p {
+                    font-size: 60px;
+                }
+            }
+
+            @media screen and (orientation: landscape) {
+                #head > h1 {
+                    font-size: 60px;
+                    padding-top: 10vh;
+                }
+                #head > p {
+                    font-size: 45px;
+                }
                 .cond-sep {
-                    display: block;
+                    display: inline;
                     clear: both;
                     width: 1px;
                 }
-                #head > h1 {
-                    font-size: 7vh;
+                .cond-view {
+                    display: inline;
                 }
-            }
-            @media screen and (max-width: 900px) {
-                #head > h1 {
-                    font-size: 6vh;
+                #social {
+                    font-size: 20px;
                 }
-                #head > p {
-                    font-size: 4vh;
+
+                @media (min-width: 1000px) {
+                    #head > h1 {
+                        font-size: 60px;
+                        padding-top: 15vh;
+                    }
+                }
+
+                @media (min-width: 1280px) {
+                    #head > h1 {
+                        font-size: 80px;
+                        padding-top: 15vh;
+                    }
+                    .cond-sep {
+                        display: inline;
+                        clear: both;
+                        width: 1px;
+                        margin: 0.1em;
+                    }
+                    #social {
+                        font-size: 25px;
+                    }
                 }
             }
         </style>
-        <script src="https://kit.fontawesome.com/f242fbc6b8.js"></script>
+        <script
+            src="https://kit.fontawesome.com/f242fbc6b8.js"
+            crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="head">
-            <h1><span class="cond-sep">Rafael</span><span class="cond-sep">Jeffman.com</span></h1>
+            <h1><span class="cond-sep">Rafael</span><span class="cond-sep">Jeffman<span class="cond-view">.com</span></span></h1>
             <p>Time for a change.</p>
             <p>And it is comming fast...</p>
         </div>
