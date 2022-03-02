@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>{% if page.section %}{{ page.section }}: {% endif %}{{ page.title }}</title>
+        <link rel="stylesheet" href="/css/site.css" />
+        <link rel="stylesheet" href="/css/syntax.css" />
+    </head>
+    <body>
+        <div id="con">
+            <div id="header">
+                {% include header.html %}
+            </div>
+            <div id="contents">
+                <div id="tags">
+                    {% for tag in page.tags %}
+                       <div class="tag">{{ tag }}</div>
+                    {% endfor %}
+                </div>
+                {% if page.section %}
+                    <h1 id="section_header">{{ page.section }}</h1>
+                {% endif %}
+                <h1>{{ page.title }}</h1>
+                {{ content }}
+            </div>
+            <div id="footer">
+                {% include footer.html %}
+            </div>
+        </div>
+    </body>
+</html>

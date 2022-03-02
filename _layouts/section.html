@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="/css/site.css">
+        <link rel="stylesheet" href="/css/syntax.css" />
+        <link rel="stylesheet" href="/css/social.css" />
+        <script
+            src="https://kit.fontawesome.com/f242fbc6b8.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="con">
+            <div id="header">
+                {% include header.html %}
+            </div>
+            <div id="contents">
+                <h1>{{ page.title }}</h1>
+                {{ content }}
+            </div>
+            <div id="footer">
+                {% include footer.html %}
+            </div>
+        </div>
+    </body>
+</html>

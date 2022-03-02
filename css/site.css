@@ -1,0 +1,145 @@
+
+html {}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    min-height: 100vh;
+    font-size: 115%;
+}
+
+a {
+    color: #f33;
+    text-decoration: underline;
+}
+
+#con {
+    position: relative;
+    top: 0;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+        height: 50px;
+        background: repeating-linear-gradient(-25deg, #807030 0px, #807030 5px, #202020 6px, #202020 11px, #807030 12px);
+        color: #eee;
+        box-shadow: inset 0px 0px 20px 20px #222;
+        padding: 30px;
+}
+
+#site_logo {
+    font-size: 36px;
+    font-weight: 600;
+    float: left;
+}
+#site_logo a {
+    text-decoration: none;
+    color: #eee;
+    text-shadow: 0 0 8px #000;
+}
+
+#menu {
+    position: absolute;
+    right: 40px;
+    top: 15px;
+}
+.menu-item {
+    list-style: none;
+    margin: 5px 10px;
+    display: inline-block;
+    text-shadow: 0 0 5px #000;
+    font-weight: bolder;
+}
+.menu-item a {
+    text-decoration: none;
+    color: #eee;
+}
+.menu-item a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+#about {
+    color: transparent;
+    text-shadow: 0 0 0 #eee;
+}
+
+#footer {
+    width: 100%;
+    text-align: center;
+    font-size: 80%;
+    margin: 0;
+    margin-top: 30px;
+    border-top: 1px dotted #aaa;
+    padding: 20px 0;
+    height: 20px;
+    background: repeating-linear-gradient(-45deg, #f0f0f0 0px, #f0f0f0 5px, #e0e0e0 6px, #e0e0e0 11px, #f0f0f0 12px);
+    /* background: repeating-linear-gradient(-45deg, #f7d707 0px, #f7d707 5px, #e7c707 6px, #e7c707 11px, #f7d707 12px); */
+}
+
+#copyright {
+    margin: 0 auto;
+}
+
+#contents {
+    width: 72ch;
+    max-width: 72ch;
+    margin: 0 auto;
+}
+
+#tags {
+    float: right;
+    max-width: 25ch;
+    text-align: center;
+    display: none;
+}
+.tag {
+    border-radius: 15px 15px;
+    background-color: #999;
+    color: #eee;
+    text-align: center;
+    display: inline-block;
+    padding: 2px 10px;
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+#section_header {
+    font-size: 48px;
+    height: 2.5ex;
+    margin-top: 5px;
+    padding-top: 1.5ex;
+    max-width: 12em;
+    width: 12em;
+}
+
+blockquote {
+    background: #eee;
+    color: #444;
+    padding: 1px 10px;
+    border-left: solid 5px #222;
+}
+
+blockquote b {
+    background: #eee;
+    color: #444;
+    padding: 1px 10px;
+}
+
+.tag-list + ul > li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+.tag-list + ul > li > a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+code.language-plaintext {
+    font-size: 120%;
+}
