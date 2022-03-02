@@ -11,7 +11,7 @@ copy: 2022
 date: 2022-02-14
 ---
 
-> **Nota**: O Sistema Operacional que você escolheu continua sendo a melhor fonte de informação sobre o próprio sistema, tente, antes de seguir qualquer coisa dita aqui, utilizar a documentação oficial do sistema que você está utilizando.
+> **Nota**: Tanto a [documentação oficial do Raspberry Pi](https://www.raspberrypi.com/software/), quanto a do Sistema Operacional que você escolheu continua sendo a melhor fonte de informação sobre a instalção do sistema, tente, antes de seguir qualquer coisa dita aqui, utilizar os documentos oficiais.
 
 Instalar um sistema no Raspberry Pi não é difícil, no entanto, algumas operações nem sempre são claras, ou as ferramentas utilizadas não estão disponíveis, ou o sistema que você deseja não é oficialmente suportado.
 
