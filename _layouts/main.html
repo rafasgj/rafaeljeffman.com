@@ -1,8 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}pt{% endif %}" dir="ltr">
     <head>
         <meta charset="utf-8">
         <title>{% if page.section %}{{ page.section }}: {% endif %}{{ page.title }}</title>
+        {% if page.title %}
+        <meta property="twitter:title" content="{{ page.title }}">
+        {% endif %}
+        {% if page.description %}
+        <meta property="twitter:description" content="{{ page.title }}">
+        <meta name="description" content="{{ page.description }}">
+        {% endif %}
         <link rel="stylesheet" href="/css/site.css" />
         <link rel="stylesheet" href="/css/syntax.css" />
     </head>
