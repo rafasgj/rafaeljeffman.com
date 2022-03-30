@@ -1,10 +1,11 @@
 
-html {}
+html {
+    font-family: Montserrat, sans-serif;
+}
 
 body {
     margin: 0;
     padding: 0;
-    font-family: Montserrat, sans-serif;
     min-height: 100vh;
     font-size: 115%;
 }
@@ -18,16 +19,31 @@ a {
     position: relative;
     top: 0;
     min-height: 100vh;
+    width: 100%;
     margin: 0;
     padding: 0;
+    display: inline-block;
 }
 
 #header {
-        height: 50px;
-        background: repeating-linear-gradient(-25deg, #807030 0px, #807030 5px, #202020 6px, #202020 11px, #807030 12px);
-        color: #eee;
-        box-shadow: inset 0px 0px 20px 20px #222;
-        padding: 30px;
+    height: 50px;
+    padding: 30px;
+    border-bottom: dashed #999 1px;
+}
+
+#header.home {
+    height: 200px;
+    background: #fff;
+    box-shadow: none;
+}
+
+#biohazard {
+    position: absolute;
+    right: 140px;
+    top: 50px;
+    font-size: 100px;
+    text-shadow: #333 0 0 8px;
+    font-family: Noto Emoji;
 }
 
 #site_logo {
@@ -35,10 +51,19 @@ a {
     font-weight: 600;
     float: left;
 }
-#site_logo a {
+#site_logo > a {
     text-decoration: none;
-    color: #eee;
-    text-shadow: 0 0 8px #000;
+    color: #fff;
+    text-shadow: 0 0 2px #222;
+}
+#site_logo > a:hover {
+    text-shadow: 0 0 2px #000;
+}
+#site_logo.home {
+    font-size: 100px;
+    margin: 0 auto;
+    float: none;
+    margin-top: 20px;
 }
 
 #menu {
@@ -46,28 +71,44 @@ a {
     right: 40px;
     top: 15px;
 }
+
 .menu-item {
     list-style: none;
     margin: 5px 10px;
     display: inline-block;
-    text-shadow: 0 0 5px #000;
     font-weight: bolder;
+    font-size: 18pt;
+    padding: 1px;
+
+    color: #fff;
+    background-clip: text;
 }
 .menu-item a {
     text-decoration: none;
-    color: #eee;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
 }
 .menu-item a:hover {
     text-decoration: none;
-    color: #fff;
+    text-shadow: 0 0 2px #800;
 }
 
 #about {
     color: transparent;
-    text-shadow: 0 0 0 #eee;
+    background: #000;
+    background-clip: text;
+    text-shadow: 0 0 3px #fff;
+}
+#about:hover {
+    color: transparent;
+    background: #000;
+    background-clip: text;
+    text-shadow: 0 0 3px #fcc;
 }
 
 #footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     text-align: center;
     font-size: 80%;
@@ -80,6 +121,15 @@ a {
     /* background: repeating-linear-gradient(-45deg, #f7d707 0px, #f7d707 5px, #e7c707 6px, #e7c707 11px, #f7d707 12px); */
 }
 
+div.icons {
+    display: inline-block;
+    border: thin solid red;
+}
+
+div.icons ul {
+    display: inline-block;
+}
+
 #copyright {
     margin: 0 auto;
 }
@@ -88,6 +138,7 @@ a {
     width: 72ch;
     max-width: 72ch;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 #tags {
@@ -131,7 +182,7 @@ blockquote b {
 
 .tag-list + ul > li {
     list-style: none;
-    display: inline-block;
+    display: block;
     margin-right: 10px;
 }
 .tag-list + ul > li > a {
@@ -142,4 +193,72 @@ blockquote b {
 
 code.language-plaintext {
     font-size: 120%;
+}
+
+div.image {
+    margin: 1em auto;
+    text-align: center;
+    padding: 1em;
+}
+
+.teaching-svg {
+    color: #333;
+    stroke: #333;
+    stroke-width: 2;
+    fill: #fff;
+    font-size: 150%;
+    font-family: "Times New Roman", serif;
+}
+
+svg > text {
+    stroke-width: 0;
+    fill: #333;
+}
+
+.card {
+    margin: 30px;
+    width: 300px;
+    padding: 30px;
+    border: transparent thin solid;
+    border-radius: 15px 15px;
+    box-shadow: #333 0px 0px 10px;
+    display: inline-block;
+}
+
+.card-title {
+    font-size: 24pt;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    margin-top: 15px;
+}
+
+.read-more a {
+    color: #eee;
+    font-size: 18pt;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #38f;
+    padding: 10px;
+    border-radius: 10px 10px;
+}
+
+
+.icons > ul > li {
+    list-style: none;
+    display: inline-block;
+    margin: 8px;
+    font-size: 18pt;
+}
+
+.icons > ul > li > a {
+    text-decoration: none;
+    color: #333;
+}
+
+.icons > ul > li > a:hover {
+    text-decoration: none;
 }
