@@ -2,7 +2,7 @@
 
 # Binary Search tree implementation
 
-def insert(root, key, balance_fn = lambda node: node):
+def insert(root, key, balance_fn=lambda node: node):
     if root:
         root_key, left, right, *_ = root
         if key < root_key:
@@ -28,6 +28,56 @@ def search(root, key):
     return root
 
 
+def remove(root, key, balance_fn=lambda node: node):
+    if root is None:
+        return None
+    root_key, left, right, *extra = root
+    if key < root_key:
+        result = (root_key, remove(left, key, balance_fn), right, *extra)
+    elif key > root_key:
+        result = (root_key, left, remove(right, key, balance_fn), *extra)
+    else: # found key
+        # simple cases
+        if not (left or right):
+            return None
+        elif left and not right:
+            result = left
+        elif not left and right:
+            result = right
+        else:
+            # the less simple case.
+            next_value, *_ = minimum(right)
+            right = balance_fn(remove(right, next_value))
+            result = (next_value, left, right, *extra)
+    return balance_fn(result)
+
+
+def minimum(root):
+    if root is None:
+        return None
+    _, left, *_ = root
+    return root if not left else minimum(left)
+
+
+def maximum(root):
+    if root is None:
+        return None
+    _, _, right, *_ = root
+    return root if not right else maximum(right)
+
+
+def is_bst(root):
+    def eval8(node, mink=float("-INF"), maxk=float("+INF")):
+        if node is None:
+            return True
+        root_key, left, right, *_ = node
+        if not (mink <= root_key <= maxk):
+            return False
+        return eval8(left, mink, root_key) and eval8(right, root_key, maxk)
+
+    return eval8(root)
+
+
 # utility functions
 
 def to_string(root):
@@ -42,16 +92,16 @@ def to_string(root):
 
 # AVL implementation
 
-def avl_insert(node):
+def avl_fix(node):
     """Ensure a node is a valid AVL node."""
     if node is None:
         return None
     diff = height_diff(node)
-    return update_height(node if abs(diff) <= 1 else avl_fix(node, diff))
+    rk, _, _, *x = node
+    return update_height(node if abs(diff) <= 1 else avl_rotate(node, diff))
 
 
-
-def avl_fix(node, diff):
+def avl_rotate(node, diff):
     """Fix an invalid AVL tree."""
     assert node is not None, "Cannot fix a null AVL node."
     k, left, right, height = node
@@ -67,6 +117,20 @@ def avl_fix(node, diff):
         if rdiff > 0:
             right = rotate_right(node[2])
         return rotate_left((k, left, right, height))
+
+
+def is_avl(root):
+    def eval8(node, mink=float("-INF"), maxk=float("+INF")):
+        if node is None:
+            return True
+        root_key, left, right, *_ = node
+        if not (mink <= root_key <= maxk):
+            return False
+        if abs(height_diff(node)) > 1:
+            return False
+        return eval8(left, mink, root_key) and eval8(right, root_key, maxk)
+
+    return eval8(root)
 
 # Tree rotation
 
@@ -147,15 +211,29 @@ if __name__ == "__main__":
         elements = [1,2,3,4,5,6,7,8,9,11,10,12]
         tree = None
         for elem in elements:
-            tree = insert(tree, elem, avl_insert)
+            tree = insert(tree, elem, avl_fix)
 
         def print_node(node):
             k, *_ = node
             print(f"{k} ", end="")
-
         in_order(tree, print_node)
+
         print()
         print(to_string(tree))
+
+        print()
         print(search(tree, 11))
+
+        print()
+        print(to_string(remove(tree, 5)))
+        print()
+        print(to_string(remove(tree, 11)))
+        print()
+        print(to_string(remove(tree, 4)))
+        print()
+        print(to_string(remove(tree, 9, avl_fix)))
+
+        assert is_avl(remove(tree, 9)) is False
+        assert is_avl(remove(tree, 9, avl_fix)) is True
 
     main()
