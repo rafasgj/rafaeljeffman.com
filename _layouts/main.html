@@ -46,6 +46,16 @@
                     <h1 id="section_header">{{ page.section }}</h1>
                 {% endif %}
                 {{ page.title | prepend: '# ' | markdownify }}
+                {% if page.date %}
+                <div id="last-update">
+                    {% if page.lang == 'en' %}
+                    Last update:  {{ page.date }}
+                    {% else if page.lang == 'fr' %}
+                    {% else %}
+                    Última atualização: {{ page.date }}
+                    {% endif %}
+                </div>
+                {% endif %}
                 {{ content }}
             </div>
             <div id="footer">

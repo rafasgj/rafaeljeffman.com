@@ -36,6 +36,15 @@ ol > li {
     margin-top: 25px;
 }
 
+#last-update {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-size: 70%;
+    color: #777
+}
+
 #con {
     position: relative;
     top: 0;
