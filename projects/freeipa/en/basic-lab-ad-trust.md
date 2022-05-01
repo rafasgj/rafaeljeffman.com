@@ -50,9 +50,14 @@ least partially automated) will be discussed.
 
 ## Prerequisites
 
+
+### Manual Installation
+
 For the manual installation process you will need a working setup of
 libvirt/KVM. The host machine will double as the _controller node_ for
 the automated installation using [Ansible].
+
+### Ansible Automation
 
 For the automated installation, you will also need Ansible, and a few
 of its collections:
@@ -66,6 +71,9 @@ of its collections:
 packages or [Ansible Galaxy] collections. The other collections are
 available with the Ansible package,  but must be individually installed
 (e.g. through Galaxy) if using `ansible-core`.
+
+The playbooks are
+[available in a Github repository](https://github.com/rjeffman/freeipa-ad-trust).
 
 > **NOTE**: While I was creating this environment, in the Ansible
 controller, _Linux System Roles_ was installed using Fedora packages,
@@ -90,10 +98,9 @@ they have screenshots there, which makes following the procedure easier.
 1. Download Windows Server VHD Image (evaluation version, usable for
    180 days):
 
-    > If you don't have a specific Windows Server version in mind, I
-    suggest you use the latest one. There is also a 2008 R2 version
-    available that does not require registration with Microsoft, but due
-    to some non-investigated issue, I wasn't able to run it.
+    > If you don't have a specific Windows Server version in mind, I suggest
+    you use Windows Server 2019, as it is [officially supported by IPA], at
+    the time of this writing (Windows Server 2022 should follow shortly).
 
     * [Windows Server 2022](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022) - select VHD
     * [Windows Server 2019](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019) - select VHD
@@ -105,8 +112,8 @@ qemu-img convert -p -f vpc -O qcow2 <Windows Image>.vhd w2k22.qcow2
     ```
     > The Windows VHD image file will have different names depending on
     the version you selected. The resulting filename should easily
-    identify the version used, _w2k22_ for Windows Server 2022, or
-    _w2k19_ for Windovs server 2019, for example.
+    identify the version being used, like _w2k22_ for Windows Server 2022,
+    or _w2k19_ for Windovs Server 2019, for example.
 
 3. Create VM
 
@@ -765,4 +772,5 @@ environment.
 [active directory]: https://docs.microsoft.com/pt-br/windows-server/identity/identity-and-access
 [red hat]: https://redhat.com
 [winrm connector]: https://docs.ansible.com/ansible/latest/user_guide/windows_winrm.html
+[officially supported by IPA]: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/integrating_rhel_systems_directly_with_windows_active_directory/connecting-rhel-systems-directly-to-ad-using-sssd_integrating-rhel-systems-directly-with-active-directory#supported-windows-platforms-for-direct-integration_connecting-rhel-systems-directly-to-ad-using-sssd
 <!-- [nice document]: https://www.redhat.com/pt-br/technologies/management/ansible/automate-microsoft-windows-with-ansible -->
