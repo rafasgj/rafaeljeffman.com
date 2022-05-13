@@ -8,11 +8,15 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+}
+
+code {
     font-size: 115%;
+    font-weight: 600;
 }
 
 a {
-    color: #f33;
+    color: #393;
     text-decoration: underline;
 }
 
@@ -22,6 +26,10 @@ p {
 
 h1 {
     margin-bottom: 40px;
+    background-image: linear-gradient(175deg, rgb(0,0,0), rgb(128,128,128));
+    background-clip: text;
+    color: transparent !important;
+    min-height: 30px;
 }
 
 h2 {
@@ -62,9 +70,10 @@ ol > li {
 }
 
 #header.home {
-    height: 200px;
-    background: #fff;
+    /* height: 150px; */
+        /* background: #fff; */
     box-shadow: none;
+    border-bottom: none;
 }
 
 #biohazard {
@@ -74,26 +83,34 @@ ol > li {
     font-size: 100px;
     text-shadow: #333 0 0 8px;
     font-family: Noto Emoji;
+    color: #0f0;
+    display: none;
 }
 
 #site_logo {
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 600;
     float: left;
+    margin-top: 5px;
 }
 #site_logo > a {
-    text-decoration: none;
-    color: #fff;
-    text-shadow: 0 0 2px #222;
-}
-#site_logo > a:hover {
-    text-shadow: 0 0 2px #000;
+    text-decoration: none;    background: #fff;
+
+    background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0));
+    background-clip: text;
+    color: transparent !important;
 }
 #site_logo.home {
-    font-size: 100px;
+    font-size: 72;
     margin: 0 auto;
     float: none;
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 1150px) {
+    #site_logo {
+        font-size: 36px;
+    }
 }
 
 #menu {
@@ -109,31 +126,43 @@ ol > li {
     font-weight: bolder;
     font-size: 18pt;
     padding: 1px;
-
-    color: #fff;
-    background-clip: text;
+    /* color: #fff; */
+    /* background-clip: text; */
 }
 .menu-item a {
     text-decoration: none;
-    color: #fff;
-    text-shadow: 0 0 2px #000;
+    color: transparent !important;
+    background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0));
+    background-clip: text;
 }
 .menu-item a:hover {
     text-decoration: none;
-    text-shadow: 0 0 2px #800;
+    color: transparent !important;
+    background-image: linear-gradient(185deg, rgb(0,128,0), rgb(0, 30, 0));
+    background-clip: text;
+}
+
+
+@media (max-width: 1150px) {
+    .menu-item {
+        font-size: 14px;
+    }
 }
 
 #about {
-    color: transparent;
+    /* color: transparent; */
     background: #000;
+    text-shadow: 0 0 2px #fff;
+    color: transparent !important;
+    background-image: linear-gradient(175deg, rgb(0,192,0), rgb(0,128,0));
     background-clip: text;
-    text-shadow: 0 0 3px #fff;
 }
 #about:hover {
-    color: transparent;
     background: #000;
+    color: transparent !important;
+    background-image: linear-gradient(175deg, rgb(0,192,0), rgb(0,0,20));
+    text-shadow: 0 0 2px #394;
     background-clip: text;
-    text-shadow: 0 0 3px #fcc;
 }
 
 #footer {
@@ -221,11 +250,6 @@ blockquote b {
     font-weight: bold;
 }
 
-code.language-plaintext {
-    font-size: 140%;
-    font-weight: lighter;
-}
-
 div.image {
     margin: 1em auto;
     text-align: center;
@@ -292,4 +316,10 @@ svg > text {
 
 .icons > ul > li > a:hover {
     text-decoration: none;
+}
+
+div.highlight {
+    border: thin solid black;
+    padding: 0 10px;
+    overflow-x: auto;
 }
