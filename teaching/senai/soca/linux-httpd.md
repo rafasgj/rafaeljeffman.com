@@ -44,7 +44,7 @@ A configuração básica de um _virtual host_ contem:
     # Configure DocumentRoot
     <Directory /www/example1>
         Options Indexes FollowSymLinks
-        AllowOverride yes
+        AllowOverride All
         Require all granted
     </Directory>
 </VirtualHost>
@@ -80,7 +80,7 @@ Para utilizar o módulo PHP, você deve ter tanto o PHP quanto o módulo PHP ins
 
 Após a instalação dos pacotes o PHP já estará configurado para executar como um módulo do Apache.
 
-Crie uma págino do `DocumentRoot` com o nome `info.php`, e o seguinte conteúdo:
+Crie uma página no `DocumentRoot` com o nome `info.php`, e o seguinte conteúdo:
 
 ```
 <?php phpinfo(); ?>
