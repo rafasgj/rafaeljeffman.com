@@ -17,49 +17,14 @@
                     &#x1f4bb; &#x1f4f7;
                 </div>
             </div>
-            <div style="width: 80%; margin: 0 auto;">
-            <div class="card">
-                <div class="card-title">Some slightly long title.</div>
-                <div class="card-abstract">
-                    A expressão Lorem ipsum em design gráfico e
-                    editoração é um texto padrão em latim utilizado
-                    na produção gráfica para preencher os espaços
-                    de texto em publicações para testar e ajustar
-                    aspectos visuais antes de utilizar conteúdo real.
-                    Também é utilizado em catálogos tipográficos,
-                    para demonstrar textos e títulos escritos com as
-                    fontes.
+            <div class="cardboard">
+                {% for item in page.cards %}
+                <div class="card">
+                    <div class="card-title">{{ item.title }}</div>
+                    <div class="card-abstract">{{ item.content }}</div>
+                    <div class="read-more"><a href="{{ item.link }}">Acesse</a></div>
                 </div>
-                <div class="read-more"><a>Leia mais</a></div>
-            </div>
-            <div class="card">
-                <div class="card-title">Some slightly long title.</div>
-                <div class="card-abstract">
-                    A expressão Lorem ipsum em design gráfico e
-                    editoração é um texto padrão em latim utilizado
-                    na produção gráfica para preencher os espaços
-                    de texto em publicações para testar e ajustar
-                    aspectos visuais antes de utilizar conteúdo real.
-                    Também é utilizado em catálogos tipográficos,
-                    para demonstrar textos e títulos escritos com as
-                    fontes.
-                </div>
-                <div class="read-more"><a>Leia mais</a></div>
-            </div>
-            <div class="card">
-                <div class="card-title">Some slightly long title.</div>
-                <div class="card-abstract">
-                    A expressão Lorem ipsum em design gráfico e
-                    editoração é um texto padrão em latim utilizado
-                    na produção gráfica para preencher os espaços
-                    de texto em publicações para testar e ajustar
-                    aspectos visuais antes de utilizar conteúdo real.
-                    Também é utilizado em catálogos tipográficos,
-                    para demonstrar textos e títulos escritos com as
-                    fontes.
-                </div>
-                <div class="read-more"><a>Leia mais</a></div>
-            </div>
+                {% endfor %}
             </div>
             <div id="footer">
                 {% include footer.html %}
