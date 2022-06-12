@@ -11,7 +11,6 @@ body {
 
 code {
     font-size: 115%;
-    /* font-weight: 600; */
     font-family: Courier, monospace;
     width: 100%;
 }
@@ -187,16 +186,6 @@ ol > li {
     padding: 20px 0;
     height: 20px;
     background: repeating-linear-gradient(-45deg, #f0f0f0 0px, #f0f0f0 5px, #e0e0e0 6px, #e0e0e0 11px, #f0f0f0 12px);
-    /* background: repeating-linear-gradient(-45deg, #f7d707 0px, #f7d707 5px, #e7c707 6px, #e7c707 11px, #f7d707 12px); */
-}
-
-div.icons {
-    display: inline-block;
-    border: thin solid red;
-}
-
-div.icons ul {
-    display: inline-block;
 }
 
 #copyright {
