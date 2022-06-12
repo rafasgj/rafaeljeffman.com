@@ -1,0 +1,4 @@
+highlighter: None
+markdown: kramdown
+kramdown:
+  input: GFM
