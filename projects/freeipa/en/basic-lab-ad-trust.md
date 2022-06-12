@@ -107,7 +107,7 @@ they have screenshots there, which makes following the procedure easier.
     * [Windows Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016) - you'll have to select ISO and perform a "regular" installation, which is out of the scope of this document.
 
 2. Convert the VHD image to QCOW2
-    ```
+    ```none
 qemu-img convert -p -f vpc -O qcow2 <Windows Image>.vhd w2k22.qcow2
     ```
     > The Windows VHD image file will have different names depending on
@@ -122,19 +122,19 @@ qemu-img convert -p -f vpc -O qcow2 <Windows Image>.vhd w2k22.qcow2
     have little to no effect later. You may also use the virt-manager
     GUI to create the VM, importing the VM file.
 
-    ```
+    ```none
 virt-install \
-    --connect qemu:///system \
-    --name "win2k22-ad" \
-    --description "Windows Server 2022 AD" \
-    --os-type "Windows" \
-    --os-variant "win2k22" \
-    --ram 4096 \
-    --vcpus 1 \
-    --disk path="win2k22.qcow2" \
-    --virt-type kvm \
-    --graphics spice \
-    --import
+        --connect qemu:///system \
+        --name "win2k22-ad" \
+        --description "Windows Server 2022 AD" \
+        --os-type "Windows" \
+        --os-variant "win2k22" \
+        --ram 4096 \
+        --vcpus 1 \
+        --disk path="win2k22.qcow2" \
+        --virt-type kvm \
+        --graphics spice \
+        --import
     ```
 
     > The `os-type` will be `Windows`, the `os-variant` may be different
@@ -247,11 +247,11 @@ package name that contains `kinit`) for this test.
 
 * Add to `/etc/krb5.conf` in the `[realms]` section:
 
-   ```
-    AD.IPA.TEST = {
+   ```none
+AD.IPA.TEST = {
         kdc = server.ad.ipa.test
         admin_server = server.ad.ipa.test
-    }
+}
    ```
 
 * Test login with `kinit jdoe@AD.IPA.TEST`.
@@ -274,42 +274,42 @@ Now, setup a FreeIPA server using a Linux VM.
 
 1. Set hostname:
 
-    ```
+    ```none
 $ hostnamectl set-hosname server.lin.ipa.test
     ```
 
 2. Set a fixed IP address:
 
-    ```
+    ```none
 # nmcli connection modify "Wired connection 1" \
-    ipv4.method manual \
-    ipv4.address 192.168.122.251/24 \
-    ipv4.gateway 192.168.122.1 \
-    ipv4.dns 1.1.1.1
+        ipv4.method manual \
+        ipv4.address 192.168.122.251/24 \
+        ipv4.gateway 192.168.122.1 \
+        ipv4.dns 1.1.1.1
 # nmcli dev reapply eth0
     ```
 
 3. Update image and reboot (Optional)
 
-    ```
+    ```none
 # dnf -y update && reboot
     ```
 
 4. Install FreeIPA packages
 
-    ```
+    ```none
 # dnf install -y \
-    ipa-server \
-    ipa-server-dns \
-    ipa-server-trust-ad \
-    python3-libselinux \
-    firewalld
+        ipa-server \
+        ipa-server-dns \
+        ipa-server-trust-ad \
+        python3-libselinux \
+        firewalld
     ```
 
 5. Install FreeIPA with integrated DNS and AD trust (note that it is
    important to disable DNSSEC validation)
 
-    ```
+    ```none
 # ipa-server-install \
     -U \
     --ds-password SomeDMpassword \
@@ -328,7 +328,7 @@ $ hostnamectl set-hosname server.lin.ipa.test
 
 After these steps you'll have FreeIPA installed, and you can test your installation with:
 
-```
+```none
 # kinit admin
 Password for admin@LIN.IPA.TEST:
 ```
@@ -339,14 +339,14 @@ Password for admin@LIN.IPA.TEST:
 Before creating the trust there is one last configuration to do on the
 Windows side. Start PowerShell and execute the command:
 
-```
+```none
 dnscmd 127.0.0.1 /ZoneAdd lin.ipa.test /Forwarder 192.168.122.251
 ```
 
 This will set a DNS forwarder zone on Windows DNS for the FreeIPA
 domain. You can test it in Powershell using:
 
-```
+```none
 PS C:> nslookup
 > set type=srv
 > _ldap._tcp.ad.ipa.test
@@ -368,12 +368,12 @@ and Windows AD.
 
 1. Add the Windows AD server IP as a DNS forwarder (you'll need a valid
    Kerberos TGT for user `admin`)
-    ```
+    ```none
 $ ipa dnsconfig-mod --forwarder=192.168.122.252 --forward-policy=only
     ```
     This will set a global forwarder to the Windows AD server. You can
     test it with `nslookup`:
-    ```
+    ```none
 # nslookup
 > set type=srv
 > _ldap._tcp.ad.ipa.test
@@ -383,7 +383,7 @@ $ ipa dnsconfig-mod --forwarder=192.168.122.252 --forward-policy=only
     ```
 
 2. Configure IPA server for cross-forest trust
-    ```
+    ```none
 # ipa-adtrust-install \
         -U \
         --netbios-name=LIN \
@@ -393,7 +393,7 @@ $ ipa dnsconfig-mod --forwarder=192.168.122.252 --forward-policy=only
 
 3. Estabilish IPA-AD trust (use Windows AD Administrator password:
    SomeW1Npassword)
-    ```
+    ```none
 # ipa trust-add --type=ad ad.ipa.test --admin Administrator --password
 Active Directory domain administrator's password:
     ```
@@ -439,6 +439,7 @@ This was the inventory used to test this procedure. For production use,
 you should not have your passwords in clear text in your inventory, this
 is for demonstration purpose only:
 
+[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/inventory.yaml){:class="download fa fa-download"}
 {% raw %}
 ```yaml
 # inventory.yaml
@@ -514,17 +515,17 @@ Windows tasks with Ansible (you should read it and follow some links).
 Download and execute the PowerShell script that will configure the
 system for you:
 
-```sh
+```
 > wget
-    -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
-    -OutFile configure_ansible.ps1
+        -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
+        -OutFile configure_ansible.ps1
 > .\configure_ansible.ps1
 ```
 
 Now you can get back to your Ansible controller (host machine), and test
 if the Windows machine is responding to Ansible:
 
-```sh
+```none
 $ ansible winserver -i inventory.yaml -m ansible.windows.win_ping
 ```
 
@@ -532,6 +533,7 @@ The playbook below will configure the Windows server, deploy and
 configure Active Directory and DNS, and prepare everything needed to
 create the trust with FreeIPA. The Windows VM will reboot twice.
 
+[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/01-windows-ad-setup.yml){:class="download fa fa-download"}
 {% raw %}
 ```yaml
 # windows-ad-setup.yml
@@ -600,7 +602,7 @@ create the trust with FreeIPA. The Windows VM will reboot twice.
 
 Execute it with:
 
- ```sh
+ ```none
 $ ansible-playbook -i inventory.yaml windows-ad-setup.yml
  ```
 
@@ -612,6 +614,7 @@ The installation of FreeIPA requires a supported Linux distribution
 [ansible-freeipa]. This playbook will perform all the configuration,
 but creating the trust.
 
+[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/02-ipa-setup.yml){:class="download fa fa-download"}
 {% raw %}
 ```yaml
 # ipa-setup.yml
@@ -654,13 +657,14 @@ but creating the trust.
 
 Invoke the playbook with:
 
-```sh
+```none
 $ ansible-playbook -i inventory.yaml ipa-setup.yml
 ```
 
 After FreeIPA is deployed you can create the trust to AD, using
 [ansible-freeipa]:
 
+[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/04-add-trust.yml){:class="download fa fa-download"}
 {% raw %}
 ```yaml
 # add-trust.yml
@@ -689,17 +693,17 @@ To test the trust setup we'll allow AD users to login into the Linux
 VM. On the FreeIPA side, you have to edit `/etc/krb5.conf`, add add the
 two `auth_to_local` lines:
 
-```
+```none
 [realms]
 LIN.IPA.TEST = {
 (...)
-  auth_to_local = RULE:[1:$1@$0](^.*@AD.IPA.TEST)s/@AD.IPA.TEST/@ad.ipa.test/
-  auth_to_local = DEFAULT
+      auth_to_local = RULE:[1:$1@$0](^.*@AD.IPA.TEST)s/@AD.IPA.TEST/@ad.ipa.test/
+      auth_to_local = DEFAULT
 }
 ```
 
 And restart `krb5kdc` and `ssd` services:
-```
+```none
 # systemctl restart krb5kdc
 # systemctl restart sssd
 ```
@@ -711,6 +715,7 @@ Now, AD users can login through SSH to the FreeIPA server using
 
 This step can also be automated with the following playbook:
 
+[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/05-krb5-config.yml){:class="download fa fa-download"}
 {% raw %}
 ```yaml
 # krb5-config.yml
@@ -744,18 +749,18 @@ This step can also be automated with the following playbook:
 
 ##  Wrap up
 
-Setting up a mixed environment that integrates [FreeIPA] and Active
-Directory brings more flexibility and complexity to the network
-environment administrator, it also enhance usability of both Linux and
-Windows domains for the users.
-
-Automating the creation of such an environment can be achieved, and
-brings a reproducible configuration.
-
 A testing environment with a trust between FreeIPA and Widows Active
 Directory was created and automated. It can be easily extended and
 enhanced, and certainly needs to be secured, to be used in a production
 environment.
+
+Setting up a mixed environment that integrates [FreeIPA] and Active
+Directory brings more flexibility to the network environment, and
+enhance usability of both Linux and Windows domains for the users.
+
+Automating the creation of such an environment can be achieved, and
+brings a reproducible configuration, helping to reduce some of the
+complexity.
 
 
 <!-- links -->
