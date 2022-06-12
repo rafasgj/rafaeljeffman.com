@@ -3,7 +3,7 @@ title: Ensino
 layout: section
 ---
 
-## Turmas atuais
+## Cursos Ministrados
 
 * Faculdade SENAI Porto Alegre
     * [Sistemas Operacionais de Código Aberto](senai/soca)
