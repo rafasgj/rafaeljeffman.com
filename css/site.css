@@ -289,15 +289,21 @@ svg > text {
     fill: #333;
 }
 
+.cardboard {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .card {
     margin: 30px;
     width: 300px;
-    height: 230px;
+    height: 180px;
     padding: 30px;
     position: relative;
-    border: transparent thin solid;
+    border: #e0e0e0 thin solid;
     border-radius: 15px 15px;
-    box-shadow: #333 0px 0px 10px;
+    box-shadow: #555 1px 2px 4px;
     display: inline-block;
     vertical-align: top;
 }
@@ -345,9 +351,4 @@ svg > text {
 
 .icons > ul > li > a:hover {
     text-decoration: none;
-}
-
-.cardboard {
-    width: 80%;
-    margin: 0 auto;
 }

@@ -20,9 +20,8 @@
             <div class="cardboard">
                 {% for item in page.cards %}
                 <div class="card">
-                    <div class="card-title">{{ item.title }}</div>
+                    <div class="card-title"><a href="{{ item.link }}">{{ item.title }}</a></div>
                     <div class="card-abstract">{{ item.content }}</div>
-                    <div class="read-more"><a href="{{ item.link }}">Acesse</a></div>
                 </div>
                 {% endfor %}
             </div>
