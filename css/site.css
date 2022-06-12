@@ -12,13 +12,11 @@ body {
 code {
     font-size: 115%;
     font-family: Courier, monospace;
-    width: 100%;
 }
 
 pre {
-    background-color: #f2f5f0;
+    border: thin solid black;
     padding: 5px 10px;
-    width: 100%;
 }
 
 pre > code {

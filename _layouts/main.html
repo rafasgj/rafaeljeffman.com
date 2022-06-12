@@ -36,6 +36,17 @@
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         </script>
         <!-- /MathJax configuration -->
+        <!-- Highlight.js configuration -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/atom-one-light.min.css">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"
+            integrity="sha384-a4pIV46KBffvdjRuStQik2G6mPrTxdtAiZFQCdpsP4fyplWNoQ7fXlLMiIGcAP+M"
+            crossorigin="anonymous"
+            >
+        </script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/go.min.js"></script> -->
+        <!-- /Highlight.js configuration -->
     </head>
     <body>
         <div id="con">
@@ -68,5 +79,7 @@
                 {% include footer.html %}
             </div>
         </div>
+        <!-- After loading page text, highlight code blocks. -->
+        <script>hljs.highlightAll();</script>
     </body>
 </html>
