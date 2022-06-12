@@ -12,6 +12,7 @@ body {
 code {
     font-size: 115%;
     font-family: Courier, monospace;
+    white-space: pre;
 }
 
 pre {
@@ -21,6 +22,8 @@ pre {
 
 pre > code {
     font-size: 90%;
+    white-space: pre;
+    overflow-x: auto !important;
 }
 
 .download {
@@ -333,8 +336,4 @@ svg > text {
 
 .icons > ul > li > a:hover {
     text-decoration: none;
-}
-
-div.highlight {
-    overflow-x: auto;
 }
