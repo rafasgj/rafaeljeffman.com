@@ -1,9 +1,9 @@
 ---
 title: Sobre
-layout: section
+layout: main
 ---
 
-Sou desenvolvedor de software, fotógrafo e quando consigo, professor. Atualmente trabalho junto ao projeto [FreeIPA], pela [Red Hat], com foco principal nos projetos de automação de gerenciamento com o [ansible-freeipa] e [Certificate System Role].
+Sou desenvolvedor de software, fotógrafo e quando consigo, professor. Atualmente trabalho junto ao projeto [FreeIPA], pela [Red Hat], com foco principal nos projetos de automação com o [ansible-freeipa] e [Certificate System Role].
 
 Meus trabalhos profissionais como desenvolvedor de software (ao menos parte dele), e como fotógrafo/impressor podem ser encontrados aqui:
 <div class="social">
@@ -20,16 +20,19 @@ Disputando o meu tempo com o trabalho estão minha esposa, minha filha, meu filh
 Alguma coisa um pouco mais pessoal, com visões de mundo bem particulares, comidas, mais fotografias (dos cachorros e comida principalmente) e alguns projetos que ainda não estão exatamente prontos para virarem algo mais sério, podem ser encontrados aqui:
 <div class="social">
 <ul>
+    <li><a target="_blank" href="https://twitter.com/rafasgj"><span class="fab fa-twitter"></span></a></li>
     <li><a target="_blank" href="https://instagram.com/rafasgj"><span class="fab fa-instagram"></span></a></li>
     <li><a target="_blank" href="https://github.com/rafasgj"><span class="fab fa-github"></span></a></li>
-    <li><a target="_blank" href="https://twitter.com/rafasgj"><span class="fab fa-twitter"></span></a></li>
 </ul>
 </div>
 
 Para me contactar, por favor, envie um email. Eu sei que é uma ferramenta antiquada, mas ainda é a melhor para que eu consiga responder, rapidamente, e tenha menos chance de perder no meio de tanta notificação que recebemos todos os dias.
-<div class="social" style="display: block; width:100%;">
+<div class="social">
 <ul style="margin: 0 auto !important;">
-    <li><a href="mailto:rafasgj@gmail.com"><span class="far fa-envelope"></span>rafasgj@gmail.com</a></li>
+    <li>
+        <a href="mailto:rafasgj@gmail.com"><span class="far fa-envelope"></span>
+        <span style="font-size: 14pt; vertical-align: middle">rafasgj@gmail.com</span></a>
+    </li>
 </ul>
 </div>
 
