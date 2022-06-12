@@ -7,7 +7,7 @@ tags:
   - bash
 title: Argumentos de linha de comando
 copy: 2022
-date: 2022-06-11
+date: 2022-06-12
 ---
 
 Quase todos os programas com interface por linha de comando oferecem uma série de parâmetros que permitem modificar o comportamento do programa. Esses argumentos podem ser opções selecionáveis ou parâmetros posicionais.
