@@ -336,7 +336,5 @@ svg > text {
 }
 
 div.highlight {
-    border: thin solid black;
-    padding: 0 10px;
     overflow-x: auto;
 }
