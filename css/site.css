@@ -184,12 +184,17 @@ ol > li {
     margin-top: 30px;
     border-top: 1px dotted #aaa;
     padding: 20px 0;
-    height: 20px;
+    height: 40px;
     background: repeating-linear-gradient(-45deg, #f0f0f0 0px, #f0f0f0 5px, #e0e0e0 6px, #e0e0e0 11px, #f0f0f0 12px);
 }
 
 #copyright {
     margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: 30ch;
+    padding: 20px 0;
+    margin-top: -10px;
 }
 
 #contents {
