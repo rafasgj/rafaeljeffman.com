@@ -4,7 +4,7 @@ section: Shell Script
 tags:
   - linux
   - shell script
-  - bash
+  - posix
 title: Argumentos de linha de comando
 copy: 2022
 date: 2022-06-12
