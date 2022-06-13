@@ -53,12 +53,12 @@
             <div id="header">
                 {% include header.html %}
             </div>
+            <div id="tags">
+                {% for tag in page.tags %}
+                   <div class="tag">{{ tag }}</div>
+                {% endfor %}
+            </div>
             <div id="contents">
-                <div id="tags">
-                    {% for tag in page.tags %}
-                       <div class="tag">{{ tag }}</div>
-                    {% endfor %}
-                </div>
                 {% if page.section %}
                     <h1 id="section_header">{{ page.section }}</h1>
                 {% endif %}

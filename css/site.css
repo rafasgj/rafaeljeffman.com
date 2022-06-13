@@ -221,15 +221,17 @@ ol > li {
 }
 
 #tags {
-    float: right;
-    max-width: 25ch;
+    float: left;
+    max-width: 20ch;
     text-align: center;
-    display: none;
+    position: absolute;
+    top: 150px;
+    right: 5ch;
 }
 .tag {
     border-radius: 15px 15px;
-    background-color: #999;
-    color: #eee;
+    background-color: #d92;
+    color: #f0f0f0;
     text-align: center;
     display: inline-block;
     padding: 2px 10px;
@@ -238,11 +240,9 @@ ol > li {
 }
 
 #section_header {
-    font-size: 48px;
+    font-size: 42px;
     margin-top: 5px;
     padding-top: 1.5ex;
-    max-width: 12em;
-    width: 12em;
 }
 
 .section-title h1 {
