@@ -1,12 +1,12 @@
 ---
 title: Ensino
 layout: section
+cards:
+  - title: Faculdade SENAI Porto Alegre
+    link: senai
+    content: >
+      * [Sistemas Operacionais de Código Aberto](senai/soca)
 ---
-
-## Cursos Ministrados
-
-* Faculdade SENAI Porto Alegre
-    * [Sistemas Operacionais de Código Aberto](senai/soca)
 
 <!--
 Durante os anos \'10 (2010-2019), lecionei na Faculdade SENAC Porto Alegre e na FADERGS, disciplinas ligadas à programação, algoritmos e estrutruas de dados, e desenvolvimento de jogos.

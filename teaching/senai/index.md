@@ -1,9 +1,9 @@
 ---
-title: Sistemas Operacionais de Código Aberto
+title: Faculdade SENAI Porto Alegre
 layout: section
+cards:
+  - title: Sistemas Operacionais de Código Aberto
+    link: soca
+    content: >
+      Sobre o que é a disciplina...
 ---
-
-## Disciplinas ministradas na Faculdade SENAI Porto Alegre
-
-* 2022/1
-    * [Sistemas Operacionais de Código Aberto](soca)
