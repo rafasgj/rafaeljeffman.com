@@ -98,6 +98,18 @@ Veja: https://e-tinet.com/linux/tcpdump/
 
 O [Wireshark] é um analisador de protocolos de rede, permitindo que você tenha uma visão em nível microscópico do que está acontecendo na sua rede.
 
+
+## Configurando o _hostname_
+
+Toda estação Linux possui um _nome_, que, idealmente, é único dentro de um _domínio_.
+
+Quando acessamos um servidor, utilizando um _browser_, o primeiro campo da URL é o nome dessa máquina, junto ao seu domínio, chamamos esse nome de _FQDN - Fully Qualified Domain Name_. Por exemplo, uma máquina cujo nome é **www**, que está no domínio **google.com**, teria o FQDN **www.google.com**.
+
+O comando `hostname` nos permite obter o hostname da máquina, seu domínio, seu FQDN, entre outras informações. Embora seja possível trocar o hostname utilizando esse comando, o ideal é que ele seja utilizado apenas para obter informações, e não alterar essas informações.
+
+Para alterar o hostname da máquina (e o domínio) é melhor utilizar o comando `hostnamectl`.
+
+
 <!-- links -->
 [Red Hat Enterprise Linux]: https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux
 [Ubuntu]: https://ubuntu.com
