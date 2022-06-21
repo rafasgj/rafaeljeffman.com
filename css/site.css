@@ -54,6 +54,7 @@ p {
 h1 {
     margin-bottom: 40px;
     background-image: linear-gradient(175deg, rgb(0,0,0), rgb(128,128,128));
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent !important;
 }
@@ -122,6 +123,7 @@ ol > li {
     text-decoration: none;
     background: #fff;
     background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0));
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent !important;
 }
@@ -158,12 +160,14 @@ ol > li {
     text-decoration: none;
     color: transparent !important;
     background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0));
+    -webkit-background-clip: text;
     background-clip: text;
 }
 .menu-item a:hover {
     text-decoration: none;
     color: transparent !important;
     background-image: linear-gradient(185deg, rgb(0,128,0), rgb(0, 30, 0));
+    -webkit-background-clip: text;
     background-clip: text;
 }
 
@@ -180,6 +184,7 @@ ol > li {
     text-shadow: 0 0 2px #fff;
     color: transparent !important;
     background-image: linear-gradient(175deg, rgb(0,192,0), rgb(0,128,0));
+    -webkit-background-clip: text;
     background-clip: text;
 }
 #about:hover {
@@ -187,6 +192,7 @@ ol > li {
     color: transparent !important;
     background-image: linear-gradient(175deg, rgb(0,192,0), rgb(0,0,20));
     text-shadow: 0 0 2px #394;
+    -webkit-background-clip: text;
     background-clip: text;
 }
 
@@ -251,6 +257,7 @@ ol > li {
     text-decoration: none;
     background: #fff;
     background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0));
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent !important;
     margin: 0;
@@ -344,6 +351,7 @@ svg > text {
 .card-abstract ul li::before{
     content: "\1F517";
     background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0));
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent !important;
     font-size: 10pt;
