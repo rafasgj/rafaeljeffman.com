@@ -25,7 +25,7 @@ Para entender melhor como funcionam as invariantes de laço, três exemplos ser�
 
 ## Busca Linear
 
-A busta linear ou sequencial é um algoritmo de busca exaustiva em listas. O algoritmo verifica cada elemento da lista até encontrar uma correspondência, ou até que não existam mais elementos na lista.
+A busta linear, ou sequencial, é um algoritmo de busca exaustiva em listas. O algoritmo verifica cada elemento da lista até encontrar uma correspondência, ou até que não existam mais elementos na lista.
 
 O pseudo-código para a busca linear pode ser definido como:
 
