@@ -1,0 +1,35 @@
+@media (min-width: 600px) {
+    #contents {
+        margin-left: 20px !important;
+        margin-right: 0px;
+    }
+    #tags {
+        right: 8px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-item {
+        font-size: 14px;
+    }
+
+    #site_logo {
+        font-size: 36px;
+    }
+    #contents {
+        margin-left: auto !important;
+        margin-right: 20% !important;
+    }
+    #tags {
+        right: 1% !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    #contents {
+        margin: 0 auto !important;
+    }
+    #tags {
+        right: 5% !important;
+    }
+}
