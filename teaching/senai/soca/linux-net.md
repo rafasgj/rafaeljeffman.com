@@ -92,7 +92,7 @@ O comando `ip` é uma espécie de canivete suíco para configuração de interfa
 
 O [tcpdump] é um analisador de pacotes de rede que funciona em linha de comando.
 
-Veja: https://e-tinet.com/linux/tcpdump/
+Veja mais em [https://e-tinet.com/linux/tcpdump](https://e-tinet.com/linux/tcpdump)
 
 ### Wireshark
 
@@ -109,6 +109,11 @@ O comando `hostname` nos permite obter o hostname da máquina, seu domínio, seu
 
 Para alterar o hostname da máquina (e o domínio) é melhor utilizar o comando `hostnamectl`.
 
+
+## Referências
+
+* **nmcli** - [página do projeto](https://developer-old.gnome.org/NetworkManager/stable/mcli.html)
+* [**nmcli WiFi Tutorial**](https://fedingo.com/how-to-connect-to-wifi-using-nmcli/)
 
 <!-- links -->
 [Red Hat Enterprise Linux]: https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux
