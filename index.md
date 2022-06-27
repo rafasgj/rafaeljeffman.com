@@ -9,4 +9,8 @@ cards:
     link: /projects
     content: >
       Tutoriais, textos e ideias sobre assuntos específicos relacionados a projetos pessoais e profissionais em que já trabalhei.
+  - title: Raspberry-Pi
+    link: /raspberry
+    content: >
+      Gosto muito da do [Raspberry-Pi](https://raspberry.org), por ser um dispositivo pronto para uso que permite criar rapidamente aplicações de teste para sistemas embarcados. Junto aqui algumas experiências que faço com diversas versões do dispositivo.
 ---

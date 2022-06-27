@@ -25,12 +25,12 @@ Outro fato importante para ser levado em consideração é o suporte de hardware
 
 <div class="tag-list">Sistemas testados:</div>
 
-* [Fedora 35](#fedora-35)
-* [Ubuntu Server 20.04](#ubuntu-server-2004)
+* [Fedora](#fedora)
+* [Ubuntu Server](#ubuntu-server)
 
-## Fedora 35
+## Fedora
 
-Há diversas versões do Fedora compatíveis com o Raspberry Pi 4 e os passos aqui descritos foram testados com a versão "_Minimal_".
+Há diversas versões do Fedora compatíveis com o Raspberry Pi 4 e os passos aqui descritos foram testados com a versão "_Minimal_" do Fedora 35 e 36.
 
 Embora eu prefire utilizar o Fedora no Raspberry que outras distribuições, a instalação tem uma desvantagem que é a necessidade de um teclado e monitor para configurar a instalação no primeiro _boot_. Ainda não achei uma forma de fazer isso de forma automatizada.
 
@@ -73,7 +73,7 @@ nmcli device wifi connect <SSID> --ask
     1. (Optional) To setup a static IP:
 
     ```sh
-nmcli con mon <SSID> ipv4.method "manual" ipv4.addresses "192.168.15.250/24" ipv4.gateway "192.168.15.1" ipv4.dns "1.1.1.1,8.8.8.8"
+nmcli connection modify <SSID> ipv4.method "manual" ipv4.addresses "192.168.15.250/24" ipv4.gateway "192.168.15.1" ipv4.dns "1.1.1.1,8.8.8.8"
     ```
 
 6. Aumente o tamanho da partição de dados e do sistema de arquivos para ocupar todo o espaço disponível no cartão micro-SD:
@@ -92,9 +92,11 @@ dnf update -y
 A instalação do Fedora 35 exigiu um cartão micro-SD de 8Gb, e após a instalação da versão _Minimal_, devido ao particionamento utilizado por padrão, a partição disponível para uso ("**/**") ficou com um tamanho de _5.7GB_, com _3.7GB_ disponíveis.
 
 
-## Ubuntu Server 20.04
+## Ubuntu Server
 
 > **_Nota_**: as instruções oficiais para a instalação do Ubuntu utilizam o Raspberry Pi Image Writer, que embora seja muito útil, pode não estar disponível ou exigir a instalação de um pograma extra. Aqui, é utilizado o `dd`, que está disponível em qualquer instalação Linux.
+
+> **_Nota_**: Este processo foi testado com as versões 20.04 e 22.04 do Ubuntu.
 
 A instalação do Ubuntu Server é um pouco mais fácil que a do Fedora, pois toda a configuração inicial pode ser realizada antes do primeiro _boot_ no Raspberry Pi, e não é necessário que o dispositivo seja ligado a um teclado e a um monitor, e, embora os passos aqui são executados manualmente, automatizar o processo de configuração do sistema é bem simples.
 
@@ -137,7 +139,7 @@ zcat <image_file> | sudo dd status=progress of='/dev/disk/by-id/my-sd-card'
 
 5. A configuração inicial é realizada pela ferramenta `cloud-init`. Se você plugou o Raspberry Pi em um monitor, espere até que algumas mensagens sobre configuração do SSH apareçam no terminal. Caso não esteja utilizando um monitor, a instalação no meu Raspberry Pi 4 com 8Gb de RAM, demorou um pouco menos de 5 minutos.
 
-    Com a instalação terminada, você pode realizar o _login_ no dispositivo com o usuário `ubuntu`. A senha também é `ubuntu`, e a troca de senha será requisitada no primeiro login. Utilize uma senha "forte", pois este usuário tem permissões de executar comandos com `sudo`.
+    Com a instalação terminada, você pode realizar o _login_ no dispositivo com o usuário `ubuntu`. A senha também é `ubuntu`, e a troca de senha será requisitada no primeiro login. Você pode precisar esperar uns minutos para que o usuário seja criado e habilitado. Utilize uma senha "forte", pois este usuário tem permissões de executar comandos com `sudo`.
 
 6. Atualize o sistema (essa operação pode demorar bastante tempo):
 
