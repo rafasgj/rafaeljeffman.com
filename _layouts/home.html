@@ -21,8 +21,8 @@
             <div class="cardboard">
                 {% for item in page.cards %}
                 <div class="card">
-                    <div class="card-title"><a href="{{ item.link }}">{{ item.title }}</a></div>
-                    <div class="card-abstract">{{ item.content }}</div>
+                    <div class="card-title"><a href="{{ item.link }}">{{ item.title | markdownify }}</a></div>
+                    <div class="card-abstract">{{ item.content | markdownify }}</div>
                 </div>
                 {% endfor %}
             </div>
