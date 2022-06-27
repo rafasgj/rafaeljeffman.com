@@ -22,7 +22,7 @@ Ao instalar o pacote, você pode acessar o exemplo padrão que é intalado junto
 
 > Note que você precisa utilizar HTTP, e não HTTPS, uma vez que os certificados de criptografia ainda não foram configurados.
 
-O _site_ padrão pode ser encontrado no diretório `/var/www/html`. A localização deste site pode ser alterada modificando a diretiva `DocumentRoot`. No caso do Fedora, essa diretiva é encontrada no arquivo principal de configuração `/etc/httpd/conf/httpd.conf`.
+O _site_ padrão pode ser encontrado no diretório `/var/www/html`. A localização deste site pode ser alterada modificando a diretiva `DocumentRoot`. No caso do Fedora, essa diretiva é encontrada no arquivo principal de configuração `/etc/apache2/apache2.conf` (`/etc/httpd/conf/httpd.conf`, no Fedora).
 
 Lembre-se que ao alterar a configuração, servidor deve ser reiniciado, ou utilizando `systemctl restart apache2.service` (ou `httpd.service` no Fedora).
 
