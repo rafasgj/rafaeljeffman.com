@@ -27,7 +27,7 @@
 
 @media (min-width: 1280px) {
     #contents {
-        margin: 0 auto !important;
+        margin: 0 auto 100px auto !important;
     }
     #tags {
         right: 5% !important;
