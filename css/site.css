@@ -315,6 +315,8 @@ svg > text {
     text-align: left;
 }
 
+.card div * p { margin: 0; }
+
 .card-title {
     font-size: 24pt;
     font-weight: bold;
