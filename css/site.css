@@ -299,12 +299,13 @@ svg > text {
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 5em;
 }
 
 .card {
     margin: 30px;
-    width: 300px;
-    min-height: 180px;
+    width: 38%;
+    min-height: 130px;
     padding: 30px;
     position: relative;
     border: #e0e0e0 thin solid;
