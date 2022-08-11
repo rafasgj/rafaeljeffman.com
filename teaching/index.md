@@ -3,19 +3,13 @@ title: Ensino
 layout: section
 ---
 
-## Turmas
+## 2022/2
 
-* [Universidade LaSalle Canoas](lassale)
-    * 2022/1
-        * [Compiladores](lasalle/compilers)
-        * [Desenvolvimento para dispositivos móveis](lasalle/compilers)
+* [Universidade LaSalle Canoas](lasalle)
+    * [Compiladores](lasalle/compilers)
+    * [Desenvolvimento para Dispositivos Móveis](lasalle/mobile)
+
+## 2022/1
 
 * [Faculdade Senai Porto Alegre](senai)
-    * 2021/2
-        * [Sistemas Operacionais de Código Aberto](senai/soca)
-
-
-## Outros textos
-
-* [Conceitos Básicos](basics)
-    * [Conjuntos e Relações](basics/set-concepts)
+     * [Sistemas Operacionais de Código Aberto](senai/soca)
