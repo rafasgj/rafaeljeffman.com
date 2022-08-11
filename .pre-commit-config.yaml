@@ -1,0 +1,8 @@
+repos:
+- repo: local
+  hooks:
+  - id: tagindex
+    name: Generate tag index
+    language: system
+    entry: utils/tag_index.sh
+    files: \.md$
