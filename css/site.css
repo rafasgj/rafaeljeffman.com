@@ -91,13 +91,11 @@ ol > li {
 }
 
 #header {
-    height: 50px;
-    padding: 30px;
+    padding: 0 50px;
     border-bottom: dashed #999 1px;
 }
 
 #header.home {
-    height: 120px;
     box-shadow: none;
     border-bottom: none;
 }
@@ -112,6 +110,7 @@ ol > li {
     color: #0f0;
     display: none;
 }
+
 
 #site_logo {
     font-size: 48px;
@@ -135,9 +134,7 @@ ol > li {
 }
 
 #menu {
-    position: absolute;
-    right: 40px;
-    top: 15px;
+    text-align: right;
 }
 
 .menu-item {
@@ -147,8 +144,6 @@ ol > li {
     font-weight: bolder;
     font-size: 18pt;
     padding: 1px;
-    /* color: #fff; */
-    /* background-clip: text; */
 }
 .menu-item a {
     text-decoration: none;
@@ -166,7 +161,6 @@ ol > li {
 }
 
 #about {
-    /* color: transparent; */
     background: #000;
     text-shadow: 0 0 2px #fff;
     color: transparent !important;
