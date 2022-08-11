@@ -3,6 +3,7 @@
 trap "exit 1" ERR
 
 DIRECTORY="$(readlink -f $(dirname ${0}))"
+TOPDIR="$(readlink -f "${DIRECTORY}/..")"
 
 venv=$(mktemp -d)
 
