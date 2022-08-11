@@ -56,7 +56,7 @@
             </div>
             <div id="article-tags">
                 {% for tag in page.tags %}
-                   <div class="tag"><a href="/index/{{ tag | downcase | replace: " ", "_" }}">{{ tag }}</a></div>
+                   <div class="tag"><a href="/tags/{{ tag | downcase | replace: " ", "_" }}">{{ tag }}</a></div>
                 {% endfor %}
             </div>
             <div id="contents">

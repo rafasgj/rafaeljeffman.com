@@ -40,12 +40,14 @@ def process_directory(dirname, index, lang_code):
             )
 
 
+tagdir = "tags"
+
 try:
-    os.mkdir("index")
+    os.mkdir(f"{tagdir}")
 except FileExistsError:
     pass
 
-with open("index/index.md", "w") as output:
+with open(f"{tagdir}/index.md", "w") as output:
     print("---\ntitle: Tags\nlayout: section\n---\n", file=output)
     print(
         textwrap.dedent(
@@ -88,7 +90,7 @@ with open("index/index.md", "w") as output:
             filelist = index[key]
             key_link = key.replace(" ", "_")
             print(f"* [{key}]({key_link})", file=output)
-            with open(f"index/{key_link}.md", "w") as keyout:
+            with open(f"{tagdir}/{key_link}.md", "w") as keyout:
                 print(
                     f'---\ntitle: Tag "{key}"\nlayout: main\n---\n', file=keyout
                 )
