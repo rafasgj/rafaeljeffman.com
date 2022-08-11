@@ -14,7 +14,7 @@
             </div>
             <div id="contents">
                 <!-- h1 class="section-title"  -->
-                {% if page.title %}
+                {% if page.title and page.title != "/none" %}
                 <div class="section-title">{{ page.title | prepend: "# " | markdownify }}</div>
                 {% endif %}
                 <div class="cardboard">
