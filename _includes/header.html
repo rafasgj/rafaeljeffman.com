@@ -1,9 +1,8 @@
 <div id="site_logo"><a href="/">RafaelJeffman.com</a></div>
 
 <ul id="menu">
-    <li class="menu-item"><a href="/teaching">Ensino</a></li>
-    <!-- <li class="menu-item"><a href="/ann">IA</a></li> -->
-    <!-- <li class="menu-item"><a href="/raspberry">Raspberry Pi</a></li> -->
-    <li class="menu-item"><a href="/projects">Projetos</a></li>
+    {% assign language = page.lang | default: "pt" %}
+    {% assign menu = "menu_" | append: language | append: ".html" %}
+    {% include {{ menu }}  lang = lang %}
     <li class="menu-item"><a href="/about"><span id="about">&#x1F464;/<span style="font-size: 140%;vertical-align:middle;">&#x2709;</span></span></a></li>
 </ul>

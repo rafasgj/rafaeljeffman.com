@@ -10,11 +10,13 @@
     <body>
         <div id="con">
             <div id="header">
-                {% include header.html %}
+                {% include header.html lang = page.lang %}
             </div>
             <div id="contents">
                 <!-- h1 class="section-title"  -->
+                {% if page.title %}
                 <div class="section-title">{{ page.title | prepend: "# " | markdownify }}</div>
+                {% endif %}
                 <div class="cardboard">
                     {% for item in page.cards %}
                     <div class="card">

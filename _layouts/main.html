@@ -52,7 +52,7 @@
     <body>
         <div id="con">
             <div id="header">
-                {% include header.html %}
+                {% include header.html lang = page.lang %}
             </div>
             <div id="article-tags">
                 {% for tag in page.tags %}
@@ -63,7 +63,9 @@
                 {% if page.section %}
                     <h1 id="section_header">{{ page.section }}</h1>
                 {% endif %}
-                {{ page.title | prepend: '# ' | markdownify }}
+                {% if page.title %}
+                {{ page.title | prepend: '# ::' | markdownify }}
+                {% endif %}
                 {% if page.date %}
                 <div id="last-update">
                     {% if page.lang == 'en' %}
