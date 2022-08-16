@@ -94,6 +94,8 @@ def parse_E_prime(data):
         if operator not in "+-":
             data.error(f"Unexpected token: '{operator}'.")
         T = parse_T(data)
+        # We don't need the result of the recursion,
+        # only the recuscion itself
         _E_prime = parse_E_prime(data)  # noqa
         return T if operator == "+" else -1 * T
     data.put_back()
@@ -115,6 +117,8 @@ def parse_T_prime(data):
         return None
     if token == Lexer.OPERATOR and operator in "*/":
         F = parse_F(data)
+        # We don't need the result of the recursion,
+        # only the recuscion itself
         _T_prime = parse_T_prime(data)  # noqa
         return F if operator == "*" else 1 / F
     data.put_back()
