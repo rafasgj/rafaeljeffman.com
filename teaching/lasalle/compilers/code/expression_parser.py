@@ -10,7 +10,7 @@
 # T = FT'
 # T' = * FT' | / FT' | &
 # F = ( E ) | num
-# num = [0-9]+(.[0-9]+)?
+# num = [+-]?([0-9]+(.[0-9]+)?|.[0-9]+)(e[0-9]+)+)?)
 
 import re
 
@@ -28,7 +28,7 @@ class Lexer:
         self.data = data
         self.current = 0
         self.previous = -1
-        self.num_re = re.compile(r"[+-]?(\d+(\.\d*)?|\.\d+)")
+        self.num_re = re.compile(r"[+-]?(\d+(\.\d*)?|\.\d+)(e\d+)?")
 
     def __iter__(self):
         """Start the lexer iterator."""
@@ -163,7 +163,8 @@ if __name__ == "__main__":
         "-1 - -2",
         "-1 - 2",
         "4 - 5",
-        "3 - ((8 + 3) * -2)"
+        "3 - ((8 + 3) * -2)",
+        "2.01e2 - 200"
     ]
     for expression in expressions:
         print(f"Expression: {expression}\t Result: {parse(expression)}")
