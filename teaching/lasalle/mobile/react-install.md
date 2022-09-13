@@ -3,7 +3,7 @@ title: Instalação do ambiente de desenvolvimento React Native.
 layout: main
 tags:
   - react-native
-  - dispositivos móveis
+  - dispositivos moveis
   - linux
 copy: 2022
 date: 2022-09-11
