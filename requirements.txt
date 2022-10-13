@@ -1,1 +1,5 @@
-pyaml
+pyyaml
+pre-commit
+flake8
+yamllint
+black
