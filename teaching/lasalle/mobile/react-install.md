@@ -17,7 +17,7 @@ Este tutorial mostar como instalar o ambiente de desenvolvimento para Android (u
 
 Para instalar o [React Native](https://reactnative.dev/){:target="_blank"}, você irá precisar instalar o [Node.js](https://nodejs.org){:target="_blank"} e uma série de pacotes utilizando o gerenciador de pacotes do Node, o `npm`.
 
-Para instalar o Node.js em uma distribuição Linux, utilize o [gerenciador de pacotes da sua distribuição](https://nodejs.org/en/download/package-manager/){:target="_blank"}, para as versões recentes do [Fedora Linux](https://getfedora.org){:target="_blank"} utilize `dnf instal npm nodejs watchman` (ao contrario do que indica o site do Node.js). Se você utiliza Windows utilize o [Chocolatey](https://chocolatey.org/){:target="_blank"} um gerenciador de pacotes popular para a plataforma, e se você utiliza macOS, instale o `node` e o `watchman` utilizando o [Homebrew](https://brew.sh) (`brew install node watchman`).
+Para instalar o Node.js em uma distribuição Linux, utilize o [gerenciador de pacotes da sua distribuição](https://nodejs.org/en/download/package-manager/){:target="_blank"}, para as versões recentes do [Fedora Linux](https://getfedora.org){:target="_blank"} utilize `dnf install npm nodejs watchman` (ao contrario do que indica o site do Node.js). Se você utiliza Windows utilize o [Chocolatey](https://chocolatey.org/){:target="_blank"} um gerenciador de pacotes popular para a plataforma, e se você utiliza macOS, instale o `node` e o `watchman` utilizando o [Homebrew](https://brew.sh) (`brew install node watchman`).
 
 É sugerido que se utilize a última versão do Node.js, no entanto, é preciso garantir que a versão seja pelo menos a 14.
 
@@ -27,7 +27,7 @@ Além do Node, você irá precisar, para o desenvolvimento para Android, de uma 
 
 Você também irá precisar do [Android Studio](https://developer.android.com/studio/index.html){:target="_blank"}. Garanta que, pelo menos, os componentes `Android SDK`, `Android SDK Platform` e `Android Virtual Device` serão instalados. Caso não seja possível configurar todos durante a instalação, você poderá configurá-los mais tarde.
 
-Ao iniciar o Android Studio (versão 2021.2.1) pela primeira vez após a configuração, você deverá clicar em _`More actions...`_ e escolher `SDK Manager`, caso não exista a opção, clique em `Customize -> All settings` e selecione `Appeparance & Behavior -> System Settings -> Android SDK`. Selecione a versão `Android 12 (S)` do `Android SDK` (API Level 31), e clique em `Apply`.
+Ao iniciar o Android Studio (versão 2021.2.1 ou 2021.3.1) pela primeira vez após a configuração, você deverá clicar em _`More actions...`_ e escolher `SDK Manager`, caso não exista a opção, clique em `Customize -> All settings` e selecione `Appeparance & Behavior -> System Settings -> Android SDK`. Selecione a versão desejada (no mínimo `Android 12 (S)` do `Android SDK` (API Level 31)), e clique em `Apply`.
 
 Após instalar o Android Studio, configure o seu arquivo `~/.bashrc`, ou `~/.bash_profile`, ou `~/.zprofile` (ou o equivalente do seu _shell_) para conter:
 
