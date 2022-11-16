@@ -64,7 +64,7 @@
                     <h1 id="section_header">{{ page.section }}</h1>
                 {% endif %}
                 {% if page.title %}
-                {{ page.title | prepend: '# ::' | markdownify }}
+                {{ page.title | prepend: '# ' | markdownify }}
                 {% endif %}
                 {% if page.date %}
                 <div id="last-update">
