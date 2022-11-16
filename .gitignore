@@ -4,3 +4,9 @@ _site
 .jekyll-metadata
 vendor
 Gemfile.lock
+
+# python files
+.pylintrc
+__pycache__/
+parser.out
+parsetab.py
