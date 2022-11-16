@@ -1,6 +1,6 @@
 ---
 title: Sobre
-layout: main
+layout: section
 ---
 
 Sou desenvolvedor de software, fotógrafo e quando consigo, professor. Atualmente trabalho junto ao projeto [FreeIPA], pela [Red Hat], com foco principal nos projetos de automação com o [ansible-freeipa] e [Certificate System Role].
@@ -8,8 +8,8 @@ Sou desenvolvedor de software, fotógrafo e quando consigo, professor. Atualment
 Meus trabalhos profissionais como desenvolvedor de software (ao menos parte dele), e como fotógrafo/impressor podem ser encontrados aqui:
 <div class="social">
 <ul>
-    <li><a target="_blank" href="https://instagram.com/rafaeljeffman.fotografia"><span class="fab fa-instagram"></span></a></li>
     <li><a target="_blank" href="https://github.com/rjeffman"><span class="fab fa-github"></span></a></li>
+    <li><a target="_blank" href="https://instagram.com/rafaeljeffman.fotografia"><span class="fab fa-instagram"></span></a></li>
 </ul>
 </div>
 

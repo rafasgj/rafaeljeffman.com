@@ -4,3 +4,4 @@ layout: main
 ---
 
 * [Prova de correção por invariantes de laço](/./teaching/algorithms/loop-invariant)
+* [Exercícios sobre Algoritmos](/./teaching/exercises/algorithms)

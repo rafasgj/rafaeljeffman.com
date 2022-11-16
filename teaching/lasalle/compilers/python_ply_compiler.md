@@ -1,4 +1,5 @@
 ---
+section: Compiladores
 title: Escrevendo um compilador com Python e PLY
 layout: main
 tags:

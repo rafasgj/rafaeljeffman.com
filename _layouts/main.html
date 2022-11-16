@@ -14,10 +14,17 @@
         <link rel="stylesheet" href="/css/syntax.css" />
         <link rel="stylesheet" href="/css/social.css" />
         <link rel="stylesheet" href="/css/responsiveness.css" />
+
+        <!-- Fonts -->
         <script
             src="https://kit.fontawesome.com/f242fbc6b8.js"
             crossorigin="anonymous">
         </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet"> 
 
         <!-- MathJax configuration -->
         <script>
@@ -50,10 +57,10 @@
         <!-- /Highlight.js configuration -->
     </head>
     <body>
+        <div id="header">
+            {% include header.html lang = page.lang %}
+        </div>
         <div id="con">
-            <div id="header">
-                {% include header.html lang = page.lang %}
-            </div>
             <div id="article-tags">
                 {% for tag in page.tags %}
                    <div class="tag"><a href="/tags/{{ tag | downcase | replace: " ", "_" }}">{{ tag }}</a></div>
@@ -61,7 +68,7 @@
             </div>
             <div id="contents">
                 {% if page.section %}
-                    <h1 id="section_header">{{ page.section }}</h1>
+                <div class="section-title">{{ page.section | prepend: "# " | markdownify }}</div>
                 {% endif %}
                 {% if page.title %}
                 {{ page.title | prepend: '# ' | markdownify }}
@@ -82,7 +89,7 @@
                 {% include footer.html %}
             </div>
         </div>
-        <!-- After loading page text, highlight code blocks. -->
+    <!-- After loading page text, highlight code blocks. -->
         <script>hljs.highlightAll();</script>
     </body>
 </html>

@@ -6,25 +6,37 @@
         <link rel="stylesheet" href="/css/site.css">
         <link rel="stylesheet" href="/css/syntax.css" />
         <link rel="stylesheet" href="/css/responsiveness.css" />
+        <link rel="stylesheet" href="/css/social.css" />
+
+        <!-- Fonts -->
+        <script
+            src="https://kit.fontawesome.com/f242fbc6b8.js"
+            crossorigin="anonymous">
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <div id="con">
             <div id="header">
                 {% include header.html lang = page.lang %}
             </div>
-            <div id="contents">
-                <!-- h1 class="section-title"  -->
-                {% if page.title and page.title != "/none" %}
-                <div class="section-title">{{ page.title | prepend: "# " | markdownify }}</div>
-                {% endif %}
-                <div class="cardboard">
-                    {% for item in page.cards %}
-                    <div class="card">
-                        <div class="card-title"><a href="{{ item.link }}">{{ item.title }}</a></div>
-                        <div class="card-abstract">{{ item.content | markdownify }}</div>
-                    </div>
-                    {% endfor %}
+            <!-- h1 class="section-title"  -->
+            {% if page.title and page.title != "/none" %}
+            <div class="section-title">{{ page.title | prepend: "# " | markdownify }}</div>
+            {% endif %}
+            <div class="cardboard">
+                {% for item in page.cards %}
+                <div class="card">
+                    <div class="card-title"><a href="{{ item.link }}">{{ item.title }}</a></div>
+                    <div class="card-abstract">{{ item.content | markdownify }}</div>
                 </div>
+                {% endfor %}
+            </div>
+            <div id="contents">
                 {{ content }}
             </div>
             <div id="footer">

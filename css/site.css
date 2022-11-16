@@ -52,19 +52,29 @@ p {
 }
 
 h1 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     margin-bottom: 40px;
     background-image: linear-gradient(175deg, rgb(0,0,0), rgb(128,128,128));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent !important;
+    font-size: 48px;
 }
 
 h2 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     margin-top: 40px;
+    font-size: 36px;
+}
+
+h2 > a {
+    text-decoration: none;
 }
 
 h3 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     margin-top: 30px;
+    font-size: 24px;
 }
 
 ol > li {
@@ -82,8 +92,8 @@ ol > li {
 
 #con {
     position: relative;
-    top: 0;
-    min-height: 100vh;
+    top: 75px;
+    min-height: calc(100vh - 75px); 
     width: 100%;
     margin: 0;
     padding: 0;
@@ -91,15 +101,19 @@ ol > li {
 }
 
 #header {
+    margin: 0;
     padding: 0 50px;
-    border-bottom: dashed #999 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    /* box-shadow: 0px 2px 7px 3px #dcdcdc; */
+    border: thin solid #888;
+    background-color: #ececec;
+    z-index: 1000;
+    background-image: linear-gradient(5deg, rgb(220,220,220), rgb(215,215,215));    
 }
-
-#header.home {
-    box-shadow: none;
-    border-bottom: none;
-}
-
 #biohazard {
     position: absolute;
     right: 140px;
@@ -113,10 +127,10 @@ ol > li {
 
 
 #site_logo {
-    font-size: 48px;
-    font-weight: 600;
-    float: left;
-    margin-top: 5px;
+    /* font-size: 50px;
+    font-weight: 100; */
+    padding-top: 15px;
+    display: inline-block;
 }
 #site_logo > a {
     text-decoration: none;
@@ -125,24 +139,46 @@ ol > li {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent !important;
+    font-size: 50px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 800;
+    /* font-variant: small-caps; */
+    letter-spacing: -5px;
 }
-#site_logo.home {
+/* #site_logo.home {
     font-size: 72px;
     margin: 0 auto;
     float: none;
     margin-top: 30px;
-}
+} */
 
+#right-menu {
+    margin-right: 0;
+    margin-left: 0;
+    position: absolute;
+    right: 100px;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-variant: small-caps;
+    font-variant-caps: all-petite-caps;
+    font-family: 'Josefin Slab', serif;
+}
 #menu {
-    text-align: right;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-variant: small-caps;
+    font-variant-caps: all-petite-caps;
+    font-family: 'Josefin Slab', serif;
 }
-
 .menu-item {
     list-style: none;
     margin: 5px 10px;
     display: inline-block;
     font-weight: bolder;
-    font-size: 18pt;
     padding: 1px;
 }
 .menu-item a {
@@ -185,7 +221,6 @@ ol > li {
     font-size: 80%;
     margin: 0;
     margin-top: 30px;
-    border-top: 1px dotted #aaa;
     padding: 20px 0;
     height: 40px;
     background: repeating-linear-gradient(-45deg, #f0f0f0 0px, #f0f0f0 5px, #e0e0e0 6px, #e0e0e0 11px, #f0f0f0 12px);
@@ -201,9 +236,13 @@ ol > li {
 }
 
 #contents {
+    margin: 0 auto;
     width: 72ch;
     max-width: 72ch;
-    margin-bottom: 100px;
+    padding-bottom: 120px;
+    font-family: serif;
+    font-weight: 100;
+    font-size: 110%;
 }
 
 #article-tags {
@@ -231,14 +270,18 @@ ol > li {
 }
 
 #section_header {
-    font-size: 42px;
     margin-top: 5px;
     padding-top: 1.5ex;
 }
 
+.section-title {
+    margin: 0 auto;
+    width: 72ch;
+    max-width: 72ch;
+}
+
 .section-title h1 {
     font-size: 32pt;
-    font-weight: bold;
     text-decoration: none;
     background: #fff;
     background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0));
@@ -298,13 +341,13 @@ svg > text {
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 5em;
+    /* margin-bottom: 5em; */
 }
 
 .card {
     margin: 30px;
-    width: 38%;
-    min-height: 130px;
+    max-width: 38%;
+    height: 160px;
     padding: 30px;
     position: relative;
     border: #e0e0e0 thin solid;
@@ -318,7 +361,8 @@ svg > text {
 .card div * p { margin: 0; }
 
 .card-title {
-    font-size: 24pt;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 26pt;
     font-weight: bold;
     color: #333;
     margin-bottom: 15px;

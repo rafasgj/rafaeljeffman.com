@@ -1,8 +1,17 @@
-<div id="site_logo"><a href="/">RafaelJeffman.com</a></div>
+
+<div id="site_logo"><a href="/">Rafael Jeffman</a></div>
 
 <ul id="menu">
     {% assign language = page.lang | default: "pt" %}
     {% assign menu = "menu_" | append: language | append: ".html" %}
     {% include {{ menu }}  lang = lang %}
-    <li class="menu-item"><a href="/about"><span id="about">&#x1F464;/<span style="font-size: 140%;vertical-align:middle;">&#x2709;</span></span></a></li>
+    <li class="menu-item">
+        <a href="/about">Sobre</a>
+    </li>
+</ul>
+
+<ul id="right-menu">
+    <li class="menu-item">
+        <a href="/tags"><span class="fa fa-tags"></span></a>
+    </li>
 </ul>

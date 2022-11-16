@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: section
 cards:
   - title: Ensino
     link: /teaching
@@ -12,5 +12,5 @@ cards:
   - title: Raspberry-Pi
     link: /raspberry
     content: >
-      Gosto muito da do [Raspberry-Pi](https://raspberry.org), por ser um dispositivo pronto para uso que permite criar rapidamente aplicações de teste para sistemas embarcados. Junto aqui algumas experiências que faço com diversas versões do dispositivo.
+      Gosto muito do [Raspberry-Pi](https://raspberry.org), por ser um dispositivo pronto para uso que permite criar rapidamente aplicações de teste para sistemas embarcados. Compartilho aqui algumas experiências que faço com diversas versões do dispositivo.
 ---
