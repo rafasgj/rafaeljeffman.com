@@ -7,20 +7,21 @@ layout: section
 <style>
 ul > li > a {
     border-radius: 15px 15px;
-    background-color: #d92;
+    background-image: linear-gradient(185deg, rgb(192,0,192), rgb(128,0,128)    );    
     color: #f0f0f0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     font-weight: bolder;
     text-align: center;
-    padding: 5px;
-    font-size: 16px;
+    font-size: 24px;
+    padding: 6px 10px;
     text-decoration: none;
     white-space: nowrap;
-    line-height: 20px;
+    line-height: 22px;
 }
 ul > li {
     list-style: none;
     display: inline-block;
-    padding: 5px;
+    padding: 3px;
     margin: 5px auto;
     line-height: 20px;
 }

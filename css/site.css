@@ -1,6 +1,7 @@
 
 html {
     font-family: Montserrat, sans-serif;
+    scroll-padding-top: 85px;
 }
 
 body {
@@ -19,6 +20,7 @@ code {
 pre {
     border: thin solid black;
     padding: 5px 10px;
+    overflow-x: auto !important;
 }
 
 pre > code {
@@ -36,15 +38,18 @@ pre > code {
     text-decoration: none;
     font-weight: bolder;
     font-size: 14pt;
-    background-color: rgb(0,128,0);
+    background-color: rgb(128,0,128);
+    /* background-color: rgb(0,128,0); */
 }
 .download:hover {
     color: rgb(0,128,0);
-    background-color: rgb(0,200,0);
+    background-color: rgb(200,0,200);
+    /*background-color: rgb(0,200,0);*/
 }
 
 a {
-    color: #393;
+    color: #939;
+    /*color: #393; */
     text-decoration: underline;
 }
 
@@ -93,10 +98,11 @@ ol > li {
 
 #con {
     position: relative;
-    top: 75px;
+    /* top: 75px; */
     min-height: calc(100vh - 75px); 
     width: 100%;
     margin: 0;
+    margin-top: 75px;
     padding: 0;
     display: inline-block;
 }
@@ -107,25 +113,13 @@ ol > li {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% - 1px);
     height: 75px;
-    /* box-shadow: 0px 2px 7px 3px #dcdcdc; */
     border: thin solid #888;
     background-color: #ececec;
     z-index: 1000;
     background-image: linear-gradient(5deg, rgb(220,220,220), rgb(215,215,215));    
 }
-#biohazard {
-    position: absolute;
-    right: 140px;
-    top: 50px;
-    font-size: 100px;
-    text-shadow: #333 0 0 8px;
-    font-family: Noto Emoji;
-    color: #0f0;
-    display: none;
-}
-
 
 #site_logo {
     /* font-size: 50px;
@@ -136,7 +130,8 @@ ol > li {
 #site_logo > a {
     text-decoration: none;
     background: #fff;
-    background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0));
+    /* background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0)); */
+    background-image: linear-gradient(185deg, rgb(192,0,192), rgb(128,0,128));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent !important;
@@ -146,12 +141,6 @@ ol > li {
     /* font-variant: small-caps; */
     letter-spacing: -5px;
 }
-/* #site_logo.home {
-    font-size: 72px;
-    margin: 0 auto;
-    float: none;
-    margin-top: 30px;
-} */
 
 #right-menu {
     margin-right: 0;
@@ -185,31 +174,18 @@ ol > li {
 .menu-item a {
     text-decoration: none;
     color: transparent !important;
+    background-image: linear-gradient(185deg, rgb(192,0,192), rgb(128,0,128));
+    /*
     background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0));
-    -webkit-background-clip: text;
+    */
     background-clip: text;
+    -webkit-background-clip: text;
 }
 .menu-item a:hover {
     text-decoration: none;
     color: transparent !important;
-    background-image: linear-gradient(185deg, rgb(0,128,0), rgb(0, 30, 0));
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-#about {
-    background: #000;
-    text-shadow: 0 0 2px #fff;
-    color: transparent !important;
-    background-image: linear-gradient(175deg, rgb(0,192,0), rgb(0,128,0));
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-#about:hover {
-    background: #000;
-    color: transparent !important;
-    background-image: linear-gradient(175deg, rgb(0,192,0), rgb(0,0,20));
-    text-shadow: 0 0 2px #394;
+    /* background-image: linear-gradient(185deg, rgb(0,128,0), rgb(0, 30, 0)); */
+    background-image: linear-gradient(185deg, rgb(128,0,128), rgb(30,0,30));
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -256,18 +232,22 @@ ol > li {
 }
 .tag {
     border-radius: 15px 15px;
-    background-color: #d92;
+    background-color: #92d;
+    background-image: linear-gradient(15deg, rgb(128,0,128), rgb(230,0,230));
     color: #f0f0f0;
     text-align: center;
     display: inline-block;
-    padding: 2px 10px;
+    padding: 4px 10px;
     margin: 2px 0;
-    font-size: 14px;
 }
 
 .tag a {
     color: #f0f0f0;
     text-decoration: none;
+    font-weight: 500;
+    background-image: linear-gradient(15deg, rgb(128,0,128), rgb(230,0,230));
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 16px;
 }
 
 #section_header {
@@ -285,7 +265,8 @@ ol > li {
     font-size: 32pt;
     text-decoration: none;
     background: #fff;
-    background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0));
+    background-image: linear-gradient(185deg, rgb(192,0,192), rgb(128,0,128));
+    /* background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0)); */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent !important;
@@ -313,9 +294,9 @@ blockquote b {
     margin-right: 10px;
 }
 .tag-list + ul > li > a {
+    font-size: 16px;
     color: #222;
     text-decoration: none;
-    font-weight: bold;
 }
 
 div.image {
@@ -347,7 +328,7 @@ svg > text {
 
 .card {
     margin: 30px;
-    max-width: 20%;
+    max-width: max(20%, 280px);
     height: 200px;
     padding: 30px;
     position: relative;
@@ -383,7 +364,7 @@ svg > text {
 }
 .card-abstract ul li::before{
     content: "\1F517";
-    background-image: linear-gradient(185deg, rgb(0,192,0), rgb(0,128,0));
+    background-image: linear-gradient(185deg, rgb(192,0,192), rgb(128,0,128));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent !important;
@@ -407,14 +388,14 @@ svg > text {
     font-size: 14pt;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgb(0, 128, 0);
+    background-color: rgb(128, 0, 128);
     padding: 10px;
     border-radius: 10px 10px;
 }
 
 .read-more a:hover {
-    color: rgb(0, 128, 0);
-    background-color: rgb(0, 200, 0);
+    color: rgb(128, 0, 128);
+    background-color: rgb(200, 0, 200);
 }
 
 .icons > ul > li {

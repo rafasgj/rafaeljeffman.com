@@ -1,10 +1,39 @@
+    @media (min-width: 300px) {
+    .section-title {
+        margin-left: 20px !important;
+        margin-right: auto !important;
+        max-width: calc(100% - 40px);
+    }
+    #contents {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 90%;
+    }
+    #article-tags {
+        display: None;
+    }
+
+    .cardboard {
+        width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .card {
+       max-width: 70% !important;
+       width: 70% !important;
+       height: auto !important;
+    }
+}
+
 @media (min-width: 600px) {
     #contents {
-        /* margin-left: 20px !important;
-        margin-right: 0px; */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 90%
     }
-    #tags {
-        right: 8px;
+    #article-tags {
+        top: 15px;
+        margin-right: 20px;
     }
 
     .card {
@@ -12,7 +41,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
     .menu-item {
         /* font-size: 14px; */
     }
@@ -20,28 +49,75 @@
     #site_logo {
         /* font-size: 18px; */
     }
-    #contents {
-        /* margin-left: auto !important;
-        margin-right: 20% !important; */
+    .cardboard {
+        width: 100%;
     }
-    #tags {
+    #article-tags {
         right: 1% !important;
     }
-
     .card {
-        width: 80% !important;
+        max-width: max(20%, 280px) !important;
+        height: 200px !important;
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 980px) {
     #contents {
-        /* margin: 0 auto 100px auto !important; */
+        margin-left: auto !important;
+        margin-right: 25% !important;
     }
-    #tags {
+    #article-tags {
+        max-width: 20ch;
+        top: 150px;
+        right: max(5%, 5ch) !important;
+    }
+}
+
+@media (min-width: 1250px) {
+    #contents {
+        margin: 0 auto 100px auto !important;
+    }
+    #article-tags {
         right: 5% !important;
     }
-
-    .card {
-        width: 38%;
+    .cardboard {
+        width: 95%;
+    }
+    #con {
+       max-width: 80%;
+       margin-left: 10% !important;
+       margin-right: auto !important;
+    }
+    #footer {
+       left: -15%;
+       width: 102vw;
     }
 }
+
+
+@media (min-width: 1440px) {
+    .cardboard {
+        width: 80%;
+    }
+    #article-tags {
+        right: 10% !important;
+    }
+    #con {
+    }
+}
+
+@media (orientation: portrait) {
+    body { font-size: 150%; }
+    #con {
+      width: 90%;
+      margin-left: 5%;
+    }
+    #footer {
+      width: 118vw;
+      left: -15%;
+    }
+    .card {
+       height: auto !important;
+    }
+}
+
