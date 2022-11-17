@@ -43,7 +43,7 @@ O algoritmo possui um único laço, onde a iteração será executada para cada 
 
 A definição da invariante do laço para a busca linear é:
 
-> O valor v não está na lista A[1..i-1].
+> O valor v não está na lista `A[1..i-1]`.
 
 * **Inicialização**:
     * Antes da primeira iteração, `i = 1` e `A[1..i)` é um conjunto vazio, logo, `v` não pertence ao conjunto, sendo a invariante verdadeira.
@@ -84,7 +84,7 @@ binary_search(A, k):
 
 A invariante do laço pode ser definida como:
 
-> Se `k` está em `A[1..n]``, então `k` está na lista `A[p..q]` que está contida em `A[1..n]`.
+> Se `k` está em `A[1..n]`, então `k` está na lista `A[p..q]` que está contida em `A[1..n]`.
 
 * **Inicialização**:
     * Na inicialização do algorimo, `p = 1` e `q = n`, logo, se `k` esta na lista `A[1..n]`, está na lista `A[p..q]`, sendo a invariante verdadeira.
