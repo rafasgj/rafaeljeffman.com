@@ -21,7 +21,9 @@ def add_keywords_to_index(filename, index, lang_code):
     tags, title = get_doc_keywords(filename, lang_code)
     for tag in tags or []:
         if "/" in tag:
-            raise ValueError(f"Character '/' not valid in a tag. File: {filename}")
+            raise ValueError(
+                f"Character '/' not valid in a tag. File: {filename}"
+            )
         doc_list = index.setdefault(tag.lower(), [])
         doc_list.append((os.path.splitext(filename)[0], title))
 
@@ -52,32 +54,36 @@ with open(f"{tagdir}/index.md", "w") as output:
     print(
         textwrap.dedent(
             """
-        <style>
-        ul > li > a {
-            border-radius: 15px 15px;
-            background-color: #d92;
-            color: #f0f0f0;
-            font-weight: bolder;
-            text-align: center;
-            padding: 5px;
-            font-size: 16px;
-            text-decoration: none;
-            white-space: nowrap;
-            line-height: 20px;
-        }
-        ul > li {
-            list-style: none;
-            display: inline-block;
-            padding: 5px;
-            margin: 5px auto;
-            line-height: 20px;
-        }
-        ul {
-            margin: 0 auto;
-            text-align: center;
-        }
-        </style>
-        """
+<style>
+#contents ul > li > a[doc-tag] {
+    border-radius: 15px 15px;
+    background-image: linear-gradient(175deg, rgb(128,0,128), rgb(192,0,192));
+    color: #f0f0f0;
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 16px;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 20px;
+}
+
+#contents ul > li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px auto;
+    line-height: 20px;
+}
+
+#contents ul {
+    margin: 0 auto;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+</style>
+            """
         ),
         file=output,
     )
@@ -89,10 +95,11 @@ with open(f"{tagdir}/index.md", "w") as output:
         for key in sorted(index.keys()):
             filelist = index[key]
             key_link = key.replace(" ", "_")
-            print(f"* [{key}]({key_link})", file=output)
+            print(f'* [{key}]({key_link}){{:doc-tag="{code}"}}', file=output)
             with open(f"{tagdir}/{key_link}.md", "w") as keyout:
                 print(
-                    f'---\ntitle: Tag "{key}"\nlayout: main\n---\n', file=keyout
+                    f'---\ntitle: Tag "{key}"\nlayout: main\n---\n',
+                    file=keyout,
                 )
                 for filename, title in filelist:
                     print(
