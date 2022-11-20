@@ -5,63 +5,74 @@ layout: section
 
 
 <style>
-ul > li > a {
+#contents ul > li > a[doc-tag] {
     border-radius: 15px 15px;
-    background-image: linear-gradient(185deg, rgb(192,0,192), rgb(128,0,128)    );    
+    background-image: linear-gradient(175deg, rgb(128,0,128), rgb(192,0,192));
     color: #f0f0f0;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
     font-weight: bolder;
     text-align: center;
-    font-size: 24px;
-    padding: 6px 10px;
+    padding: 5px 10px;
+    font-size: 16px;
     text-decoration: none;
     white-space: nowrap;
-    line-height: 22px;
+    line-height: 20px;
 }
-ul > li {
+
+#contents ul > li {
     list-style: none;
     display: inline-block;
-    padding: 3px;
+    padding: 5px;
     margin: 5px auto;
     line-height: 20px;
 }
-ul {
+
+#contents ul {
     margin: 0 auto;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 </style>
 
 
 ## Português
-* [algoritmos](algoritmos)
-* [algoritmos iterativos](algoritmos_iterativos)
-* [análise de algoritmos](análise_de_algoritmos)
-* [compiladores](compiladores)
-* [conjuntos](conjuntos)
-* [dispositivos moveis](dispositivos_moveis)
-* [fedora](fedora)
-* [funcoes](funcoes)
-* [installation](installation)
-* [linux](linux)
-* [network](network)
-* [parser](parser)
-* [ply](ply)
-* [posix](posix)
-* [python](python)
-* [raspberry-pi](raspberry-pi)
-* [react-native](react-native)
-* [relacoes](relacoes)
-* [respostas](respostas)
-* [script](script)
-* [senai](senai)
-* [shell](shell)
-* [shell script](shell_script)
-* [tradução baseada em sintaxe](tradução_baseada_em_sintaxe)
-* [ubuntu](ubuntu)
+* [algoritmos](algoritmos){:doc-tag="pt"}
+* [algoritmos iterativos](algoritmos_iterativos){:doc-tag="pt"}
+* [análise de algoritmos](análise_de_algoritmos){:doc-tag="pt"}
+* [cloud](cloud){:doc-tag="pt"}
+* [code interview](code_interview){:doc-tag="pt"}
+* [compiladores](compiladores){:doc-tag="pt"}
+* [conceitos basicos](conceitos_basicos){:doc-tag="pt"}
+* [conceitos básicos](conceitos_básicos){:doc-tag="pt"}
+* [conjuntos](conjuntos){:doc-tag="pt"}
+* [dispositivos moveis](dispositivos_moveis){:doc-tag="pt"}
+* [exercicios](exercicios){:doc-tag="pt"}
+* [exercícios](exercícios){:doc-tag="pt"}
+* [expressões regulares](expressões_regulares){:doc-tag="pt"}
+* [fedora](fedora){:doc-tag="pt"}
+* [funcoes](funcoes){:doc-tag="pt"}
+* [installation](installation){:doc-tag="pt"}
+* [linux](linux){:doc-tag="pt"}
+* [network](network){:doc-tag="pt"}
+* [parser](parser){:doc-tag="pt"}
+* [ply](ply){:doc-tag="pt"}
+* [posix](posix){:doc-tag="pt"}
+* [python](python){:doc-tag="pt"}
+* [raspberry-pi](raspberry-pi){:doc-tag="pt"}
+* [react-native](react-native){:doc-tag="pt"}
+* [relacoes](relacoes){:doc-tag="pt"}
+* [respostas](respostas){:doc-tag="pt"}
+* [script](script){:doc-tag="pt"}
+* [senai](senai){:doc-tag="pt"}
+* [shell](shell){:doc-tag="pt"}
+* [shell script](shell_script){:doc-tag="pt"}
+* [tradução baseada em sintaxe](tradução_baseada_em_sintaxe){:doc-tag="pt"}
+* [ubuntu](ubuntu){:doc-tag="pt"}
+* [virtualização](virtualização){:doc-tag="pt"}
 
 ## English
-* [ansible](ansible)
-* [ansible-freeipa](ansible-freeipa)
-* [freeipa](freeipa)
-* [trust](trust)
-* [windows active directory](windows_active_directory)
+* [ansible](ansible){:doc-tag="en"}
+* [ansible-freeipa](ansible-freeipa){:doc-tag="en"}
+* [freeipa](freeipa){:doc-tag="en"}
+* [trust](trust){:doc-tag="en"}
+* [windows active directory](windows_active_directory){:doc-tag="en"}
