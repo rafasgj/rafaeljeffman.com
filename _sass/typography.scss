@@ -185,3 +185,14 @@ $flex_nav_breakpoint: 1024px;
   // font-variant-caps: all-petite-caps;
   font-weight: 300;
 }
+
+/* Download button */
+.download {
+  float: right;
+  font-size: 120%;
+  margin-left: -2em;
+  border-radius: 25px;
+  padding: 8px;
+  padding-top: 6px;
+  border: 2px dotted rgb(192, 0, 192);
+}
