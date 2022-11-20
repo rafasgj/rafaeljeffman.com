@@ -1,0 +1,61 @@
+- title: "Home"
+  path: ""
+
+- title: "Sobre"
+  path: "about.html"
+  section: "Sobre"
+
+- title: "Ensino"
+  path: "teaching/"
+  section: Ensino
+
+  subitems:
+
+  - title: "Algoritmos"
+    path: "algorithms/"
+    section: Algoritmos
+
+  - title: "Conceitos Básicos"
+    path: "basics/"
+
+    subitems:
+
+    - title: "Conceitos básicos sobre conjuntos e relações"
+      path: "set-concepts.html"
+
+  - title: "Compiladores"
+    path: "lasalle/compilers/"
+
+    subitems:
+    - title: "Desenvolvendo um compilador com Python e PLY"
+      path: python_ply_compiler.html
+
+  - title: 'Desenvolvimento Móvel'
+    path: "lasalle/mobile/"
+
+    subitems:
+    - title: "Instalação do ambiente de desenvolvimento React Native"
+      path: react-install.html
+
+  - title: "Linux"
+    path: "teaching/senai/soca"
+
+- title: "Raspberry-Pi"
+  path: "raspberry/"
+
+  subitems:
+
+  - title: "Instalação de um Sistema Operacional no Raspberry Pi 4"
+    path: "os-installation.html"
+
+- tile: "Projects"
+  path: "projects/"
+
+  subitems:
+
+  - title: "FreeIPA"
+    path: "freeipa/"
+
+    subitems:
+    - title: "Creating a test lab for FreeIPA-AD trust"
+      path: "enn/basic-lab-ad-trust.md"
