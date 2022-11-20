@@ -3,15 +3,14 @@ $section-title-bg: linear-gradient(175deg, rgb(192,0,192), rgb(30,0,30));
 $inverted-title-bg: linear-gradient(175deg, rgb(128,0,128), rgb(192,0,192));
 
 $menu-font: 'Josefin Slab', serif;
-
 $title-font: 'Yanone Kaffeesatz', sans-serif;
 $code-font: 'Cutive Mono', monospace;
 
 $link-color: #b000b0;
 
 
-$normal-font-size: calc((.4em + .25vmin) + (.4em + .25vmax));
-$small-font-size: calc((.4em + .25vmin) + (.4em + .15vmax));
+$normal-font-size: calc((.4em + .20vmin) + (.4em + .20vmax));
+$small-font-size: calc((.4em + .15vmin) + (.4em + .15vmax));
 
 $h1-font-size: calc((.4em + 1.2vmin) + (.4em + 1.2vmax));
 $h2-font-size: calc((.4em + .8vmin) + (.4em + .8vmax));
@@ -47,8 +46,12 @@ $h6-font-size: calc((.4em + .20vmin) + (.4em + .20vmax));
   color: transparent !important;
 }
 
+@mixin code-font {
+  font-family: $code-font;
+  font-size: $normal-font-size;
+}
 
-body {
+* {
   @include normal-font;
 }
 
@@ -58,7 +61,7 @@ a {
 }
 
 p {
-  letter-spacing: 0.6px;
+  letter-spacing: 0.3px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -99,7 +102,10 @@ blockquote {
 }
 
 code {
-  font-size: $normal-font-size;
+  @include code-font;
+  * {
+    @include code-font;
+  }
 }
 
 #copyright {
@@ -107,22 +113,33 @@ code {
 }
 
 #site-logo{
-    @include logo-font;
-    background-image: $logo-title-bg;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent !important;
-    text-decoration: none;
+    a {
+      @include logo-font;
+      font-weight: 800;
+      font-size: 50px;
+      background-image: $logo-title-bg;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent !important;
+      text-decoration: none;
+      padding-right: 1ch;
+    }
 }
 
 /** CARDS **/
 
 .card-title {
-  @include title-font;
-  font-size: $h3-font-size;
-  font-weight: 600;
   a {
-    @include logo-bg;
+    @include title-font;
+    font-size: $h3-font-size;
+    font-weight: 600;
+      @include logo-bg;
+  }
+}
+
+.card-abstract {
+  * {
+    @include normal-font;
   }
 }
 
@@ -137,7 +154,6 @@ code {
 
 #search-submit {
   font-size: 20px;
-
   > span {
     @include logo-bg;
   }
@@ -156,14 +172,16 @@ code {
 /** MENU **/
 $flex_nav_breakpoint: 1024px;
 .nav ul {
-  @include logo-font;
+  a:not(#menu-tag a) {
+    font-family: $menu-font;
+    @media(min-width:$flex_nav_breakpoint) {
+      font-size: 20px;    
+    }
+  }
   letter-spacing: 0.3px;
   font-size: 30px;
   letter-spacing: 0px;
   font-variant: small-caps;
   // font-variant-caps: all-petite-caps;
   font-weight: 300;
-  @media(min-width:$flex_nav_breakpoint) {
-    font-size: 20px;    
-  }
 }
