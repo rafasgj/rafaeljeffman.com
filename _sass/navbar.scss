@@ -1,0 +1,231 @@
+
+
+.container: {
+    margin: 0 auto;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    background-color: #293b49;
+    align-items: stretch;
+    height: 4.25rem;
+  
+    .container {
+        display: flex;
+        
+        @media (min-width: 768px) {
+            max-width: 740px
+            width: 740px
+        }
+        @media screen and (min-width: 1088px) {
+            max-width: 960px;
+            width: 960px;
+        }
+        > .navbar-item:last-child {
+            margin-left: auto
+        }
+
+    &-brand {
+        display: flex;
+        align-items: stretch;
+    }
+    
+    .navbar-burger {
+        color: #ccc;
+        cursor: pointer;
+        display: block;
+        height: 3.25rem;
+        position: relative;
+        width: 3.25rem;
+        margin-left: auto;
+        align-self: center;
+
+        span {
+            background-color: currentColor;
+            display: block;
+            height: 1px;
+            left: calc(50% - 8px);
+            position: absolute;
+            width: 16px;
+    
+            &:nth-child(1) {
+                top: calc(50% - 6px);
+            }
+            &:nth-child(2) {
+                top: calc(50% - 1px);
+            }
+            &:nth-child(3) {
+                top: calc(50% + 4px);
+            }
+        }
+    }
+    .navbar-item {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    &-item, &-toggle {
+        display: flex;
+        text-decoration: none;
+        color: #fff;
+        align-items: center;
+        padding-left: .75rem;
+        padding-right: .75rem;
+    }
+    &:hover {
+        background-color: rgba(0,0,0,.1);
+        color: #fff;
+    }
+
+    &-stack {
+        display: flex;
+    }
+    a {
+        color: white;
+    }
+    &:hover {
+        background-color: rgba(0,0,0,.1);
+        color: #fff;
+    }
+
+    /* mobile */
+    &-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        min-height: 100vh;
+        width: 16rem;
+        padding-top: .75rem;
+        background-color: #f8f9fa;
+        box-shadow: 4px 0 20px rgba(0,0,0,.1);
+        transition: .5s;
+        transform: translateX(-102%);
+    }
+
+    &.is-active {
+        transform: translateX(0);
+    }
+
+    .navbar-item {
+        color: #333;
+    }
+  
+    &-start,
+    &-end,
+    &-stack {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-item {
+        padding: .75rem .75rem;
+    }
+
+    &-toggle {
+        display: none;
+        padding: .75rem .75rem;
+        align-items: stretch;
+    }
+}
+
+// tablet
+@media (min-width: 768px) {
+    .navbar {
+        &-start {
+            flex-grow: 1;
+        }
+        
+        .navbar-burger {
+            display: none;
+        }
+        
+        &-menu {
+            display: flex;
+            position: static;
+            min-height: 0;
+            flex-direction: inherit;
+            flex-grow: 1;
+            flex-shrink: 0;
+            padding: 0;
+            align-items: stretch;
+            background-color: transparent;
+            transform: translateX(0);
+        }
+        
+        .navbar-item {
+            color: #fff;
+        }
+    
+        &-start,
+        &-end {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &-stack {
+            flex-direction: column;
+            width: 10rem;
+        }
+        
+        &:after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        .navbar-toggle {
+            display: flex;
+            min-height: 4.25rem;
+            align-items: center;
+        }
+            
+        a.navbar-item {
+            display: none;
+            width: auto;
+            color: #333;
+            transition: .5s;
+            position: relative;
+            background-color: #fff;
+            
+            &:hover {
+                background-color: #f0f0f0;
+            }
+            
+            &.is-active {
+                display: block;
+            }
+        }
+    }
+}
+
+// desktop
+@media (min-width: 1088px) {
+    .navbar {
+        .container  {
+            .navbar-menu {
+                 margin-right: 0;
+            }
+        }
+    }
+      
+    &-stack {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+      
+        .navbar-toggle {
+            display: none;
+        }
+
+        a.navbar-item, 
+        a.navbar-item.is-active {
+            display: flex;
+            background-color: transparent;
+            color: #fff;
+        }
+    }
+}

@@ -1,17 +1,51 @@
-
-<div id="site_logo"><a href="/">Rafael Jeffman</a></div>
-
-<ul id="menu">
-    {% assign language = page.lang | default: "pt" %}
-    {% assign menu = "menu_" | append: language | append: ".html" %}
-    {% include {{ menu }}  lang = lang %}
-    <li class="menu-item">
-        <a href="/about">Sobre</a>
-    </li>
-</ul>
-
-<ul id="right-menu">
-    <li class="menu-item">
-        <a href="/tags"><span class="fa fa-tags"></span></a>
-    </li>
-</ul>
+<div id="header">
+<div id="site-logo"><a href="/">Cool Title Here</a></div>
+<nav role="navigation" class="nav navigation">
+    <input class="trigger input-toggler" type="checkbox" id="mainNavButton" />
+    <label for="mainNavButton" class="menu-toggler">
+                      <span class="menu-toggler__line"></span>
+                      <span class="menu-toggler__line"></span>
+                      <span class="menu-toggler__line"></span>
+    </label>
+    <ul>
+      <li id="menu-home"><a href="/">Home</a></li>
+      {% if page.lang == "en" %}
+      {% include menu_en.html %}
+      {% else %}
+      {% include menu_pt.html %}
+      {% endif %}
+      <li class="separator">&nbsp;</li>
+      <li>
+        <a href="/about">
+          {% if page.lang == "en" %}
+          About
+          {% else %}
+          Sobre
+          {% endif %}
+        </a>
+      </li>
+      <li>
+        <!-- <div id="#search-bar">
+          <form id="search-form" action="/search" method="get">
+              <input id="search-input" class="search-input" type="text" name="search" placeholder="Pesquisa" />
+              <input type="hidden" name="lang" value="{{ page.lang }}" />
+              <button id="search-submit"><span class="fa fa-search"></span></button>
+          </form>
+        </div> -->
+        <a id="search-link" href="/search">
+          {% if page.lang == "en" %}
+          Search
+          {% else %}
+          Pesquisa
+          {% endif %}
+        </a>
+      </li>
+      <li>
+        <a id="menu-tags" href="/tags">
+            <span id="tag-text">Tags</span>
+            <span id="tag-icon" class="fa fa-tags"></span>
+        </a>
+      </li>
+    </ul>
+</nav>
+</div>

@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="utf-8">
-        <title>RafaelJeffman.com</title>
-        <link rel="stylesheet" href="/css/site.css" />
-        <link rel="stylesheet" href="/css/responsiveness.css" />
-        <script
-            src="https://kit.fontawesome.com/f242fbc6b8.js"
-            crossorigin="anonymous">
-        </script>
+        {% include common_head.html %}
+        {% include styles.html %}
     </head>
     <body>
         <div id="con">
-            <div id="header" class="home">
-                <div id="site_logo" class="home"><a href="/">RafaelJeffman.com</a></div>
-                <div id="biohazard">
-                    &#x1f4bb; &#x1f4f7;
-                </div>
+            <div id="header">
+                {% include header.html lang = page.lang %}
             </div>
-            <div class="cardboard">
+            <div id="cardboard">
                 {% for item in page.cards %}
                 <div class="card">
                     <div class="card-title"><a href="{{ item.link }}">{{ item.title | markdownify }}</a></div>

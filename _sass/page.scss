@@ -1,0 +1,361 @@
+$header-height: 5em;
+$footer-height: 3em;
+
+$header-gradient: linear-gradient(5deg, rgb(220,220,220), rgb(215,215,215));
+$header-gradient-hover: linear-gradient(5deg, rgb(220,220,220), rgb(240,240,240));
+
+$blockquote-bg: #eee;
+$blockquote-fg: #444;
+$blockquote-border: solid 5px #222;
+
+$content-width: 72ch;
+$content-max-width: 90%;
+
+@import "colors";
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+blockquote {
+    background: $blockquote-bg;
+    color: $blockquote-fg;
+    padding: 1px 10px;
+    border-left: $blockquote-border;
+}
+
+#con {
+    position: relative;
+    padding-bottom: 3em;
+    @media screen and (min-width: 768px) {
+        top: calc(#{$header-height} + 1em);
+    }
+}
+
+#contents {
+    margin: 0 auto;
+    padding: 0;
+    width: $content-width;
+    max-width: $content-max-width;
+}
+
+#section-title {
+    margin: 0 auto;
+    padding: 0;
+    width: $content-width;
+    max-width: $content-max-width;
+}
+
+#footer {
+    /* Goal s to display on the bottom of the body. */
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    height: $footer-height;
+    margin: 0 auto;
+    text-align: center;
+    #copyright {
+    }
+}
+
+#header {
+    position: relative;
+    margin: 0;
+    width: calc(100% - 2px); // client area - border size
+    height: $header-height;
+    background: $header-gradient;
+    border: 1px solid #999;
+
+    @media screen and (min-width: 768px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;  // ensure it's on top of everything.            
+    }
+}
+
+#site-logo {
+    display: inline-block;
+    margin: 20px;
+}
+
+#article-tags {
+    display: none;
+}
+
+// search
+#search-form {
+    border: solid 1px #aaa;
+    border-radius: 25px;
+    background-color: #fafafa;
+    padding: 4px 6px;
+    text-align: center;
+    max-width: 50%;
+    margin: 0 auto;
+
+    > input {
+        border: none;
+        width: 80%;
+        margin: 0 auto;
+        font-size: 125%;
+    }
+}
+
+#search-input {
+    background-color: #fafafa;
+
+    &:focus {
+        background-color: #fafafa;
+        outline: none;
+        box-shadow: none;
+        border: dotted 1px #444 !important;
+    }
+}
+
+#search-submit {
+    border: none;
+    background: none;
+    background-color: transparent !important;  
+}
+
+.search-item {
+    margin-bottom: 1.5em;
+}
+.search-item .search-excerpt {
+    margin-left: 3em;
+    margin-top: 0.3em;
+}
+
+// .separator {
+//     display: inline;
+//     flex: 1 1 auto;
+// }
+
+// navbar
+$toggle-size: 1em;
+$toggle-right: 0.6em;
+
+$flex_nav_breakpoint: 1024px;
+$flex_nav_subNavWidth: 12.5em;
+
+.nav {
+    z-index: 1000;
+    position: fixed;
+    right: 4em;
+    top: 0.5em;
+    // min-width: 10em;
+    max-width: 100%; // 100% - 3em
+
+    .navigation li:last-of-type a {
+      border-bottom: none;
+    }
+
+    // Tags entry.
+    #menu-tags {
+        #tag-icon { display: none; }
+        #tag-text { display: inline; }
+        @media(min-width: $flex_nav_breakpoint) {
+            #tag-icon { display: inline; }
+            #tag-text { display: none; }
+        }
+    }
+    // first level
+    ul {
+        position: relative;
+        // right: 1em;
+        box-shadow: 0px 2px 4px 2px #aaa;
+        border: solid thin #666;
+        display: none;
+        width: 110%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            &.separator { display: none; }
+            a {
+                white-space: nowrap;
+                display: block;
+                padding: 0.3em 0.7em;
+                text-decoration: none;
+                background: $header-gradient;
+                &:hover {
+                  background: $header-gradient-hover !important;
+                }
+            }
+            // &:last-of-type {
+            //     a {
+            //         border-right: 0;
+            //     }
+            // }
+            // 2nd level
+            ul {
+                left: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+                // background: $header-gradient;
+                // &:hover {
+                //     background: $header-gradient;
+                // }  
+                li {
+                    a {
+                        display: none;
+                        // white-space: nowrap;
+                        @media(min-height: 460px) {
+                            display: block;
+                            padding-left: 1.5em;
+                        }
+                    }
+                    // 3rd level
+                    ul {
+                        li {
+                            display: none;
+                            // white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        } //li
+    }
+
+    input.trigger {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        &:checked ~ ul,
+        &:checked ~ ul li ul {
+            display: block;
+            @media(min-width: $flex_nav_breakpoint) {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        // Turns the hamburger bar into an x (and back)
+        &:checked ~ .menu-toggler .menu-toggler__line:nth-child(1) {
+          transform: translateY($toggle-size/5*2) rotate(45deg);
+        }
+        &:checked ~ .menu-toggler .menu-toggler__line:nth-child(2) {
+          opacity: 0;
+        }
+        &:checked ~ .menu-toggler .menu-toggler__line:nth-child(3) {
+          transform: translateY($toggle-size/5*-2) rotate(-45deg);
+        }
+    }
+    
+    label {
+        border: thick solid white;
+        text-align: center;
+        background-color: white;
+        box-shadow: 0px 0px 4px 4px #ccc;
+
+        .menu-toggler__line {
+          height: ($toggle-size/5);
+          background: $logo-title-bg;
+          position: absolute;
+          left: 0;
+          right: 0;
+          transition: transform, opacity;
+          transition-duration: 0.5s, .25s;
+        }
+        // places the middle bar in the middle
+        .menu-toggler__line:nth-child(2) {
+          top: ($toggle-size/5*2);
+        }
+        // places the bottom bar at the bottom
+        .menu-toggler__line:nth-child(3) {
+          top: ($toggle-size/5*4);
+        }
+    }
+    
+    // bigger screens
+    @media(min-width:$flex_nav_breakpoint) {
+        right: 0.5em;
+        top: 0;
+        left: 300px;
+        margin-top: calc(50px - 22px); // Logo font size - "something"
+        #menu-home { display: none; }
+        ul {
+            max-width: 100%;
+            box-shadow: none;
+            border: none;
+            display: flex;
+            flex-direction: row;
+            li {
+                position: relative;
+                text-align: center;
+                &:not(.separator) { flex: 0; }
+                &.separator {
+                    flex: 1 !important;
+                    display: block;
+                }
+                a { padding: 0.7em; }
+                // 2nd Level - drop down
+                ul {
+                    border: solid thin rgb(192,192,192);
+                    box-shadow: 1px 3px 3px 1px #999;
+                    display: none !important;
+                    position: absolute;
+                    left: 0;
+                    margin: 0 !important;
+                    min-width: $flex_nav_subNavWidth;
+                    z-index: 200;
+                    li {
+                        left: 0;
+                        text-align: left;
+                        white-space: wrap;
+                        background: $header-gradient;
+                        a {
+                            padding: 3px 0.5em !important;
+                        }
+                        // third level - drop right
+                        ul {
+                            z-index: 300;
+                            top: 0.5em;
+                            left: calc(#{$flex_nav_subNavWidth} - .3em);
+                            li {
+                                display: block !important;
+                                a {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                } // ul 2nd level
+                &:hover > ul {
+                    display: block !important;
+                }
+            } //li
+        } //ul
+        label {
+            display: none;
+        }
+    }
+    #search-bar {
+        display: block;
+        flex: 1;
+        min-width: 20ch !important;
+        width: 200px;
+    }
+}
+  
+.input-toggler {
+    display: none;
+}
+.menu-toggler {
+    display: block;
+    width: $toggle-size;
+    height: $toggle-size;
+    position: fixed;
+    top: 0.6em;
+    right: $toggle-right;
+    cursor: pointer;
+}

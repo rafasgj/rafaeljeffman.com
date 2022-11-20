@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="utf-8">
-        <title>{{ page.title }}</title>
-        <link rel="stylesheet" href="/css/site.css">
-        <link rel="stylesheet" href="/css/syntax.css" />
-        <link rel="stylesheet" href="/css/responsiveness.css" />
-        <link rel="stylesheet" href="/css/social.css" />
-
-        <!-- Fonts -->
-        <script
-            src="https://kit.fontawesome.com/f242fbc6b8.js"
-            crossorigin="anonymous">
-        </script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet"> 
+        {% include common_head.html page = page %}
+        {% include styles.html %}
     </head>
     <body>
+        -{{ page.lang }}-
+        {% include header.html lang=page.lang %}
         <div id="con">
-            <div id="header">
-                {% include header.html lang = page.lang %}
-            </div>
             <!-- h1 class="section-title"  -->
             {% if page.title and page.title != "/none" %}
-            <div class="section-title">{{ page.title | prepend: "# " | markdownify }}</div>
+            <div id="section-title">{{ page.title | prepend: "# " | markdownify }}</div>
             {% endif %}
-            <div class="cardboard">
+            <div id="cardboard">
                 {% for item in page.cards %}
                 <div class="card">
                     <div class="card-title"><a href="{{ item.link }}">{{ item.title }}</a></div>
@@ -43,6 +26,7 @@
             <div id="footer">
                 {% include footer.html %}
             </div>
-        </div>
+       </div>
+       <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     </body>
 </html>
