@@ -9,12 +9,24 @@ $code-font: 'Cutive Mono', monospace;
 
 $link-color: #b000b0;
 
+
+$normal-font-size: calc((.4em + .25vmin) + (.4em + .25vmax));
+$small-font-size: calc((.4em + .25vmin) + (.4em + .15vmax));
+
+$h1-font-size: calc((.4em + 1.2vmin) + (.4em + 1.2vmax));
+$h2-font-size: calc((.4em + .8vmin) + (.4em + .8vmax));
+$h3-font-size: calc((.4em + .5vmin) + (.4em + .5vmax));
+$h4-font-size: calc((.4em + .35vmin) + (.4em + .35vmax));
+$h5-font-size: calc((.4em + .25vmin) + (.4em + .25vmax));
+$h6-font-size: calc((.4em + .20vmin) + (.4em + .20vmax));
+
+
 @import "colors";
 
 @mixin normal-font {
   font-weight: 400;
   font-family: 'Montserrat', serif;
-  font-size: 18px;
+  font-size: $normal-font-size;
 }
 
 @mixin title-font {
@@ -34,6 +46,7 @@ $link-color: #b000b0;
   background-clip: text;
   color: transparent !important;
 }
+
 
 body {
   @include normal-font;
@@ -58,25 +71,25 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin-bottom: 40px;
-  font-size: 48px;
+  font-size: $h1-font-size;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: $h2-font-size;
 }
 
 h3 {
-  font-size: 34px;
+  font-size: $h3-font-size;
 }
 
 h4 {
-  font-size: 26px;
+  font-size: $h4-font-size;
 }
 
 #section-title {
   h1 {
     background-image: $section-title-bg;
-    font-size: 42px;
+    font-size: $h1-font-size;
     font-weight: 600;
   }
 } 
@@ -86,11 +99,11 @@ blockquote {
 }
 
 code {
-  font-size: 18px;
+  font-size: $normal-font-size;
 }
 
 #copyright {
-  font-size: 12px;
+  font-size: $small-font-size;
 }
 
 #site-logo{
@@ -106,22 +119,11 @@ code {
 
 .card-title {
   @include title-font;
-  font-size: 32px;
+  font-size: $h3-font-size;
   font-weight: 600;
   a {
     @include logo-bg;
   }
-}
-
-/** MENU **/
-.nav ul {
-  @include logo-font;
-  letter-spacing: 0.3px;
-  font-size: 20px;
-  letter-spacing: 0px;
-  font-variant: small-caps;
-  font-variant-caps: all-petite-caps;
-  font-weight: 300;
 }
 
 /* search */
@@ -149,4 +151,19 @@ code {
 
 .search-item .search-excerpt {
   @include normal-font;
+}
+
+/** MENU **/
+$flex_nav_breakpoint: 1024px;
+.nav ul {
+  @include logo-font;
+  letter-spacing: 0.3px;
+  font-size: 30px;
+  letter-spacing: 0px;
+  font-variant: small-caps;
+  // font-variant-caps: all-petite-caps;
+  font-weight: 300;
+  @media(min-width:$flex_nav_breakpoint) {
+    font-size: 20px;    
+  }
 }

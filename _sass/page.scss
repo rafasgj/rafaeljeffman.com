@@ -151,7 +151,7 @@ $flex_nav_subNavWidth: 12.5em;
     z-index: 1000;
     position: fixed;
     right: 4em;
-    top: 0.5em;
+    top: 0.75em;
     // min-width: 10em;
     max-width: 100%; // 100% - 3em
 
@@ -191,21 +191,12 @@ $flex_nav_subNavWidth: 12.5em;
                   background: $header-gradient-hover !important;
                 }
             }
-            // &:last-of-type {
-            //     a {
-            //         border-right: 0;
-            //     }
-            // }
             // 2nd level
             ul {
                 left: 0;
                 box-shadow: none;
                 width: 100%;
                 border: none;
-                // background: $header-gradient;
-                // &:hover {
-                //     background: $header-gradient;
-                // }  
                 li {
                     a {
                         display: none;
