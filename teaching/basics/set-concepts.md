@@ -5,7 +5,7 @@ tags:
   - conjuntos
   - relacoes
   - funcoes
-title: Conceitos básicos de conjuntos e relações
+title: Conceitos básicos sobre conjuntos e relações
 copy: 2022
 date: 2022-03-07
 ---

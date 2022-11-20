@@ -57,6 +57,7 @@ def p_other_statement(prod):  # noqa: D205, D400, D403, D415
             append_node(node, prod[2])
         prod[0] = node
 
+
 def p_expression(prod):  # noqa: D205, D400, D403, D415
     """
     expression : value_expr

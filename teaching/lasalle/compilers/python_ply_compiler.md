@@ -1,6 +1,6 @@
 ---
 section: Compiladores
-title: Escrevendo um compilador com Python e PLY
+title: Desenvolvendo um compilador com Python e PLY
 layout: main
 tags:
   - compiladores
