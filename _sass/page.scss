@@ -135,17 +135,12 @@ blockquote {
     margin-top: 0.3em;
 }
 
-// .separator {
-//     display: inline;
-//     flex: 1 1 auto;
-// }
-
 // navbar
 $toggle-size: 1em;
 $toggle-right: 0.6em;
 
 $flex_nav_breakpoint: 1024px;
-$flex_nav_subNavWidth: 8em;
+$flex_nav_subNavWidth: 9em;
 
 .nav {
     z-index: 1000;
