@@ -9,15 +9,15 @@ $code-font: 'Cutive Mono', monospace;
 $link-color: #b000b0;
 
 
-$normal-font-size: calc((.4em + .15vmin) + (.4em + .15vmax));
-$small-font-size: calc((.4em + .10vmin) + (.4em + .10vmax));
+// $normal-font-size: calc((.4em + .15vmin) + (.4em + .15vmax));
+// $small-font-size: calc((.4em + .10vmin) + (.4em + .10vmax));
 
-$h1-font-size: calc((.4em + 1.2vmin) + (.4em + 1.2vmax));
-$h2-font-size: calc((.4em + .8vmin) + (.4em + .8vmax));
-$h3-font-size: calc((.4em + .5vmin) + (.4em + .5vmax));
-$h4-font-size: calc((.4em + .35vmin) + (.4em + .35vmax));
-$h5-font-size: calc((.4em + .25vmin) + (.4em + .25vmax));
-$h6-font-size: calc((.4em + .20vmin) + (.4em + .20vmax));
+// $h1-font-size: calc((.4em + 1.2vmin) + (.4em + 1.2vmax));
+// $h2-font-size: calc((.4em + .8vmin) + (.4em + .8vmax));
+// $h3-font-size: calc((.4em + .5vmin) + (.4em + .5vmax));
+// $h4-font-size: calc((.4em + .35vmin) + (.4em + .35vmax));
+// $h5-font-size: calc((.4em + .25vmin) + (.4em + .25vmax));
+// $h6-font-size: calc((.4em + .20vmin) + (.4em + .20vmax));
 
 
 @import "colors";
@@ -25,7 +25,7 @@ $h6-font-size: calc((.4em + .20vmin) + (.4em + .20vmax));
 @mixin normal-font {
   font-weight: 300;
   font-family: 'Montserrat', serif;
-  font-size: $normal-font-size;
+  // font-size: $normal-font-size;
 }
 
 @mixin title-font {
@@ -48,7 +48,9 @@ $h6-font-size: calc((.4em + .20vmin) + (.4em + .20vmax));
 
 @mixin code-font {
   font-family: $code-font;
-  font-size: $normal-font-size;
+  font-size: 110%;
+  letter-spacing: -0.5px;
+  // font-size: $normal-font-size;
 }
 
 * {
@@ -77,28 +79,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin-bottom: 40px;
-  font-size: $h1-font-size;
+  margin-bottom: 20px;
+  font-size: 250%;
 }
 
 h2 {
-  font-size: $h2-font-size;
+  font-size: 220%;
 }
 
 h3 {
-  font-size: $h3-font-size;
+  font-size: 180%;
 }
 
 h4 {
-  font-size: $h4-font-size;
+  font-size: 150%;
 }
 
 #section-title {
   h1 {
     background-image: $section-title-bg;
-    font-size: $h1-font-size;
     font-weight: 600;
   }
+  &+h1 {
+    font-size: 300%;
+  } 
 } 
 
 blockquote {
@@ -113,7 +117,7 @@ code {
 }
 
 #copyright {
-  font-size: $small-font-size;
+  // font-size: $small-font-size;
 }
 
 #site-logo{
@@ -135,7 +139,7 @@ code {
 .card-title {
   a {
     @include title-font;
-    font-size: $h3-font-size;
+    // font-size: $h3-font-size;
     font-weight: 600;
       @include logo-bg;
   }

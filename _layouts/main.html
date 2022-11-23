@@ -45,8 +45,7 @@
     </head>
     <body>
         <div id="header">
-            -{{ page.lang }}-
-            {% include header.html lang=page.lang %}
+            {% include header.html lang = page.lang %}
         </div>
         <div id="con">
             <div id="article-tags">
@@ -73,9 +72,9 @@
                 {% endif %}
                 {{ content }}
             </div>
-            <div id="footer">
-                {% include footer.html %}
-            </div>
+        </div>
+        <div id="footer">
+            {% include footer.html %}
         </div>
 <!-- After loading page text, highlight code blocks. -->
         <script>hljs.highlightAll();</script>
