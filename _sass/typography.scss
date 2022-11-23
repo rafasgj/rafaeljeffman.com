@@ -23,8 +23,8 @@ $link-color: #b000b0;
 @import "colors";
 
 @mixin normal-font {
-  font-weight: 300;
-  font-family: 'Montserrat', serif;
+  // font-weight: 300;
+  font-family: 'Rokkit', serif;
   // font-size: $normal-font-size;
 }
 
@@ -57,10 +57,6 @@ $link-color: #b000b0;
   @include normal-font;
 }
 
-strong, b {
-  font-weight: 500 !important;
-}
-
 a {
   color: $link-color;
   text-decoration: none;
@@ -68,6 +64,7 @@ a {
 
 p {
   letter-spacing: 0.3px;
+  font-size: 110%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -139,9 +136,9 @@ code {
 .card-title {
   a {
     @include title-font;
-    // font-size: $h3-font-size;
+    font-size: 180%;
     font-weight: 600;
-      @include logo-bg;
+    @include logo-bg;
   }
 }
 
@@ -157,7 +154,6 @@ code {
   font-family: $menu-font;
   font-size: 18px;
   font-variant: small-caps;
-  font-variant-caps: all-petite-caps;
 }
 
 #search-submit {
@@ -170,11 +166,14 @@ code {
 .search-item {
   @include title-font;
   font-size: 24px;
-  font-weight: 100;
-}
-
-.search-item .search-excerpt {
-  @include normal-font;
+  .search-excerpt {
+    @include normal-font;
+    font-size: 80%;
+    font-weight: 100;
+    b {
+      font-weight: 700;
+    }
+  }
 }
 
 /** MENU **/
