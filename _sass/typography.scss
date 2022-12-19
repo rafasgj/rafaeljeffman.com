@@ -8,18 +8,6 @@ $code-font: 'Cutive Mono', monospace;
 
 $link-color: #b000b0;
 
-
-// $normal-font-size: calc((.4em + .15vmin) + (.4em + .15vmax));
-// $small-font-size: calc((.4em + .10vmin) + (.4em + .10vmax));
-
-// $h1-font-size: calc((.4em + 1.2vmin) + (.4em + 1.2vmax));
-// $h2-font-size: calc((.4em + .8vmin) + (.4em + .8vmax));
-// $h3-font-size: calc((.4em + .5vmin) + (.4em + .5vmax));
-// $h4-font-size: calc((.4em + .35vmin) + (.4em + .35vmax));
-// $h5-font-size: calc((.4em + .25vmin) + (.4em + .25vmax));
-// $h6-font-size: calc((.4em + .20vmin) + (.4em + .20vmax));
-
-
 @import "colors";
 
 @mixin normal-font {
