@@ -309,7 +309,7 @@ $flex_nav_subNavWidth: 9em;
                     li {
                         left: 0;
                         text-align: left;
-                        white-space: wrap;
+                        white-space: normal;
                         background: $header-gradient;
                         a {
                             padding: 3px 0.5em !important;
