@@ -66,8 +66,7 @@ def t_NUM(token):  # pylint: disable=invalid-name
 @lex.TOKEN(r"\n+")
 def t_newline(token):
     """Count new lines."""
-    # For some unknown reason, new lines are being doubled
-    token.lexer.lineno += len(token.value) // 2
+    token.lexer.lineno += len(token.value)
 
 
 def t_error(token):
@@ -87,6 +86,6 @@ if __name__ == "__main__":
     with (
         open(sys.argv[1], "rt") if len(sys.argv) > 1 else sys.stdin
     ) as source_file:
-        the_lexer.input("".join(source_file.readlines()))
+        the_lexer.input(source_file.read())
     for tk in the_lexer:
         print(tk)

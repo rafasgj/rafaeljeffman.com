@@ -124,7 +124,7 @@ if __name__ == "__main__":
     with (
         open(sys.argv[1], "rt") if len(sys.argv) > 1 else sys.stdin
     ) as source_file:
-        SOURCE = "\n".join(source_file.readlines())
+        SOURCE = source_file.read()
     # parse source data
     mylex = lexer()
     parser = yacc.yacc(start="program")
