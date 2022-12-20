@@ -8,7 +8,7 @@ $blockquote-bg: #eee;
 $blockquote-fg: #444;
 $blockquote-border: solid 5px #222;
 
-$content-width: 72ch;
+$content-width: 82ch;
 $content-max-width: 90%;
 
 @import "colors";
@@ -35,9 +35,6 @@ blockquote {
 
 #con {
     margin: 100px 0 0 0;
-    @media screen and (min-width: 768px) {
-        top: calc(#{$header-height} + 1em);
-    }
 }
 
 #contents {

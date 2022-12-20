@@ -8,12 +8,14 @@ $code-font: 'Cutive Mono', monospace;
 
 $link-color: #b000b0;
 
+$normal-font-size: 22px;
+
 @import "colors";
 
 @mixin normal-font {
   // font-weight: 300;
   font-family: 'Rokkit', serif;
-  // font-size: $normal-font-size;
+  font-size: $normal-font-size;
 }
 
 @mixin title-font {
@@ -23,7 +25,6 @@ $link-color: #b000b0;
 
 @mixin logo-font {
   font-family: 'Josefin Slab', serif;
-  font-size: 50px;
   letter-spacing: -5px;
 }
 
@@ -36,7 +37,7 @@ $link-color: #b000b0;
 
 @mixin code-font {
   font-family: $code-font;
-  font-size: 110%;
+  font-size: 110%;  
   letter-spacing: -0.5px;
   // font-size: $normal-font-size;
 }
@@ -52,7 +53,6 @@ a {
 
 p {
   letter-spacing: 0.3px;
-  font-size: 110%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,19 +65,25 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin-bottom: 20px;
-  font-size: 250%;
+  font-size: 210%;
 }
 
 h2 {
-  font-size: 220%;
+  font-size: 175%;
+  margin: 1.25em 0 0.25em 0;
+}
+h2 + h3 {
+  margin: 1em 0 0.25em 0;
 }
 
 h3 {
-  font-size: 180%;
+  font-size: 150%;
+  margin: 1.75em 0 0.25em 0;
 }
 
 h4 {
-  font-size: 150%;
+  font-size: 130%;
+  margin: 1.5em 0 0.25em 0;
 }
 
 #section-title {
@@ -86,7 +92,7 @@ h4 {
     font-weight: 600;
   }
   &+h1 {
-    font-size: 300%;
+    font-size: 250%;
   } 
 } 
 
@@ -109,7 +115,7 @@ code {
     a {
       @include logo-font;
       font-weight: 800;
-      font-size: 50px;
+      font-size: 300%;
       background-image: $logo-title-bg;
       -webkit-background-clip: text;
       background-clip: text;
@@ -169,8 +175,9 @@ $flex_nav_breakpoint: 1024px;
 .nav ul {
   a:not(#menu-tag a) {
     font-family: $menu-font;
+    font-size: 130%;
     @media(min-width:$flex_nav_breakpoint) {
-      font-size: 20px;    
+      font-size: 80%;
     }
   }
   letter-spacing: 0.3px;
