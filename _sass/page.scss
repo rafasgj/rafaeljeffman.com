@@ -1,5 +1,5 @@
-$header-height: 5em;
-$footer-height: 3em;
+$header-height: 85px;
+$footer-height: 60px;
 
 $header-gradient: linear-gradient(5deg, rgb(220,220,220), rgb(215,215,215));
 $header-gradient-hover: linear-gradient(5deg, rgb(220,220,220), rgb(240,240,240));
@@ -154,10 +154,9 @@ $flex_nav_subNavWidth: 9em;
 .nav {
     z-index: 1000;
     position: fixed;
-    right: 4em;
+    right: 75px;
     top: 0.75em;
-    // min-width: 10em;
-    max-width: 100%; // 100% - 3em
+    max-width: 100%;
 
     .navigation li:last-of-type a {
       border-bottom: none;
@@ -175,7 +174,6 @@ $flex_nav_subNavWidth: 9em;
     // first level
     ul {
         position: relative;
-        // right: 1em;
         box-shadow: 0px 2px 4px 2px #aaa;
         border: solid thin #666;
         display: none;
@@ -188,7 +186,7 @@ $flex_nav_subNavWidth: 9em;
             a {
                 white-space: nowrap;
                 display: block;
-                padding: 0.3em 0.7em;
+                padding: 5px 8px;
                 text-decoration: none;
                 background: $header-gradient;
                 &:hover {
@@ -275,10 +273,11 @@ $flex_nav_subNavWidth: 9em;
     
     // bigger screens
     @media(min-width:$flex_nav_breakpoint) {
-        right: 0.5em;
-        top: 0;
-        left: 300px;
-        margin-top: calc(50px - 22px); // Logo font size - "something"
+        right: 1.5em;
+        top: 2px;
+        width: calc(100% - 425px);
+        max-width: calc(100% - 425px);
+        height: 80px;
         #menu-home { display: none; }
         ul {
             max-width: 100%;
@@ -286,6 +285,8 @@ $flex_nav_subNavWidth: 9em;
             border: none;
             display: flex;
             flex-direction: row;
+            margin-left: 25px;
+            margin-top: calc(75px - 28px);
             li {
                 position: relative;
                 text-align: center;
@@ -294,7 +295,7 @@ $flex_nav_subNavWidth: 9em;
                     flex: 1 !important;
                     display: block;
                 }
-                a { padding: 0.7em; }
+                a { padding: 5px 8px; }
                 // 2nd Level - drop down
                 ul {
                     border: solid thin rgb(192,192,192);
@@ -302,7 +303,7 @@ $flex_nav_subNavWidth: 9em;
                     display: none !important;
                     position: absolute;
                     left: 0;
-                    top: 1.3em;
+                    top: calc(1em + 4px);
                     margin: 0 !important;
                     min-width: $flex_nav_subNavWidth;
                     z-index: 200;
