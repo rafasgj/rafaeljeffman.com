@@ -133,6 +133,13 @@ blockquote {
     margin-top: 0.3em;
 }
 
+// Reduce highlight.js font size.
+code.hljs {
+    font-size: 85%;
+    max-width: 82ch;
+    margin: 0 auto;
+}
+
 // cards
 
 .card-title {
