@@ -176,9 +176,6 @@ $flex_nav_breakpoint: 1024px;
   a:not(#menu-tag a) {
     font-family: $menu-font;
     font-size: 130%;
-    @media(min-width:$flex_nav_breakpoint) {
-      font-size: 80%;
-    }
   }
   letter-spacing: 0.3px;
   font-size: 30px;
