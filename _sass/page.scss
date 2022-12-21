@@ -21,7 +21,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    min-height: calc(100vh - 100px - 80px);  /* 100% - header and footer */
     position: relative;
     padding-bottom: 80px;
 }
