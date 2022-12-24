@@ -203,4 +203,12 @@ $flex_nav_breakpoint: 1024px;
   padding: 8px;
   padding-top: 6px;
   border: 2px dotted rgb(192, 0, 192);
+  background-color: #fff;
+}
+
+/* last update div */
+div#last-update {
+  font-size: 70%;
+  text-align: right;
+  color: #888;
 }
