@@ -1,0 +1,53 @@
+---
+- name: Install IPA server
+  hosts: ipaserver
+  become: yes
+  gather_facts: yes
+
+  roles:
+  - role: freeipa.ansible_freeipa.ipaserver
+    state: present
+
+- name: Backup IPA server certificates
+  hosts: ipaserver
+  become: no
+  gather_facts: no
+  
+  vars:
+    target_dir: "{{ ipaserver_realm }}-certs"
+
+  tasks:
+  - name: Ensure backup directory exists locally
+    ansible.builtin.file:
+      path: "{{ target_dir }}"
+      state: directory
+    delegate_to: localhost
+
+  - name: Retrieve IPA server master certificates
+    ansible.builtin.fetch:
+      src: "{{ item }}"
+      dest: "{{ target_dir }}/"
+      flat: yes
+    with_items:
+      - cacert.p12
+      - ca-agent.p12
+      - kracert.
+    become: yes
+
+- name: Install IPA replicas
+  hosts: ipareplicas
+  become: yes
+  gather_facts: yes
+
+  roles:
+  - role: freeipa.ansible_freeipa.ipareplica
+    state: present
+
+- name: Install IPA clients
+  hosts: ipaclients
+  become: yes
+  gather_facts: yes
+
+  roles:
+  - role: freeipa.ansible_freeipa.ipaclient
+    state: present

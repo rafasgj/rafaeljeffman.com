@@ -1,0 +1,76 @@
+---
+all:
+  children:
+    # define cluster
+    ipacluster:
+      children:
+        ipaserver:
+        ipareplicas:
+        ipaclients:
+      vars:
+        ipaserver_domain: fed.ipa.test
+        ipaserver_realm: FED.IPA.TEST
+        ipadm_password: "{{ ipa_dm_password }}"
+        ipaadmin_password: "{{ ipa_admin_password }}"
+    # IPA First Server (CA Renewal) 
+    ipaserver:
+      hosts:
+        server.fed.ipa.test:
+          ansible_user: root
+      vars:
+        # KRA
+        ipaserver_setup_kra: yes
+        # DNS
+        ipaserver_setup_dns: yes
+        ipaserver_forwarders: 1.1.1.1
+        ipaserver_auto_reverse: yes
+        ipaserver_allow_zone_overlap: yes
+        # this is required for AD trust
+        ipaserver_no_dnssec_validation: yes
+        # trust vars
+        ipaserver_setup_adtrust: yes
+        # disable 'allow all' HBAC rule
+        ipaserver_no_hbac_allow: yes
+        # other vars
+    # IPA Replica Servers
+    ipareplicas:
+      hosts:
+        rep-01.fed.ipa.test:
+          ansible_user: root
+          # CA backup
+          ipareplica_setup_ca: yes
+          # KRA backup
+          ipareplica_setup_kra: yes
+          # DNS backup
+          ipareplica_setup_dns: yes
+          ipareplica_no_dnssec_validation: yes
+          ipareplica_no_forwarders: yes
+          # Trust backup
+          ipareplica_setup_trust: yes
+      vars:
+        # Update IP addressess
+        ipaclient_all_ip_addresses: yes
+        # Automatically handle DNS nameservers (v1.9.0+)
+        ipaclient_configure_dns_resolver: yes
+        ipaclient_dns_servers:
+          # server.fed.ipa.test IPv4 address
+          - 192.168.122.30
+          # rep-01.fed.ipa.test IPv4 address
+          - 192.168.122.31
+    # IPA Client hosts
+    ipaclients:
+      hosts:
+        cli-01.fed.ipa.test:
+          ansible_user: root
+      vars:
+        # Client options
+        ipaclient_mkhomedir: yes
+        # Add client DNS entries
+        ipaclient_all_ip_addresses: yes
+        # Automatically handle DNS nameservers (v1.9.0+)
+        ipaclient_configure_dns_resolver: yes
+        ipaclient_dns_servers:
+          # server.fed.ipa.test IPv4 address
+          - 192.168.122.30
+          # rep-01.fed.ipa.test IPv4 address
+          - 192.168.122.31

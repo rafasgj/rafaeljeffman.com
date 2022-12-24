@@ -4,4 +4,5 @@ layout: section
 lang: en
 ---
 
-* [Creating a test lab for FreeIPA-AD trust](/projects/freeipa/en/basic-lab-ad-trust)
+* [Deploying a FreeIPA cluster with ansible-freeipa](cluster-deployment-ansible.md)
+* [Creating a test lab for FreeIPA-AD trust](basic-lab-ad-trust)
