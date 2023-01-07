@@ -54,7 +54,7 @@ With the collection installed, the first FreeIPA server can be deployed using th
 ```yaml
 - name: Deploy an IPA server
   hosts: ipaserver
-  become: yes
+  become: true
 
   roles:
     - freeipa.ansible_freeipa.ipaserver:
@@ -87,18 +87,18 @@ all:
           ansible_user: root
       vars:
         # KRA
-        ipaserver_setup_kra: yes
+        ipaserver_setup_kra: true
         # DNS
-        ipaserver_setup_dns: yes
+        ipaserver_setup_dns: true
         ipaserver_forwarders: 1.1.1.1
-        ipaserver_auto_reverse: yes
-        ipaserver_allow_zone_overlap: yes
+        ipaserver_auto_reverse: true
+        ipaserver_allow_zone_overlap: true
         # this is required for AD trust
-        ipaserver_no_dnssec_validation: yes
+        ipaserver_no_dnssec_validation: true
         # trust vars
-        ipaserver_setup_adtrust: no
+        ipaserver_setup_adtrust: false
         # disable 'allow all' HBAC rule
-        ipaserver_no_hbac_allow: yes
+        ipaserver_no_hbac_allow: true
 ```
 {% endraw %}
 
@@ -115,8 +115,8 @@ After deploying the server, some backup files are created with the private and p
 ```yaml
 - name: Backup IPA server certificates
   hosts: ipaserver
-  become: no
-  gather_facts: no
+  become: false
+  gather_facts: false
 
   vars:
     target_dir: "{{ ipaserver_realm }}-certs"
@@ -132,12 +132,12 @@ After deploying the server, some backup files are created with the private and p
     ansible.builtin.fetch:
       src: "{{ item }}"
       dest: "{{ target_dir }}/"
-      flat: yes
+      flat: true
     with_items:
       - cacert.p12
       - ca-agent.p12
       - kracert.p12
-    become: yes
+    become: true
 ```
 
 Once the server is deployed, we can start deploying replicas and clients.
@@ -154,7 +154,7 @@ The playbook to deploy a replica with ansible-freeipa is similar to the server d
 ```yaml
 - name: Deploy the IPA replicas
   hosts: ipareplicas
-  become: yes
+  become: true
 
   roles:
     - freeipa.ansible_freeipa.ipareplica:
@@ -182,20 +182,20 @@ all:
         rep-01.fed.ipa.test:
           ansible_user: root
           # CA backup
-          ipareplica_setup_ca: yes
+          ipareplica_setup_ca: true
           # KRA backup
-          ipareplica_setup_kra: yes
+          ipareplica_setup_kra: true
           # DNS backup
-          ipareplica_setup_dns: yes
-          ipareplica_no_dnssec_validation: yes
-          ipareplica_no_forwarders: yes
+          ipareplica_setup_dns: true
+          ipareplica_no_dnssec_validation: true
+          ipareplica_no_forwarders: true
           # Trust backup
-          ipareplica_setup_trust: yes
+          ipareplica_setup_trust: true
       vars:
         # Update IP addressess
-        ipaclient_all_ip_addresses: yes
+        ipaclient_all_ip_addresses: true
         # Automatically handle DNS nameservers (v1.9.0+)
-        ipaclient_configure_dns_resolver: yes
+        ipaclient_configure_dns_resolver: true
         ipaclient_dns_servers:
           # server.fed.ipa.test IPv4 address
           - 192.168.122.30
@@ -228,7 +228,7 @@ As it should be expected, by now, the playbook to deploy an IPA client is not mu
 ```yaml
 - name: Deploy the IPA clients
   hosts: ipaclients
-  become: yes
+  become: true
 
   roles:
     - freeipa.ansible_freeipa.ipaclient:
@@ -257,11 +257,11 @@ all:
           ansible_user: root
       vars:
         # Client options
-        ipaclient_mkhomedir: yes
+        ipaclient_mkhomedir: true
         # Add client DNS entries
-        ipaclient_all_ip_addresses: yes
+        ipaclient_all_ip_addresses: true
         # Automatically handle DNS nameservers (v1.9.0+)
-        ipaclient_configure_dns_resolver: yes
+        ipaclient_configure_dns_resolver: true
         ipaclient_dns_servers:
           # server.fed.ipa.test IPv4 address
           - 192.168.122.30
@@ -277,14 +277,14 @@ With the clients deployed, we have the whole IPA cluster up and running, and now
 
 ## Add users, groups and rules to access the clients
 
-As the first server was installed with `ipaserver_no_hbac_allow: yes`, access to all clients by IPA users is disabled by default. Using ansible-freipa plugins allow us to add users and HBAC rules for these users to allow them to log into the client host.
+As the first server was installed with `ipaserver_no_hbac_allow: true`, access to all clients by IPA users is disabled by default. Using ansible-freipa plugins allow us to add users and HBAC rules for these users to allow them to log into the client host.
 
 ```yaml
 ---
 - name: Configure users and host access
   hosts: ipaserver
-  become: no
-  gather_facts: no
+  become: false
+  gather_facts: false
 
   tasks:
   - name: Add a testing user
@@ -346,8 +346,8 @@ Find below the code and the download option for these files.
 ---
 - name: Install IPA server
   hosts: ipaserver
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
   - role: freeipa.ansible_freeipa.ipaserver
@@ -355,8 +355,8 @@ Find below the code and the download option for these files.
 
 - name: Backup IPA server certificates
   hosts: ipaserver
-  become: no
-  gather_facts: no
+  become: false
+  gather_facts: false
 
   vars:
     target_dir: "{{ ipaserver_realm }}-certs"
@@ -372,17 +372,17 @@ Find below the code and the download option for these files.
     ansible.builtin.fetch:
       src: "{{ item }}"
       dest: "{{ target_dir }}/"
-      flat: yes
+      flat: true
     with_items:
       - cacert.p12
       - ca-agent.p12
       - kracert.p12
-    become: yes
+    become: true
 
 - name: Install IPA replicas
   hosts: ipareplicas
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
   - role: freeipa.ansible_freeipa.ipareplica
@@ -390,8 +390,8 @@ Find below the code and the download option for these files.
 
 - name: Install IPA clients
   hosts: ipaclients
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
   - role: freeipa.ansible_freeipa.ipaclient
@@ -422,18 +422,18 @@ all:
           ansible_user: root
       vars:
         # KRA
-        ipaserver_setup_kra: yes
+        ipaserver_setup_kra: true
         # DNS
-        ipaserver_setup_dns: yes
+        ipaserver_setup_dns: true
         ipaserver_forwarders: 1.1.1.1
-        ipaserver_auto_reverse: yes
-        ipaserver_allow_zone_overlap: yes
+        ipaserver_auto_reverse: true
+        ipaserver_allow_zone_overlap: true
         # this is required for AD trust
-        ipaserver_no_dnssec_validation: yes
+        ipaserver_no_dnssec_validation: true
         # trust vars
-        ipaserver_setup_adtrust: yes
+        ipaserver_setup_adtrust: true
         # disable 'allow all' HBAC rule
-        ipaserver_no_hbac_allow: yes
+        ipaserver_no_hbac_allow: true
         # other vars
     # IPA Replica Servers
     ipareplicas:
@@ -441,20 +441,20 @@ all:
         rep-01.fed.ipa.test:
           ansible_user: root
           # CA backup
-          ipareplica_setup_ca: yes
+          ipareplica_setup_ca: true
           # KRA backup
-          ipareplica_setup_kra: yes
+          ipareplica_setup_kra: true
           # DNS backup
-          ipareplica_setup_dns: yes
-          ipareplica_no_dnssec_validation: yes
-          ipareplica_no_forwarders: yes
+          ipareplica_setup_dns: true
+          ipareplica_no_dnssec_validation: true
+          ipareplica_no_forwarders: true
           # Trust backup
-          ipareplica_setup_trust: yes
+          ipareplica_setup_trust: true
       vars:
         # Update IP addressess
-        ipaclient_all_ip_addresses: yes
+        ipaclient_all_ip_addresses: true
         # Automatically handle DNS nameservers (v1.9.0+)
-        ipaclient_configure_dns_resolver: yes
+        ipaclient_configure_dns_resolver: true
         ipaclient_dns_servers:
           # server.fed.ipa.test IPv4 address
           - 192.168.122.30
@@ -467,11 +467,11 @@ all:
           ansible_user: root
       vars:
         # Client options
-        ipaclient_mkhomedir: yes
+        ipaclient_mkhomedir: true
         # Add client DNS entries
-        ipaclient_all_ip_addresses: yes
+        ipaclient_all_ip_addresses: true
         # Automatically handle DNS nameservers (v1.9.0+)
-        ipaclient_configure_dns_resolver: yes
+        ipaclient_configure_dns_resolver: true
         ipaclient_dns_servers:
           # server.fed.ipa.test IPv4 address
           - 192.168.122.30

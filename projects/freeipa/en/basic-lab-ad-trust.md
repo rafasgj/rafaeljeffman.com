@@ -459,12 +459,12 @@ all:
           ansible_user: root
       vars:
         # DNS configuration
-        ipaserver_setup_dns: yes
-        ipaserver_no_forwarders: yes
+        ipaserver_setup_dns: true
+        ipaserver_no_forwarders: true
         # trust configuration
-        ipaserver_setup_adtrust: yes
+        ipaserver_setup_adtrust: true
         # disable 'allow all' HBAC rule
-        # ipaserver_no_hbac_allow: no
+        # ipaserver_no_hbac_allow: false
   vars:
     # passwords
     ipaadmin_password: SomeADMINpassword
@@ -474,8 +474,8 @@ all:
     ipaserver_realm: LIN.IPA.TEST
     ipaserver_netbios_name: IPA
     # client configuration
-    ipaclient_mkhomedir: yes
-    ipaclient_no_ntp: yes
+    ipaclient_mkhomedir: true
+    ipaclient_no_ntp: true
     # hostnames
     ipaserver_hostname: server.lin.ipa.test
     winserver_hostname: server.ad.ipa.test
@@ -540,7 +540,7 @@ create the trust with FreeIPA. The Windows VM will reboot twice.
 ---
 - name: Deploy Windows Server AD
   hosts: winserver
-  become: no
+  become: false
 
   tasks:
   - name: Ensure AD timezone matches IPA timezone.
@@ -561,15 +561,15 @@ create the trust with FreeIPA. The Windows VM will reboot twice.
   - name: Install AD feature
     ansible.windows.win_feature:
       name: AD-Domain-Services
-      include_management_tools: yes
-      include_sub_features: yes
+      include_management_tools: true
+      include_sub_features: true
       state: present
 
   - name: Install DNS feature and configure first AD Domain
     ansible.windows.win_domain:
       dns_domain_name: "{{ winserver_domain }}"
       safe_mode_password: "{{ winserver_dsrm_password }}"
-      install_dns: yes
+      install_dns: true
       domain_netbios_name: "{{ winserver_netbios_name }}"
     register: status
 
@@ -593,8 +593,8 @@ create the trust with FreeIPA. The Windows VM will reboot twice.
       upn: "jdoe@{{ winserver_domain }}"
       firstname: John
       surname: Doe
-      enabled: yes
-      password_expired: no
+      enabled: true
+      password_expired: false
       password: SomeUS3Rpassword
       update_password: on_create
 ```
@@ -621,7 +621,7 @@ but creating the trust.
 ---
 - name: Pre-checks to deploy IPA
   hosts: ipaserver
-  become: yes
+  become: true
 
   tasks:
   - name: Set FQDN for FreeIPA Server
@@ -631,17 +631,17 @@ but creating the trust.
   - name: Ensure IPA timezone matches AD timezone.
     community.general.timezone:
       name: "{{ ipaserver_timezone }}"
-    become: yes
+    become: true
 
 # ---------------------
 - name: Deploy IPA with support to AD.
   hosts: ipaserver
-  become: yes
+  become: true
 
   roles:
   - role: ipaserver
     state: present
-    become: yes
+    become: true
 
   # IPA configuration of trust to Windows AD
   tasks:
@@ -671,8 +671,8 @@ After FreeIPA is deployed you can create the trust to AD, using
 ---
 - name: Playbook to create a trust to AD
   hosts: ipaserver
-  become: no
-  gather_facts: no
+  become: false
+  gather_facts: false
 
   tasks:
     - name: Ensure AD trust is present
@@ -722,8 +722,8 @@ This step can also be automated with the following playbook:
 ---
 - name: Configure Kerberos to allow for AD users login.
   hosts: "{{ target_host | default('ipaserver') }}"
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
   tasks:
   - name: Modify /etc/krb5.conf

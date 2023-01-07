@@ -19,18 +19,18 @@ all:
           ansible_user: root
       vars:
         # KRA
-        ipaserver_setup_kra: yes
+        ipaserver_setup_kra: true
         # DNS
-        ipaserver_setup_dns: yes
+        ipaserver_setup_dns: true
         ipaserver_forwarders: 1.1.1.1
-        ipaserver_auto_reverse: yes
-        ipaserver_allow_zone_overlap: yes
+        ipaserver_auto_reverse: true
+        ipaserver_allow_zone_overlap: true
         # this is required for AD trust
-        ipaserver_no_dnssec_validation: yes
+        ipaserver_no_dnssec_validation: true
         # trust vars
-        ipaserver_setup_adtrust: yes
+        ipaserver_setup_adtrust: true
         # disable 'allow all' HBAC rule
-        ipaserver_no_hbac_allow: yes
+        ipaserver_no_hbac_allow: true
         # other vars
     # IPA Replica Servers
     ipareplicas:
@@ -38,20 +38,20 @@ all:
         rep-01.fed.ipa.test:
           ansible_user: root
           # CA backup
-          ipareplica_setup_ca: yes
+          ipareplica_setup_ca: true
           # KRA backup
-          ipareplica_setup_kra: yes
+          ipareplica_setup_kra: true
           # DNS backup
-          ipareplica_setup_dns: yes
-          ipareplica_no_dnssec_validation: yes
-          ipareplica_no_forwarders: yes
+          ipareplica_setup_dns: true
+          ipareplica_no_dnssec_validation: true
+          ipareplica_no_forwarders: true
           # Trust backup
-          ipareplica_setup_trust: yes
+          ipareplica_setup_trust: true
       vars:
         # Update IP addressess
-        ipaclient_all_ip_addresses: yes
+        ipaclient_all_ip_addresses: true
         # Automatically handle DNS nameservers (v1.9.0+)
-        ipaclient_configure_dns_resolver: yes
+        ipaclient_configure_dns_resolver: true
         ipaclient_dns_servers:
           # server.fed.ipa.test IPv4 address
           - 192.168.122.30
@@ -64,11 +64,11 @@ all:
           ansible_user: root
       vars:
         # Client options
-        ipaclient_mkhomedir: yes
+        ipaclient_mkhomedir: true
         # Add client DNS entries
-        ipaclient_all_ip_addresses: yes
+        ipaclient_all_ip_addresses: true
         # Automatically handle DNS nameservers (v1.9.0+)
-        ipaclient_configure_dns_resolver: yes
+        ipaclient_configure_dns_resolver: true
         ipaclient_dns_servers:
           # server.fed.ipa.test IPv4 address
           - 192.168.122.30
