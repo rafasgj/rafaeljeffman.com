@@ -34,7 +34,7 @@ blockquote {
 }
 
 #con {
-    margin: 100px 0 0 0;
+    margin: 110px 0 0 0;
 }
 
 #contents {
@@ -45,10 +45,18 @@ blockquote {
 }
 
 #section-title {
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 0;
     width: $content-width;
     max-width: $content-max-width;
+}
+#section-title h1 {
+    margin: 10px 0;
+    padding: 0;
+}
+#section-title h2 {
+    margin: 15px 0;
+    padding: 0;
 }
 
 #footer {
