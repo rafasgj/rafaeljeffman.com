@@ -192,8 +192,8 @@ all:
           # Trust backup
           ipareplica_setup_trust: true
       vars:
-        # Update IP addressess
-        ipaclient_all_ip_addresses: true
+        # Update DNS address
+        ipasssd_enable_dns_updates: true
         # Automatically handle DNS nameservers (v1.9.0+)
         ipaclient_configure_dns_resolver: true
         ipaclient_dns_servers:
@@ -258,8 +258,8 @@ all:
       vars:
         # Client options
         ipaclient_mkhomedir: true
-        # Add client DNS entries
-        ipaclient_all_ip_addresses: true
+        # Update DNS address
+        ipasssd_enable_dns_updates: true
         # Automatically handle DNS nameservers (v1.9.0+)
         ipaclient_configure_dns_resolver: true
         ipaclient_dns_servers:
@@ -451,8 +451,8 @@ all:
           # Trust backup
           ipareplica_setup_trust: true
       vars:
-        # Update IP addressess
-        ipaclient_all_ip_addresses: true
+        # Update DNS address
+        ipasssd_enable_dns_updates: true
         # Automatically handle DNS nameservers (v1.9.0+)
         ipaclient_configure_dns_resolver: true
         ipaclient_dns_servers:
@@ -468,8 +468,8 @@ all:
       vars:
         # Client options
         ipaclient_mkhomedir: true
-        # Add client DNS entries
-        ipaclient_all_ip_addresses: true
+        # Update DNS address
+        ipasssd_enable_dns_updates: true
         # Automatically handle DNS nameservers (v1.9.0+)
         ipaclient_configure_dns_resolver: true
         ipaclient_dns_servers:
