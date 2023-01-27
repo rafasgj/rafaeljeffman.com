@@ -38,6 +38,7 @@ layout: section
 ## Português
 * [algoritmos](algoritmos){:doc-tag="pt"}
 * [algoritmos iterativos](algoritmos_iterativos){:doc-tag="pt"}
+* [analisado léxico](analisado_léxico){:doc-tag="pt"}
 * [análise de algoritmos](análise_de_algoritmos){:doc-tag="pt"}
 * [cloud](cloud){:doc-tag="pt"}
 * [code interview](code_interview){:doc-tag="pt"}
@@ -52,6 +53,7 @@ layout: section
 * [fedora](fedora){:doc-tag="pt"}
 * [funcoes](funcoes){:doc-tag="pt"}
 * [installation](installation){:doc-tag="pt"}
+* [lexer](lexer){:doc-tag="pt"}
 * [linux](linux){:doc-tag="pt"}
 * [network](network){:doc-tag="pt"}
 * [parser](parser){:doc-tag="pt"}
@@ -73,6 +75,8 @@ layout: section
 ## English
 * [ansible](ansible){:doc-tag="en"}
 * [ansible-freeipa](ansible-freeipa){:doc-tag="en"}
+* [cluster](cluster){:doc-tag="en"}
+* [deployment](deployment){:doc-tag="en"}
 * [freeipa](freeipa){:doc-tag="en"}
 * [trust](trust){:doc-tag="en"}
 * [windows active directory](windows_active_directory){:doc-tag="en"}
