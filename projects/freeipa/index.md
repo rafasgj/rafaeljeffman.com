@@ -7,6 +7,6 @@ layout: section
 
 ## Posts
 
-* Instalando um cluste FreeIPA com ansible-freeipa ([english version](en/cluster-deployment-ansible.md))
+* Instalando um cluster FreeIPA com ansible-freeipa ([english version](en/cluster-deployment-ansible.md))
 
 * Criando um laboratório de teste para _trust_ FreeIPA-AD ([english version](en/basic-lab-ad-trust))
