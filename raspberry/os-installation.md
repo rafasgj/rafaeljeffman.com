@@ -8,7 +8,7 @@ tags:
   - Ubuntu
 title: Instalação de um Sistema Operacional no Raspberry Pi 4
 copy: 2022
-date: 2022-03-22
+date: 2023-01-31
 ---
 
 > **Nota**: Tanto a [documentação oficial do Raspberry Pi](https://www.raspberrypi.com/software/), quanto a do Sistema Operacional que você escolheu continua sendo a melhor fonte de informação sobre a instalção do sistema, tente, antes de seguir qualquer coisa dita aqui, utilizar os documentos oficiais.
@@ -21,7 +21,7 @@ A partir do Raspberry Pi 4, é possível inicializar o sistema a partir de um di
 
 O uso de um micro-SD como disco de sistema deixa o sistema um pouco mais lento (Raspberry Pi 4) e é uma questão de tempo para que o sistema do arquivo do cartão seja corrompido e ele precise ser recuperado ou reconstruído. Leve isso em consideração ao planejar o uso do Raspberry Pi, incluindo a necessidade de _backup_ de dados, replicação e restauração do sistema.
 
-Outro fato importante para ser levado em consideração é o suporte de hardware que cada distribuiçao oferece. Hoje, o Raspberry Pi OS (baseado no Debian) provê o melhor suporte de hardware, incluindo aceleração gráfica e decodificação de vídeo. O Fedora talvez seja o que esteja mais defasado nesse sentido, pois aguarda o suporte oficial no _kernel_ upstream para isso. Se você vai utilizar com um desktop normal, talvez a melhor opção seja utilizar o Raspberry Pi OS, como isso não é o meu caso, eu o utilizo apenas nas versões antigas do Raspberry Pi (1 A, B e B+, 32-bits), que não são suportadas por outras distribuições.
+Outro fato importante para ser levado em consideração é o suporte de hardware que cada distribuiçao oferece. Hoje, o Raspberry Pi OS (baseado no Debian) provê o melhor suporte de hardware, incluindo aceleração gráfica e decodificação de vídeo. Se você vai utilizar com um desktop normal, talvez a melhor opção seja utilizar o Raspberry Pi OS, mas como isso não é o meu caso, eu o utilizo apenas nas versões antigas do Raspberry Pi (1 A, B e B+, 32-bits), que não são suportadas por outras distribuições.
 
 <div class="tag-list">Sistemas testados:</div>
 
@@ -54,7 +54,7 @@ xzcat <image_file> | sudo dd status=progress of='/dev/disk/by-id/my-sd-card'
 
         * Mesmo se você não for utilizar rede cabeada, você pode configurar o _hostname_ nesse ponto.
 
-    * A senha de _root_ não precisa ser configurada e/ou usuários não precisam ser criados. Como o meu objetivo é gerenciar os usuários com o [FreeIPA], eu configurei uma senha para o _root_, mas não criei novos usuários, se você for utilizar o dispositivo como um _desktop_, eu recomendo fazer exatamente o contrário.
+    * A senha de _root_ não precisa ser configurada e/ou usuários não precisam ser criados. Como o meu objetivo é gerenciar os usuários com o [FreeIPA](/projects/freeipa), eu configurei uma senha para o _root_, mas não criei novos usuários, se você for utilizar o dispositivo como um _desktop_, eu recomendo fazer exatamente o contrário.
 
 4. Após a configuração, faça _login_ com um usuário que lhe permita alterar configurações da máquina (_root_ ou _sudoer_).
 
