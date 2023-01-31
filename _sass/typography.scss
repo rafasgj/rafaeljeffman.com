@@ -87,11 +87,11 @@ h4 {
 }
 
 #section-title {
-  h1 {
+  &>h1 {
     background-image: $section-title-bg;
     font-weight: 600;
   }
-  &+h1 {
+  h1 {
     font-size: 250%;
   } 
 } 

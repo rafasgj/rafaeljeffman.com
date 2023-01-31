@@ -1,5 +1,6 @@
 $header-height: 85px;
 $footer-height: 60px;
+$con-margin: 150px;
 
 $header-gradient: linear-gradient(5deg, rgb(220,220,220), rgb(215,215,215));
 $header-gradient-hover: linear-gradient(5deg, rgb(220,220,220), rgb(240,240,240));
@@ -11,6 +12,7 @@ $blockquote-border: solid 5px #222;
 $content-width: 82ch;
 $content-max-width: 90%;
 
+
 @import "colors";
 
 html {
@@ -21,7 +23,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    min-height: calc(100vh - 110px - 90px);  /* 100% - header and footer */
+    min-height: calc(100vh - #{$con-margin} - 90px);  /* 100% - header and footer */
     position: relative;
     padding-bottom: 80px;
 }
@@ -34,29 +36,40 @@ blockquote {
 }
 
 #con {
-    margin: 110px 0 0 0;
+    margin: $con-margin 0 0 0;
 }
 
 #contents {
     margin: 0 auto;
+    margin-top: 50px;
     padding: 0;
     width: $content-width;
     max-width: $content-max-width;
 }
 
 #section-title {
-    margin: 20px auto;
+    margin: 0px auto;
     padding: 0;
     width: $content-width;
     max-width: $content-max-width;
+    padding-bottom: 5px;
+    border-bottom: thin solid #222;
+
+    &>h1 {
+        margin: 20px 0;
+        padding: 0;
+    }
+    h2 {
+        margin: 10px 0;
+        padding: 0;
+    }
 }
-#section-title h1 {
-    margin: 10px 0;
-    padding: 0;
-}
-#section-title h2 {
-    margin: 15px 0;
-    padding: 0;
+
+#page-title {
+    &>h1 {
+        margin: 0;
+        margin-top: 20px;
+    }
 }
 
 #footer {

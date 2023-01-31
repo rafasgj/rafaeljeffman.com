@@ -52,25 +52,31 @@
                    <div class="tag"><a href="/tags/{{ tag | downcase | replace: " ", "_" }}">{{ tag }}</a></div>
                 {% endfor %}
             </div>
-            <div id="contents">
+            <div id="section-title">
                 {% if page.section %}
-                <div id="section-title">{{ page.section | prepend: "# " | markdownify }}</div>
+                {{ page.section | prepend: "# " | markdownify }}
                 {% endif %}
-                {% if page.title %}
-                {{ page.title | prepend: '# ' | markdownify }}
-                {% endif %}
-                {% if page.date %}
-                <div id="last-update">
-                    {% if page.lang == 'en' %}
-                    Last update:  {{ page.date }}
-                    {% else if page.lang == 'fr' %}
-                    {% else %}
-                    Última atualização: {{ page.date }}
+                <div id="page-title">
+                    {% if page.title %}
+                    {{ page.title | prepend: '# ' | markdownify }}
+                    {% endif %}
+                    {% if page.subtitle %}
+                    {{ page.subtitle | prepend: '## ' | markdownify }}
+                    {% endif %}
+                    {% if page.date %}
+                        <div id="last-update">
+                            {% if page.lang == 'en' %}
+                            Last update:  {{ page.date }}
+                            {% else if page.lang == 'fr' %}
+                            {% else %}
+                            Última atualização: {{ page.date }}
+                            {% endif %}
+                        </div>
                     {% endif %}
                 </div>
-                {% endif %}
-                {{ content }}
             </div>
+        <div id="contents">
+                {{ content }}
         </div>
         <div id="footer">
             {% include footer.html %}

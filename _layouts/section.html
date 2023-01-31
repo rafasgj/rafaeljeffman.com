@@ -9,7 +9,11 @@
         <div id="con">
             <!-- h1 class="section-title"  -->
             {% if page.title and page.title != "/none" %}
-            <div id="section-title">{{ page.title | prepend: "# " | markdownify }}</div>
+            <div id="section-title">{{ page.title | prepend: "# " | markdownify }}
+            {% if page.subtitle %}
+            <div id="section-subtitle">{{ page.subtitle | prepend: "## " | markdownify }}</div>
+            {% endif %}
+            </div>
             {% endif %}
             <div id="cardboard">
                 {% for item in page.cards %}
