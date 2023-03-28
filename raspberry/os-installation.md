@@ -7,8 +7,8 @@ tags:
   - Fedora
   - Ubuntu
 title: Instalação de um Sistema Operacional no Raspberry Pi 4
-copy: 2022
-date: 2023-01-31
+copy: "2022-2023"
+date: 2023-02-17
 ---
 
 > **Nota**: Tanto a [documentação oficial do Raspberry Pi](https://www.raspberrypi.com/software/), quanto a do Sistema Operacional que você escolheu continua sendo a melhor fonte de informação sobre a instalção do sistema, tente, antes de seguir qualquer coisa dita aqui, utilizar os documentos oficiais.
@@ -21,12 +21,54 @@ A partir do Raspberry Pi 4, é possível inicializar o sistema a partir de um di
 
 O uso de um micro-SD como disco de sistema deixa o sistema um pouco mais lento (Raspberry Pi 4) e é uma questão de tempo para que o sistema do arquivo do cartão seja corrompido e ele precise ser recuperado ou reconstruído. Leve isso em consideração ao planejar o uso do Raspberry Pi, incluindo a necessidade de _backup_ de dados, replicação e restauração do sistema.
 
-Outro fato importante para ser levado em consideração é o suporte de hardware que cada distribuiçao oferece. Hoje, o Raspberry Pi OS (baseado no Debian) provê o melhor suporte de hardware, incluindo aceleração gráfica e decodificação de vídeo. Se você vai utilizar com um desktop normal, talvez a melhor opção seja utilizar o Raspberry Pi OS, mas como isso não é o meu caso, eu o utilizo apenas nas versões antigas do Raspberry Pi (1 A, B e B+, 32-bits), que não são suportadas por outras distribuições.
-
 <div class="tag-list">Sistemas testados:</div>
 
+* [Raspberry Pi OS](#raspberry-pi-os)
 * [Fedora](#fedora)
 * [Ubuntu Server](#ubuntu-server)
+* [NetBSD](#netbsd)
+
+
+## Raspberry Pi OS
+
+O [Raspberry Pi OS](https://www.raspberrypi.com/software/), antigamente conhecido como "Raspbian" é o sistema operacional "oficial" do Raspberry Pi. É, no mínimo, o que oferece melhor suporte ao dispositivo. Existem várias formas de instalação, porém eu prefiro a forma manual.
+
+1. Após baixar a [imagem desejada](https://www.raspberrypi.com/software/operating-systems/) (utilizei o Rapsberry Pi OS Lite, da versão para todos os modelos), grave a imagem em um cartão SD:
+
+    ```sh
+xzcat <image_file> | sudo dd status=progress of='/dev/disk/by-id/my-sd-card'
+    ```
+
+2. Instale o cartão micro-SD no Raspberry Pi. Ligue um teclado e um monitor ao dispositivo e inicialize-o. A finalização da configuração deve ser feita diretamente no Raspberry Pi.
+    > Não esqueça de criar um usuário, que será o administrador do sistema, durante a instalação.
+
+3. Após a configuração inicial, precisei configurar o WiFi, que utiliza o `wpa_supplicant`. Minha rede (como diversas outras) utiliza WPA-PSK (WPA2) para autenticação e precisei adicionar a seguinte configuração ao arquivo `/etc/wpa_supplicant/wpa_supplicant.conf`:
+
+    ```
+    network={
+        ssid="MyNetworkSSID"
+        scan_ssid=1
+        key_mgmt=WPA-PSK
+        psk="my_secret_password"
+    }
+    ```
+
+4. Com a rede configurada foi possível atualizar os pacotes do systema:
+    ```sh
+sudo apt-get update
+sudo apt-get dist-upgrade
+    ```
+
+5. A qualquer momento você pode alterar diversas configurações do dispositivo, utilizando o comando `sudo raspi-config`, incluindo quantidade de memória da GPU, overclock, protocolos de comunicação do GPIO (ex. I2C, SPI e UART), entre diversas outras configurações.
+    > Eu não gosto muito da interface do `raspi-config`, no entanto é bom encontrar toda a configuração centralizada em um único programa.
+
+6. Caso você tenha esquecido e precise refazer a configuração persistente do teclado, você pode utilizar:
+
+    ```sh
+sudo dpkg-reconfigure keyboard-configuration
+    ```
+
+Uma das vantagens de utilizar a versão _lite_ do Raspberry Pi OS, é que ocupa relativamente pouco espaço no cartão de memória. Com um cartão de 8GB, o sistema inteiro ocupa 1.6Gb, deixando 5.2GB disponíveis para uso.
 
 ## Fedora
 
@@ -116,7 +158,7 @@ zcat <image_file> | sudo dd status=progress of='/dev/disk/by-id/my-sd-card'
         dhcp4: true
         optional: true
         access-points:
-          <my_cool_network_name>:
+          my_cool_network_name:
             password: "1123581321"
     ```
 
