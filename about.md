@@ -8,8 +8,8 @@ Sou desenvolvedor de software, fotógrafo e quando consigo, professor. Atualment
 Meus trabalhos profissionais como desenvolvedor de software (ao menos parte dele), e como fotógrafo/impressor podem ser encontrados aqui:
 <div class="social">
 <ul>
-    <li><a target="_blank" href="https://github.com/rjeffman"><span class="fab fa-github"></span></a></li>
-    <li><a target="_blank" href="https://instagram.com/rafaeljeffman.fotografia"><span class="fab fa-instagram"></span></a></li>
+    <li><a target="_blank" href="https://github.com/rjeffman"><span class="fa-brands fa-github huge"></span></a></li>
+    <li><a target="_blank" href="https://instagram.com/rafaeljeffman.fotografia"><span class="fa-brands fa-instagram huge"></span></a></li>
 </ul>
 </div>
 
@@ -20,9 +20,9 @@ Disputando o meu tempo com o trabalho estão minha esposa, minha filha, meu filh
 Alguma coisa um pouco mais pessoal, com visões de mundo bem particulares, comidas, mais fotografias (dos cachorros e comida principalmente) e alguns projetos que ainda não estão exatamente prontos para virarem algo mais sério, podem ser encontrados aqui:
 <div class="social">
 <ul>
-    <li><a target="_blank" href="https://twitter.com/rafasgj"><span class="fab fa-twitter"></span></a></li>
-    <li><a target="_blank" href="https://instagram.com/rafasgj"><span class="fab fa-instagram"></span></a></li>
-    <li><a target="_blank" href="https://github.com/rafasgj"><span class="fab fa-github"></span></a></li>
+    <li><a target="_blank" href="https://twitter.com/rafasgj"><span class="fa-brands fa-twitter huge"></span></a></li>
+    <li><a target="_blank" href="https://instagram.com/rafasgj"><span class="fa-brands fa-instagram huge"></span></a></li>
+    <li><a target="_blank" href="https://github.com/rafasgj"><span class="fa-brands fa-github huge"></span></a></li>
 </ul>
 </div>
 
@@ -30,7 +30,7 @@ Para me contactar, por favor, envie um email. Eu sei que é uma ferramenta antiq
 <div class="social">
 <ul style="margin: 0 auto !important;">
     <li>
-        <a href="mailto:rafasgj@gmail.com"><span class="far fa-envelope"></span>
+        <a href="mailto:rafasgj@gmail.com"><span class="fa-regular fa-envelope"></span>
         <span style="font-size: 14pt; vertical-align: middle">rafasgj@gmail.com</span></a>
     </li>
 </ul>

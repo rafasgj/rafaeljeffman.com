@@ -19,6 +19,9 @@
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']]
             },
+            chtml: {
+                fontCache: 'global'
+            },
             svg: {
                 fontCache: 'global'
             }
@@ -67,7 +70,8 @@
                         <div id="last-update">
                             {% if page.lang == 'en' %}
                             Last update:  {{ page.date }}
-                            {% else if page.lang == 'fr' %}
+                            {% elsif page.lang == 'fr' %}
+                            dernière mise à jour:  {{ page.date }}
                             {% else %}
                             Última atualização: {{ page.date }}
                             {% endif %}

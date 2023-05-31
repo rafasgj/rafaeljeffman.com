@@ -6,6 +6,7 @@ tags:
   - installation
   - Fedora
   - Ubuntu
+  - NetBSD
 title: Instalação de um Sistema Operacional no Raspberry Pi 4
 copy: "2022-2023"
 date: 2023-02-17
@@ -200,3 +201,47 @@ sudo apt-get dist-upgrade
         ```sh
 sudo dpkg-reconfigure keyboard-configuration`
         ```
+
+## NetBSD
+
+O [NetBSD](https://www.netbsd.org){:target="_blank"} é um sistema operacional Open Source, cujos principais objetivos são prover um sistema estável, rápido, distribuído sob uma licença simples (BSD de 2 cláusulas), portável e voltado a interoperabilidade e padrões abertos, sempre que possível.
+
+O _port_ [NetBSD/evbarm](https://wiki.netbsd.org/ports/evbarm/){:target="_blank"} possui versões para diversos dispositivos ARM, incluindo o Raspberry PI, tanto para versões 32-bits com para as versões 64-bits. Se você tem um Raspberry Pi 1, você pode utilizar a plataforma `earmv6hf`, e para o Raspberry Pi 3 ou 4, utilize a plataforma `aarch64`.
+
+Como sempre, recomendo seguir o [processo oficial de instalação](https://wiki.netbsd.org/ports/evbarm/raspberry_pi/){:target="_blank"}, aqui vou documentar apenas um resumo com os passou que eu segui.
+
+Ao contrário dos outros sistemas operacionais avaliados aqui, utilizei o NetBSD apenas no Rapsberry Pi 1 B+. Esse modelo possui 512MB de RAM, e um single-core ARMv6 rodando a 700Mhz. É possível fazer overclock até 1Ghz (acima de 800Mhz é necessário o uso de refrigeração ativa ("_fans_")), o que é até bastante simples no Linux, no entanto, não tentei fazer isso com o NetBSD.
+
+Para instalar o NetBSD, [baixe a imagem adequada](https://wiki.netbsd.org/ports/evbarm/raspberry_pi#index6h2), descompacte e  grave num cartão (micro-)SD. Por exemplo, para o Raspbery 1, você pode utilizar (ajuste o dispositivo do cartão de memória):
+
+```sh
+curl \
+  http://nycdn.netbsd.org/pub/NetBSD-daily/netbsd-9/latest/evbarm-earmv6hf/binary/gzimg/rpi.img.gz \
+  | gunzip -c | dd of=/dev/disks/by-id/mmc-my-SD-card bs=1m status=progress
+```
+
+Insira o cartão no Raspberry Pi, ligue e espere o NetBSD terminar a instalação (que inclui o ajuste do tamanho do `rootfs`). Quando o _prompt de login_ aparecer, faça o _login_ com o usuário `root`. Note que esse usuário não terá uma senha definida, e tem poderes de superusuário, portanto é importante criar uma nova senha.
+
+Após a instalação, algumas configurações ainda são necessárias:
+
+1. Como uso um teclado Dvorak, é necessário executar o comando `wsconsctl -k -w encoding=us.dvorak` para alterar o mapa de teclado. Para que a alteração seja permatente execute o comando
+    ```sh
+    echo "encoding us.dvorak" >> /etc/wscons.conf
+    ```
+
+2. O NetBSD não tem suporte ao WiFi dos Raspberry Zero, Zero2, 3 e 4, portanto, se você vai utilizar WiFi nos dispositivos é necessário um _dongle_ USB. Eu uso o velho, lento, mas que funciona em qualquer sistema, dongle `Wi-Pi` com o chipset Ralink 5370.
+
+    * Edite o arqivo `/etc/wpa_supplicant/wpa_supplicant.conf`, adicionando:
+    ```
+    network={
+        ssid="MyNetworkSSID"
+        scan_ssid=1
+        key_mgmt=WPA-PSK
+        psk="my_secret_password"
+    }
+    ```
+    * 
+
+    ```
+    TODO
+    ```

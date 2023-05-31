@@ -25,6 +25,19 @@
             </div>
             <div id="contents">
                 {{ content }}
+                {% assign page_list = site.pages | where_exp: "item", "item.title and item.date and item.layout != 'section' and item.section == page.title or page.sections contains item.section or page.title == nil" | sort: "date" | reverse  %}
+                {% if page_list.size > 0 %}
+                <h1>Posts</h1>
+                <div id="by-posts">
+                    <ul>
+                        {% for linkto in page_list %}
+                            <li>
+                                <a href="{{ linkto.url }}">{{ linkto.title }}</a> <div id="last-update">{{ linkto.date }}</div> {% if linkto.lang %}<div id="lang-code">({{ linkto.lang }})</div>{% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
             </div>
        </div>
        <div id="footer">

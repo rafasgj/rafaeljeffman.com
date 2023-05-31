@@ -439,7 +439,7 @@ This was the inventory used to test this procedure. For production use,
 you should not have your passwords in clear text in your inventory, this
 is for demonstration purpose only:
 
-[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/inventory.yaml){:class="download fa fa-download"}
+[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/inventory.yaml){:class="download fa-solid fa-download"}
 {% raw %}
 ```yaml
 # inventory.yaml
@@ -533,7 +533,7 @@ The playbook below will configure the Windows server, deploy and
 configure Active Directory and DNS, and prepare everything needed to
 create the trust with FreeIPA. The Windows VM will reboot twice.
 
-[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/01-windows-ad-setup.yml){:class="download fa fa-download"}
+[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/01-windows-ad-setup.yml){:class="download fa-solid fa-download"}
 {% raw %}
 ```yaml
 # windows-ad-setup.yml
@@ -614,7 +614,7 @@ The installation of FreeIPA requires a supported Linux distribution
 [ansible-freeipa]. This playbook will perform all the configuration,
 but creating the trust.
 
-[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/02-ipa-setup.yml){:class="download fa fa-download"}
+[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/02-ipa-setup.yml){:class="download fa-solid fa-download"}
 {% raw %}
 ```yaml
 # ipa-setup.yml
@@ -664,7 +664,7 @@ $ ansible-playbook -i inventory.yaml ipa-setup.yml
 After FreeIPA is deployed you can create the trust to AD, using
 [ansible-freeipa]:
 
-[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/04-add-trust.yml){:class="download fa fa-download"}
+[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/04-add-trust.yml){:class="download fa-solid fa-download"}
 {% raw %}
 ```yaml
 # add-trust.yml
@@ -715,7 +715,7 @@ Now, AD users can login through SSH to the FreeIPA server using
 
 This step can also be automated with the following playbook:
 
-[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/05-krb5-config.yml){:class="download fa fa-download"}
+[](https://github.com/rjeffman/freeipa-ad-trust/blob/main/05-krb5-config.yml){:class="download fa-solid fa-download"}
 {% raw %}
 ```yaml
 # krb5-config.yml

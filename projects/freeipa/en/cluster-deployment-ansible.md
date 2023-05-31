@@ -341,7 +341,7 @@ ansible-playbook -i inventory.yaml install-freeipa-cluster.yml
 
 Find below the code and the download option for these files.
 
-[](/files/freeipa/install-freeipa-cluster.yml){:class="download fa fa-download" download="install-freeipa-cluster.md"}
+[](/files/freeipa/install-freeipa-cluster.yml){:class="download fa-solid fa-download" download="install-freeipa-cluster.md"}
 ```yaml
 ---
 - name: Install IPA server
@@ -398,7 +398,7 @@ Find below the code and the download option for these files.
     state: present
 ```
 
-[](/files/freeipa/cluster-inventory.yaml){:class="download fa fa-download" download="cluster-inventory.yaml"}
+[](/files/freeipa/cluster-inventory.yaml){:class="download fa-solid fa-download" download="cluster-inventory.yaml"}
 {% raw %}
 ```yaml
 ---

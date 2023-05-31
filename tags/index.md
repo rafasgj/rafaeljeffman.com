@@ -5,7 +5,7 @@ layout: section
 
 
 <style>
-#contents ul > li > a[doc-tag] {
+ul.tags > li > a[doc-tag] {
     border-radius: 15px 15px;
     background-image: linear-gradient(175deg, rgb(128,0,128), rgb(192,0,192));
     color: #f0f0f0;
@@ -18,7 +18,7 @@ layout: section
     line-height: 20px;
 }
 
-#contents ul > li {
+ul.tags > li {
     list-style: none;
     display: inline-block;
     padding: 5px;
@@ -26,7 +26,7 @@ layout: section
     line-height: 20px;
 }
 
-#contents ul {
+ul.tags {
     margin: 0 auto;
     text-align: center;
     margin: 0;

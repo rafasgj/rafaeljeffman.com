@@ -1,6 +1,6 @@
 ---
 layout: main
-section: Algortimos
+section: Algoritmos
 tags:
   - algoritmos
   - análise de algoritmos

@@ -110,6 +110,7 @@ blockquote {
 #site-logo {
     display: inline-block;
     margin: 20px;
+    margin-top: 10px;
 }
 
 #article-tags {
@@ -179,7 +180,7 @@ $toggle-size: 1em;
 $toggle-right: 0.6em;
 
 $flex_nav_breakpoint: 1024px;
-$flex_nav_subNavWidth: 9em;
+$flex_nav_subNavWidth: 10em;
 
 .nav {
     z-index: 1000;
@@ -325,7 +326,7 @@ $flex_nav_subNavWidth: 9em;
                     flex: 1 !important;
                     display: block;
                 }
-                a { padding: 5px 8px; }
+                a { padding: 2px 10px; }
                 // 2nd Level - drop down
                 ul {
                     border: solid thin rgb(192,192,192);
@@ -350,6 +351,7 @@ $flex_nav_subNavWidth: 9em;
                             z-index: 300;
                             top: 0.2em;
                             left: calc(#{$flex_nav_subNavWidth} - .3em);
+                            min-width: $flex_nav_subNavWidth;
                             li {
                                 display: block !important;
                                 a {
@@ -387,4 +389,10 @@ $flex_nav_subNavWidth: 9em;
     top: 0.6em;
     right: $toggle-right;
     cursor: pointer;
+}
+
+div#by-posts {
+    max-height: 30ch;
+    overflow-x: hidden;
+    overflow-y: auto;
 }

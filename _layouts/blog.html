@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        {% include common_head.html page = page %}
+        {% include styles.html %}
+        <style>
+        ul.tags > li > a[doc-tag] {
+            border-radius: 15px 15px;
+            background-image: linear-gradient(175deg, rgb(128,0,128), rgb(192,0,192));
+            color: #f0f0f0;
+            font-weight: bolder;
+            text-align: center;
+            padding: 5px 10px;
+            font-size: 16px;
+            text-decoration: none;
+            white-space: nowrap;
+            line-height: 20px;
+        }
+
+        ul.tags > li {
+            list-style: none;
+            display: inline-block;
+            padding: 5px;
+            margin: 5px auto;
+            line-height: 20px;
+        }
+
+        ul.tags {
+            margin: 0 auto;
+            #text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        div#by-posts, div#recent {
+            width: 58%;
+            max-width: 58%;
+            border: thin solid red;
+        }
+        div#by-tag {
+            max-width: 28%;
+            border: thin solid blue;
+        }
+        @media(min-width: 1024px) {
+            div#blog > div {
+                display: inline-block;
+                vertical-align: top;
+            }
+            div#blog > div + div {
+                margin-left: 10%;
+            }
+        }
+        </style>
+
+    </head>
+    <body>
+        {% include header.html lang=page.lang %}
+        <div id="con">
+            <!-- h1 class="section-title"  -->
+            {% if page.title and page.title != "/none" %}
+            <div id="section-title">{{ page.title | prepend: "# " | markdownify }}
+            {% if page.subtitle %}
+            <div id="section-subtitle">{{ page.subtitle | prepend: "## " | markdownify }}</div>
+            {% endif %}
+            </div>
+            {% endif %}
+
+            <div id="contents">
+                <div id="blog">
+                    <div id="by-posts">
+                        <h2>Older Posts</h2>
+                        <ul>
+                          {% for post in site.posts offset:5 %}
+                            <li>
+                              <a href="{{ post.url }}">{{ post.title }}</a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- sort tags by name -->
+                    {% capture site_tags %}
+                        {% for tag in site.tags %}
+                            {{ tag | first }}{% unless forloop.last %},{% endunless %}
+                        {% endfor %}
+                    {% endcapture %}
+                    {% assign tags_list = site_tags | split:',' | sort_natural %}
+                    <div id="by-tag">
+                        <h2>Português</h2>
+                        <ul class="tags">
+                        {% assign lang_tags = tags_list | where: "lang", "en" %}
+                        {{ lang_tags }}
+                        <hr>
+                        {% for tag in tags_list %}
+                          {%capture tag_name %}{{ tag | strip }}{% endcapture %}
+                          {% for post in site.tags[tag_name] %}
+                              {% if post.lang == "en" %}
+                                  <li><a doc-tag="pt">{{ tag_name }}</a></li>
+                                  {% break %}
+                              {% endif %}
+                          {% endfor %}
+                        {% endfor %}
+                        </ul>
+                        <h2>English</h2>
+                        <ul class="tags">
+                        {% for tag in tags_list %}
+                          {%capture tag_name %}{{ tag | strip }}{% endcapture %}
+                          {% for post in site.tags[tag_name] %}
+                              {% if post.lang == "en" %}
+                                  <li><a doc-tag="en">{{ tag_name }}</a></li>
+                                  {% break %}
+                              {% endif %}
+                          {% endfor %}
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                {{ content }}
+            </div>
+       </div>
+       <div id="footer">
+        {% include footer.html %}
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    </body>
+</html>
