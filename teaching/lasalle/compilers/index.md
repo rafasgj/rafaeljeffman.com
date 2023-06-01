@@ -1,6 +1,8 @@
 ---
 title: Compiladores
 layout: section
+sections:
+  - Compiladores
 ---
 
 * Exemplo de um analisador preditivo para avaliação de expressões aritméticas infixas

@@ -2,6 +2,7 @@
 title: Search
 layout: section
 lang: en
+sections: []
 ---
 
 <div id="#search">

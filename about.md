@@ -1,6 +1,7 @@
 ---
 title: Sobre
 layout: section
+sections: []
 ---
 
 Sou desenvolvedor de software, fotógrafo e quando consigo, professor. Atualmente trabalho junto ao projeto [FreeIPA], pela [Red Hat], com foco principal nos projetos de automação com o [ansible-freeipa] e [Certificate System Role].
