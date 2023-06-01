@@ -32,7 +32,9 @@
                     {% assign filtered_list = page_list%}
                 {% endif %}
                 {% if filtered_list.size != 0 %}
-                <h1>{% if page.cards == nil %}Related {% endif %}Posts</h1>
+                {% if page.cards == nil %}
+                <h1>{% if page.lang == "en" %}Related {% endif %}Posts{%if page.lang == nil or page.lang == "pt" %} Relacionados{% endif %}</h1>
+                {% endif %}
                 <div id="by-posts">
                     <ul>
                         {% for linkto in filtered_list %}
