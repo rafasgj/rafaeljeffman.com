@@ -10,7 +10,9 @@
   subitems:
   - title: "Algoritmos"
     path: "algorithms/"
-    section: Algoritmos
+    subitems:
+    - title: "Prova de correção por invariantes de laço"
+      path: "loop-invariant.html"
   - title: "Conceitos Básicos"
     path: "basics/"
     subitems:
@@ -33,11 +35,13 @@
   subitems:
   - title: "Instalação de um Sistema Operacional no Raspberry Pi 4"
     path: "os-installation.html"
-- tile: "Projects"
+- title: "Projects"
   path: "projects/"
   subitems:
   - title: "FreeIPA"
     path: "freeipa/"
     subitems:
     - title: "Creating a test lab for FreeIPA-AD trust"
-      path: "enn/basic-lab-ad-trust.md"
+      path: "en/basic-lab-ad-trust.html"
+    - title: "Deploying a FreeIPA cluster with ansible-freeipa"
+      path: "en/cluster-deployment-ansible.html"
