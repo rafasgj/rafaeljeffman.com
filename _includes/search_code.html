@@ -1,13 +1,21 @@
+
+<div class="results-container"></div>
 <script src="js/search.js" type="text/javascript"></script>
 <script type="text/javascript">
 
+  var items = [
+    {% if page.lang == "en" %}
+    "<p>No result for current search.</p>"
+    {% else %}
+    "<p>Nenhuma resultado para a busca atual.</p>"
+    {% endif %}
+  ]
   var search = getGetVariable("search");
   if (search != null && search != "") {
     document.title = document.title.replace("Search | ", "Search for \""+search+"\" | ");
     document.getElementById("search-input").value = htmlDecode(search);
     var regex = new RegExp(search, 'igm');
     $.getJSON( "search.json", function( data ) {
-      var items = [];
       for (var i = 0; i < data.length; i++) {
         if (regex.test(data[i].title) || regex.test(data[i].content) ||
             regex.test(data[i].tags) || regex.test(data[i].category)) {
@@ -29,7 +37,9 @@
       }).appendTo(".results-container");
     });
   } else {
+    $( "<div/>", {
+      "class": "search-results",
+      html: items.join("")
+    }).appendTo(".results-container");
   }
 </script>
-
-<div class="results-container"></div>
