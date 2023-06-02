@@ -67,7 +67,7 @@
                     {{ page.subtitle | prepend: '## ' | markdownify }}
                     {% endif %}
                     {% if page.date %}
-                        <div id="last-update">
+                        <div class="last-update">
                             {% if page.lang == 'en' %}
                             Last update:  {{ page.date }}
                             {% elsif page.lang == 'fr' %}

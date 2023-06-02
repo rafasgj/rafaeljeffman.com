@@ -237,7 +237,7 @@ $flex_nav_breakpoint: 1024px;
 }
 
 /* last update div */
-div#last-update {
+.last-update {
   display: inline-block;
   font-size: 70%;
   text-align: right;
@@ -245,7 +245,7 @@ div#last-update {
 }
 
 /* language code */
-div#lang-code {
+.lang-code {
   display: inline-block;
   font-size: 80%;
   text-align: right;

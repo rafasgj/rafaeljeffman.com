@@ -41,7 +41,7 @@
                     <ul>
                         {% for linkto in filtered_list %}
                             <li>
-                                <a href="{{ linkto.url }}">{{ linkto.title | strip | markdownify | remove: '<p>' | remove: '</p>' }}</a> <div id="last-update">{{ linkto.date }}</div> {% if linkto.lang %}<div id="lang-code">({{ linkto.lang }})</div>{% endif %}
+                                <a href="{{ linkto.url }}">{{ linkto.title | strip | markdownify | remove: '<p>' | remove: '</p>' }}</a> <div class="last-update">{{ linkto.date }}</div> {% if linkto.lang %}<div class="lang-code">({{ linkto.lang }})</div>{% endif %}
                         </li>
                         {% endfor %}
                     </ul>
