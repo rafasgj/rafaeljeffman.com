@@ -1,6 +1,7 @@
 ---
 title: Sistemas Operacionais de Código Aberto
 layout: section
+sections: []
 ---
 
 ## Conteúdos ministrados
