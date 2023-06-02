@@ -1,9 +1,9 @@
-<li><a href="/teaching">Ensino</a>
+<li><a href="/teaching">{{ site.data.lang['Ensino'][page.lang] | default: "Ensino" }}</a>
     <ul>
     <li><a href="/teaching/lasalle">Universidade LaSalle</a>
       <ul>
-          <li><a href="/teaching/lasalle/compilers">Compiladores</a></li>
-          <li><a href="/teaching/lasalle/mobile">Desenvolvimento Móvel</a></li>
+          <li><a href="/teaching/lasalle/compilers">{{ site.data.lang['Compiladores'][page.lang] | default: "Compiladores" }}</a></li>
+          <li><a href="/teaching/lasalle/mobile">{{ site.data.lang['Desenvolvimento_Movel'][page.lang] | default: "Desenvolvimento Móvel" }}</a></li>
       </ul>
     </li>
     <li><a href="/teaching/senai">Faculdade Senai</a>
@@ -18,9 +18,9 @@
     </li> -->
   </ul>
 </li>
-<li><a href="/projects">Projetos</a>
+<li><a href="/projects">{{ site.data.lang['Projetos'][page.lang] | default: "Projetos" }}</a>
   <ul>
-    <li><a href="/projects/freeipa">FreeIPA</a>
+    <li><a href="/projects/freeipa{% if page.lang != nil and page.lang.downcase != 'pt' %}/{{ page.lang }}/{% endif %}">FreeIPA</a>
         <ul>
             <li><a href="/projects/freeipa/en/basic-lab-ad-trust">Setup AD-trust Test Lab</a></li>
             <li><a href="/projects/freeipa/en/cluster-deployment-ansible">Cluster deployment</a></li>

@@ -4,7 +4,6 @@ layout: section
 sections: []
 ---
 
-
 <style>
 .page-tags {
     border-radius: 25px 5px;

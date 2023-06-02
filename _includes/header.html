@@ -8,38 +8,11 @@
                       <span class="menu-toggler__line"></span>
     </label>
     <ul>
-      <li id="menu-home"><a href="/">Home</a></li>
-      {% if page.lang == "en" %}
-      {% include menu_en.html %}
-      {% else %}
-      {% include menu_pt.html %}
-      {% endif %}
+      <li id="menu-home"><a href="/">{{ site.data.lang['Home'][page.lang] | default: "Início" }}</a></li>
+      {% include menu.html  %}
       <li class="separator">&nbsp;</li>
-      <li>
-        <a href="/about">
-          {% if page.lang == "en" %}
-          About
-          {% else %}
-          Sobre
-          {% endif %}
-        </a>
-      </li>
-      <li>
-        <!-- <div id="#search-bar">
-          <form id="search-form" action="/search" method="get">
-              <input id="search-input" class="search-input" type="text" name="search" placeholder="Pesquisa" />
-              <input type="hidden" name="lang" value="{{ page.lang }}" />
-              <button id="search-submit"><span class="fa-solid fa-magnifying-glass"></span></button>
-          </form>
-        </div> -->
-        <a id="search-link" href="/search">
-          {% if page.lang == "en" %}
-          Search
-          {% else %}
-          Procura
-          {% endif %}
-        </a>
-      </li>
+      <li><a href="/about">{{ site.data.lang['Sobre'][page.lang] | default: 'Sobre' }}</a></li>
+      <li><a id="search-link" href="/search">{{ site.data.lang['Procura'][page.lang] | default: 'Procura' }}</a></li>
       <li>
         <a id="menu-tags" href="/tags">
             <span id="tag-text">Tags</span>

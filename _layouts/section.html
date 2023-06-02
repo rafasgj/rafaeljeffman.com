@@ -33,7 +33,9 @@
                 {% endif %}
                 {% if filtered_list.size != 0 %}
                 {% if page.cards == nil %}
-                <h1>{% if page.lang == "en" %}Related {% endif %}Posts{%if page.lang == nil or page.lang == "pt" %} Relacionados{% endif %}</h1>
+                <h1>{{ site.data.lang['Posts_Relacionados'][page.lang] | default: "Posts Relacionados" }}</h1>
+                {% else %}
+                <h1>{{ site.data.lang['Posts_Recentes'][page.lang] | default: "Posts Recentes" }}</h1>
                 {% endif %}
                 <div id="by-posts">
                     <ul>
