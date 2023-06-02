@@ -6,11 +6,12 @@ sections: []
 
 Sou desenvolvedor de software, fotógrafo e quando consigo, professor. Atualmente trabalho junto ao projeto [FreeIPA], pela [Red Hat], com foco principal nos projetos de automação com o [ansible-freeipa] e [Certificate System Role].
 
-Meus trabalhos profissionais como desenvolvedor de software (ao menos parte dele), e como fotógrafo/impressor podem ser encontrados aqui:
+Meus trabalhos profissionais como desenvolvedor de software (ao menos parte dele), e como fotógrafo e impressor podem ser encontrados aqui:
 <div class="social">
 <ul>
     <li><a target="_blank" href="https://github.com/rjeffman"><span class="fa-brands fa-github huge"></span></a></li>
     <li><a target="_blank" href="https://instagram.com/rafaeljeffman.fotografia"><span class="fa-brands fa-instagram huge"></span></a></li>
+    <li><a target="_blank" href="https://lightroom.adobe.com/shares/4bbe9f19914b4f6faaae89503331a573"><i class="fa-sharp fa-solid fa-camera huge"></i></a></li>
 </ul>
 </div>
 
@@ -21,7 +22,9 @@ Disputando o meu tempo com o trabalho estão minha esposa, minha filha, meu filh
 Alguma coisa um pouco mais pessoal, com visões de mundo bem particulares, comidas, mais fotografias (dos cachorros e comida principalmente) e alguns projetos que ainda não estão exatamente prontos para virarem algo mais sério, podem ser encontrados aqui:
 <div class="social">
 <ul>
+    <!--
     <li><a target="_blank" href="https://twitter.com/rafasgj"><span class="fa-brands fa-twitter huge"></span></a></li>
+    -->
     <li><a target="_blank" href="https://instagram.com/rafasgj"><span class="fa-brands fa-instagram huge"></span></a></li>
     <li><a target="_blank" href="https://github.com/rafasgj"><span class="fa-brands fa-github huge"></span></a></li>
 </ul>
