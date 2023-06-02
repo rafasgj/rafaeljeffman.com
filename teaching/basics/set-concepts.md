@@ -2,10 +2,10 @@
 layout: main
 section: Conceitos Básicos
 tags:
-  - conceitos basicos
+  - conceitos básicos
   - conjuntos
-  - relacoes
-  - funcoes
+  - relações
+  - funções
 title: Conceitos básicos sobre conjuntos e relações
 copy: 2022
 date: 2022-03-07

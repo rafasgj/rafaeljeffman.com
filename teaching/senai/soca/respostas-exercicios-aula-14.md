@@ -3,7 +3,7 @@ layout: main
 section: Sistemas Operacionais de Código Aberto
 tags:
   - SENAI
-  - exercicios
+  - exercícios
   - respostas
 title: Respostas aos exercícios da aula 14
 copy: 2022
