@@ -5,7 +5,7 @@ tags:
   - SENAI
   - exercícios
   - respostas
-title: Respostas aos exercícios da aula 14
+title: Respostas aos exercícios da aula 14 (Turma 2022/1)
 copy: 2022
 date: 2022-06-22
 ---

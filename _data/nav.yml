@@ -23,13 +23,12 @@
     subitems:
     - title: "Desenvolvendo um compilador com Python e PLY"
       path: python_ply_compiler.html
-  - title: 'Desenvolvimento Móvel'
-    path: "lasalle/mobile/"
-    subitems:
-    - title: "Instalação do ambiente de desenvolvimento React Native"
-      path: react-install.html
   - title: "Linux"
     path: "teaching/senai/soca"
+- title: 'Desenvolvimento para Dispositivos Móveis'
+  subitems:
+  - title: "Instalação do ambiente de desenvolvimento React Native"
+    path: "tools/react-install.html"
 - title: "Raspberry-Pi"
   path: "raspberry/"
   subitems:

@@ -1,7 +1,7 @@
 ---
-section: Desenvolvimento para Dispositivos Móveis
 title: Instalação do ambiente de desenvolvimento React Native.
 layout: main
+section: Desenvolvimento para Dispositivos Móveis
 tags:
   - react-native
   - dispositivos móveis

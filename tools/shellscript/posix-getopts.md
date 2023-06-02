@@ -1,6 +1,6 @@
 ---
 layout: main
-section: Shell Script
+section: Shellscript
 tags:
   - linux
   - shell script

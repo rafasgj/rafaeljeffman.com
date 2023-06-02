@@ -1,6 +1,10 @@
 ---
 title: Desenvolvimento para Dispositivos Móveis
 layout: section
+sections:
+  - Desenvolvimento para Dispositivos Móveis
 ---
 
-* [Ambiente de desenvolvimento React Native](react-install)
+## Turmas da Disciplina
+
+* [Unilasalle 2022/2](../2022-02-mobile)
