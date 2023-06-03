@@ -392,3 +392,27 @@ $flex_nav_subNavWidth: 10em;
 }
 
 div#by-posts {}
+    
+#page-tags {
+    float: right;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+#page-tags > ul {
+    margin: 0;
+    padding: 0;
+}
+
+#page-tags ul > li {
+    list-style: none;
+    display: inline-block;
+    margin: 1px 0px;
+    padding: 3px 10px;
+    border-radius: 15px 5px;
+    color: #f0f0f0;
+    background: #a39;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Yanone Kaffeesatz", serif;
+}

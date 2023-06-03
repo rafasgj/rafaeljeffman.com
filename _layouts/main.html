@@ -66,6 +66,15 @@
                     {% if page.subtitle %}
                     {{ page.subtitle | prepend: '## ' | markdownify }}
                     {% endif %}
+                    <div id="page-tags">
+                      <ul>
+                      {% assign empty_list = "" | split: "" %}
+                      {% assign sorted_tags = page.tags | default: empty_list | sort_natural | uniq %}
+                      {% for tag in sorted_tags %}
+                          <li>{{ tag }}</li>
+                      {% endfor %}
+                      <ul>
+                    </div>
                     {% if page.date %}
                         <div class="last-update">
                             {% if page.lang == 'en' %}
