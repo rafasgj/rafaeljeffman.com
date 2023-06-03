@@ -77,13 +77,7 @@
                     </div>
                     {% if page.date %}
                         <div class="last-update">
-                            {% if page.lang == 'en' %}
-                            Last update:  {{ page.date }}
-                            {% elsif page.lang == 'fr' %}
-                            dernière mise à jour:  {{ page.date }}
-                            {% else %}
-                            Última atualização: {{ page.date }}
-                            {% endif %}
+                            {{ site.data.lang["Ultima_atualizacao"][page.lang] | default: "Última atualização" }}: {{ page.date }}
                         </div>
                     {% endif %}
                 </div>
