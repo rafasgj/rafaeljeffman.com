@@ -11,6 +11,9 @@ Ensino:
 Home:
   en: Home
   pt: Início
+nenhum_resultado_procura:
+  en: No result for current search.
+  pt: Nenhum resultado para a busca atual.
 Posts_Recentes:
   en: Recent Posts
   pt: Posts Recentes
@@ -21,6 +24,8 @@ Procura:
   en: Search
 Projetos:
   en: Projects
+Sobre:
+  en: About
 Ultima_atualizacao:
   en: Last update
   pt: Última atualização

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="{% if page.lang %}{{ page.lang }}{% else %}pt{% endif %}" dir="ltr">
+<html lang="{{ page.lang | default: 'pt' }}" dir="ltr">
     <head>
-        <meta charset="utf-8">
-        <title>{% if page.section %}{{ page.section }}: {% endif %}{{ page.title }}</title>
+        {% include common_head.html page = page %}
         {% if page.title %}
         <meta property="twitter:title" content="{{ page.title }}">
         {% endif %}
         {% if page.description %}
-        <meta property="twitter:description" content="{{ page.title }}">
+        <meta property="twitter:description" content="{{ page.description }}">
         <meta name="description" content="{{ page.description }}">
         {% endif %}
 
