@@ -45,7 +45,7 @@ ul.target-pages > li {
 {% assign page_list = site.pages | where_exp: "item", "item.title != nil" | where_exp: "item", "item.date != nil" | where_exp: "item", "item.layout != 'section'" | where_exp: "item", "item.tags != nil" | sort: "date" | reverse  %}
 
 <ul class="tags">
-{% assign page_tags = page_list | map: "tags" | join: ", " | downcase | split: ", " | sort | uniq %}
+{% assign page_tags = page_list | map: "tags" | join: ", " | downcase | split: ", " | sort_natural | uniq %}
 {% for tag in page_tags %}
 <li><a href="javascript:filter_tag('{{ tag | downcase | replace: " ", "-" | prepend: "data-" }}')" class="page-tags">{{ tag }}</a></li>
 {% endfor %}
