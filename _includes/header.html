@@ -12,7 +12,7 @@
       {% include menu.html  %}
       <li class="separator">&nbsp;</li>
       <li><a href="/about">{{ site.data.lang['Sobre'][page.lang] | default: 'Sobre' }}</a></li>
-      <li><a id="search-link" href="/search">{{ site.data.lang['Procura'][page.lang] | default: 'Procura' }}</a></li>
+      <li><a href="{{ site.data.lang['_lang_prefix'][page.lang] }}/search">{{ site.data.lang['Procura'][page.lang] | default: 'Procura' }}</a></li>
       <li>
         <a id="menu-tags" href="/tags">
             <span id="tag-text">Tags</span>

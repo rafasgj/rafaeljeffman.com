@@ -1,4 +1,7 @@
 ---
+_lang_prefix:
+  en: /en
+  pt: ""
 Algoritmos:
   en: Algorithms
 Compiladores:
