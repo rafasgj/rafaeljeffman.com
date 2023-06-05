@@ -1,3 +1,8 @@
+{% if page.lang != nil and page.lang.downcase != 'pt' %}
+{% assign lang_path = page.lang | append: '/'  %}
+{% else %}
+{% assign lang_path = "" %}
+{% endif %}
 <li><a href="/teaching">{{ site.data.lang['Ensino'][page.lang] | default: "Ensino" }}</a>
   <ul>
     <!-- 
@@ -7,7 +12,7 @@
       </ul>
     </li>
     -->
-    <li><a href="/teaching">Instituições</a>
+    <li><a href="/teaching">{{ site.data.lang['Instituicoes'][page.lang] | default: "Instituições }}</a>
       <ul>
         <li><a href="/teaching/lasalle">Universidade LaSalle</a></li>
         <li><a href="/teaching/senai">Faculdade Senai</a></li>
@@ -17,7 +22,7 @@
 </li>
 <li><a href="/projects">{{ site.data.lang['Projetos'][page.lang] | default: "Projetos" }}</a>
   <ul>
-    <li><a href="/projects/freeipa{% if page.lang != nil and page.lang.downcase != 'pt' %}/{{ page.lang }}/{% endif %}">FreeIPA</a>
+    <li><a href="/projects/freeipa/{{ lang_path }}">FreeIPA</a>
         <ul>
             <li><a href="/projects/freeipa/en/basic-lab-ad-trust">Setup AD-trust Test Lab</a></li>
             <li><a href="/projects/freeipa/en/cluster-deployment-ansible">Cluster deployment</a></li>
