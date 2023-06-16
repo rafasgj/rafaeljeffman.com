@@ -1,9 +1,5 @@
-{% if page.lang != nil and page.lang.downcase != 'pt' %}
-{% assign lang_path = page.lang | append: '/'  %}
-{% else %}
-{% assign lang_path = "" %}
-{% endif %}
-<li><a href="/teaching">{{ site.data.lang['Ensino'][page.lang] | default: "Ensino" }}</a>
+{% assign lang_path = site.data.lang["_lang_prefix"][lang]  %}
+<li><a href="/teaching">{{ site.data.lang['Ensino'][lang] | default: "Ensino" }}</a>
   <ul>
     <!-- 
     <li><a href="/teaching/algorithms">Algoritmos</a>
@@ -12,7 +8,7 @@
       </ul>
     </li>
     -->
-    <li><a href="/teaching">{{ site.data.lang['Instituicoes'][page.lang] | default: "Instituições }}</a>
+    <li><a href="/teaching">{{ site.data.lang['Instituicoes'][lang] | default: "Instituições" }}</a>
       <ul>
         <li><a href="/teaching/lasalle">Universidade LaSalle</a></li>
         <li><a href="/teaching/senai">Faculdade Senai</a></li>
@@ -20,7 +16,7 @@
     </li>
   </ul>
 </li>
-<li><a href="/projects">{{ site.data.lang['Projetos'][page.lang] | default: "Projetos" }}</a>
+<li><a href="/projects">{{ site.data.lang['Projetos'][lang] | default: "Projetos" }}</a>
   <ul>
     <li><a href="/projects/freeipa/{{ lang_path }}">FreeIPA</a>
         <ul>
