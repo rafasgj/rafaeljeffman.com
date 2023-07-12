@@ -1,5 +1,6 @@
 ---
-title: Compiladores (Unilasalle - 2022/2)
+title: Compiladores
+subtitle: Unilasalle - 2022/2
 layout: section
 section: LaSalle
 sections:
