@@ -10,3 +10,13 @@ sass:
 feed:
   path: atom.xml
 
+exclude:
+  - .vendor/
+  - .pre-commit-config.yaml
+  - .gitignore
+  - requirements.txt
+  - build_image
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - jekyll.sh
