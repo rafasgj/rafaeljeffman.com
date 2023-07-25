@@ -1,0 +1,23 @@
+table {
+  border-collapse: collapse;
+}
+thead, tr {
+  border: thin solid black;
+  margin: 0;
+  padding: 5px;
+}
+tr > td > strong {
+    font-weight: 600;
+}
+
+td:nth-child(1), th:nth-child(1) {
+  padding-left: 10px;
+}
+
+td, th {
+   padding-right: 30px;
+}
+
+th {
+    font-weight: 600;
+}

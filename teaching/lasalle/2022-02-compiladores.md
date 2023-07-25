@@ -5,6 +5,8 @@ layout: section
 section: LaSalle
 sections:
   - Compiladores
+extra_styles:
+  - cronograma
 ---
 
 * Exemplo de um analisador preditivo para avaliação de expressões aritméticas infixas
