@@ -11,7 +11,17 @@ tr > td > strong {
 }
 
 td:nth-child(1), th:nth-child(1) {
-  padding-left: 10px;
+  padding-left: 1ch;
+  width: 4ch;
+}
+
+td:nth-child(2), th:nth-child(2) {
+  max-width: 55ch;
+}
+
+td:nth-child(3), th:nth-child(3) {
+  width: 10ch;
+  min-width: 10ch;
 }
 
 td, th {
