@@ -3,6 +3,9 @@
     <head>
         {% include common_head.html page = page %}
         {% include styles.html %}
+        {% for css in page.extra_styles %}
+        <link rel="stylesheet" href="/css/{{ css }}.css">
+        {% endfor %}
     </head>
     <body>
         {% include header.html lang=page.lang %}
