@@ -11,6 +11,7 @@ feed:
   path: atom.xml
 
 exclude:
+  - _todo/
   - .vendor/
   - .pre-commit-config.yaml
   - .gitignore
