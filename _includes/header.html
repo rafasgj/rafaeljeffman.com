@@ -1,4 +1,3 @@
-{% assign lang_path = site.data.lang["_lang_prefix"][lang]  %}
 <div id="header">
 <div id="site-logo"><a href="/">Cool Title Here</a></div>
 <nav role="navigation" class="nav navigation">
@@ -14,7 +13,7 @@
       {% include menu.html  lang=lang %}
       <li class="separator">&nbsp;</li>
       <li><a href="/about">{{ site.data.lang['Sobre'][page.lang] | default: 'Sobre' }}</a></li>
-      <li><a href="/{{ lang_path }}/search">{{ site.data.lang['Procura'][page.lang] | default: 'Procura' }}</a></li>
+      <li><a href="/{{ site.data.lang['_lang_prefix'][lang] | default: '.' }}/search">{{ site.data.lang['Procura'][page.lang] | default: 'Procura' }}</a></li>
       <li>
         <a id="menu-tags" href="/tags">
             <span id="tag-text">Tags</span>
