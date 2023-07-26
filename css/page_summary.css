@@ -1,0 +1,8 @@
+div#page_summary > ul > li {
+  display: inline-block;
+  padding: 0 20px;
+  list-style: none;
+  width: 20ch;
+  white-space: nowrap;
+}
+
