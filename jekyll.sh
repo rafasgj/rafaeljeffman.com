@@ -4,7 +4,10 @@ TAG="$(whoami)/jekyll"
 
 [ -d "${PWD}/.vendor/bundle" ] || mkdir -p "${PWD}/.vendor/bundle"
 
-podman build -t "${TAG}" .
+
+existing=$(podman images -f reference="localhost/${TAG}" --format "{{ .Repository }}")
+
+[ -z "${existing}" ] && podman build -t "${TAG}" .
 
 podman run \
     --volume "${PWD}:/srv/jekyll:Z" \
