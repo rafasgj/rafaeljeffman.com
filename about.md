@@ -4,7 +4,7 @@ layout: section
 sections: []
 ---
 
-Sou desenvolvedor de software, fotógrafo e quando consigo, professor. Atualmente trabalho junto ao projeto [FreeIPA], pela [Red Hat], com foco principal nos projetos de automação com o [ansible-freeipa] e [Certificate System Role].
+Sou desenvolvedor de software, fotógrafo e quando consigo, professor. Atualmente trabalho junto ao projeto [FreeIPA], pela [Red Hat], com foco principal nos projetos de automação com o [ansible-freeipa] e [Certificate System Role], e como professor na [Universidade LaSalle Canoas].
 
 Meus trabalhos profissionais como desenvolvedor de software (ao menos parte dele), e como fotógrafo e impressor podem ser encontrados aqui:
 <div class="social">
@@ -44,3 +44,4 @@ Para me contactar, por favor, envie um email. Eu sei que é uma ferramenta antiq
 [ansible-freeipa]: https://github.com/freeipa/ansible-freeipa
 [certificate system role]: https://github.com/linux-system-roles/certificate
 [Red Hat]: https://jobs.redhat.com
+[Universidade LaSalle Canoas]: /teaching/lasalle
