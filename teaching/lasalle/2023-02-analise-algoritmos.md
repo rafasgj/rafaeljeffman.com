@@ -82,8 +82,8 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias e em grup
 | **14** | Algoritmos P vs. NP | 6/11 |
 | **15** | Redução de algoritmos. NP-hard e NP-complete. (**Entrega T3**) | 13/11 |
 | **16** | Apresentação de Pesquisa (**A2**) e Revisão | 20/11 |
-| **17** | **Avaliação P2** | 27/11 |
-| **18** | Revisão e Entrega de Resultados  | 4/12 |
+| **17** | **Avaliação 12** | 27/11 |
+| **18** | Entrega de Resultados e revisão | 4/12 |
 | **19** | **Avaliação de Recuperação** | 11/12 |
 | **20** | Divulgação de Resultados | 18/12 |
 
@@ -94,7 +94,7 @@ A nota final será composta por trabalhos/exercícios e prova, que serão desenv
 
 O grau 1 será composto por `G1 = T1 (3,0) + T2(3,0) + A1(4,0)`
 
-O grau 2 (G2) será composto por `G2 = P2 (6,0) + T3(2,0) + T4(2,0)`
+O grau 2 (G2) será composto por `G2 = A2 (6,0) + T3(2,0) + P1(2,0)`
 
 A nota final será a média (M) dada pela regra `M = (G1 + G2) / 2`
 
