@@ -33,6 +33,16 @@ Os principais objetivos da disciplina são:
 * Praticar a implementação de aplicações distribuídas
 
 
+## Pré-requisitos
+
+Embora os pré-requisitos não sejam obrigatórios, o seu domínio auxiliará muito na evolução do aprendizado:
+
+* Conceitos de sistemas operacionais
+* Conceitos de redes de computadores
+* Interoperabilidade entre diferentes sistemas
+* Proficiência em uma linguagem de programação
+
+
 ## Competências trabalhadas
 
 Serão trabalhadas as seguintes competências:

@@ -35,6 +35,16 @@ Os principais objetivos da disciplina são:
 * Estudar métricas de desempenho
 
 
+## Pré-requisitos
+
+Embora os pré-requisitos não sejam obrigatórios, o seu domínio auxiliará muito na evolução do aprendizado:
+
+* Teoria de autômatos
+* Gramáticas
+* Implementação de algoritmos básicos (ordenação e busca)
+* Estruturas de dados
+
+
 ## Competências trabalhadas
 
 As competências trabalhadas durante a disciplina são:
