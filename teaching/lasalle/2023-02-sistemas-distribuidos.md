@@ -66,26 +66,26 @@ Aulas expositivas, exemplos de desenvolvimento, e exercícios práticos.
 
 | Aula | Conteúdo Programado | Data |
 | :--: | :------------------ | :--: |
-| **01** | Apresentação da disciplina, Conceitos Básicos | |
-| **02** | Arquiteturas | |
-| **03** | Processos | |
-| **04** | Processamento paralelo, multiprocessos, corrotinas, comunicação entre processos | |
-| **05** | Sincronização. | |
-| **06** | Exemplos de implementação |  |
-| **07** | Revisão dos conteúdos do _G1_ | |
-| **08** | Apresentação das aplicações implementadas (**T1**) | |
-| **09** | Avaliação **P1** | |
-| **10** | Nomeação. | |
-| **11** | Consistência e replicação | |
-| **12** | Estudo de caso de um sistema distribuído: LDAP e FreeIPA. | |
-| **13** | Tolerância a falha | |
-| **14** | Segurança. Modelos de sistemas distribuídos | |
-| **15** | Revisão dos conteúdos do _G2_ | |
-| **16** | Apresentação dos sistemas implementados (**T2**) | |
-| **17** | Avaliação **P2** | |
-| **18** | Divulgação de Resultados, Revisão para Recuperação | |
-| **19** | Recuperação | |
-| **20** | Divulgação de Resultados | |
+| **01** | Apresentação da disciplina, Conceitos Básicos | 4/8 |
+| **02** | Arquiteturas | 11/8 |
+| **03** | Processos | 18/8 |
+| **04** | Processamento paralelo, multiprocessos, corrotinas, comunicação entre processos | 25/8 |
+| **05** | Sincronização. | 1/9 |
+| **06** | _Feriado_ | 8/9 |
+| **07** | Revisão dos conteúdos | 15/9 |
+| **08** | Apresentação das aplicações implementadas (**T1**) | 22/9 |
+| **09** | Avaliação **P1** | 29/9 |
+| **10** | Nomeação. | 6/10 |
+| **11** | _Feriado_ | 13/10 |
+| **12** | Consistência e replicação. | 20/10 |
+| **13** | _Evento Institucional_ | 27/10 |
+| **14** | Tolerância a falha. | 3/11 |
+| **15** | Segurança. Modelos de sistemas distribuídos | 10/11 |
+| **16** | Apresentação dos sistemas implementados (**T2**) | 17/11 |
+| **17** | Avaliação **P2** | 24/11 |
+| **18** | Divulgação de Resultados, Revisão para Recuperação | 1/12 |
+| **19** | Recuperação | 8/12 |
+| **20** | Divulgação de Resultados | 15/12 |
 
 
 ## Atividades de Extensão {#extensao}
