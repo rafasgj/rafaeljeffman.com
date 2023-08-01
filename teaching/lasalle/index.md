@@ -10,8 +10,12 @@ sections:
 * [Complexidade de Algoritmos e Avaliação de Desempenho](2023-02-analise-algoritmos)
 * [Sistemas Distribuídos](2023-02-sistemas-distribuidos)
 * [Desenvolvimento para Dispositivos Móveis](2023-02-mobile)
+* [Laboratório de Engengaria de Software](2023-02-engsw)
+* Inteligência Artificial Aplicada (EAD)
 * Desenvolvimento para Dispositivos Móveis (EAD)
 * Segurança Computacional (EAD)
+* Banco de Dados Aplicado (EAD)
+
 
 ## 2022/2
 
