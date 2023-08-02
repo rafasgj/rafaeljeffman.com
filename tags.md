@@ -39,7 +39,9 @@ ul.tags {
 ul.target-pages > li {
     list-style: none;
     margin-bottom: 10px;
+    font-size: 110%;
 }
+
 </style>
 
 {% assign page_list = site.pages | where_exp: "item", "item.title != nil" | where_exp: "item", "item.date != nil" | where_exp: "item", "item.layout != 'section'" | where_exp: "item", "item.tags != nil" | sort: "date" | reverse  %}
