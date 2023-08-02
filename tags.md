@@ -57,8 +57,10 @@ ul.target-pages > li {
 {% for linkto in page_list %}
   <li{% for tag in linkto.tags %} {{ tag | downcase | replace: " ", "-" | prepend: "data-" }}{% endfor %}>
      <a href="{{ linkto.url }}">{{ linkto.title | strip | markdownify | remove: '<p>' | remove: '</p>' }}</a>
-     <div id="last-update">{{ linkto.date }}</div>
-     {% if linkto.lang %}<div id="lang-code">({{ linkto.lang }})</div>{% endif %}<div style="margin-bottom: 5px; margin-left: 1em;">{% for t in linkto.tags %}<span class="page-tags">{{ t }}</span>{% endfor %}</div>
+     <div class="last-update">{{ linkto.date }}</div>
+     {% if linkto.lang %}<div class="lang-code">({{ linkto.lang }})</div>{% endif %}
+     {% if linkto.abstract %}<div id="abstract">{{ linkto.abstract }}</div>{% endif %}
+     <div style="margin-bottom: 5px; margin-right: 5em; text-align:right">{% for t in linkto.tags %}<span class="page-tags" style="font-size:16px !important">{{ t }}</span>{% endfor %}</div>
   </li>
 {% endfor %}
 
