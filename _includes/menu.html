@@ -1,17 +1,21 @@
 {% assign lang_path = site.data.lang["_lang_prefix"][lang]  %}
 <li><a href="/teaching">{{ site.data.lang['Ensino'][lang] | default: "Ensino" }}</a>
   <ul>
-    <!-- 
-    <li><a href="/teaching/algorithms">Algoritmos</a>
+    <li><a href="/teaching/cs">Ciência da Computação</a>
       <ul>
-        <li><a href="/teaching/algorithms/basics">Conceitos Básicos</a></li>
+        <li><a href="/teaching/cs/basics">Conceitos Básicos</a></li>
       </ul>
     </li>
-    -->
-    <li><a href="/teaching">{{ site.data.lang['Instituicoes'][lang] | default: "Instituições" }}</a>
+    <li><a href="/teaching/institutions">{{ site.data.lang['Instituicoes'][lang] | default: "Instituições" }}</a>
       <ul>
-        <li><a href="/teaching/lasalle">Universidade LaSalle</a></li>
-        <li><a href="/teaching/senai">Faculdade Senai</a></li>
+        <li><a href="/teaching/lasalle">Universidade LaSalle</a>
+            <ul>
+                <li><a href="teaching/lasalle/2023-02-analise-algoritmos">Análise de Algoritmos</a></li>
+                <li><a href="teaching/lasalle/2023-02-engsw">Engenharia de Software</a></li>
+                <li><a href="teaching/lasalle/2023-02-moblie">Dispositivos Móveis</a></li>
+                <li><a href="teaching/lasalle/2023-02-sistemas-distribuidos">Sistemas Distribuídos</a></li>
+            </ul>
+        </li>
       </ul>
     </li>
   </ul>
