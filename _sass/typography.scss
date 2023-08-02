@@ -243,9 +243,13 @@ $flex_nav_breakpoint: 1024px;
 /* last update div */
 .last-update {
   display: inline-block;
-  font-size: 70%;
+  font-size: 14px;
   text-align: right;
   color: #888;
+}
+.last-update a {
+  font-size: 14px;
+  color: #444;
 }
 
 /* language code */

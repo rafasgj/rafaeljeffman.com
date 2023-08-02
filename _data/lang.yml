@@ -17,6 +17,9 @@ Home:
 Instituicoes:
   en: Institutions
   pt: Instituições
+Nao_ocorreu:
+  en: No occurrences
+  pt: Não ocorreu
 nenhum_resultado_procura:
   en: No result for current search.
   pt: Nenhum resultado para a busca atual.
@@ -35,4 +38,7 @@ Sobre:
 Ultima_atualizacao:
   en: Last update
   pt: Última atualização
+Ultima_ocorrencia:
+  en: Last occurrence
+  pt: Última ocorrência
 ...

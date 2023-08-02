@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'pt' }}" dir="ltr">
+    <head>
+        {% include common_head.html page = page %}
+        {% if page.title %}
+        <meta property="twitter:title" content="{{ page.title }}">
+        {% endif %}
+        {% if page.description %}
+        <meta property="twitter:description" content="{{ page.description }}">
+        <meta name="description" content="{{ page.description }}">
+        {% endif %}
+
+        {% include styles.html %}
+    
+        <!-- MathJax configuration -->
+        <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            chtml: {
+                fontCache: 'global'
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+        </script>
+        <script
+            src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+        </script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+        <!-- /MathJax configuration -->
+        <!-- Highlight.js configuration -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/atom-one-light.min.css">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"
+            integrity="sha384-a4pIV46KBffvdjRuStQik2G6mPrTxdtAiZFQCdpsP4fyplWNoQ7fXlLMiIGcAP+M"
+            crossorigin="anonymous"
+            >
+        </script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/go.min.js"></script> -->
+        <!-- /Highlight.js configuration -->
+    </head>
+    <body>
+        <div id="header">
+            {% include header.html lang = page.lang %}
+        </div>
+        <div id="con">
+            <div id="article-tags">
+                {% for tag in page.tags %}
+                   <div class="tag"><a href="/tags/{{ tag | downcase | replace: " ", "_" }}">{{ tag }}</a></div>
+                {% endfor %}
+            </div>
+            <div id="section-title">
+                {% if page.section %}
+                {{ page.section | prepend: "# " | markdownify }}
+                {% endif %}
+                <div id="page-title">
+                    {% if page.title %}
+                    {{ page.title | prepend: '# ' | markdownify }}
+                    {% endif %}
+                    {% if page.subtitle %}
+                    {{ page.subtitle | prepend: '## ' | markdownify }}
+                    {% endif %}
+                    <div id="page-tags">
+                      <ul>
+                      {% assign empty_list = "" | split: "" %}
+                      {% assign sorted_tags = page.tags | default: empty_list | sort_natural | uniq %}
+                      {% for tag in sorted_tags %}
+                          <li>{{ tag }}</li>
+                      {% endfor %}
+                      <ul>
+                    </div>
+                    {% if page.date %}
+                        <div class="last-update">
+                            {{ site.data.lang["Ultima_ocorrencia"][page.lang] | default: "Última ocorrência" }}: {{ page.last-occurrence | default: site.data.lang["Nao_ocorreu"][page.lang] | default: "Não ocorreu" }} em <a href="{{ page.institution.link }}">{{ page.institution.name }}</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        <div id="contents">
+                {{ content }}
+        </div>
+        <div id="footer">
+            {% include footer.html %}
+        </div>
+<!-- After loading page text, highlight code blocks. -->
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>
