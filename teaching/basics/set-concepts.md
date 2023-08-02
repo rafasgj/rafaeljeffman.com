@@ -24,7 +24,7 @@ Graficamente esta relação entre o elemento $a$ e o conjunto $A$ pode ser vista
 
 <div class="image">
     <svg height="200" width="100" class="teaching-svg">
-        <ellipse cx="50" cy="120" rx="40" ry="75" />
+        <ellipse cx="50" cy="120" rx="40" ry="75" fill="#f0f0f0" stroke="#222" />
         <circle cx="43" cy="115" r="2.5" fill="#333" />
         <text x="50" y="120">a</text>
         <text x="40" y="25">A</text>
@@ -39,7 +39,7 @@ Graficamente esta relação entre o elemento $a$ e o conjunto $A$ pode ser vista
 
 <div class="image">
     <svg height="200" width="160" class="teaching-svg">
-        <ellipse cx="50" cy="120" rx="40" ry="75" />
+        <ellipse cx="50" cy="120" rx="40" ry="75" fill="#f0f0f0" stroke="#222" />
         <circle cx="130" cy="125" r="2.5" fill="#333" />
         <text x="140" y="130">a</text>
         <text x="40" y="25">A</text>
@@ -101,8 +101,8 @@ Graficamente um subconjunto $A$ de um subconjunto $B$ pode ser visto como:
                <line stroke="#aaa" stroke-width="7px" y2="10"/>
           </pattern>
         </defs>
-        <ellipse cx="90" cy="80" rx="75" ry="60" />
-        <ellipse cx="70" cy="85" rx="45" ry="30" fill="url(#gradient-fill)"/>
+        <ellipse cx="90" cy="80" rx="75" ry="60" fill="#f0f0f0" stroke="#222" />
+        <ellipse cx="70" cy="85" rx="45" ry="30" fill="url(#gradient-fill)" stroke="#222" />
         <text x="120" y="90">A</text>
         <text x="165" y="55">B</text>
     </svg>
@@ -141,7 +141,7 @@ A partir da definição da igualdade de conjuntos, podemos demonstrar que elemen
 <div class="image">
     <svg height="250" width="500" class="teaching-svg">
         <!-- Conjunto B -->
-        <ellipse cx="310" cy="140" rx="55" ry="100" />
+        <ellipse cx="310" cy="140" rx="55" ry="100" fill="#f0f0f0" stroke="#222" />
         <text style="font-size:80%;" x="300" y="20">B</text>
         <text style="font-size:80%;" x="310" y="80">1</text>
         <circle cx="300" cy="77" r="2.5" fill="#333" />
@@ -156,7 +156,7 @@ A partir da definição da igualdade de conjuntos, podemos demonstrar que elemen
         <text style="font-size:80%;" x="310" y="205">3</text>
         <circle cx="300" cy="202" r="2.5" fill="#333" />
         <!-- Conjunto A -->
-        <ellipse cx="80" cy="140" rx="55" ry="100" />
+        <ellipse cx="80" cy="140" rx="55" ry="100" fill="#f0f0f0" stroke="#222" />
         <text x="70" y="20">A</text>
         <text style="font-size:80%;" x="65" y="80">1</text>
         <circle cx="82" cy="75" r="2.5" fill="#333" />
@@ -197,6 +197,40 @@ Sejam $A$ e $B$ conjuntos, a união ($\cup$) dos conjuntos resultará em um conj
 
 $$ A \cup B = \{ x \:|\: x \in A \lor x \in B \} $$
 
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <circle r="85" id="circle_left" cy="100" cx="100" fill="" stroke="" />
+        <circle r="85" id="circle_right" cy="100" cx="200" fill="" stroke="" />
+        <mask id="mask_right">
+            <rect width="300" height="200" fill="#fff" stroke="#fff" />
+            <use xlink:href="#circle_left" fill="#000" />
+        </mask>
+        <mask id="mask_left">
+            <rect width="300" height="200" fill="#fff" stroke="#fff" />
+            <use xlink:href="#circle_right" fill="#000" />
+        </mask>
+        <mask id="mask_inverse_right">
+            <rect width="300" height="200" fill="#000" stroke="#000" />
+            <use xlink:href="#circle_left" fill="#fff" />
+        </mask>
+        <mask id="mask_inverse_left">
+            <rect width="300" height="200" fill="#000" stroke="#000" />
+            <use xlink:href="#circle_right" fill="#fff" />
+        </mask>
+        <clipPath id="clip_right">
+            <use xlink:href="#circle_right" />
+        </clipPath>
+        <clipPath id="clip_left">
+            <use xlink:href="#circle_left" />
+        </clipPath>
+    </defs>
+    <g>
+        <use xlink:href="#circle_right" stroke-width="1.5" stroke="#222" fill="url(#gradient-fill)" mask="url(#mask_right)" />
+        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="url(#gradient-fill)" mask="url(#mask_left)" />
+        <use xlink:href="#circle_left" stroke-width="1.5" stroke="" fill="url(#gradient-fill)" clip-path="url(#clip_right)" />
+    </g>
+</svg>
+
 
 #### Intersecção
 
@@ -206,6 +240,13 @@ $$ A \cup B = \{ x \:|\: x \in A \land x \in B \} $$
 
 <a name="disjoint-set" />Quando temos que $A \cap B = \varnothing$ dizemos que $A$ e $B$ são conjuntos disjuntos, independentes ou mutuamente exclusivos.
 
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <use xlink:href="#circle_left" id="center" fill="url(#gradient-fill)" clip-path="url(#clip_right)"/>
+        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#000" fill="none"/>
+        <use xlink:href="#circle_right" stroke-width="1.5" stroke="#000" fill="none"/>
+    </g>
+</svg>
 
 #### Complemento
 
@@ -213,6 +254,13 @@ Dado um conjunto fixo $U$, denominado _conjunto universo_, o complemento de um c
 
 $$ \thicksim\! A = \{ x \:|\: x \in U \land x \notin A \} $$
 
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <use xlink:href="#circle_right" stroke-width="1.5" stroke="#222" fill="url(#gradient-fill)" mask="url(#mask_right)" />
+        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="#fff" mask="url(#mask_left)" />
+        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="#fff" clip-path="url(#clip_right)" />
+    </g>
+</svg>
 
 #### Diferença
 
@@ -225,6 +273,13 @@ $$
 \end{align}
 $$
 
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <use xlink:href="#circle_right" stroke-width="1.5" stroke="#bbb" fill="#fff" mask="url(#mask_right)" />
+        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="url(#gradient-fill)" mask="url(#mask_left)" />
+        <use xlink:href="#circle_right" stroke-width="1.5" stroke="#222" fill="#fff" clip-path="url(#clip_left)" />
+    </g>
+</svg>
 
 #### Conjunto das Partes
 
