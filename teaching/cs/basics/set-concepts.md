@@ -10,6 +10,11 @@ tags:
 title: Conceitos básicos sobre conjuntos e relações
 copy: 2022-2023
 date: 2023-08-01
+abstract: |-
+  Os conceitos de conjuntos e relações são muito utilizados em ciência da
+  computação. Neste artigo são tratados os conceitos básicos de conjuntos
+  e relações com foco no uso destes conceitos nas disciplinas de linguagens
+  formais e bancos de dados.
 ---
 
 Em diversas áreas da ciência da computação é importante entender conceitos de conjuntos e relações, como nas linguagens formais ou nos bancos de dados. Aqui são apresentados alguns desses conceitos, a nomenclatura e as conveções adotadas nos textos que disponibilizo.
