@@ -82,7 +82,7 @@ Aulas expositivas, exemplos de desenvolvimento, e exercícios práticos.
 | **11** | _Feriado_ | 13/10 |
 | **12** | Consistência e replicação. | 20/10 |
 | **13** | _Evento Institucional_ | 27/10 |
-| **14** | Tolerância a falha. | 3/11 |
+| **14** | Tolerância a falhas. | 3/11 |
 | **15** | Segurança. Modelos de sistemas distribuídos | 10/11 |
 | **16** | Apresentação dos sistemas implementados (**T2**) | 17/11 |
 | **17** | Avaliação **P2** | 24/11 |
@@ -114,3 +114,7 @@ A frequência será medida a partir de chamada nominal, realizada em todas as au
 
 
 ## Material Complementar
+
+### Bibilografia
+
+* _Sistemas Distribuídos: princípios e paradigmas_. Andrew S Tanenbaum; Maarten vas Steen. 2<sup>a</sup> Ed. Pearson. 2008. (Ou a versão mais atualizada, em inglês: **Distributed Systems**. 3<sup>a</sup> Ed. 2017.)
