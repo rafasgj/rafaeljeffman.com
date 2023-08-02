@@ -12,6 +12,7 @@ extra_styles:
 {::options parse_block_html="true" /}
 <div id="page_summary">
 * [Objetivos](#objetivos)
+* [Pré-requisitos](#pré-requisitos)
 * [Competências](#competências-trabalhadas)
 * [Unidades de Aprendizagem](#unidades-de-aprendizagem)
 * [Estratégias Metodológicas](#estratégias-metodológicas)
@@ -51,11 +52,13 @@ Serão trabalhadas as seguintes competências:
 * Estudar as principais tecnologias empregadas em sistemas distribuídos e computação em nuvem para identificar as principais características de cada uma
 * Analisar técnicas e tecnologias empregadas para o provimento de tolerância a falhas em sistemas computacionais distribuídos.
 
+
 ## Unidades de aprendizagem
 
 * Compreensão dos principais conceitos relacionados a sistemas distribuídos e os tipos de comunicação em rede de forma individual ou colaborativa
 * Desenvolvimento de práticas utilizando sistemas distribuídos gerindo a sua aprendizagem de forma autônoma e proativa
 * Análise crítica das ferramentas e técnicas utilizadas para prover tolerância a falhas em sistemas computacionais.
+
 
 ## Estratégias metodológicas
 
