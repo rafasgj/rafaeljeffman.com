@@ -83,15 +83,15 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias e em grup
 | **04** | Recursão. Árvores binárias. | 28/8 |
 | **05** | Algoritmos de ordenação em O(N). (**Entrega T1**) | 4/9 |
 | **06** | Hashing. Algoritmos randômicos. | 11/9 |
-| **07** | Problema do menor caminho. (**Entrega T2**) | 18/9 |
+| **07** | Grafos. Algoritmos de busca em grafos. Problema do menor caminho. (**Entrega T2**) | 18/9 |
 | **08** | Apresentação de Pesquisa. (**A1**) | 25/9 |
-| **09** | Grafos. Algoritmos de busca em grafos. | 2/10 |
+| **09** | Programação dinâmica. | 2/10 |
 | **10** | Programação dinâmica. | 9/10 |
-| **11** | Programação dinâmica. | 16/10 |
+| **11** | Projeto e análise de algoritmos. | 16/10 |
 | **12** | _Evento da Universidade_ | 23/10 |
-| **13** | Intratabilidade e Complexidade. | 30/10 |
-| **14** | Algoritmos P vs. NP | 6/11 |
-| **15** | Redução de algoritmos. NP-hard e NP-complete. (**Entrega T3**) | 13/11 |
+| **13** | Intratabilidade e Complexidade de Algoritmos. | 30/10 |
+| **14** | Algoritmos P vs. NP. Redução de algoritmos. | 6/11 |
+| **15** | Algoritmos NP-hard e NP-complete. Outras classes de algoritmos e problemas. (**Entrega T3**) | 13/11 |
 | **16** | Apresentação de Pesquisa (**A2**) e Revisão | 20/11 |
 | **17** | **Avaliação 12** | 27/11 |
 | **18** | Entrega de Resultados e revisão | 4/12 |
