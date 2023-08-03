@@ -69,7 +69,7 @@ Aulas expositivas, exemplos de desenvolvimento, e exercícios práticos.
 
 | Aula | Conteúdo Programado | Data |
 | :--: | :------------------ | :--: |
-| **01** | Apresentação da disciplina, Conceitos Básicos | 4/8 |
+| [**01**](lectures/sistemas-distribuidos/lecture-01) | Apresentação da disciplina, Conceitos Básicos | [4/8](lectures/sistemas-distribuidos/lecture-01) |
 | **02** | Arquiteturas | 11/8 |
 | **03** | Processos | 18/8 |
 | **04** | Processamento paralelo, multiprocessos, corrotinas, comunicação entre processos | 25/8 |
