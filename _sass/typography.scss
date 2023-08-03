@@ -16,6 +16,10 @@ $normal-font-size: 24px;
   font-family: 'Rokkitt', serif;
   font-size: $normal-font-size;
   font-weight: 300;
+
+  @media (orientation: vertical) {
+    font-size: 28px;
+  }
 }
 
 @mixin title-font {
@@ -40,6 +44,9 @@ $normal-font-size: 24px;
   font-size: 95%;
   font-weight: 600;
   letter-spacing: -0.5px;
+  @media (orientation: vertical) {
+    font-size: 110%;
+  }
 }
 
 @font-face {
@@ -243,13 +250,19 @@ $flex_nav_breakpoint: 1024px;
 /* last update div */
 .last-update {
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   text-align: right;
   color: #888;
+  @media (orientation: vertical) {
+    font-size: 18px;
+  }
 }
 .last-update a {
-  font-size: 14px;
+  font-size: 16px;
   color: #444;
+  @media (orientation: vertical) {
+    font-size: 18px;
+  }
 }
 
 /* language code */
