@@ -15,5 +15,5 @@ parsetab.py
 # temp files
 .*.swp
 
-# TODO file
-TODO
+# _todo directory
+_todo/
