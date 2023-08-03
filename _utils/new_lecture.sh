@@ -22,4 +22,4 @@ next_lecture=$(printf "lecture-%02d.md" $(echo "1 + ${next_lecture}" | bc -l))
 source="${BASEDIR}/_utils/templates/lecture.md"
 [ -f "${BASEDIR}/_utils/templates/${next_lecture}" ] && source="${BASEDIR}/_utils/templates/${next_lecture}"
 
-sed -e "s/@TITLE@/${title}/g" -e "s/@DISCIPLINA@/${name}/g" -e "s/@YEAR@/${year}/g" -e "s/@INSTITUTION@/${instituicao}/g" -e "s/@NICK@/${nick}/g" < "${source}" > "${LECTURE_DIR}/${next_lecture}"
+sed -e "s/@TITLE@/${title}/g" -e "s/@DISCIPLINA@/${name}/g" -e "s/@YEAR@/${year}/g" -e "s/@INSTITUTION@/${institution}/g" -e "s/@NICK@/${nick}/g" < "${source}" > "${LECTURE_DIR}/${next_lecture}"
