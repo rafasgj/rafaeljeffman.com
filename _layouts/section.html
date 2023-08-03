@@ -28,7 +28,7 @@
             </div>
             <div id="contents">
                 {{ content }}
-                {% assign page_list = site.pages | where_exp: "item", "item.title != nil" | where_exp: "item", "item.date != nil" | where_exp: "item", "item.layout != 'section'" | sort: "date" | reverse  %}
+                {% assign page_list = site.pages | where_exp: "item", "item.title != nil" | where_exp: "item", "item.date != nil" | where_exp: "item", "item.layout != 'section'" | where_exp: "item", "item.layout != 'lecture'" | sort: "date" | reverse  %}
                 {% if page.sections %}
                     {% assign filtered_list = page_list | where_exp: "item", "page.sections contains item.section" %}
                 {% else %}
