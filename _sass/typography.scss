@@ -22,6 +22,10 @@ $normal-font-size: 24px;
   }
 }
 
+html {
+    @include normal-font;
+}
+
 @mixin title-font {
   font-family: $title-font;
   font-weight: 300;
@@ -73,8 +77,9 @@ $normal-font-size: 24px;
   font-display: swap;
 }
 
-* {
+p {
   @include normal-font;
+  letter-spacing: 0.3px;
 }
 
 a {
@@ -84,10 +89,6 @@ a {
 
 strong {
   font-weight: 600 !important;
-}
-
-p {
-  letter-spacing: 0.3px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -157,7 +158,7 @@ code {
     a {
       @include logo-font;
       font-weight: 200 !important;
-      font-size: 300%;
+      font-size: 72px;
       background-image: $logo-title-bg;
       -webkit-background-clip: text;
       background-clip: text;
@@ -168,7 +169,7 @@ code {
 }
 
 .huge {
-  font-size: 250% !important;
+  font-size: 48px !important;
 }
 
 /** CARDS **/
@@ -183,8 +184,9 @@ code {
 }
 
 .card-abstract {
-  * {
+  p {
     @include normal-font;
+    letter-spacing: 0.1px;
   }
 }
 
@@ -221,13 +223,13 @@ $flex_nav_breakpoint: 1024px;
 .nav ul {
   a:not(#menu-tag a) {
     font-family: $menu-font;
-    font-size: 110%;
+    font-size: 24px;
     font-weight: 600 !important;
   }
   li {
     ul {
       a:not(#menu-tag a) {
-        font-size: 95%;
+        font-size: 22px;
         font-weight: 600 !important;
       }
     }
@@ -272,7 +274,7 @@ $flex_nav_breakpoint: 1024px;
 /* language code */
 .lang-code {
   display: inline-block;
-  font-size: 80%;
+  font-size: 14px;
   text-align: right;
   color: #858;
 }
