@@ -60,7 +60,7 @@ As competências trabalhadas durante a disciplina são:
 
 As unidades de aprendizagem que compreendem esta disciplina são:
 
-* Entedimento sobre a notação assintótica e crescimento de funções para a análise de algoritmos de forma individual e crítica
+* Entendimento sobre a notação assintótica e crescimento de funções para a análise de algoritmos
 * Análise crítica sobre a computação de algoritmos para mensurar o desempenho destes
 * Compreensão sobre as ordens de complexidade e notações para a análise de algotimos
 * Entendimento sobre recorrência
@@ -77,26 +77,26 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias e em grup
 
 | Aula | Conteúdo Programado | Data |
 | :--: | :------------------ | :--: |
-| **01** | Apresentação da disciplina, Conceitos Básicos. Pensamento algorítmico. | 7/8 |
-| **02** | Análise assintótica. Notações omega, theta e Big-O. | 14/8 |
-| **03** | Modelos de computacão. Análise de algoritmos de ordenação.  | 21/8 |
-| **04** | Recursão. Árvores binárias. | 28/8 |
-| **05** | Algoritmos de ordenação em O(N). (**Entrega T1**) | 4/9 |
-| **06** | Hashing. Algoritmos randômicos. | 11/9 |
-| **07** | Grafos. Algoritmos de busca em grafos. Problema do menor caminho. (**Entrega T2**) | 18/9 |
+| **01** | Apresentação da disciplina. Conceitos Básicos. Pensamento algorítmico. | 7/8 |
+| **02** | Análise assintótica. Notações omega, theta e Big-O. Algoritmos de busca. | 14/8 |
+| **03** | Modelos de computacão. Recursão. Análise de algoritmos de ordenação. | 21/8 |
+| **04** | Algoritmos eficientes de ordenação. Árvores binárias de pesquisa. | 28/8 |
+| **05** | Algoritmos de ordenação em O(N). Hashing. | 4/9 |
+| **06** | Grafos. Algoritmos de busca em grafos. Problema do menor caminho. | 11/9 |
+| **07** | Grafos: outros algoritmos de busca. (**Entrega T1**) | 18/9 |
 | **08** | Apresentação de Pesquisa. (**A1**) | 25/9 |
-| **09** | Programação dinâmica. | 2/10 |
-| **10** | Programação dinâmica. | 9/10 |
-| **11** | Projeto e análise de algoritmos. | 16/10 |
+| **20** | Projeto e análise de algoritmos. | 2/10 |
+| **11** | Projeto e análise de algoritmos. | 9/10 |
+| **09** | Programação dinâmica. | 16/10 |
 | **12** | _Evento da Universidade_ | 23/10 |
-| **13** | Intratabilidade e Complexidade de Algoritmos. | 30/10 |
-| **14** | Algoritmos P vs. NP. Redução de algoritmos. | 6/11 |
-| **15** | Algoritmos NP-hard e NP-complete. Outras classes de algoritmos e problemas. (**Entrega T3**) | 13/11 |
-| **16** | Apresentação de Pesquisa (**A2**) e Revisão | 20/11 |
-| **17** | **Avaliação 12** | 27/11 |
-| **18** | Entrega de Resultados e revisão | 4/12 |
-| **19** | **Avaliação de Recuperação** | 11/12 |
-| **20** | Divulgação de Resultados | 18/12 |
+| **10** | Programação dinâmica e Jogos de Computador. | 30/10 |
+| **13** | Intratabilidade e Complexidade de Algoritmos. | 6/11 |
+| **14** | Algoritmos P vs. NP. Redução de algoritmos. | 13/11 |
+| **15** | Algoritmos NP-hard e NP-complete. Outras classes de algoritmos e problemas. (**Entrega T3**) | 20/11 |
+| **17** | Apresentação de Pesquisa (**A2**) e Revisão | 27/11 |
+| **18** | **Avaliação P1** | 4/12 |
+| **19** | Entrega de Resultados e revisão | 11/12 |
+| **20** | **Avaliação de Recuperação** | 18/12 |
 
 
 ## Procedimentos e Critérios de Avaliação {#avaliacao}
