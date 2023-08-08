@@ -27,13 +27,16 @@ Cursos que ministrei em instituições de ensino superior:
     * Desenvolvimento para Dispositivos Móveis
         * [2023/2](lasalle/2023-02-mobile)
         * [2022/2](lasalle/2022-02-mobile)
+    * Laboratório de Engenharia de Software
+        * [2023/2](lasalle/2023-02-engswlab)
     * Sistemas Distribuídos
         * [2023/2](lasalle/2023-02-sistemas-distribuidos)
     * EAD
         * 2023/2
+        : Banco de Dados Aplicado
+        : Desenvolvimento para Dispositivos Móveis
         : Inteligência Artificial Aplicada
         : Segurança Computacional
-        : Banco de Dados Aplicado
 * [Faculdade Senai Porto Alegre](senai) [site institucional <i class="fa-solid fa-globe" style="font-size: 70%; vertical-align: baseline;"></i>](https://www.senairs.org.br/unidades/senai-porto-alegre){:target="\_blank" class="last-update blue"}
     * Sistemas Operacionais de Código Aberto
         * [2022/1](senai/2022-01-soca)
