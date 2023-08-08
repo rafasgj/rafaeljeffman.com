@@ -15,7 +15,7 @@ institution=${5:-"Universidade LaSalle Canoas"}
 BASEDIR="$(dirname $0)/.."
 LECTURE_DIR="${BASEDIR}/teaching/lasalle/lectures/${nick}"
 
-next_lecture=$({ echo "lecture-00.md" ; ls -1 "${LECTURE_DIR}"; } | tail -n 1 | tee out | xargs basename -s .md | cut -d- -f2)
+next_lecture=$({ echo "lecture-00.md" ; ls -1 "${LECTURE_DIR}"; } | tail -n 1 | xargs basename -s .md | cut -d- -f2)
 
 next_lecture=$(printf "lecture-%02d.md" $(echo "1 + ${next_lecture}" | bc -l))
 
