@@ -39,7 +39,7 @@ institution:
     1. Métodos de aprendizado
         1. Notas de Cornell
         2. Resumos
-        3.. Flashcards
+        3. Flashcards
         4. Preparação de apresentações
     2. Métodos de organização
         1. TODO list
@@ -56,17 +56,12 @@ institution:
 10. Tipos de aplicações para dispositivos móveis
 11. Desenvolvimento nativo vs. Desenvolvimento híbrido
 12. Principais problemas encontrados no desenvolvimento para dispositivos móveis
-13. Revisão sobre desenvolvimento Web
-14. Revisão sobre JavaScript
-15. Sugestões de pesquisa para a próxima aula
 
 
 ## Questões
 
 1. Por que a abordagem da disciplina deve ser "desenvolvimento para dispositivos móveis" e não "desenvolvimento de aplicações para celular"?
 2. Elenque vantagens e desvantagens do desenvolvimento de aplicações nativo e híbrido
-3. Crie uma calculadora com operações básicas utilizando apenas HTML, CSS e Javascript. Como essa aplicação se comporta em diferentes dispositivos?
-
 
 ## Recursos extras
 
