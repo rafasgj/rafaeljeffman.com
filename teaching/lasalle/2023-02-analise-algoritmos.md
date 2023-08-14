@@ -70,30 +70,30 @@ As unidades de aprendizagem que compreendem esta disciplina são:
 
 ## Estratégias metodológicas
 
-Serão utilizadas aulas expositivas, exercícios práticos individuias e em grupo, pesquisas e apresentação de conteúdos relacionados à discplina.
+Serão utilizadas aulas expositivas, exercícios práticos individuias ou em grupo, pesquisas e apresentação de conteúdos relacionados a discplina.
 
 
 ## Cronograma
 
 | Aula | Conteúdo Programado | Data |
 | :--: | :------------------ | :--: |
-| **01** | Apresentação da disciplina. Conceitos Básicos. Pensamento algorítmico. | 7/8 |
-| **02** | Análise assintótica. Notações omega, theta e Big-O. Algoritmos de busca. | 14/8 |
-| **03** | Modelos de computacão. Recursão. Análise de algoritmos de ordenação. | 21/8 |
-| **04** | Algoritmos eficientes de ordenação. Árvores binárias de pesquisa. | 28/8 |
-| **05** | Algoritmos de ordenação em O(N). Hashing. | 4/9 |
-| **06** | Grafos. Algoritmos de busca em grafos. Problema do menor caminho. | 11/9 |
-| **07** | Grafos: outros algoritmos de busca. (**Entrega T1**) | 18/9 |
-| **08** | Apresentação de Pesquisa. (**A1**) | 25/9 |
-| **20** | Projeto e análise de algoritmos. | 2/10 |
-| **11** | Projeto e análise de algoritmos. | 9/10 |
+| [**01**](lectures/analise-algoritmos/lecture-01) | Apresentação da disciplina. Conceitos Básicos. Pensamento algorítmico. | [7/8](lectures/analise-algoritmos/lecture-01) |
+| [**02**](lectures/analise-algoritmos/lecture-02) | Revisão: teoria de autômatos, máquinas universais, equivalência de máquinas universais. Linguagen regulares, livres de contexto. | [14/8](lectures/analise-algoritmos/lecture-02) |
+| **03** | Análise assintótica. Notações omega, theta e Big-O. Algoritmos de busca e ordenação. | 21/8 |
+| **04** | Modelos de computacão. Algoritmos eficientes de ordenação por comparação. Algoritmos de ordenação em O(N). | 28/8 |
+| **05** | Recursão. Árvores binárias de pesquisa. | 5/9 |
+| **06** | Hashing. | 11/9 |
+| **07** | Apresentação de Pesquisa. (**A1**) | 18/9 |
+| **08** | Grafos. Problema do menor caminho. (**Entrega T1**) | 25/9 |
+| **20** | Projeto e análise de algoritmos: Divisão e Conquista, Algoritmos Gulosos. | 2/10 |
+| **11** | Procura em Strings. | 9/10 |
 | **09** | Programação dinâmica. | 16/10 |
 | **12** | _Evento da Universidade_ | 23/10 |
 | **10** | Programação dinâmica e Jogos de Computador. | 30/10 |
 | **13** | Intratabilidade e Complexidade de Algoritmos. | 6/11 |
 | **14** | Algoritmos P vs. NP. Redução de algoritmos. | 13/11 |
-| **15** | Algoritmos NP-hard e NP-complete. Outras classes de algoritmos e problemas. (**Entrega T3**) | 20/11 |
-| **17** | Apresentação de Pesquisa (**A2**) e Revisão | 27/11 |
+| **15** | Algoritmos NP-hard e NP-complete. Outras classes de algoritmos e problemas. | 20/11 |
+| **17** | Exercícios e Revisão. (**Entrega T3**) | 27/11 |
 | **18** | **Avaliação P1** | 4/12 |
 | **19** | Entrega de Resultados e revisão | 11/12 |
 | **20** | **Avaliação de Recuperação** | 18/12 |
@@ -103,9 +103,9 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias e em grup
 
 A nota final será composta por trabalhos/exercícios e prova, que serão desenvolvidos durante as aulas e em atividades extraclasse.
 
-O grau 1 será composto por `G1 = T1 (3,0) + T2(3,0) + A1(4,0)`
+O grau 1 será composto por `G1 = T1 (3,0) + A1(4,0) + E1(3,0)`
 
-O grau 2 (G2) será composto por `G2 = A2 (6,0) + T3(2,0) + P1(2,0)`
+O grau 2 (G2) será composto por `G2= T2(3,0) + P1(4,0) + E2(3,0)`
 
 A nota final será a média (M) dada pela regra `M = (G1 + G2) / 2`
 
