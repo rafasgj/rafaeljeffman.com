@@ -65,8 +65,8 @@ Aulas expositivas, debates em grupo e exercícios práticos.
 
 | Aula | Conteúdo Programado | Data |
 | :--: | :------------------ | :--: |
-| [**01**](/teaching/lasalle/lectures/engswlab/lecture-01) | Apresentação da Disciplina. Revisão requisitos funcionais e não-funcionais. | [8/8](/teaching/lasalle/lectures/engswlab/lecture-01) |
-| **02** | Engeharia de Requisitos. Exercício prático. | 15/8 |
+| [**01**](lectures/engswlab/lecture-01) | Apresentação da Disciplina. Revisão requisitos funcionais e não-funcionais. | [8/8](lectures/engswlab/lecture-01) |
+| [**02**](lectures/engswlab/lecture-02) | Engeharia de Requisitos. Exercício prático. | [15/8](lectures/engswlab/lecture-02) |
 | **03** | Diagrama de Casos de Uso. Detalhamento dos diagramas de Casos de Uso. Ferramentas para criar diagramas. | 22/8 |
 | **04** | Diagramas de Classe e de Sequencia. | 29/8 |
 | **05** | Diagramas de Atividade. Controle de versão e qualidade. | 5/9 |

@@ -34,7 +34,9 @@ Cada grupo deve entregar um texto contendo:
 
 ## Recursos para essa aula
 
-[Slides apresentados em aula](https://rafaeljeffman.com/teaching/lasalle/lectures/engswlab/files/eng_requisitos.pdf)
+[Slides apresentados em aula](files/eng_requisitos.pdf){:target="\_blank"}
+<embed class="pdf-doc" src="files/eng_requisitos.pdf" type="application/pdf"/>
+
 
 ### Recursos on-line
 
