@@ -69,26 +69,26 @@ Aulas expositivas, exemplos de desenvolvimento, e exercícios práticos.
 
 | Aula | Conteúdo Programado | Data |
 | :--: | :------------------ | :--: |
-| [**01**](lectures/sistemas-distribuidos/lecture-01) | Apresentação da disciplina, Conceitos Básicos | [4/8](lectures/sistemas-distribuidos/lecture-01) |
-| **02** | Arquiteturas | 11/8 |
-| **03** | Processos | 18/8 |
-| **04** | Processamento paralelo, multiprocessos, corrotinas, comunicação entre processos | 25/8 |
-| **05** | Sincronização. | 1/9 |
-| **06** | _Feriado_ | 8/9 |
-| **07** | Revisão dos conteúdos | 15/9 |
-| **08** | Apresentação das aplicações implementadas (**T1**) | 22/9 |
-| **09** | Avaliação **P1** | 29/9 |
-| **10** | Nomeação. | 6/10 |
-| **11** | _Feriado_ | 13/10 |
-| **12** | Consistência e replicação. | 20/10 |
-| **13** | _Evento Institucional_ | 27/10 |
-| **14** | Tolerância a falhas. | 3/11 |
-| **15** | Segurança. Modelos de sistemas distribuídos | 10/11 |
-| **16** | Apresentação dos sistemas implementados (**T2**) | 17/11 |
-| **17** | Avaliação **P2** | 24/11 |
-| **18** | Divulgação de Resultados, Revisão para Recuperação | 1/12 |
-| **19** | Recuperação | 8/12 |
-| **20** | Divulgação de Resultados | 15/12 |
+| [**01**](lectures/sistemas-distribuidos/lecture-01) | Apresentação da disciplina. Introdução aos sistemas distribuídos. Exemplos de aplicações. | [3/8](lectures/sistemas-distribuidos/lecture-01) |
+| **02** | Revisão de conceitos de sistemas operacionais e redes de computadores | 10/8 |
+| [**03**](lectures/sistemas-distribuidos/lecture-03) | _TI Carreiras (Evento institucional)_. Exercícios sobre virtualização. | [17/8](lectures/sistemas-distribuidos/lecture-03) |
+| **04** | Arquiteturas e Processos distribuídos. | 24/8 |
+| **05** | Processamento paralelo, multiprocessos, corrotinas, comunicação entre processos. | 31/8 |
+| **06** | _Feriado_ | 7/9 |
+| **07** | Sincronização. | 14/9 |
+| **08** | Apresentação das aplicações implementadas (**T1**) | 21/9 |
+| **09** | Avaliação **P1** | 28/9 |
+| **10** | Nomeação. | 5/10 |
+| **11** | _Feriado_ | 12/10 |
+| **12** | Consistência e replicação. | 19/10 |
+| **13** | _Evento Institucional_ <!-- Apresentação parcial dos trabalhos (***T2**) --> | 26/10 |
+| **14** | Feriado | 2/11 |
+| **15** | Tolerância a falhas. | 9/11 |
+| **16** | Segurança. Modelos de sistemas distribuídos. | 16/11 |
+| **17** | Apresentação dos sistemas implementados (**T2**) | 23/11 |
+| **18** | Prova **P2** | 30/11 |
+| **19** | Divulgação de Resultados, Revisão para Recuperação | 7/12 |
+| **20** | Prova de Recuperação. | 14/12 |
 
 
 ## Atividades de Extensão {#extensao}
