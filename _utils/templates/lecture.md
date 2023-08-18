@@ -2,7 +2,7 @@
 title: @TITLE@
 subtitle: @DISCIPLINA@
 layout: lecture
-last-occurrence: 
+last_occurrence: 
 copy: @YEAR@
 institution:
   name: Universidade LaSalle Canoas

@@ -2,7 +2,7 @@
 title: Aula prática sobre virtualização
 subtitle: Sistemas Distribuídos
 layout: lecture
-last-occurrence: 2023-08-17
+last_occurrence: 2023-08-17
 copy: 2023
 institution:
   name: Universidade LaSalle Canoas

@@ -2,7 +2,7 @@
 title: Revisão de Conceitos
 subtitle: Complexidade de Algoritmos e Análise de Desempenho
 layout: lecture
-last-occurrence: 2023-08-14
+last_occurrence: 2023-08-14
 copy: 2023
 institution:
   name: Universidade LaSalle Canoas

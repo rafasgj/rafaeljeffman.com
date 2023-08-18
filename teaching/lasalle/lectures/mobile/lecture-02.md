@@ -2,7 +2,7 @@
 title: Revisão dos conceitos de desenvolvimento Web
 subtitle: Desenvolvimento para Dispositivos Móveis
 layout: lecture
-last-occurrence: 
+last_occurrence: 2023-08-12
 copy: 2023
 institution:
   name: Universidade LaSalle Canoas

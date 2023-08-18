@@ -2,7 +2,7 @@
 title: Apresentação da Disciplina
 subtitle: Lab. de Engenharia de Software
 layout: lecture
-last-occurrence: 2023-08-08
+last_occurrence: 2023-08-08
 copy: 2023
 institution:
   name: 

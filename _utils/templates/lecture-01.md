@@ -2,7 +2,7 @@
 title: Apresentação da Disciplina
 subtitle: @DISCIPLINA@
 layout: lecture
-last-occurrence: 
+last_occurrence: 
 copy: @YEAR@
 institution:
   name: @INSTITUTION@

@@ -78,11 +78,10 @@
                       {% endfor %}
                       <ul>
                     </div>
-                    {% if page.date %}
-                        <div class="last-update">
-                            {{ site.data.lang["Ultima_ocorrencia"][page.lang] | default: "Última ocorrência" }}: {{ page.last-occurrence | default: site.data.lang["Nao_ocorreu"][page.lang] | default: "Não ocorreu" }} em <a href="{{ page.institution.link }}">{{ page.institution.name }}</a>
-                        </div>
-                    {% endif %}
+                    {% assign occurrence = page.last_occurrence | default: site.data.lang["Nao_ocorreu"][page.lang] | default: "Não ocorreu" %}
+                    <div class="last-update">
+                        {{ site.data.lang["Ultima_ocorrencia"][page.lang] | default: "Última ocorrência" }}: {{ occurrence }}{% if page.last_occurrence %} em <a href="{{ page.institution.link }}">{{ page.institution.name }}</a> {% endif %}
+                    </div>
                 </div>
             </div>
         <div id="contents">

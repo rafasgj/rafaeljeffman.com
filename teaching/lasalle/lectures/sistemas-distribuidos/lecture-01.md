@@ -2,7 +2,7 @@
 title: Apresentação da Disciplina
 subtitle: Sistemas Distribuídos
 layout: lecture
-last-occurrence: 
+last_occurrence: 2023-08-04
 copy: 2023
 institution: 
   name: Universidade LaSalle Canoas
