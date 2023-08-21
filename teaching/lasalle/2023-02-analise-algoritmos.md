@@ -79,8 +79,8 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias ou em gru
 | :--: | :------------------ | :--: |
 | [**01**](lectures/analise-algoritmos/lecture-01) | Apresentação da disciplina. Conceitos Básicos. Pensamento algorítmico. | [7/8](lectures/analise-algoritmos/lecture-01) |
 | [**02**](lectures/analise-algoritmos/lecture-02) | Revisão: teoria de autômatos, máquinas universais, equivalência de máquinas universais. Linguagen regulares, livres de contexto. | [14/8](lectures/analise-algoritmos/lecture-02) |
-| **03** | Análise assintótica. Notações omega, theta e Big-O. Algoritmos de busca e ordenação. | 21/8 |
-| **04** | Modelos de computacão. Algoritmos eficientes de ordenação por comparação. Algoritmos de ordenação em O(N). | 28/8 |
+| [**03**](lectures/analise-algoritmos/lecture-03) | Complexidade e desempenho de algoritmos. Medidas de Desempenho. Análise assintótica. Notações Omega, Theta e Big-O. Algoritmos de busca e ordenação. | [21/8](lectures/analise-algoritmos/lecture-03) |
+| **04** | Algoritmos eficientes de ordenação por comparação. Algoritmos de ordenação em O(N). | 28/8 |
 | **05** | Recursão. Árvores binárias de pesquisa. | 5/9 |
 | **06** | Hashing. | 11/9 |
 | **07** | Apresentação de Pesquisa. (**A1**) | 18/9 |
