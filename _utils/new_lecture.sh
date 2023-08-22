@@ -6,9 +6,10 @@ usage() {
 
 [ "$#" -lt 1 ] || [ "$#" -gt 5 ] && usage && exit 1
 
-declare -A lectures=(
+declare -A lectures
+lectures=(
     [analise-algoritmos]="Complexidade de Algoritmos e Análise de Desempenho"
-    [engsw]="Laboratório de Engenharia de Software"
+    [engswlab]="Laboratório de Engenharia de Software"
     [sistemas-distribuidos]="Sistemas Distribuídos"
     [mobile]="Desenvolmimento para Dispositivos Móveis"
     [compiler]="Compiladores"
@@ -20,6 +21,7 @@ title=${2:-''}
 year=${3:-$(date +"%Y")}
 name=${4:-${lectures[${nick}]}}
 institution=${5:-"Universidade LaSalle Canoas"}
+
 
 BASEDIR="$(dirname $0)/.."
 LECTURE="teaching/lasalle/lectures/${nick}"
