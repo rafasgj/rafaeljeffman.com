@@ -65,11 +65,11 @@ Aulas expositivas, debates em grupo e exercícios práticos.
 
 | Aula | Conteúdo Programado | Data |
 | :--: | :------------------ | :--: |
-| [**01**](lectures/engswlab/lecture-01) | Apresentação da Disciplina. Revisão requisitos funcionais e não-funcionais. | [8/8](lectures/engswlab/lecture-01) |
-| [**02**](lectures/engswlab/lecture-02) | Engeharia de Requisitos. Exercício prático. | [15/8](lectures/engswlab/lecture-02) |
-| [**03**](lectures/engswlab/lecture-03) | Diagrama de Casos de Uso. Detalhamento dos diagramas de Casos de Uso. Ferramentas para criar diagramas. | [22/8](lectures/engswlab/lecture-03) |
-| **04** | Diagramas de Classe e de Sequencia. | 29/8 |
-| **05** | Diagramas de Atividade. Controle de versão e qualidade. | 5/9 |
+| [**01**](lectures/engswlab/lecture-01) | Apresentação da Disciplina. Definição e papel da Engenharia de Software. | [8/8](lectures/engswlab/lecture-01) |
+| [**02**](lectures/engswlab/lecture-02) | Engeharia de Requisitos. | [15/8](lectures/engswlab/lecture-02) |
+| [**03**](lectures/engswlab/lecture-03) | Diagrama de Casos de Uso. Ferramentas para criar diagramas. | [22/8](lectures/engswlab/lecture-03) |
+| **04** | Detalhamento dos diagramas de Casos de Uso. Diagramas de Classe. | 29/8 |
+| **05** | Diagramas de Sequencia e de Atividade. Controle de versão e qualidade. | 5/9 |
 | **06** | Metodologias ágeis. Gestão e documentação de software. | 12/9 |
 | **07** | Prova **P1** | 19/9 |
 | **08** | Especificação do Projeto **G2** | 26/9 |
@@ -78,10 +78,10 @@ Aulas expositivas, debates em grupo e exercícios práticos.
 | **11** | Apresentação 1<sup>a</sup> (**A1**) parte do Projeto **G2** | 17/10 |
 | **12** | _Evento institucional_ | 24/10 |
 | **13** | Desenvolvimento do projeto **G2**  | 31/10 |
-| **14** | Apresentação 2<sup>a</sup> (**A2**) parte do Projeto **G2** | 7/10 |
-| **15** | Desenvolvimento do projeto **G2**   | 14/10 |
-| **16** | Desenvolvimento do projeto **G2** | 21/10 |
-| **17** | Apresentação final (**A3**) do Projeto **G2** | 28/10 |
+| **14** | Apresentação 2<sup>a</sup> (**A2**) parte do Projeto **G2** | 7/11 |
+| **15** | Desenvolvimento do projeto **G2**   | 14/11 |
+| **16** | Desenvolvimento do projeto **G2** | 21/11 |
+| **17** | Apresentação final (**A3**) do Projeto **G2** | 28/11 |
 | **18** | Prova **P2** | 5/12 |
 | **19** | Entrega de resultados e revisão para substituição de grau | 12/12 |
 | **20** | Substituição de grau | 19/12 |
@@ -103,3 +103,6 @@ Para obter a aprovação, o aluno deve obter uma média (M) igual ou superior a 
 
 A frequência será medida a partir de chamada nominal, realizada em todas as aulas.
 
+## Material Complementar
+
+* [Draw.io](https://app.diagrams.net/): Ferramenta online, gratuita, para a geração de diagramas.
