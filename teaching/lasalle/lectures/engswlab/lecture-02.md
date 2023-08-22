@@ -12,8 +12,8 @@ institution:
 ## Assuntos
 
 1. Engenharia de Requisitos
-2. Requistios Funcionais e Não-funcionais
-3. Princípios de Engenharia de Requisitos
+2. Princípios de Engenharia de Requisitos
+3. Requistios Funcionais e Não-funcionais
 
 
 ## Questões
@@ -37,7 +37,8 @@ Cada grupo deve entregar um texto contendo:
 [Slides apresentados em aula](files/eng_requisitos.pdf){:target="\_blank"}
 <embed class="pdf-doc" src="files/eng_requisitos.pdf" type="application/pdf"/>
 
-
 ### Recursos on-line
 
-[Engenharia de Requisitos Passo-a-Passo](https://visuresolutions.com/pt/blog/processo-de-engenharia-de-requisitos/)
+* [Engenharia de Requisitos Passo-a-Passo](https://visuresolutions.com/pt/blog/processo-de-engenharia-de-requisitos/)
+* [O que são requisitos funcionais e não funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/) (Codificar)
+* [O que são requisitos funcionais e não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-nao-funcionais/) (Análise de Requisitos)
