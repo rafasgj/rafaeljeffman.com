@@ -31,7 +31,7 @@ Apresenta os princípios e conceitos de análise léxica, sintática e semântic
 Embora os pré-requisitos não sejam obrigatórios, o seu domínio auxiliará muito na evolução do aprendizado:
 
 * Expressões Regulares
-* Gramáticas Livres de Context
+* Gramáticas Livres de Contexto
 * Paradigmas de Linguagens de Programação
 * Estruturas de dados (Árvores e Tabelas Hash)
 * Conhecimento intermediário em Python ou C/C++
@@ -70,18 +70,14 @@ Implementação dos componentes de um compilador para uma máquina virtual de pi
 | G2 | Geração de código alvo para uma máquina virtual de pilha simplificada. | 2,0 |
 
 
-## Atividades de Extensão {#extensao}
-
-Atividades destinadas à interação entre alunos e a comunidade na qual estão inseridos. Buscar demandas da sociedade e transformá-las em propostas de projeto com implementação e validação de protótipos de sistemas.
-
-
 ## Procedimentos e Critérios de Avaliação {#avaliacao}
 
 A nota final será composta por trabalhos práticos de implementação, e será calculada com  a média (M) dada pela regra `M = (G1 + G2) / 2`, sendo G1 e G2 graus parciais formados totalmente por trabalhos práticos.
 
 Para obter a aprovação, o aluno deve obter uma média (M) igual ou superior a **6**, com frequência mínima de 8 encontros presenciais.
 
-<!--
 ## Material Complementar
--->
 
+### Bibilografia
+
+* Aho, Lam, Sethi e Ulmann. **Compiladore: Princípios, Técnicas e Ferramentas**. 2<sup>a</sup> ed. Pearson Addison Wesley, 2008.
