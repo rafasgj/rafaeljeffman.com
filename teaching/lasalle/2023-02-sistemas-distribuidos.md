@@ -72,8 +72,8 @@ Aulas expositivas, exemplos de desenvolvimento, e exercícios práticos.
 | [**01**](lectures/sistemas-distribuidos/lecture-01) | Apresentação da disciplina. Introdução aos sistemas distribuídos. Exemplos de aplicações. | [3/8](lectures/sistemas-distribuidos/lecture-01) |
 | **02** | Revisão de conceitos de sistemas operacionais e redes de computadores | 10/8 |
 | [**03**](lectures/sistemas-distribuidos/lecture-03) | _TI Carreiras (Evento institucional)_. Exercícios sobre virtualização. | [17/8](lectures/sistemas-distribuidos/lecture-03) |
-| **04** | Arquiteturas e Processos distribuídos. | 24/8 |
-| **05** | Processamento paralelo, multiprocessos, corrotinas, comunicação entre processos. | 31/8 |
+| [**04**](lectures/sistemas-distribuidos/lecture-04) | Arquiteturas e Processos distribuídos. | [24/8](lectures/sistemas-distribuidos/lecture-04) |
+| **05** | Processos Distribuídos. Comunicação. | 31/8 |
 | **06** | _Feriado_ | 7/9 |
 | **07** | Sincronização. | 14/9 |
 | **08** | Apresentação das aplicações implementadas (**T1**) | 21/9 |
