@@ -3,7 +3,7 @@ title: Linguagens Formais e Autômatos (Tutoria)
 subtitle: Unilasalle - 2023/2
 layout: section
 sections:
-  - Compiladores
+  - conjuntos
   - automata
   - parser
   - lexer
