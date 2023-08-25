@@ -1,9 +1,13 @@
 ---
-title: Compiladores
+title: Compiladores (Tutoria)
 subtitle: Unilasalle - 2023/2
 layout: section
 sections:
   - Compiladores
+  - automata
+  - parser
+  - lexer
+  - grammar
 extra_styles:
   - cronograma
   - page_summary
@@ -80,4 +84,4 @@ Para obter a aprovação, o aluno deve obter uma média (M) igual ou superior a 
 
 ### Bibilografia
 
-* Aho, Lam, Sethi e Ulmann. **Compiladore: Princípios, Técnicas e Ferramentas**. 2<sup>a</sup> ed. Pearson Addison Wesley, 2008.
+* Aho, Lam, Sethi e Ulmann. **Compiladores: Princípios, Técnicas e Ferramentas**. 2<sup>a</sup> ed. Pearson Addison Wesley, 2008.
