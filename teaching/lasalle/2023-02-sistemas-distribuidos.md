@@ -72,23 +72,24 @@ Aulas expositivas, exemplos de desenvolvimento, e exercícios práticos.
 | [**01**](lectures/sistemas-distribuidos/lecture-01) | Apresentação da disciplina. Introdução aos sistemas distribuídos. Exemplos de aplicações. | [3/8](lectures/sistemas-distribuidos/lecture-01) |
 | **02** | Revisão de conceitos de sistemas operacionais e redes de computadores | 10/8 |
 | [**03**](lectures/sistemas-distribuidos/lecture-03) | _TI Carreiras (Evento institucional)_. Exercícios sobre virtualização. | [17/8](lectures/sistemas-distribuidos/lecture-03) |
-| [**04**](lectures/sistemas-distribuidos/lecture-04) | Arquiteturas e Processos distribuídos. | [24/8](lectures/sistemas-distribuidos/lecture-04) |
+| [**04**](lectures/sistemas-distribuidos/lecture-04) | Arquiteturas e Processos distribuídos. Especificação do Trabalho **T1**. | [24/8](lectures/sistemas-distribuidos/lecture-04) |
 | **05** | Processos Distribuídos. Comunicação. | 31/8 |
 | **06** | _Feriado_ | 7/9 |
 | **07** | Sincronização. | 14/9 |
-| **08** | Apresentação das aplicações implementadas (**T1**) | 21/9 |
+| **08** | Revisão para **P1**. Especificação do Trabalho **T2**. (Entrega do **T1**.) | 21/9 |
 | **09** | Avaliação **P1** | 28/9 |
 | **10** | Nomeação. | 5/10 |
 | **11** | _Feriado_ | 12/10 |
-| **12** | Consistência e replicação. | 19/10 |
+| **12** | Consistência e Replicação. | 19/10 |
 | **13** | _Evento Institucional_ <!-- Apresentação parcial dos trabalhos (***T2**) --> | 26/10 |
-| **14** | Feriado | 2/11 |
+| **14** | _Feriado_ | 2/11 |
 | **15** | Tolerância a falhas. | 9/11 |
 | **16** | Segurança. Modelos de sistemas distribuídos. | 16/11 |
-| **17** | Apresentação dos sistemas implementados (**T2**) | 23/11 |
-| **18** | Prova **P2** | 30/11 |
-| **19** | Divulgação de Resultados, Revisão para Recuperação | 7/12 |
-| **20** | Prova de Recuperação. | 14/12 |
+| **17** | Implementação dos trabalhos. | 23/11 |
+| **18** | Apresentação dos sistemas implementados (**T2**) | 20/11 |
+| **19** | Prova **P2** | 7/12 |
+| **20** | Divulgação de Resultados, Revisão para Recuperação | 14/12 |
+| **21** | Prova de Recuperação. | 21/12 |
 
 
 ## Atividades de Extensão {#extensao}
