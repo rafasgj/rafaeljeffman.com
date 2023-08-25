@@ -13,11 +13,16 @@ cards:
     link: /raspberry
     content: >
       O [Raspberry-Pi](https://raspberry.org) é bastante útil para criar rapidamente aplicações para sistemas embarcados. Compartilho aqui algumas experiências que faço com diversas versões do dispositivo.
-  - title: Unilasalle
+  - title: Unilasalle - Presencial
     link: /teaching/lasalle
     content: |
       * [Complexidade de Algoritmos e Análise de Desempenho](/teaching/lasalle/2023-02-analise-algoritmos)
       * [Laboratório de Engenharia de Software](/teaching/lasalle/2023-02-engswlab)
       * [Sistemas Distribuídos](/teaching/lasalle/2023-02-sistemas-distribuídos)
       * [Desenvolvimento para Dispositivos Móveis](/teaching/lasalle/2023-02-mobile)
+  - title: Unilasalle - Tutorias
+    link: /teaching/lasalle
+    content: |
+      * [Compiladores](/teaching/lasalle/tutoria/compiladores)
+      * [Linguagens Formais e Autômatos](/teaching/lasalle/tutoria/automata)
 ---

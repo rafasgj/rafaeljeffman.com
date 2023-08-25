@@ -16,7 +16,7 @@ sections:
 * Segurança Computacional (EAD)
 * Banco de Dados Aplicado (EAD)
 * [Compiladores](tutoria/compilers) (Tutoria)
-* Linguagens Formais e Autômatos (Tutoria)
+* [Linguagens Formais e Autômatos](tutoria/automata) (Tutoria)
 
 ## 2022/2
 

@@ -24,11 +24,14 @@ Cursos que ministrei em instituições de ensino superior:
         * [2023/2](lasalle/2023-02-analise-algoritmos)
     * Compiladores
         * [2022/2](lasalle/2022-02-compiladores)
+        * [2023/2 <small>(tutoria)</small>](lasalle/tutoria/compiladores)
     * Desenvolvimento para Dispositivos Móveis
         * [2023/2](lasalle/2023-02-mobile)
         * [2022/2](lasalle/2022-02-mobile)
     * Laboratório de Engenharia de Software
         * [2023/2](lasalle/2023-02-engswlab)
+    * Linguagens Formais e Autômatos
+        * [2023/2 <small>(tutoria)</small>](lasalle/tutoria/automata)
     * Sistemas Distribuídos
         * [2023/2](lasalle/2023-02-sistemas-distribuidos)
     * EAD
