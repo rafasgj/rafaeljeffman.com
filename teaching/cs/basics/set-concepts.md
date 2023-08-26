@@ -249,8 +249,8 @@ $$ A \cup B = \{ x \:|\: x \in A \land x \in B \} $$
 <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     <g>
         <use xlink:href="#circle_left" id="center" fill="url(#gradient-fill)" clip-path="url(#clip_right)"/>
-        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#000" fill="none"/>
-        <use xlink:href="#circle_right" stroke-width="1.5" stroke="#000" fill="none"/>
+        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="none"/>
+        <use xlink:href="#circle_right" stroke-width="1.5" stroke="#222" fill="none"/>
     </g>
 </svg>
 
@@ -263,7 +263,7 @@ $$ \thicksim\! A = \{ x \:|\: x \in U \land x \notin A \} $$
 <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     <g>
         <use xlink:href="#circle_right" stroke-width="1.5" stroke="#222" fill="url(#gradient-fill)" mask="url(#mask_right)" />
-        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="#fff" mask="url(#mask_left)" />
+        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#bbb" fill="#fff" mask="url(#mask_left)" />
         <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="#fff" clip-path="url(#clip_right)" />
     </g>
 </svg>
@@ -310,7 +310,7 @@ O produto cartesiano pode ser _multi-dimensional_, como em
 
 $$ A \times B \times C = \{(a,b,c) \:|\: a \in A \land b \in B \land c \in C\} $$
 
-O produto cartesiano não é uma operação comutativa. Note que a ordem dos elementos é importante, e $A \times B$ \noteq $B \times A$.
+O produto cartesiano não é uma operação comutativa. Note que a ordem dos elementos é importante, e $A \times B \neq B \times A$.
 
 Esta operação também não é associativa. Seja o conjunto $A = \\{1\\}$, então $(A \times A) \times A$ resulta em $\\{(1, 1), 1\\}$, enquanto $A \times (A \times A)$ resulta em $\\{1, (1, 1)\\}$.
 
@@ -387,11 +387,12 @@ $$ \thicksim\! ( \thicksim\! A ) = A $$
 
 O complemento da união de dois conjuntos é a intersecção dos complementos desses conjuntos.
 
+$$
+\thicksim\! (A \cup B) = \; \thicksim\! A \; \cap \thicksim\! B
+$$ 
+
 O complemento da intersecção de dois conjuntos é a união dos complementos desses conjuntos.
 
 $$
-\begin{align}
-& \thicksim\! (A \cup B) = \; \thicksim\! A \; \cap \thicksim\! B \\
-& \thicksim\! (A \cap B) = \; \thicksim\! A \; \cup \thicksim\! B
-\end{align}
+\thicksim\! (A \cap B) = \; \thicksim\! A \; \cup \thicksim\! B
 $$
