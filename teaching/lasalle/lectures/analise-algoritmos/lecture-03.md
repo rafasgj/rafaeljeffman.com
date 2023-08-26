@@ -34,45 +34,50 @@ institution:
 $$
 t(a,n) = \frac{c + T(a)\times{n}}{\frac{op}{s}}
 $$ 
-<br/>Dada uma máquina com $X$ operações por segundo, e outra com $2X$ operações por segundo, a segunda máquina executaria o mesmo algoritmo em, aproximadamente, metade do tempo da primeira.
+<br/>Dada uma máquina com $X$ operações por segundo, e outra com $2X$ operações por segundo, a segunda máquina executaria o mesmo algoritmo em, aproximadamente, metade do tempo da primeira, para a mesma entrada.
 8. Complexidade de Algoritmos
     * A _complexidade assintótica_ é definida pelo crescimento da complexidade para entradas suficientemente grandes.
-    * Levando em consideração a execução de dois algoritmos na mesma máquina, com a mesma entrada, temos uma comparação entre $c_{1} + T(a_{1})\times{n}$ com $c_{2} + T(a_{2}\times{n}$, onde claramente as constantes associadas aos algoritmos ($c_{1}$ e $c_{2}) tem influência na comparação.
+    * Levando em consideração a execução de dois algoritmos na mesma máquina, com a mesma entrada, temos uma comparação entre $c_{1} + T(a_{1})\times{n}$ com $c_{2} + T(a_{2}\times{n})$, onde claramente as constantes associadas aos algoritmos ($c_{1}$ e $c_{2}$) tem influência na comparação.
     * No entanto, para valores muito grandes de $n$, a diferença entre as contantes tende a ser desprezível, fazendo com que a diferença da complexidade de tempo dos algoritmos domine a comparação.
     * Exemplos:
         * Busca Exaustiva:
-```
-linear_search(A, v):
-   for i in 1..A.length:
-       if A[i] == v:
-          return i
-   return nil
-```
+
+        ```nohl
+        func linear_search(A, v):
+            for i in 1..A.length:
+                if A[i] == v:
+                    return i
+            return nil
+        ```
+
         * Busca Binária:
-```
-binary_search(A, k):
-    p = 1
-    q = A.length
-    while p != q:
-        m = p + (q - p) / 2
-        if k <= A[m]:
-            q = m
-        else:
-            p = m + 1
-    if k != A[q]:
-        return nil
-    return p
-```
+
+        ```nohl
+        func binary_search(A, k):
+            p = 1
+            q = A.length
+            while p != q:
+                m = p + (q - p) / 2
+                if k <= A[m]:
+                    q = m
+                else:
+                    p = m + 1
+            if k != A[q]:
+                return nil
+            return p
+        ```
+
         * Ordenação por Inserção:
-```
-insertion_sort(A):
-    for j in 2 to A.length:
-        k = A[j]
-        i = j - 1
-        while i > 0 and A[i] > k:
-            A[i + 1] = A[i]
-            i = i - 1
-        A[i + 1] = k
+
+        ```nohl
+        func insertion_sort(A):
+            for j in 2 to A.length:
+                k = A[j]
+                i = j - 1
+                while i > 0 and A[i] > k:
+                    A[i + 1] = A[i]
+                    i = i - 1
+                A[i + 1] = k
 ```
 9. Complexidade Assintótica
     * Usualmente o cálculo da complexidade concentra-se em determinar a ordem de magnitude do número de operações fundamentais na execução de um algoritmo. Podemos utilizar a ideia de _cota assintótica superior_.
@@ -86,8 +91,8 @@ insertion_sort(A):
 11. Notação $\Omega$
     * Se uma função $c \in \mathbb{R}^{+}: {g}(n)$ é dominada por uma função $c\times f(n)$, a partir de um $n\_{0} \in \mathbb{N}$, temos $f(n) = O(g(n))$, ou seja, $(\exists c \in \mathbb{R}^{+})(\exists n_{0} \in \mathbb{N})(\forall n \ge n_{0}): c\times{f}(n) \ge g(n)$.
     * A notação $\Omega$ define uma cota assintótica inferior.
-12. Notação $\Theta
-    * Dadas duas funções $f(n)$ e $g(n)$ e duas constanstes $c \in \mathbb{N}$ e $d \in \mathbb{N}$ , $f(n) \ \Theta(g(n))$, se e apenas se, $c\times{g}(n) \le f(n) \le d\times{g}(n) 
+12. Notação $\Theta$
+    * Dadas duas funções $f(n)$ e $g(n)$ e duas constanstes $c \in \mathbb{N}$ e $d \in \mathbb{N}$ , $f(n) \ \Theta(g(n))$, se e apenas se, $c\times{g}(n) \le f(n) \le d\times{g}(n)$ 
     * A notação $\Theta$ define um limite assintótico exato.
 
 
