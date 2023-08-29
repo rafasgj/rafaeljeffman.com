@@ -68,7 +68,7 @@ Aulas expositivas, debates em grupo e exercícios práticos.
 | [**01**](lectures/engswlab/lecture-01) | Apresentação da Disciplina. Definição e papel da Engenharia de Software. | [8/8](lectures/engswlab/lecture-01) |
 | [**02**](lectures/engswlab/lecture-02) | Engeharia de Requisitos. | [15/8](lectures/engswlab/lecture-02) |
 | [**03**](lectures/engswlab/lecture-03) | Diagrama de Casos de Uso. Ferramentas para criar diagramas. | [22/8](lectures/engswlab/lecture-03) |
-| **04** | Detalhamento dos diagramas de Casos de Uso. Diagramas de Classe. | 29/8 |
+| [**04**](lectures/engswlab/lecture-04) | Detalhamento dos diagramas de Casos de Uso. Diagramas de Classe. | [29/8](lectures/engswlab/lecture-04) |
 | **05** | Diagramas de Sequencia e de Atividade. Controle de versão e qualidade. | 5/9 |
 | **06** | Metodologias ágeis. Gestão e documentação de software. | 12/9 |
 | **07** | Prova **P1** | 19/9 |

@@ -40,3 +40,5 @@ institution:
 
 * [Casos de Uso e Diagramas de Casos de Uso](https://edisciplinas.usp.br/pluginfile.php/3720765/course/section/857581/Aula02_CasosDeUso.pdf){:target="\_blank"}
 * [Modelagem de Casos de Uso](https://www.ic.unicamp.br/~ariadne/mc436/1s2013/cap02-1-mar2013-1.pdf){:target="\_blank"}
+* [Diagrama de caso de uso UML: O que é, como fazer e exemplos](https://www.lucidchart.com/pages/pt/diagrama-de-caso-de-uso-uml){:target="\_blank"}
+* [Tutorial do diagrama de caso de uso (guia com exemplos)](https://creately.com/blog/pt/diagrama/tutorial-de-diagrama-de-caso-de-uso/){:target="\_blank"}
