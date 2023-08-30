@@ -76,14 +76,14 @@ Aulas expositivas, exemplos de desenvolvimento, e exercícios práticos.
 | **05** | Processos Distribuídos. Comunicação. | 31/8 |
 | **06** | _Feriado_ | 7/9 |
 | **07** | Sincronização. | 14/9 |
-| **08** | Revisão para **P1**. Especificação do Trabalho **T2**. (Entrega do **T1**.) | 21/9 |
+| **08** | Revisão para **P1**. (Entrega do **T1**.) | 21/9 |
 | **09** | Avaliação **P1** | 28/9 |
-| **10** | Nomeação. | 5/10 |
+| **10** | Nomeação. Especificação do Trabalho **T2**.  | 5/10 |
 | **11** | _Feriado_ | 12/10 |
 | **12** | Consistência e Replicação. | 19/10 |
-| **13** | _Evento Institucional_ <!-- Apresentação parcial dos trabalhos (***T2**) --> | 26/10 |
+| **13** | _Evento Institucional_ | 26/10 |
 | **14** | _Feriado_ | 2/11 |
-| **15** | Tolerância a falhas. | 9/11 |
+| **15** | Tolerância a falhas. Apresentação parcial dos trabalhos (**T2**) | 9/11 |
 | **16** | Segurança. Modelos de sistemas distribuídos. | 16/11 |
 | **17** | Implementação dos trabalhos. | 23/11 |
 | **18** | Apresentação dos sistemas implementados (**T2**) | 20/11 |

@@ -88,8 +88,8 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias ou em gru
 | **09** | Grafos. Representação, busca em grafos, ordenação topológica. (**Entrega T1**) | 2/10 |
 | **10** | Grafos. Problema do menor caminho. | 9/10 |
 | **11** | Procura em Strings. | 16/10 |
-| **12** | Projeto e análise de algoritmos: Divisão e Conquista, Algoritmos Gulosos. | 23/10 |
-| **13** | _Evento da Universidade_ | 30/10 |
+| **12** | _Evento da Universidade_ | 23/10 |
+| **13** | Projeto e análise de algoritmos: Divisão e Conquista, Algoritmos Gulosos. | 30/10 |
 | **14** | Programação Dinâmica | 6/11 |
 | **15** | Intratabilidade e Complexidade de Algoritmos. | 13/11 |
 | **16** | Algoritmos P, NP, NP-hard e NP-complete. Redução de algoritmos. Outras classes de algoritmos e problemas. | 20/11 |
