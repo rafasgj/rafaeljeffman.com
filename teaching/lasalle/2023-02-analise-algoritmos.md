@@ -80,19 +80,19 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias ou em gru
 | [**01**](lectures/analise-algoritmos/lecture-01) | Apresentação da disciplina. Conceitos Básicos. Pensamento algorítmico. | [7/8](lectures/analise-algoritmos/lecture-01) |
 | [**02**](lectures/analise-algoritmos/lecture-02) | Revisão: teoria de autômatos, máquinas universais, equivalência de máquinas universais. Linguagen regulares, livres de contexto. | [14/8](lectures/analise-algoritmos/lecture-02) |
 | [**03**](lectures/analise-algoritmos/lecture-03) | Complexidade e desempenho de algoritmos. Medidas de Desempenho. Análise assintótica. Notações Omega, Theta e Big-O. Algoritmos de busca e ordenação. | [21/8](lectures/analise-algoritmos/lecture-03) |
-| [**04**](lectures/analise-algoritmos/lecture-04) | Algoritmos eficientes de ordenação por comparação. Algoritmos de ordenação em O(N). | [28/8](lectures/analise-algoritmos/lecture-04) |
-| **05** | Recursão. Árvores binárias de pesquisa. | 5/9 |
-| **06** | Hashing. | 11/9 |
-| **07** | Apresentação de Pesquisa. (**A1**) | 18/9 |
-| **08** | Grafos. Representação, busca em grafos, ordenação topológica. (**Entrega T1**) | 25/9 |
-| **20** | Grafos. Problema do menor caminho. | 2/10 |
-| **11** | Procura em Strings. | 9/10 |
-| **09** | Projeto e análise de algoritmos: Divisão e Conquista, Algoritmos Gulosos. | 16/10 |
-| **12** | _Evento da Universidade_ | 23/10 |
-| **10** | Programação Dinâmica | 30/10 |
-| **13** | Programação Dinâmica | 6/11 |
-| **14** | Intratabilidade e Complexidade de Algoritmos. | 13/11 |
-| **15** | Algoritmos P, NP, NP-hard e NP-complete. Redução de algoritmos. Outras classes de algoritmos e problemas. | 20/11 |
+| **04** | Correção de exercícios e revisão de conteúdo. | 28/8 |
+| [**05**](lectures/analise-algoritmos/lecture-05) | Algoritmos eficientes de ordenação por comparação. Algoritmos de ordenação em O(N). | [5/9](lectures/analise-algoritmos/lecture-05) |
+| **06** | Recursão. Árvores binárias de pesquisa. | 11/9 |
+| **07** | Hashing. | 18/9 |
+| **08** | Apresentação de Pesquisa. (**A1**) | 25/9 |
+| **09** | Grafos. Representação, busca em grafos, ordenação topológica. (**Entrega T1**) | 2/10 |
+| **10** | Grafos. Problema do menor caminho. | 9/10 |
+| **11** | Procura em Strings. | 16/10 |
+| **12** | Projeto e análise de algoritmos: Divisão e Conquista, Algoritmos Gulosos. | 23/10 |
+| **13** | _Evento da Universidade_ | 30/10 |
+| **14** | Programação Dinâmica | 6/11 |
+| **15** | Intratabilidade e Complexidade de Algoritmos. | 13/11 |
+| **16** | Algoritmos P, NP, NP-hard e NP-complete. Redução de algoritmos. Outras classes de algoritmos e problemas. | 20/11 |
 | **17** | Exercícios e Revisão. (**Entrega T3**) | 27/11 |
 | **18** | **Avaliação P1** | 4/12 |
 | **19** | Entrega de Resultados e revisão | 11/12 |
