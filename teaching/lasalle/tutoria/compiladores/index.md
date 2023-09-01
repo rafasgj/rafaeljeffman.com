@@ -66,8 +66,8 @@ Implementação dos componentes de um compilador para uma máquina virtual de pi
 
 | Grau | Descrição | Peso na nota final |
 | :--: | :------------------ | :--- |
-| G1 | Implementação de um analizador recursivo descendente para uma gramática de expressões aritméticas. | 2,0 |
-| G1 | Implementação de um avaliador de expressões aritméticas com atribuição e acesso a variáveis. | 2,0 |
+| G1 | [Implementação de um analisador recursivo descendente para uma gramática de expressões aritméticas.](trabalho-01) | 2,0 |
+| G1 | [Implementação de um avaliador de expressões aritméticas com atribuição e acesso a variáveis.](trabalho-02) | 2,0 |
 | G1 | Definição de uma gramática livre de contexto para uma linguagem procedural Turing-complete. | 1,0 |
 | G2 | Implementação de um parser para uma gramática livre de contexto. | 1,5 |
 | G2 | Geração de uma árvore de derivação com uso tabela de símbolos, para uma gramática livre de contexto. | 1,5 |
