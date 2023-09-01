@@ -34,7 +34,7 @@ td { border: solid thin #022; padding: 10px 15px 5px 15px; vertical-align: top; 
 
 ## Questões
 
-1. Descreva em detalhes os casos de uso definidos no [evercício da aula anterior](lecture-03#questões)
+1. Descreva em detalhes os casos de uso definidos no [exercício da aula anterior](lecture-03#questões)
 
 ## Recursos para essa aula
 
