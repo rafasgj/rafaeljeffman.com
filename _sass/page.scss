@@ -43,6 +43,11 @@ blockquote {
     border-left: $blockquote-border;
 }
 
+iframe {
+    border: 0;
+    margin: auto 0;
+}
+
 #con {
     margin: 0;
     padding-top: $con-margin;
@@ -441,4 +446,13 @@ embed.pdf-doc {
     margin: auto 0;
     width: 70%;
     aspect-ratio: 3/1.8;
+}
+
+.read_more {
+    display: inline;
+    margin-left: 2em;
+}
+.read_more > div > div {
+    border: thin solid #222;
+    margin: 0 2em;
 }

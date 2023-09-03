@@ -39,6 +39,19 @@ data.map((value) => { value * 2})
 ## Questões
 
 1. **Projeto:** Crie uma calculadora com operações básicas utilizando apenas HTML, CSS e Javascript. Como essa aplicação se comporta em diferentes dispositivos?
+<div class="read_more">
+    <div id="resposta_calculadora" style="display:none">
+        <a href="javascript:hide_answer('calculadora')">Esconder resposta.</a>
+        <div>
+            <iframe id="calculadora" height=310 src="/files/lasalle/code/calculadora/calculadora.html" >No <i>iframe</i>?</iframe>
+        </div>
+    </div>
+    <div id="pergunta_calculadora">
+        <a href="javascript:show_answer('calculadora')">Ver resposta.</a>
+    </div>
+</div>
+<script defer>hide_answer('calculadora')</script>
+
 2. **Projeto:** Publique sua calculadora como um _site_ estático no Github Pages
 
 ## Recursos para essa aula
@@ -59,3 +72,5 @@ data.map((value) => { value * 2})
 10. [Pro Git](https://git-scm.com/book/pt-br/v2) (Tradução parcial do livro para português do Brasil)
 11. [Git - Guia prático](https://rogerdudler.github.io/git-guide/index.pt_BR.html): Um guia bem direto, sem muita explicação.
 12. [Github - Início Rápido](https://docs.github.com/pt/get-started/quickstart)
+
+
