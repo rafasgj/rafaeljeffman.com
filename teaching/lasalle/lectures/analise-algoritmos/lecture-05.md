@@ -23,9 +23,7 @@ institution:
         ```
         Complexidade de Tempo: $O(n! \times n)$ <br/>
         Complexidade de Espaço: $O(n)$
-    3. Insertion Sort
-        * Como visto na última aula, o `Insertion Sort` tem $O(n^2)$ para o pior caso e $\Omega(n)$ para o melhor caso.
-    4. Prova que algoritmos de ordenação por comparação tem $\Omega(n\log{n})$
+    3. Prova que algoritmos de ordenação por comparação tem $\Omega(n\log{n})$
         * Modelo computacional: **Modelo de Comparação**
             * Todos os items de entrada são _caixas pretas_ (ADT)
             * as únicas operações permitidas são comparações ($\le, \lt, =, \neq, \gt, \ge$)
@@ -53,6 +51,7 @@ institution:
         * O número de respostas possíveis para um algoritmo de ordenação é, pelo menos, todas as combinações possíveis do elementos de entrada, que é $n!$.
         * A altura da árvore é, pelo menos, $\log(n!)$
         * Aplicando a [aproximação de Stirling](https://en.wikipedia.org/wiki/Stirling%27s_approximation), chegamos em $\ln(n!) = n \ln n - n + O(\ln n)$, fica claro que $\Omega(n\log{n})$
+    4. Como visto na última aula, o `insertion sort` tem $O(n^{2})$ para o pior caso e $\Omega(n)$ para o melhor caso.
     5. Merge Sort
         * Utiliza o método de divisão e conquista.
         * Divide o array até que a ordenação seja trivial.
@@ -87,7 +86,10 @@ institution:
                 j -= 1
             return C    
         ```
-        * `Merge Sort` tem $O(n\times\log{n})$ e $\Omega(n\times\log{n})$ (ou seja $\Theta(n\times\log{n})$, sendo um algoritmo de ordenação ótimo.
+        * `Merge Sort` tem complexidade de tempo $O(n\times\log{n})$ e $\Omega(n\times\log{n})$ (ou seja $\Theta(n\times\log{n})$, sendo um algoritmo de ordenação ótimo em relação ao modelo de comparação.
+        * A complexidade de espaço do `merge sort` é $O(n)$.
+        * O `merge sort` é um algoritmo estável em relação às chaves ordenadas.
+        * O algoritmo `timsort` utilizado pelo Python e pelo Java é baseado no `merge sort`.
     6. Outras características importantes dos algoritmos de ordenação:
         * Complexidade de Espaço
         * Estabilidade de Chaves
@@ -102,7 +104,7 @@ institution:
         * Cria um array com $n$ posições
         * Para cada chave, soma 1 na posição da chave.
         * Percorre o algoritmo adicionando as chaves ao array.
-        * Algoritmo:
+        * `Pidgeonhole Sorting`:
             ```nohl
             L = array de k listas vazias
             for j in 0...(n-1):
@@ -110,6 +112,27 @@ institution:
             output = []
             for i in 0..(k-1):
                 output.extend(L[k])
+            ```
+        * `Counting sort`:
+            ```nohl
+            function CountingSort(input, k)
+
+                count ← array of k + 1 zeros
+                output ← array of same length as input
+
+                for i = 0 to length(input) - 1 do
+                    j = key(input[i])
+                    count[j] = count[j] + 1
+
+                for i = 1 to k do
+                    count[i] = count[i] + count[i - 1]
+
+                for i = length(input) - 1 down to 0 do
+                    j = key(input[i])
+                    count[j] = count[j] - 1
+                    output[count[j]] = input[i]
+
+                return output
             ```
         * Características:
             * Complexidade de Tempo: $O(n + k)$
@@ -126,5 +149,10 @@ institution:
 
 1. Mostre, intuitivamente, que o algoritmo `Selection Sort` não é estável para as chaves.
 2. O que é necessário para que a implementação do algoritmo `Insertion Sort` seja estável para as chaves?
-3. Implemente o algoritmo `Quicksort`. Qual a complexidade de espaço utilizada na sua implementação? 
+3. Implemente o algoritmo `Quicksort`. Qual a complexidade de espaço utilizada na sua implementação?
+4. Baseado no uso de um `max_heap`, o algoritmo `Heapsort` tem complexidade de tempo $\Theta(n\log{n})$ e de espaço $O(1)$. Escreva um artigo, de no máximo duas páginas, incluindo o código ou pseudocódgio do algoritmo, e demonstrando a sua complexidade. Crie uma hipótese para o motivo dele não ser estável em relação à ordenaçào das chaves.
+
+## Recursos para essa aula
+
+1. Algoritmos de ordenação [implementados em Python](/teaching/code/algorithms/sorting.py)
 
