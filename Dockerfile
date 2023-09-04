@@ -1,4 +1,4 @@
-FROM ruby:3-alpine
+FROM ruby:alpine
 
 RUN apk add --no-cache make gcc g++ libc-dev openssl-dev
 
