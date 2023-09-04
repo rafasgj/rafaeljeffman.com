@@ -81,10 +81,10 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias ou em gru
 | [**02**](lectures/analise-algoritmos/lecture-02) | Revisão: teoria de autômatos, máquinas universais, equivalência de máquinas universais. Linguagen regulares, livres de contexto. | [14/8](lectures/analise-algoritmos/lecture-02) |
 | [**03**](lectures/analise-algoritmos/lecture-03) | Complexidade e desempenho de algoritmos. Medidas de Desempenho. Análise assintótica. Notações Omega, Theta e Big-O. Algoritmos de busca e ordenação. | [21/8](lectures/analise-algoritmos/lecture-03) |
 | **04** | Correção de exercícios e revisão de conteúdo. | 28/8 |
-| [**05**](lectures/analise-algoritmos/lecture-05) | Algoritmos eficientes de ordenação por comparação. Algoritmos de ordenação em O(N). | [5/9](lectures/analise-algoritmos/lecture-05) |
+| [**05**](lectures/analise-algoritmos/lecture-05) | Ordenação (_Sorting_). Algoritmos de ordenação eficientes. Algoritmos de ordenação em O(N). | [4/9](lectures/analise-algoritmos/lecture-05) |
 | **06** | Recursão. Árvores binárias de pesquisa. | 11/9 |
 | **07** | Hashing. | 18/9 |
-| **08** | Apresentação de Pesquisa. (**A1**) | 25/9 |
+| **08** | Heaps. Heapsort. (Entrega dos trabalhos de pesquisa **A1**) | 25/9 |
 | **09** | Grafos. Representação, busca em grafos, ordenação topológica. (**Entrega T1**) | 2/10 |
 | **10** | Grafos. Problema do menor caminho. | 9/10 |
 | **11** | Procura em Strings. | 16/10 |
