@@ -69,8 +69,8 @@ Aulas expositivas, debates em grupo e exercícios práticos.
 | [**02**](lectures/engswlab/lecture-02) | Engeharia de Requisitos. | [15/8](lectures/engswlab/lecture-02) |
 | [**03**](lectures/engswlab/lecture-03) | Diagrama de Casos de Uso. Ferramentas para criar diagramas. | [22/8](lectures/engswlab/lecture-03) |
 | [**04**](lectures/engswlab/lecture-04) | Detalhamento dos diagramas de Casos de Uso. | [29/8](lectures/engswlab/lecture-04) |
-| **05** | Diagramas de Classe, Sequencia e de Atividade. Controle de versão e qualidade. | 5/9 |
-| **06** | Metodologias ágeis. Gestão e documentação de software. | 12/9 |
+| [**05**](lectures/engswlab/lecture-05) | Diagramas de Classe, Sequencia e de Atividade. | [5/9](lectures/engswlab/lecture-05) |
+| **06** | Controle de versão e qualidade. Metodologias ágeis. Gestão e documentação de software. | 12/9 |
 | **07** | Prova **P1** | 19/9 |
 | **08** | Especificação do Projeto **G2** | 26/9 |
 | **09** | Desenvolvimento do projeto **G2** | 3/10 |
