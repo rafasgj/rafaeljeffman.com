@@ -1,5 +1,5 @@
 ---
-title: Recursão e Algoritmos eficientes de ordenação.
+title: Algoritmos eficientes de ordenação.
 subtitle: Complexidade de Algoritmos e Análise de Desempenho
 layout: lecture
 last_occurrence: 2023-08-28
@@ -86,7 +86,7 @@ institution:
                 j -= 1
             return C    
         ```
-        * `Merge Sort` tem complexidade de tempo $O(n\times\log{n})$ e $\Omega(n\times\log{n})$ (ou seja $\Theta(n\times\log{n})$, sendo um algoritmo de ordenação ótimo em relação ao modelo de comparação.
+        * `Merge Sort` tem complexidade de tempo $O(n\times\log{n})$ e $\Omega(n\times\log{n})$ (ou seja $\Theta(n\times\log{n})$), sendo um algoritmo de ordenação ótimo em relação ao modelo de comparação.
         * A complexidade de espaço do `merge sort` é $O(n)$.
         * O `merge sort` é um algoritmo estável em relação às chaves ordenadas.
         * O algoritmo `timsort` utilizado pelo Python e pelo Java é baseado no `merge sort`.
@@ -100,19 +100,20 @@ institution:
         * Requer que as chaves são inteiros entre $\{0, 1, \ldots, K-1\}$
         * Pode-se fazer muito mais que apenas comparações
         * Para $k = n^{O(1)}$, pode-se ordenar com complexidade de tempo $O(n)$
+    * `Pidgeonhole Sorting`:
+        ```nohl
+        L = array de k listas vazias
+        for j in 0...(n-1):
+            L[key(A[j])].append(A[j])
+        output = []
+        for i in 0..(k-1):
+            output.extend(L[k])
+        ```
     * `Counting Sort`
-        * Cria um array com $n$ posições
+        * Dado um _array_ com $n$ elementos e $k$ chaves.
+        * Cria um _array_ com $k$ posições e um _array_ de retorno de $n$.
         * Para cada chave, soma 1 na posição da chave.
         * Percorre o algoritmo adicionando as chaves ao array.
-        * `Pidgeonhole Sorting`:
-            ```nohl
-            L = array de k listas vazias
-            for j in 0...(n-1):
-                L[key(A[j])].append(A[j])
-            output = []
-            for i in 0..(k-1):
-                output.extend(L[k])
-            ```
         * `Counting sort`:
             ```nohl
             function CountingSort(input, k)
@@ -136,7 +137,7 @@ institution:
             ```
         * Características:
             * Complexidade de Tempo: $O(n + k)$
-            * Complexidade de espaço: $O(n)$
+            * Complexidade de espaço: $O(n + k)$
             * O `counting sort` é estável.
     * `Radix Sort`
         - Imagine os inteiros como sendo inteiros em uma base $b$.
