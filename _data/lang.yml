@@ -23,6 +23,9 @@ Nao_ocorreu:
 nenhum_resultado_procura:
   en: No result for current search.
   pt: Nenhum resultado para a busca atual.
+outros:
+  en: other
+  pt: outros
 Posts_Recentes:
   en: Recent Posts
   pt: Posts Recentes

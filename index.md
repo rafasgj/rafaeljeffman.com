@@ -9,6 +9,10 @@ cards:
     link: /projects
     content: >
       Tutoriais, textos e ideias sobre assuntos específicos relacionados a projetos pessoais e profissionais em que já trabalhei.
+  - title: Linux
+    link: /linux
+    content: >
+      Há mais de 25 anos que utilizo Linux em diversos projetos pessoais e profissionais. Junto aqui um pouco do que passei nesse tempo todo.
   - title: Raspberry-Pi
     link: /raspberry
     content: >
