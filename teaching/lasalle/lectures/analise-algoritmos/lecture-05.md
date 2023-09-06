@@ -22,7 +22,7 @@ institution:
                     return B
         ```
         Complexidade de Tempo: $O(n! \times n)$ <br/>
-        Complexidade de Espaço: $O(n)$
+        Complexidade de Espaço: $O(1)$
     3. Prova que algoritmos de ordenação por comparação tem $\Omega(n\log{n})$
         * Modelo computacional: **Modelo de Comparação**
             * Todos os items de entrada são _caixas pretas_ (ADT)
