@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a { text-decoration: none; }
+		#calculator {
+            margin: 0 auto;
+			width: calc(4*50px); /* button size is 48 + 2 (border). */
+		}
+		.row {
+            height: 48px;
+			margin: 0;
+			padding: 0;
+		}
+		.button {
+			margin: 0;
+			padding: 0;
+			padding-top: 2px;
+            height: calc(48px - 2px);
+            width: 48px;
+            display: inline-block;
+			font-family: sans-serif;
+			font-size: 28px;
+			text-align: center;
+			border: thin solid #541;
+		}
+		#display {
+			padding: 5px;
+			font-family: monospace;
+			font-size: 32px;
+			background-color: #222;
+			color: #3d3;
+			text-align: right;
+            text-overflow: ellipsis;
+            overflow: hidden;
+		}
+		.calc_special {
+			color: #eee;
+			background-color: #595040;
+		}
+		.calc_unary {
+			color: #eee;
+			background-color: #595040;
+		}
+		.calc_binary {
+			color: #eee;
+			background-color: #f80;
+		}
+		.calc_exec {
+			color: #eee;
+			background-color: #f80;
+		}
+		.calc_num {
+			color: #eee;
+			background-color: #aaa099;
+		}
+		.double {
+			width: 98px; /* a double button will remove the 2px border of the non-used button. */
+		}
+        .small_text {
+            font-size: 28px;
+            font-stretch: ultra-condensed !important;
+            letter-spacing: -3px;
+        }
+	</style>
+</head>
+<body>
+    <div id="calculator">
+        <div id="display">0</div> 
+        <div class="row">
+            <a href="#" class="calc_special button small_text">AC</a><a href="#" class="calc_unary button">&#x221a;</a><a href="#" class="calc_unary button">%</a><a href="#" class="calc_binary button">&#x00f7;</a>
+        </div>
+	<div class="row">
+        <a href="#" class="calc_num button">7</a><a href="#" class="calc_num button">8</a><a href="#" class="calc_num button">9</a><a href="#" class="calc_binary button">x</a>
+	</div>
+        <div class="row">
+        <a href="#" class="calc_num button">4</a><a href="#" class="calc_num button">5</a><a href="#" class="calc_num button">6</a><a href="#" class="calc_binary button">-</a>
+        </div>
+        <div class="row">
+            <a href="#" class="calc_num button">1</a><a href="#" class="calc_num button">2</a><a href="#" class="calc_num button">3</a><a href="#" class="calc_binary button">+</a>
+        </div>
+        <div class="row">
+            <a href="#" class="calc_num button double">0</a><a href="#" class="calc_num button">,</a><a href="#" class="calc_exec button">=</a>
+        </div>
+    </div>
+
+    <script>
+        var editing = false;
+        var storedValue = 0;
+        var currentValue = 0;
+        var pendingFunction = identity;
+
+        function identity() {
+            return currentValue;
+        }
+
+        // Define comandos especiais
+        const special_fn = {
+            AC: () => {
+                currentValue = storedValue = 0;
+                reset_editing();
+                return currentValue;
+            },
+        }
+
+        function reset_editing() {
+            editing = false;
+        }
+
+        function update_display(value) {
+            document.getElementById("display").textContent = value
+        }
+
+        function binary_function(fn) {
+            function bin_fn() {
+                storedValue = pendingFunction();
+                pendingFunction = fn;
+                reset_editing();
+                return storedValue;
+            }
+            return bin_fn;
+        }
+
+        const binary_fn = {
+            "+": binary_function(() => { return storedValue + currentValue; }),
+            "-": () => { storedValue = pendingFunction(); pendingFunction = () => { return storedValue - currentValue; }; reset_editing(); return storedValue; },
+            "x": () => { storedValue = pendingFunction(); pendingFunction = () => { return storedValue * currentValue; }; reset_editing(); return storedValue; },
+            "\u{00f7}": () => { pstoredValue = pendingFunction(); endingFunction = () => { return storedValue /= (1.0 * value) }; reset_editing(); return storedValue; },
+        };
+
+        const unary_fn = {
+            '\u{03c0}': () => { currentValue = Math.PI; return currentValue; },
+            '\u{00b1}': () => { currentValue *= -1; return currentValue; },
+            '\u{00b1}': () => { currentValue = Math.sqrt(currentValue); return currentValue; },
+            '\u{221a}': () => { currentValue = Math.sqrt(currentValue); return currentValue; },
+            '%': () => { currentValue /= 100.0; return currentValue; },
+        };
+
+        const exec_fn = {
+            "=": () => { currentValue = pendingFunction(); pendingFunction = identity; reset_editing(); return currentValue; }
+        }
+
+        function set_event_listener(button, group) {
+            button.addEventListener("click", (e) => {
+                const fn = group[e.target.textContent];
+                if (typeof fn !== "undefined") {
+                    const x = fn();
+                    update_display(x);
+                }
+            })
+        }
+
+        // Adiciona um método para tratamento do evento de 'click'
+        // aos elementos de cada um dos tipos de 'botões' da calculadora
+        [
+            [".calc_special", special_fn],
+            [".calc_unary", unary_fn],
+            [".calc_binary", binary_fn],
+            [".calc_exec", exec_fn],
+        ].forEach(([fn_type, fn_list]) => {
+            document.querySelectorAll(fn_type).forEach((item) => {
+                set_event_listener(item, fn_list);
+            })
+        })
+
+        // Adiciona um método para tratamento do evento de 'click'
+        // aos números da calculadora.
+        document.querySelectorAll(".calc_num").forEach((item) => {
+            item.addEventListener("click", (e) => {
+                if (e.target.matches("a")) {
+                    const disp = document.getElementById("display");
+                    if (editing) {
+                        currentValue = currentValue * 10 + Number(e.target.textContent);
+                    } else {
+                        currentValue = Number(e.target.textContent);
+                    }
+                    disp.textContent = currentValue;
+                    editing = true;
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
