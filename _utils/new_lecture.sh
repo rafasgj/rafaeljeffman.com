@@ -11,7 +11,7 @@ lectures=(
     [analise-algoritmos]="Complexidade de Algoritmos e Análise de Desempenho"
     [engswlab]="Laboratório de Engenharia de Software"
     [sistemas-distribuidos]="Sistemas Distribuídos"
-    [mobile]="Desenvolmimento para Dispositivos Móveis"
+    [mobile]="Desenvolvimento para Dispositivos Móveis"
     [compiler]="Compiladores"
     [automata]="Linguagens Formais e Autômatos"
 )
