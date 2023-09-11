@@ -82,7 +82,7 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias ou em gru
 | [**03**](lectures/analise-algoritmos/lecture-03) | Complexidade e desempenho de algoritmos. Medidas de Desempenho. Análise assintótica. Notações Omega, Theta e Big-O. Algoritmos de busca e ordenação. | [21/8](lectures/analise-algoritmos/lecture-03) |
 | **04** | Correção de exercícios e revisão de conteúdo. | 28/8 |
 | [**05**](lectures/analise-algoritmos/lecture-05) | Ordenação (_Sorting_). Algoritmos de ordenação eficientes. Algoritmos de ordenação em O(N). | [4/9](lectures/analise-algoritmos/lecture-05) |
-| **06** | Recursão. Árvores binárias de pesquisa. | 11/9 |
+| [**06**](lectures/analise-algoritmos/lecture-06) | Recursão. Árvores binárias de pesquisa. | [11/9](lectures/analise-algoritmos/lecture-06) |
 | **07** | Hashing. | 18/9 |
 | **08** | Heaps. Heapsort. (Entrega dos trabalhos de pesquisa **A1**) | 25/9 |
 | **09** | Grafos. Representação, busca em grafos, ordenação topológica. (**Entrega T1**) | 2/10 |
@@ -123,3 +123,11 @@ A frequência será medida a partir de chamada nominal, realizada em todas as au
 1. [Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-videos/) MIT OpenCourseWare. 2020. (Também disponíveis os cursos de [2011](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) e [2008](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2008/).)
 2. [Theory of Computation](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020) MIT OpenCourseWare. 2020.
 3. [Design and Analysis of Algorithms](https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015) MIT OpenCourseWare. 2015.
+
+### Bibliografia
+
+1. Cormen, E. et al. **Introduction to Algorithms**.
+2. Sedwick, R.. **Algorithms**.
+3. Sipser, Michael. **Introdução à Teoria da Computação**.
+4. Aho, A. **Automatos, Lingagens e Computação**.
+5. Bird, Richard. **Programs and Macines**.
