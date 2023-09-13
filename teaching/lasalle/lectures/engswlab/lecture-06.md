@@ -23,7 +23,7 @@ institution:
     * Operações comuns:
         * **Annotate**/**Blame**
             : Verificar quem e quando alterou uma informação pela última vez.
-        * **Brach**
+        * **Branch**
             : Uma bifurcação no repositório criando duas linhas paralelas de desenvolvimento. O _branch_ principal é, às vezes, chamado de _trunk_.
         * **Checkout**
             : Criar uma cópia local a partir de um ponto específico do repositório
@@ -111,7 +111,7 @@ institution:
 ### Bibliografia
 
 1. Sutherland, Jeff. **Scrum: A Arte de Fazer o Dobro do Trabalho na Metade do Tempo**. 2<sup>a</sup> Ed. LeYa. 2016.
-2. [Version Control](https://en.wikipedia.org/wiki/Version_control):{:target="\_blank"} Wikipedia
+2. [Version Control](https://en.wikipedia.org/wiki/Version_control){:target="\_blank"}: Wikipedia
 
 ### Repositórios
 
