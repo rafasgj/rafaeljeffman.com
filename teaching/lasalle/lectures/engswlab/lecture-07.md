@@ -9,11 +9,6 @@ institution:
   link: /teaching/lasalle/2023-02-engswlab
 ---
 
-<style>
-    ul.lettered { list-style-type: upper-alpha; }
-    ul.lettered li::marker { font-weight: 400; }
-</style>
-
 > **Nota**: Todas as questões foram extraídas de provas do ENADE, e podem ter sofrido alterações.
 
 ## Questão 1
@@ -23,9 +18,7 @@ e cenários. Frequentemente usadas juntas, essas técnicas se complementam de fo
 realísticos que possibilitam ao desenvolvedor explorar as atividades atuais do usuário, uso futuro de
 novos produtos e visões futuristas de novas tecnologias. Elas também podem guiar o desenvolvimento
 ao longo do ciclo de vida do produto._
-<span style="display:block; margin-top: 5px; text-align:right; font-family: monospaced; color:#777; font-size:75%">
-ROGERS, Y.; PREECE, J.; SHARP, H. Interaction Design: beyond human-computer interaction.<br/>5. ed. Indianapolis, IN, USA: John Wiley & Sons, Inc., 2019 (adaptado).
-</span>
+<span class="bibtex">ROGERS, Y.; PREECE, J.; SHARP, H. Interaction Design: beyond human-computer interaction.<br/>5. ed. Indianapolis, IN, USA: John Wiley & Sons, Inc., 2019 (adaptado).</span>
 
 Com base no texto apresentado e sobre os objetivos do uso de personas e cenários em um processo de
 elicitação de requisitos, avalie as afirmações a seguir.
@@ -60,9 +53,7 @@ orçamento, estabelecer prioridades e atualizar seus planos de negócio. Nesse c
 o SCRUM, um framework para a organização de projetos ágeis. O SCRUM prevê dois indivíduos: o
 Scrum Master e o Product Owner, que são responsáveis por atuar como interface entre a equipe de
 desenvolvimento e a organização._
-<span style="display:block; margin-top: 5px; text-align:right; font-family: monospaced; color:#777; font-size:75%">
-SOMMERVILLE, I. Engineering Software Products: An Introduction to Modern Software Engineering.<br/> Boston: Pearson, 2019 (adaptado).
-</span>
+<span class="bibtex">SOMMERVILLE, I. Engineering Software Products: An Introduction to Modern Software Engineering.<br/> Boston: Pearson, 2019 (adaptado).</span>
 
 Em relação à metodologia _Scrum_, avalie as afirmações a seguir.
 1. O papel do _Scrum Master_ é guiar a equipe no uso efetivo da metodologia _Scrum_.
