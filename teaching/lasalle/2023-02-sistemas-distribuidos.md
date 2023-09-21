@@ -76,7 +76,7 @@ Aulas expositivas, exemplos de desenvolvimento, e exercícios práticos.
 | **05** | Processos Distribuídos. Comunicação. | 31/8 |
 | **06** | _Feriado_ | 7/9 |
 | [**07**](lectures/sistemas-distribuidos/lecture-07) | Comunicação orientada a fluxo e multicast. Sincronização em Threads. | [14/9](lectures/sistemas-distribuidos/lecture-07) |
-| **08** | Revisão para **P1**. (Entrega do **T1**.) | 21/9 |
+| [**08**](lectures/sistemas-distribuidos/lecture-08) | Revisão para **P1**. (Entrega do **T1**.) | [21/9](lectures/sistemas-distribuidos/lecture-08) |
 | **09** | Avaliação **P1** | 28/9 |
 | **10** | Sincronização em sistemas distribuídos. Nomeação. Especificação do Trabalho **T2**.  | 5/10 |
 | **11** | _Feriado_ | 12/10 |
