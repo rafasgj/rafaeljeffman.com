@@ -2,7 +2,7 @@
 title: "Utilizando MongoDB no Fedora"
 layout: main
 section: Bancos de Dados
-keywords:
+tags:
   - MongoDB
   - NoSQL
   - container
