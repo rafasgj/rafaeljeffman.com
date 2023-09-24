@@ -84,7 +84,7 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias ou em gru
 | [**05**](lectures/analise-algoritmos/lecture-05) | Ordenação (_Sorting_). Algoritmos de ordenação eficientes. Algoritmos de ordenação em O(N). | [4/9](lectures/analise-algoritmos/lecture-05) |
 | [**06**](lectures/analise-algoritmos/lecture-06) | Recursão. Árvores binárias de pesquisa. | [11/9](lectures/analise-algoritmos/lecture-06) |
 | [**07**](lectures/analise-algoritmos/lecture-07) | Hashing. | [18/9](lectures/analise-algoritmos/lecture-07) |
-| **08** | Heaps. Heapsort. (Entrega dos trabalhos de pesquisa **A1**) | 25/9 |
+| [**08**](lectures/analise-algoritmos/lecture-08) | Heaps. Heapsort. (Entrega dos trabalhos de pesquisa **A1**) | [25/9](lectures/analise-algoritmos/lecture-08) |
 | **09** | Grafos. Representação, busca em grafos, ordenação topológica. (**Entrega T1**) | 2/10 |
 | **10** | Grafos. Problema do menor caminho. | 9/10 |
 | **11** | Procura em Strings. | 16/10 |
