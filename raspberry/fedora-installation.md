@@ -7,7 +7,7 @@ tags:
   - Fedora
 title: Instalação do Fedora no Raspberry Pi 4
 copy: "2022-2023"
-date: 2023-09-13
+date: 2023-09-27
 ---
 
 > **Nota**: Tanto a [documentação oficial do Raspberry Pi](https://www.raspberrypi.com/software/), quanto a do Sistema Operacional que você escolheu continua sendo a melhor fonte de informação sobre a instalção do sistema, tente, antes de seguir qualquer coisa dita aqui, utilizar os documentos oficiais.
@@ -50,12 +50,21 @@ $ xzcat <image_file> | sudo dd status=progress bs=1M of='/dev/disk/by-id/my-sd-c
 6. (Opcional) Configure o WiFi:
 ```nohl
 # nmcli device wifi list
-# nmcli device wifi connect <SSID> --ask
+# nmcli device wifi connect --ask <SSID>
+```
+    Caso o SSID seja ocultado pelo roteador, utilize:
+```nohl
+# nmcli device wifi connect --ask <SSID> \
+    name <SSID> hidden yes
 ```
 
 7. (Opcional) Para configurar um IP estático na conexão WiFi utilize:
 ```nohl
-# nmcli connection modify <SSID> ipv4.method "manual" ipv4.addresses "192.168.15.250/24" ipv4.gateway "192.168.15.1" ipv4.dns "1.1.1.1,8.8.8.8"
+# nmcli connection modify <SSID> \
+    ipv4.method "manual" \
+    ipv4.addresses "192.168.123.250/24" \
+    ipv4.gateway "192.168.123.1" \
+    ipv4.dns "8.8.8.8,1.1.1.1"
 ```
 
 8. Caso o cartão utilizado seja maior que 8Gb, aumente o tamanho da partição de dados e do sistema de arquivos para ocupar todo o espaço disponível no cartão micro-SD
@@ -63,7 +72,8 @@ $ xzcat <image_file> | sudo dd status=progress bs=1M of='/dev/disk/by-id/my-sd-c
 ```nohl
 # growpart /dev/mmcblk0 3
 # pvresize /dev/mmcblk0p3
-# lvextend /dev/mapper/fedora-root -l+100%FREE
+# lvextend /dev/mapper/fedora-root \
+    -l+100%FREE
 # xfs_growfs /dev/mapper/fedora-root
 ```
     : Para o Fedora 35 e 36 use
