@@ -85,7 +85,7 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias ou em gru
 | [**06**](lectures/analise-algoritmos/lecture-06) | Recursão. Árvores binárias de pesquisa. | [11/9](lectures/analise-algoritmos/lecture-06) |
 | [**07**](lectures/analise-algoritmos/lecture-07) | Hashing. | [18/9](lectures/analise-algoritmos/lecture-07) |
 | [**08**](lectures/analise-algoritmos/lecture-08) | Heaps. Heapsort. (Entrega dos trabalhos de pesquisa **A1**) | [25/9](lectures/analise-algoritmos/lecture-08) |
-| **09** | Grafos. Representação, busca em grafos, ordenação topológica. (**Entrega T1**) | 2/10 |
+| [**09**](lectures/analise-algoritmos/lecture-09) | Grafos. Representação, busca em grafos. (**Entrega T1**) | [2/10](lectures/analise-algoritmos/lecture-09) |
 | **10** | Grafos. Problema do menor caminho. | 9/10 |
 | **11** | Procura em Strings. | 16/10 |
 | **12** | _Evento da Universidade_ | 23/10 |
