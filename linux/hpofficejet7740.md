@@ -24,7 +24,7 @@ Comecei esse texto com o objetivo de mostrar como configurar essa impressora (qu
 
 Após retirar os milhares de adesivos azuis que prendem as partes da impressora para o transporte, ligá-la na rede elétrica, e instalar os cartuchos (com um sistema fácil, mas péssimo e meio _solto_ de conexão), a impressora _realiza uma série de procedimentos muito bem ocultados e que certamente reduzem a vida útil dos cartuchos_. Uma página de alinhamento das cabeças de impressão é impressa e você está pronto para começar a ~~sofrer~~ utilizar a impressora, caso você vá usar a porta USB.
 
-Para configurar como uma impressora de rede você pode usar uma conexão Ethernet, porém eu acabei utilizando o WiFi. A configuração é relativamente simples, porém minha rede, que não é oculta, não foi atomaticamente identificada pela impressora. Apesar disso, bastou inserir o nome da rede, a senha de conexão e a impressora configurou os serviços de impressão em rede.
+Para configurar como uma impressora de rede você pode usar uma conexão Ethernet, porém eu acabei utilizando o WiFi. A configuração é relativamente simples, porém minha rede, que não é oculta, não foi automaticamente identificada pela impressora. Apesar disso, bastou inserir o nome da rede, a senha de conexão e a impressora configurou os serviços de impressão em rede.
 
 E aqui começam os sustos, para o bem e para o mal.
 
@@ -38,13 +38,13 @@ Outros serviços como AirPrint (Apple/iOS) e Google Cloud Product (Google/Androi
 
 A melhor parte dos protocolos de impressão de rede habilitados é o IPP. Uma vez configurada a rede, você pode dar um _hostname_ para a impressora e qualquer sistema que saiba imprimir via IPP irá encontrá-la e (aparentemente) saberá utilizá-la.
 
-E aqui veio a melhor surpresa, como a impressora se anuncia via Bonjour, ela automagicamente apareceu nos diálogos de impressão do Fedora 38, numa instalação quase sem adições do [i3 Spin](fedoraproject.org/spins/i3){:target="\_blank"}. Bastou um `ping` no IP da impressora para o sistema se achar e disponibilizar a impressora para uso.
+E aqui veio a melhor surpresa, como a impressora se anuncia via Bonjour e o suporte a _IPP Everywhere_ funciona em todos os sistemas e impressoras atuais (pós 2015), ela magicamente apareceu nos diálogos de impressão do Fedora 38, numa instalação quase sem adições do [i3 Spin](fedoraproject.org/spins/i3){:target="\_blank"}. Bastou um `ping` no IP da impressora para o sistema se achar e disponibilizar a impressora para uso.
 
 ## Conclusão
 
 Se passaram quase 20 anos desde a última vez que eu havia configurado uma impressora no Linux, e tanto para uso como uma impressora local como para impressão remota via IPP não eram simples. Houve uma evolução muito grande do lado do sistema operacional e do lado do suporte de fabricantes de hardware (mesmo que esse suporte ainda esteja muito aquém do desejado).
 
-Hoje em dia, ao menos para impressão em rede em impressoras que provém esse suporte diretamente, o processo de configuraçõe está bastante simples, e os resultados de impressão bem satisfatórios.
+Hoje em dia, ao menos para impressão em rede em impressoras que provém esse suporte diretamente, o processo de configuração está muito mais simples, e os resultados de impressão bem satisfatórios.
 
 Aparentemente o problema agora é "como manter meu ambiente seguro e controlado" ao invés de "vou ter que fazer um ritual pagão para isso funcionar".
 

@@ -5,7 +5,7 @@ tags:
   - ciência da computação
   - conceitos básicos
   - matemática
-  - progressão aritimética
+  - progressão aritmética
   - progressão geométrica
 title: Progressão aritmética e geométrica
 subtitle: Conceitos de Matemática para Ciência da Computação
@@ -22,7 +22,7 @@ $$
 a_{n} = a_{k} + (n - k) \cdot r
 $$
 
-De forma geral, a soma de $n$ termos de uma progressão aritimética é:
+De forma geral, a soma de $n$ termos de uma progressão aritmética é:
 
 $$
 S_{n} = \frac{(a_{1} + a_{n}) \cdot n}{2}

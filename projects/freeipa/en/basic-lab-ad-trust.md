@@ -77,12 +77,12 @@ The playbooks are
 
 > **NOTE**: While I was creating this environment, in the Ansible
 controller, _Linux System Roles_ was installed using Fedora packages,
-the other collections were installed using [Ansible Galaxy], and _an
-unmerged development branch of ansible-freeipa_ was used (the available
-package or the Galaxy collection should work). I didn't care to fix the
+the other collections were installed using [Ansible Galaxy], and the
+_master_ branch of ansible-freeipa_ was used (either the Ansible Galaxy
+or the RPM packages should work). I didn't care to fix the
 playbooks so that they were readily usable in every situation. You may
-need to adapt the playbooks for your own use (i.e. use FCQN for
-roles/modules/actions).
+need to adapt the playbooks for your own use (i.e. use fully qualified
+collection names - FQCN - for roles/modules/actions).
 
 
 ## Installing and configuring the Windows AD server
@@ -113,13 +113,13 @@ qemu-img convert -p -f vpc -O qcow2 <Windows Image>.vhd w2k22.qcow2
     > The Windows VHD image file will have different names depending on
     the version you selected. The resulting filename should easily
     identify the version being used, like _w2k22_ for Windows Server 2022,
-    or _w2k19_ for Windovs Server 2019, for example.
+    or _w2k19_ for Windows Server 2019, for example.
 
 3. Create VM
 
     In this example, 1 virtual CPU and 4GB or RAM is used,
     what seems to make initial configuration much more slow, but will
-    have little to no effect later. You may also use the virt-manager
+    have little to no effect later. You may also use the `virt-manager`
     GUI to create the VM, importing the VM file.
 
     ```none
@@ -344,7 +344,7 @@ dnscmd 127.0.0.1 /ZoneAdd lin.ipa.test /Forwarder 192.168.122.251
 ```
 
 This will set a DNS forwarder zone on Windows DNS for the FreeIPA
-domain. You can test it in Powershell using:
+domain. You can test it in PowerShell using:
 
 ```none
 PS C:> nslookup
@@ -391,7 +391,7 @@ $ ipa dnsconfig-mod --forwarder=192.168.122.252 --forward-policy=only
         --add-sids
     ```
 
-3. Estabilish IPA-AD trust (use Windows AD Administrator password:
+3. Establish IPA-AD trust (use Windows AD Administrator password:
    SomeW1Npassword)
     ```none
 # ipa trust-add --type=ad ad.ipa.test --admin Administrator --password
@@ -420,12 +420,12 @@ and I'll try to fix it. Good Luck.
 Before you start, this steps assume you have the following installed on
 your host machine:
 
-* _WinRM_: install package python3-winrm (Fedora) or pywinrm (pip)
+* _WinRM_: install package `python3-winrm` (Fedora) or `pywinrm` (pip)
 * _Ansible Collections_: The following collections must be installed:
     * ansible.windows
     * community.windows
     * community.general
-    * freeipa.ansible_freeipa (I'll use the [git repo])
+    * freeipa.ansible_freeipa (I'll use the [git repository])
 
 The host machine will double as Ansible controller node.
 
@@ -507,7 +507,7 @@ were not automated, so you still have to manually execute steps `1`
 through `5` (that is install Windows until you can login Administrator,
 and setup its network connection).
 
-After the Windows installation, you need to configure it so that Ansbile
+After the Windows installation, you need to configure it so that Ansible
 can connect to it using [WinRM connector]. [Red Hat] has provided a
 [nice document] with instructions and details on automating Microsoft
 Windows tasks with Ansible (you should read it and follow some links).
@@ -711,7 +711,7 @@ And restart `krb5kdc` and `ssd` services:
 Now, AD users can login through SSH to the FreeIPA server using
 `AD\<user name>` or _UPN username_, as in `ssh AD\\jdoe@ad.ipa.test`.
 
-### Automating contfiguration with Ansible
+### Automating configuration with Ansible
 
 This step can also be automated with the following playbook:
 
@@ -764,10 +764,10 @@ complexity.
 
 
 <!-- links -->
-[freeipa]: https://freeipa.org
+[FreeIPA]: https://freeipa.org
 [ansible]: https://ansible.com
 [ansible-freeipa]: https://github.com/freeipa/ansible-freeipa
-[git repo]: https://github.com/freeipa/ansible-freeipa
+[git repository]: https://github.com/freeipa/ansible-freeipa
 [linux-system-roles]: https://linux-system-roles.github.io
 [libvirt]: https://libvirt.org
 [kvm]: https://www.linux-kvm.org
@@ -776,6 +776,6 @@ complexity.
 [microsoft windows]: https://windowsserver.com
 [active directory]: https://docs.microsoft.com/pt-br/windows-server/identity/identity-and-access
 [red hat]: https://redhat.com
-[winrm connector]: https://docs.ansible.com/ansible/latest/user_guide/windows_winrm.html
+[WinRM connector]: https://docs.ansible.com/ansible/latest/user_guide/windows_winrm.html
 [officially supported by IPA]: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/integrating_rhel_systems_directly_with_windows_active_directory/connecting-rhel-systems-directly-to-ad-using-sssd_integrating-rhel-systems-directly-with-active-directory#supported-windows-platforms-for-direct-integration_connecting-rhel-systems-directly-to-ad-using-sssd
 <!-- [nice document]: https://www.redhat.com/pt-br/technologies/management/ansible/automate-microsoft-windows-with-ansible -->

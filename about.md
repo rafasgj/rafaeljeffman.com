@@ -30,7 +30,7 @@ Alguma coisa um pouco mais pessoal, com visões de mundo bem particulares, comid
 </ul>
 </div>
 
-Para me contactar, por favor, envie um email. Eu sei que é uma ferramenta antiquada, mas ainda é a melhor para que eu consiga responder, rapidamente, e tenha menos chance de perder no meio de tanta notificação que recebemos todos os dias.
+Para me contatar, por favor, envie um email. Eu sei que é uma ferramenta antiquada, mas ainda é a melhor para que eu consiga responder, rapidamente, e tenha menos chance de perder no meio de tanta notificação que recebemos todos os dias.
 <div class="social">
 <ul style="margin: 0 auto !important;">
     <li>

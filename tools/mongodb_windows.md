@@ -25,18 +25,18 @@ Nesse artigo, mostro como instalar o MongoDB no Windows, e, para testar a instal
 
 O primeiro passo é realizar o _download_ do [MongoDB Community Server](mongodb.com/try/download/community'). Foi utilizada a [versão 7.0.1 x86\_64](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.1-signed.msi), mas você deve escolher a versão mais recente.
 
-O MongoDB utiliza um sistema de instalação guiada, e você pode utilizar as configurações pré-estabelecidas, apenas lembre-se de usar a opção de instalação completa.
+O MongoDB utiliza um sistema de instalação guiada, e você pode utilizar as configurações preestabelecidas, apenas lembre-se de usar a opção de instalação completa.
 
 Após a instalação, o `Compass`, uma ferramenta gráfica para administração do MongoDB irá
 iniciar, porém, não vamos utilizá-lo nesse momento. (Se a instalação do `Compass` falhar, você pode ignorar o erro, caso não vá utilizá-lo depois.)
 
-Para verificar se o MongoDB está rodando, utilize o aplication `Services` (Serviços) e procure por "MongoDB Server". O _status_ deve ser `Running` (Executando).
+Para verificar se o MongoDB está rodando, utilize o aplicativo `Services` (Serviços) e procure por "MongoDB Server". O _status_ deve ser `Running` (Executando).
 
-O MongoDB não vem com as ferramentas de linha de comando instaladas. Você pode obter [diversas ferramentas de linha de comand](https://mongodb.com/try/download), aqui utilizaremos apenas o [MongoDB Shell](https://mongodb.com/try/download/shell) (foi utilizada a [versão 1.10.6](https://downloads.mongodb.com/compass/mongosh-1.10.6-x64.msi)) e o `mongoimport` que faz part do pacote [MongoDB Database Tools](https://mongodb.com/try/download/database-tools) (foi utilizada a [versão 100.8.0](https://fastdl.mongodb.org/tools/db/mongodb-database-tools-windows-x86_64-100.8.0.msi)).
+O MongoDB não vem com as ferramentas de linha de comando instaladas. Você pode obter [diversas ferramentas de linha de comando](https://mongodb.com/try/download), aqui utilizaremos apenas o [MongoDB Shell](https://mongodb.com/try/download/shell) (foi utilizada a [versão 1.10.6](https://downloads.mongodb.com/compass/mongosh-1.10.6-x64.msi)) e o `mongoimport` que faz part do pacote [MongoDB Database Tools](https://mongodb.com/try/download/database-tools) (foi utilizada a [versão 100.8.0](https://fastdl.mongodb.org/tools/db/mongodb-database-tools-windows-x86_64-100.8.0.msi)).
 
 Todas as ferramentas utilizam instalação guiada, e, ao instalar o `MongoDB Shell`, instale o programa para todos os usuários desmarcando a opção `Install just for you`.
 
-A instalação do `MongoDB Shell` ajusta automaticamente o caminho de procura de ferramentas (`PATH`) dos _prompts_ de linha commando (`CMD` e `PowerShell`) para que o programa possa ser executado, porém as ferramentas do `Mongo Database Tools` não configuram essa variável de ambiente.
+A instalação do `MongoDB Shell` ajusta automaticamente o caminho de procura de ferramentas (`PATH`) dos _prompts_ de linha comando (`CMD` e `PowerShell`) para que o programa possa ser executado, porém as ferramentas do `Mongo Database Tools` não configuram essa variável de ambiente.
 
 No prompt, Adicione o diretório das ferramentas ao `PATH` para poder executá-las:
 ```nohl
@@ -92,20 +92,20 @@ Com o arquivo de dados criado, podemos utilizar o `mongoimport` para importar os
         --file="data.csv"
 ```
 
-Os parâmetos do `mongoimport` utilizados para a importação dos dados são:
-* --db=Company
+Os parâmetros do `mongoimport` utilizados para a importação dos dados são:
+* `--db=Company`
 : Utiliza a base de dados `Users`
-* --collection=Users
+* `--collection=Users`
 : Utiliza a coleção `Users`
-* --drop
+* `--drop`
 : Apaga a coleção caso ela exista
-* --mode=insert
+* `--mode=insert`
 : Insere os documentos na base
-* --type=csv
+* `--type=csv`
 : Define o formato dos dados a serem importados (por exemplo, `csv` ou `json`)
-* --headerline
+* `--headerline`
 : Trata a primeira linha dos dados como a descrição dos campos.
-* --file="data.csv"
+* `--file="data.csv"`
 : Define um arquivo contendo os dados para serem importados.
 
 Para testar a importação dos dados, crie um arquivo `query.js` no mesmo diretório:
@@ -149,5 +149,5 @@ A saída deverá ser:
 ]
 ```
 
-A instalação do MongoDB no Window é relativamente simples, para quem gosta de desenvolver utilizando programas de linha de comando (quem não gosta?) é necessária a execução de alguns passos a mais (em relação ao [uso de um _container_](mongodb_fedora)) para que as ferramentas sejam corretamente instaladas.
+A instalação do MongoDB no Windows é relativamente simples, para quem gosta de desenvolver utilizando programas de linha de comando (quem não gosta?) é necessária a execução de alguns passos a mais (em relação ao [uso de um _container_](mongodb_fedora)) para que as ferramentas sejam corretamente instaladas.
 

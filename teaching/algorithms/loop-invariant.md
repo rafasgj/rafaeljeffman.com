@@ -20,14 +20,14 @@ Sobre a invariante de laço, devemos demonstrar seu estado da em três momentos,
 
 A prova de correção de algoritmos por invariantes de laço são semelhantes à prova por indução.
 
-Para entender melhor como funcionam as invariantes de laço, três exemplos serão analizados.
+Para entender melhor como funcionam as invariantes de laço, três exemplos serão analisados.
 
 
 ## Busca Linear
 
-A busta linear, ou sequencial, é um algoritmo de busca exaustiva em listas. O algoritmo verifica cada elemento da lista até encontrar uma correspondência, ou até que não existam mais elementos na lista.
+A busca linear, ou sequencial, é um algoritmo de busca exaustiva em listas. O algoritmo verifica cada elemento da lista até encontrar uma correspondência, ou até que não existam mais elementos na lista.
 
-O pseudo-código para a busca linear pode ser definido como:
+O pseudocódigo para a busca linear pode ser definido como:
 
 ```
 linear_search(A, v):
@@ -52,7 +52,7 @@ A definição da invariante do laço para a busca linear é:
     * Para a _i-ésima_ iteração do laço, se `A[i] == v`, o laço termina, logo, a iteração só ocorre se `v` não pertence a `A[i, i+1)`.
 
 * **Finalização**:
-    * O algoritmo termina se `A[i] == v`, onde o elemento procurado é encontrado, ou se não existem mais elementos em `A`, sendo que a invariante `v` não pertence a `A[1..i-1]` se mantém verdadeira para abmos os casos.
+    * O algoritmo termina se `A[i] == v`, onde o elemento procurado é encontrado, ou se não existem mais elementos em `A`, sendo que a invariante `v` não pertence a `A[1..i-1]` se mantém verdadeira para ambos os casos.
 
 Como a invariante se mantém sempre verdadeira, o algoritmo está correto.
 
@@ -65,7 +65,7 @@ Caso os elementos de uma lista estejam organizadas em ordem crescente em relaç�
 
 Na busca binária em uma lista ordenada de elementos `A[1..n]`, comparamos uma chave `k` com um elemento da lista `A[i]`, onde `1 <= i <= n`. Se `k <= A[i]`, como a lista está ordenada, sabemos que `k` está no conjunto `A[1..i]`, caso contrário, sabemos que `k` está no conjunto `A[i+1..n]`.
 
-O pseudo-código para a busca binária iterativa pode ser definido da seguinte forma:
+O pseudocódigo para a busca binária iterativa pode ser definido da seguinte forma:
 
 ```
 binary_search(A, k):
@@ -87,7 +87,7 @@ A invariante do laço pode ser definida como:
 > Se `k` está em `A[1..n]`, então `k` está na lista `A[p..q]` que está contida em `A[1..n]`.
 
 * **Inicialização**:
-    * Na inicialização do algorimo, `p = 1` e `q = n`, logo, se `k` esta na lista `A[1..n]`, está na lista `A[p..q]`, sendo a invariante verdadeira.
+    * Na inicialização do algoritmo, `p = 1` e `q = n`, logo, se `k` esta na lista `A[1..n]`, está na lista `A[p..q]`, sendo a invariante verdadeira.
 
 * **Manutenção**:
     * Dado que `p <= m <= q`, como a lista está ordenada, se `k <= A[m]`, `k` está em `A[p..m]`, logo, sendo `q = m`, então `k` está em `A[p..q]`. Caso contrário se `k > A[m]`, logo, sendo `p = m + 1`, então `k` está em `A[p..q]`, sendo verdadeira a invariante.
@@ -98,12 +98,12 @@ A invariante do laço pode ser definida como:
 
 ## Insertion Sort
 
-Para que a _busca binária_ possa ser utilizada é necessáro que a lista de elementos esteja ordenada de acordo com uma chave. O problema da ordenação pode ser definido em função da sua entrada e saída esperada:
+Para que a _busca binária_ possa ser utilizada é necessário que a lista de elementos esteja ordenada de acordo com uma chave. O problema da ordenação pode ser definido em função da sua entrada e saída esperada:
 
 > Entrada: lista de N elementos A = {a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n-1</sub>, a<sub>n</sub>} <br/>
 > Saída: lista de N elementos A<sup>'</sup>, tal que A<sup>'</sup> = {a<sup>'</sup><sub>1</sub> <= a<sup>'</sup><sub>2</sub> <= ... <= a<sup>'</sup><sub>n-1</sub> <= a<sup>'</sup><sub>n</sub>} e a<sup>'</sup><sub>j</sub> pertence a A, para todo j pertencente a [1..n].
 
-Podemos definir o pseudo-código para o algoritmo `Insertion Sort` como:
+Podemos definir o pseudocódigo para o algoritmo `Insertion Sort` como:
 
 ```
 insertion_sort(A):
@@ -122,18 +122,18 @@ O algoritmo é formado por dois laços. O laço externo irá iterar sobre todos 
 
 Para verificar a correção do algoritmo _insertion sort_, definimos a invariante de laço como:
 
-> A cada iteração de laço `for`, a sub-sequência A[1..j-1] consiste dos elementos originais em A[1..j-1], porém, ordenados.
+> A cada iteração de laço `for`, a subsequência A[1..j-1] consiste dos elementos originais em A[1..j-1], porém, ordenados.
 
 E verificamos se a invariante é verdadeira:
 
 * **Inicialização**:
-  * Antes da primeira iteração, quando j = 2, a sub-sequência A[1..j-1] é formado por um único elemento, o elemento original A[1], e obviamente, esta sub-sequência está ordenada, logo, a invariante de laço é verdadeira na inicialização.
+  * Antes da primeira iteração, quando j = 2, a subsequência A[1..j-1] é formado por um único elemento, o elemento original A[1], e obviamente, esta subsequência está ordenada, logo, a invariante de laço é verdadeira na inicialização.
 
 * **Manutenção**:
-    * Informalmente, o laço `for` move elementos A[j-1], A[j-2], A[j-3] e assim por diante, uma posição à direita, até que encontre a posição adequada para o elemento A[j]. Nesse ponto, os elementos da sub-sequência A[1..j] consistem dos elementos originais A[1..j] ordenados. Incrementando o valor de j para a próxima iteração garante que a invariante de laço mantém-se verdadeira.
+    * Informalmente, o laço `for` move elementos A[j-1], A[j-2], A[j-3] e assim por diante, uma posição à direita, até que encontre a posição adequada para o elemento A[j]. Nesse ponto, os elementos da subsequência A[1..j] consistem dos elementos originais A[1..j] ordenados. Incrementando o valor de j para a próxima iteração garante que a invariante de laço mantém-se verdadeira.
 
 * **Finalização**:
-    * A condição que faz com que o laço `for` termine é que j seja maior que o número de elementos em A (n). Como incrementamos j de 1 em 1, o loop terminará com j = n + 1. Substituindo j na invariante do laço, temos que a sub-sequência A[1..n+1-1], ou seja A[1..n], consiste dos elementos originais de A e está ordenada. Como a sequência A[1..n] é a sequência completa concluímos que todos os elementos foram ordenados.
+    * A condição que faz com que o laço `for` termine é que j seja maior que o número de elementos em A (n). Como incrementamos j de 1 em 1, o loop terminará com j = n + 1. Substituindo j na invariante do laço, temos que a subsequência A[1..n+1-1], ou seja A[1..n], consiste dos elementos originais de A e está ordenada. Como a sequência A[1..n] é a sequência completa concluímos que todos os elementos foram ordenados.
 
 Para uma prova de todo o algoritmo, devemos demostrar que o laço interno, o `while`, está correto:
 
@@ -156,5 +156,5 @@ Podemos utilizar invariantes de laço para demonstrar se um algoritmo iterativo 
 
 ## Referências
 
-1. Cormen et al. **Introduction to Algoritms**. MIT Press. 2014.
+1. Cormen et al. **Introduction to Algorithms**. MIT Press. 2014.
 2. Robert Sedwick; Kevin Wayne. **Algorithms**. Addisson-Wesley Professional. 2011.

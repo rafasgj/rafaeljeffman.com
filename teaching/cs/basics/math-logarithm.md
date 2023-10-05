@@ -44,7 +44,7 @@ $$
 \log_{a} \left( \frac{n}{m} \right) = \log_{a} n - \log_{a} m
 $$
 
-* O logartimo da potência é igual a multiplicação do expoente pelo logaritmo:
+* O logaritmo da potência é igual a multiplicação do expoente pelo logaritmo:
 
 $$
 \log_{a} n^{m} = m\cdot\log_{a} n

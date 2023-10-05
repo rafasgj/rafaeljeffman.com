@@ -17,7 +17,7 @@ abstract: |-
   formais e bancos de dados.
 ---
 
-Em diversas áreas da ciência da computação é importante entender conceitos de conjuntos e relações, como nas linguagens formais ou nos bancos de dados. Aqui são apresentados alguns desses conceitos, a nomenclatura e as conveções adotadas nos textos que disponibilizo.
+Em diversas áreas da ciência da computação é importante entender conceitos de conjuntos e relações, como nas linguagens formais ou nos bancos de dados. Aqui são apresentados alguns desses conceitos, a nomenclatura e as convenções adotadas nos textos que disponibilizo.
 
 
 ## Conjuntos
@@ -72,7 +72,7 @@ Outra forma de definir um conjunto é a partir de uma propriedade. Por exemplo, 
 
 $$ {Pares} = \{ x \in \mathbb{N} \:|\: x \bmod{2} = 0 \} $$
 
-Esta definição de conjunto pode ser interpretada como o _conjunto de todos os elementos pertencentes aos números naturais, $\mathbb N$, tal que o resto da diisão inteira seja igual a 0_.
+Esta definição de conjunto pode ser interpretada como o _conjunto de todos os elementos pertencentes aos números naturais, $\mathbb N$, tal que o resto da divisão inteira seja igual a 0_.
 
 A forma geral para a definição de um conjunto em relação a uma propriedade $p$ é:
 
@@ -142,7 +142,7 @@ Dois conjuntos são iguais se e somente se todos os elementos de um conjunto tam
 
 $$ A = B \iff A \subseteq B \land B \subseteq A $$
 
-A partir da definição da igualdade de conjuntos, podemos demonstrar que elementos repetidos não influenciam na difinição do conjunto, uma vez que, mesmo que existam elementos repetidos, a condição $A \subseteq B \land B \subseteq A$ continua válida, como mostra a imagem:
+A partir da definição da igualdade de conjuntos, podemos demonstrar que elementos repetidos não influenciam na definição do conjunto, uma vez que, mesmo que existam elementos repetidos, a condição $A \subseteq B \land B \subseteq A$ continua válida, como mostra a imagem:
 
 <div class="image">
     <svg height="250" width="500" class="teaching-svg">
@@ -189,7 +189,7 @@ Um conjunto importante é o conjunto que não contém nenhum elemento, o **conju
 
 Um conjunto vazio não representa _nada_, ele representa um conjunto sem nenhum elemento dentro.
 
-O conjunto vazio está contido que qualquer conjunto $A$. Podemos demonstrar isso a partira da definição de subconjunto e da _regra da implicação_. É necessário que a condição $x \in \varnothing \Longrightarrow x \in A$ seja verdadeira, e como o antecedende $x \in \varnothing$ é _**falso**_ para qualquer $x$, a condição será verdadeira, logo $\varnothing \subseteq A$.
+O conjunto vazio está contido que qualquer conjunto $A$. Podemos demonstrar isso a partira da definição de subconjunto e da _regra da implicação_. É necessário que a condição $x \in \varnothing \Longrightarrow x \in A$ seja verdadeira, e como o antecedente $x \in \varnothing$ é _**falso**_ para qualquer $x$, a condição será verdadeira, logo $\varnothing \subseteq A$.
 
 
 ### Operações sobre conjuntos
@@ -306,7 +306,7 @@ O produto cartesiano de dois conjuntos é o conjunto de pares ordenados $(a, b)$
 
 $$ A \times B = \{ (a, b) \:|\: a \in A \land b \in B \} $$
 
-O produto cartesiano pode ser _multi-dimensional_, como em
+O produto cartesiano pode ser _multidimensional_, como em
 
 $$ A \times B \times C = \{(a,b,c) \:|\: a \in A \land b \in B \land c \in C\} $$
 

@@ -11,7 +11,7 @@ date: 2023-09-13
 
 O [Raspberry Pi OS](https://www.raspberrypi.com/software/), antigamente conhecido como "Raspbian" é o sistema operacional "oficial" do Raspberry Pi. É, no momento, o que oferece melhor suporte ao dispositivo. Existem várias formas de instalação, porém eu prefiro a forma manual.
 
-1. Após baixar a [imagem desejada](https://www.raspberrypi.com/software/operating-systems/) (utilizei o Rapsberry Pi OS Lite, da versão para todos os modelos), grave a imagem em um cartão SD:
+1. Após baixar a [imagem desejada](https://www.raspberrypi.com/software/operating-systems/) (utilizei o Raspberry Pi OS Lite, da versão para todos os modelos), grave a imagem em um cartão SD:
 ```nohl
 # xzcat <image_file> | sudo dd status=progress of='/dev/disk/by-id/my-sd-card'
 ```
@@ -43,5 +43,5 @@ $ sudo apt-get dist-upgrade
 $ sudo dpkg-reconfigure keyboard-configuration
 ```
 
-Uma das vantagens de utilizar a versão _lite_ do Raspberry Pi OS, é que ocupa relativamente pouco espaço no cartão de memória. Com um cartão de 8GB, o sistema inteiro ocupa 1.6Gb, deixando 5.2GB disponíveis para uso.
+Uma das vantagens de utilizar a versão _lite_ do Raspberry Pi OS, é que ocupa relativamente pouco espaço no cartão de memória. Com um cartão de 8GB, o sistema inteiro ocupa 1.6GB, deixando 5.2GB disponíveis para uso.
 

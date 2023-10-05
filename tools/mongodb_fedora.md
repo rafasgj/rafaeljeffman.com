@@ -21,9 +21,9 @@ abstract: |-
     dados a partir de arquivos CSV como demontração do ambiente.
 ---
 
-O MongoDB utiliza uma licença proprietária (SSPL), uma licença que não é livre e não é compatível com licensas comuns com GPL, Apache ou BSD, e, por esses motivos, foi removido das distribuições Linux. Como alternativa, para poder desenvolver utilizando o MongoDB de forma relativamente fácil e repetível, podemos utilizar um _container_ baseado no Docker ou Podman.
+O MongoDB utiliza uma licença proprietária (SSPL), ou seja, uma licença que não é livre e não é compatível com licenças _open source_ comuns com GPL, Apache ou BSD, e, por esse motivos, foi removido das distribuições Linux. Como alternativa, para poder desenvolver utilizando o MongoDB de forma relativamente fácil e repetível, podemos utilizar um _container_ baseado no Docker ou Podman.
 
-Aqui, utilizarei o [`podman`](https://podman.org), pois assim é possível utilizar um usuário sem privilégios. Para usar o `docker` talvez seja necessário, apenas, trocar o compando `podman` por `docker`, uma vez que a ideia do Podman é que ele seja um substituto direto do Docker.
+Aqui, utilizarei o [`podman`](https://podman.org), pois assim é possível utilizar um usuário sem privilégios. Para usar o `docker` talvez seja necessário, apenas, trocar o comando `podman` por `docker`, uma vez que a ideia do Podman é que ele seja um substituto direto do Docker.
 
 Como a ideia é preparar um ambiente que permita o desenvolvimento utilizando MongoDB, será criado um projeto de importação de dados a partir de um arquivo CSV.
 
@@ -40,7 +40,7 @@ Quando utilizamos um _container_, ao encerrá-lo os dados do _container_ são pe
 $ mkdir data
 ```
 
-Crie um arquivo CSV com os dados a serem importados, por exemplo o arvivo `${PWD}/import/users.csv`:
+Crie um arquivo CSV com os dados a serem importados, por exemplo o arquivo `${PWD}/import/users.csv`:
 
 ```nohl
 id,first_name,last_name,email,gender
