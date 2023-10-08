@@ -86,6 +86,20 @@
                 </div>
             </div>
         <div id="contents">
+                {% assign empty_array = "" | split: "," %}
+                {% assign session_array = page.section | lower | split: "," %}
+                {% assign page_related = page.related | default: empty_array %}
+                {% assign related = page.tags | concat: page_related | concat: session_array %}
+                {% assign sections = related | join: "," | downcase | split: "," | uniq %}
+                <div id="posts-relacionados">
+                <h2>{{ site.data.lang["Posts_Relacionados"][page.lang] | default: "Posts Relacionados" }}</h2>
+                <ul>
+                {% for post in site.pages %}{% assign related_items = post.tags | uniq %}{% if post.title and post.title != page.title and post.layout == "main" %}{% assign lower_section = post.section | downcase %}{% if sections contains lower_section %}<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><span class="last-update">{{ post.last_update }}</span></li>
+                {% else %}{% for tag in related_items %}{% if sections contains tag %}<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><span class="last-update">{{ post.last_update }}</span></li>
+                {% break %}{% endif %}{% endfor %}{% endif %}{% endif %}{% endfor %}
+                </ul>
+                </div>
+
                 {{ content }}
         </div>
         <div id="footer">

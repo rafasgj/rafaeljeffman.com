@@ -41,6 +41,7 @@ blockquote {
     color: $blockquote-fg;
     padding: 1px 10px;
     border-left: $blockquote-border;
+    overflow: auto;
 }
 
 iframe {
@@ -408,7 +409,10 @@ $flex_nav_subNavWidth: 10em;
     cursor: pointer;
 }
 
-div#by-posts {}
+div#by-posts {
+    max-height: 300px;
+    overflow: auto;
+}
     
 #page-tags {
     float: right;
@@ -456,3 +460,26 @@ embed.pdf-doc {
     border: thin solid #222;
     margin: 0 2em;
 }
+
+div#posts-relacionados {
+    float: right;
+    max-width: 25ch;
+    margin: 0 0 0 30px;
+    padding: 0px;
+    font-size: 75%;
+}
+div#posts-relacionados h2 {
+    font-size: 20pt;
+    margin: 0;
+    padding: 0;
+}
+div#posts-relacionados ul {
+    padding-left: 15px;
+}
+div#posts-relacionados ul li {
+    list-style: circle;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3px;
+}
+
