@@ -33,7 +33,9 @@ institution:
     : $\to$ não tem auto-arestas (uma aresta que sai e volta para o mesmo nó)
     : $\to$ toda aresta é distinta, ou seja, só existe uma aresta $(v, w)$
     : $\to\|E\| = O(\|V\|^{2})$
-        : Algoritmos cuja complexidade está baseada nas arestas podem ser vistos como $O(\|V\|^2)$, no entanto, em muitos casos práticos os grafos são esparsos, ond $E \ll \|V\|^2$.
+        : Algoritmos cuja complexidade está baseada nas arestas podem ser vistos como $O(\|V\|^2)$, no entanto, em muitos casos práticos os grafos são esparsos, onde $E \ll \|V\|^2$.
+    * Existe uma relação polinomial entre o número de aresta se vértices, logo $\log \|E\| = \Theta(\log \|V\|)$
+    * Um grafo **conectado** é um grafo onde existe, pelo menos, um caminho entre quaisquer dois vértices do grafo, e $\|E\| \ge \|V\| - 1$.
 3. Grafo como tipo abstrato de dados
     * Operações
         * `adjacent(G, u, v): bool`
@@ -55,15 +57,22 @@ institution:
     * O **grau de saída** de um vértice $u \in V$ é $\deg^{+}(u) = \|\text{Adj}^{+}(u)\|$
     * O **grau de entrada** de um vértice $u \in V$ é $\deg^{-}(u) = \|\text{Adj}^{-}(u)\|$
     * Para grafos não-direcionados $\text{Adj}^{+}(u) = \text{Adj}^{-}(u)$ e $\deg^{+}(u) = \deg^{-}(u)$
-    * Quando o superscrito não é utilizado, estamos nos referenciando aos vizinhos de saída: $\text{Adj}(u) = \text{Adj}^{+}(u)$ e $\deg(u) = \deg^{+}(u)$
+    * Quando o sobrescrito não é utilizado, estamos nos referenciando aos vizinhos de saída: $\text{Adj}(u) = \text{Adj}^{+}(u)$ e $\deg(u) = \deg^{+}(u)$
 
 5. Representação de Grafos
     * O objetivo é otimizar:
         * espaço de armazenamento
-        * funções `adajacent` e `neighbors`
+        * funções `adjacent` e `neighbors`
     * Lista de adjacências
+        * Lista de arestas para um vértice $v \in G$.
+        * O custo de armazenamento é $\Theta(\|V\| + \|E\|)$.
+        * É uma representação _esparsa_, pois representa apenas as arestas necessárias, em grafos esparsos.
+        * Exemplo de grafos esparsos: grafo planar ($\|E\| \le 3\|V\|-6$, para $\|V\| \ge 3$), árvores, lista encadeada.
     * Matrix de adjacências
-    * Matrix de incidências
+        * Matriz $V\timesV$ com cada célula $(i, j)$ representando uma aresta entre os vértices $i$ e $j$.
+        * O custo de armazenamento é $\Theta(\|V\|^2)$.
+        * É uma representação _densa_, pois representa grafos densamente conectados.
+        * Exemplo de grafos densos: grafo completo.
 
 6. Caminhos (_Paths_)
     * Um caminho é uma sequência de vértices $p = (v_1, v_2, \dots ,v_k)$, onde $(v_i, v_{i+1}) \in E \; \forall i \in \\{1, ..., k-1\\}$
@@ -81,15 +90,9 @@ institution:
 8. Algoritmos
     * Busca pelo menor caminho:
         * Caso base
-<<<<<<< HEAD
-        : $(i = 1): L_0 = \\{s\\}, \delta(s,s) = 0, P = \varnothing$
-        * Indução para calcular $L_i$
-            * para cada vértice `u` em $L_{i-1}$
-=======
         : $(i = 1): L_0 = \\{s\\}, \delta(s,s) = 0, P(s) = \varnothing$
         * Indução para calcular $L_i$
             * para cada vértice `u` em $L{i-1}$
->>>>>>> bb1d0f5 (lasalle/analise-algoritmos: Lecture 09)
                 * para cada vértice $v \in \text{Adj}(u)$ que não está em $L_j$ para $j \lt i$
                     * adicione $v$ a $L_i$, defina $\delta(s, v) = i$, e $P(v) = u$
         *  Repetidamente calcule $L_i$ a partir de $L_j$ para $j \lt i$, incrementando $i$ até que $L_i$ seja o conjunto vazio.
@@ -97,15 +100,6 @@ institution:
     * Implementação
         : $L_0 \gets \\{s\\}$
         : $\delta(s, s) \gets 0$
-<<<<<<< HEAD
-        : $P \gets {}$
-        : $i \gets 1$
-        : $\text{while} \; L_{i-1} \ne \varnothing$
-        : $\quad\quad \forall u \in L_{i-1}i, \forall v \in \text{Adj}(u) \; \text{and}\; v \notin \cup^{i-1}\_{j}{L_j}$
-        : $\quad\quad\quad\quad L_i \gets L_i \cup {v}$
-        : $\quad\quad\quad\quad \delta(s, v) = i$
-        : $\quad\quad\quad\quad P(v) = u$
-=======
         : $P(s) \gets \varnothing$
         : $i \gets 1$
         : $\text{while} \; L_{i-1} \ne \varnothing$
@@ -113,7 +107,6 @@ institution:
         : $\quad\quad L_i \gets L_i \cup {v}$
         : $\quad\quad \delta(s, v) = i$
         : $\quad\quad P(v) = u$
->>>>>>> bb1d0f5 (lasalle/analise-algoritmos: Lecture 09)
 
     * Complexidade do algoritmo: $O(\|V\| + \|E\|)$
 
