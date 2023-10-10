@@ -72,9 +72,9 @@ Aulas expositivas, debates em grupo e exercícios práticos.
 | [**05**](lectures/engswlab/lecture-05) | Diagramas de Classe, Sequencia e de Atividade. | [5/9](lectures/engswlab/lecture-05) |
 | [**06**](lectures/engswlab/lecture-06) | Controle de versão. Metodologias ágeis. | [12/9](lectures/engswlab/lecture-06) |
 | [**07**](lectures/engswlab/lecture-07) | Revisão e exercícios | [19/9](lectures/engswlab/lecture-07) |
-| **08** | Prova **P1** | 26/9 |
-| **09** | Especificação e desenvolvimento do Projeto **G2** | 3/10 |
-| **10** | Desenvolvimento do projeto **G2** | 10/10 |
+| [**08**](https://github.com/gherkin-by-example/python-behave){:target="\_blank"} | _Behavior Driven Development_ e Python Behave | [26/9](https://github.com/gherkin-by-example/python-behave){:target="\_blank"} |
+| **09** | Prova **P1** | 3/10 |
+| **10** | Correção da Prova. Especificação e desenvolvimento do Projeto **G2** | 10/10 |
 | **11** | Apresentação 1<sup>a</sup> (**A1**) parte do Projeto **G2** | 17/10 |
 | **12** | _Evento institucional_ | 24/10 |
 | **13** | Desenvolvimento do projeto **G2**  | 31/10 |
