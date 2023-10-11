@@ -482,4 +482,7 @@ div#posts-relacionados ul li {
     padding: 0;
     margin-bottom: 3px;
 }
+@media print {
+    div#posts-relacionados { display: none; } 
+}
 
