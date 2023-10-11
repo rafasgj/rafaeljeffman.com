@@ -74,14 +74,14 @@ Aulas expositivas, debates em grupo e exercícios práticos.
 | [**07**](lectures/engswlab/lecture-07) | Revisão e exercícios | [19/9](lectures/engswlab/lecture-07) |
 | [**08**](https://github.com/gherkin-by-example/python-behave){:target="\_blank"} | _Behavior Driven Development_ e Python Behave | [26/9](https://github.com/gherkin-by-example/python-behave){:target="\_blank"} |
 | **09** | Prova **P1** | 3/10 |
-| **10** | Correção da Prova. Especificação e desenvolvimento do Projeto **G2** | 10/10 |
-| **11** | Apresentação 1<sup>a</sup> (**A1**) parte do Projeto **G2** | 17/10 |
+| **10** | Correção da Prova. [Especificação](lectures/engswlab/projeto_desenvolvimento_g2)  e desenvolvimento do Projeto **G2** | 10/10 |
+| **11** | [Apresentação 1<sup>a</sup> (**A1**) parte do Projeto **G2**](lectures/engswlab/projeto_desenvolvimento_g2#aval_1)  | 17/10 |
 | **12** | _Evento institucional_ | 24/10 |
 | **13** | Desenvolvimento do projeto **G2**  | 31/10 |
-| **14** | Apresentação 2<sup>a</sup> (**A2**) parte do Projeto **G2** | 7/11 |
+| **14** | [Apresentação 2<sup>a</sup> (**A2**) parte do Projeto **G2**](lectures/engswlab/projeto_desenvolvimento_g2#aval_2)  | 7/11 |
 | **15** | Desenvolvimento do projeto **G2**   | 14/11 |
 | **16** | Desenvolvimento do projeto **G2** | 21/11 |
-| **17** | Apresentação final (**A3**) do Projeto **G2** | 28/11 |
+| **17** | [Apresentação final (**A3**) do Projeto **G2**](lectures/engswlab/projeto_desenvolvimento_g2#aval_3)  | 28/11 |
 | **18** | Prova **P2** | 5/12 |
 | **19** | Entrega de resultados e revisão para substituição de grau | 12/12 |
 | **20** | Substituição de grau | 19/12 |
