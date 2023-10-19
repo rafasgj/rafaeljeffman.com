@@ -77,14 +77,14 @@ Aulas expositivas, exemplos de desenvolvimento, e exercícios práticos.
 | **06** | _Feriado_ | 7/9 |
 | [**07**](lectures/sistemas-distribuidos/lecture-07) | Comunicação orientada a fluxo e multicast. Sincronização em Threads. | [14/9](lectures/sistemas-distribuidos/lecture-07) |
 | [**08**](lectures/sistemas-distribuidos/lecture-08) | Revisão para **P1**. (Entrega do **T1**.) | [21/9](lectures/sistemas-distribuidos/lecture-08) |
-| **09** | Avaliação **P1** | 28/9 |
-| **10** | Sincronização em sistemas distribuídos. Nomeação. Especificação do Trabalho **T2**.  | 5/10 |
+| **09** | Correção do trabalho **T1** | 28/9 |
+| **10** | Avaliação **P1** | 5/10 |
 | **11** | _Feriado_ | 12/10 |
-| **12** | Consistência e Replicação. | 19/10 |
+| **12** | Sincronização em sistemas distribuídos. Nomeação. Especificação do Trabalho **T2**. | 19/10 |
 | **13** | _Evento Institucional_ | 26/10 |
 | **14** | _Feriado_ | 2/11 |
-| **15** | Tolerância a falhas. Apresentação parcial dos trabalhos (**T2**) | 9/11 |
-| **16** | Segurança. Modelos de sistemas distribuídos. | 16/11 |
+| **15** | Consistência e Replicação. Apresentação parcial dos trabalhos (**T2**) | 9/11 |
+| **16** | Tolerância a falhas. Segurança. | 16/11 |
 | **17** | Implementação dos trabalhos. | 23/11 |
 | **18** | Apresentação dos sistemas implementados (**T2**) | 20/11 |
 | **19** | Prova **P2** | 7/12 |
