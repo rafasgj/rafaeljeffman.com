@@ -21,7 +21,7 @@ $normal-font-size: 24px;
     font-size: 28px;
   }
   @media print {
-    font-size: 12pt;
+    font-size: 10pt;
   }
 }
 
@@ -53,6 +53,9 @@ html {
   letter-spacing: -0.5px;
   @media (orientation: vertical) {
     font-size: 110%;
+  }
+  @media print {
+    font-size: 11pt;
   }
 }
 
@@ -100,14 +103,14 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent !important;
-  @media print {
-     color: #000 !important;
-  }
 }
 
 h1 {
   margin-bottom: 20px;
   font-size: 210%;
+  @media print {
+    font-size: 20pt;
+  }
 }
 
 h2 {
@@ -116,6 +119,9 @@ h2 {
   a {
     font-size: 100%;
   };
+  @media print {
+    font-size: 18pt;
+  }
 }
 h2 + h3 {
   margin: 1em 0 0.25em 0;
@@ -124,11 +130,29 @@ h2 + h3 {
 h3 {
   font-size: 150%;
   margin: 1.75em 0 0.25em 0;
+  @media print {
+    font-size: 16pt;
+  }
 }
 
 h4 {
   font-size: 130%;
   margin: 1.5em 0 0.25em 0;
+  @media print {
+    font-size: 14pt;
+  }
+}
+
+h5 {
+  @media print {
+    font-size: 12pt;
+  }
+}
+
+h6 {
+  @media print {
+    font-size: 11pt;
+  }
 }
 
 ul.lettered { list-style-type: upper-alpha; }
@@ -300,3 +324,29 @@ $flex_nav_breakpoint: 1024px;
   color: #858;
 }
 
+/* margins and objects for print. */
+@media print {
+    h1,h2,h3,h4,h5,h6 {
+        color: #000 !important;
+        margin: 0.3cm auto 0.2cm auto;
+    }
+    p {
+        margin: 0.25cm auto 0 auto;
+    }
+    ol,ul {
+        margin: 0.25cm 0 0 auto;
+        list-style-position: inside;
+        padding: 0 0 0 0.25cm;
+    }
+    li {
+        margin: 0 auto 0 0.25em;
+        padding: 0;
+    }
+    #page_summary { display: none; } 
+    #contents {
+        margin: 0 auto;
+    }
+    table {
+        margin: 0.3cm 0.25cm 0.3cm 0.25cm;
+    }
+}
