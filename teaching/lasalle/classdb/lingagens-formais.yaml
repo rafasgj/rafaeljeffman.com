@@ -1,0 +1,142 @@
+---
+section: LaSalle
+subtitle: Unilasalle - 2024/1
+sections: []
+objectives: []
+requirements: []
+learning_units: []
+competences: []
+grading:
+  g1:
+  - label: T1
+    weight: 3.0
+  - label: E1
+    weight: 3.0
+  - label: P1
+    weight: 4.0
+  g2:
+  - label: T2
+    weight: 3.0
+  - label: E2
+    weight: 3.0
+  - label: P2
+    weight: 4.0
+resources:
+  online: []
+  tools: []
+  bibliography: []
+layout: classplan
+year: 2024
+semester: 1
+strategy: Serão utilizadas aulas expositivas, exercícios práticosindividuais ou
+  em grupo, pesquisas e apresentação de conteúdosrelacionados a disciplina.
+calendar:
+- test: 2024-03-01 00:00:00
+  day: '2024-03-01'
+  lecture: true
+  topics:
+  - Apresentação da disciplina
+  - Revisão de conceitos básicos
+- test: 2024-03-08 00:00:00
+  day: '2024-03-08'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-03-15 00:00:00
+  day: '2024-03-15'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-03-22 00:00:00
+  day: '2024-03-22'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-03-29 00:00:00
+  day: '2024-03-29'
+  lecture: false
+  topics:
+  - Sexta-feira Santa
+- test: 2024-04-05 00:00:00
+  day: '2024-04-05'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-04-12 00:00:00
+  day: '2024-04-12'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-04-19 00:00:00
+  day: '2024-04-19'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-04-26 00:00:00
+  day: '2024-04-26'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-05-03 00:00:00
+  day: '2024-05-03'
+  lecture: true
+  topics:
+  - Prova **P1**
+- test: 2024-05-10 00:00:00
+  day: '2024-05-10'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-05-17 00:00:00
+  day: '2024-05-17'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-05-24 00:00:00
+  day: '2024-05-24'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-05-31 00:00:00
+  day: '2024-05-31'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-06-07 00:00:00
+  day: '2024-06-07'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-06-14 00:00:00
+  day: '2024-06-14'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-06-21 00:00:00
+  day: '2024-06-21'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-06-28 00:00:00
+  day: '2024-06-28'
+  lecture: true
+  topics:
+  - ''
+- test: 2024-07-05 00:00:00
+  day: '2024-07-05'
+  lecture: true
+  topics:
+  - Prova **P2**
+- test: 2024-07-12 00:00:00
+  day: '2024-07-12'
+  lecture: true
+  topics:
+  - Divulgação de Resultados
+  - Revisão para a substituição de grau
+- test: 2024-07-19 00:00:00
+  day: '2024-07-19'
+  lecture: true
+  topics:
+  - Substituição de grau
+title: Lingagens Formais
+...

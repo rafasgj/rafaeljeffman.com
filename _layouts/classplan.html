@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'pt' }}" dir="ltr">
+    <head>
+        {% include common_head.html page = page %}
+        {% include styles.html %}
+        <link rel="stylesheet" href="/css/page_summary.css">
+        <link rel="stylesheet" href="/css/cronograma.css">
+        {% for css in page.extra_styles %}
+        <link rel="stylesheet" href="/css/{{ css }}.css">
+        {% endfor %}
+    </head>
+    <body>
+        {% include header.html lang=page.lang %}
+        <div id="con">
+            <!-- h1 class="section-title"  -->
+            {% if page.title and page.title != "/none" %}
+            <div id="section-title">{{ page.title | prepend: "# " | markdownify }}
+            {% if page.subtitle %}
+            <div id="section-subtitle">{{ page.subtitle | prepend: "## " | markdownify }}</div>
+            {% endif %}
+            </div>
+            {% endif %}
+            <div id="cardboard">
+                {% for item in page.cards %}
+                <div class="card">
+                    <div class="card-title"><a href="{{ item.link }}">{{ item.title }}</a></div>
+                    <div class="card-abstract">{{ item.content | markdownify }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div id="contents">
+                <div id="page_summary">
+                <ul>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+                <li><a href="#competências-trabalhadas">Competências trabalhadas</a></li>
+                <li><a href="#unidades-de-aprendizagem">Unidades de Aprendizagem</a></li>
+                <li><a href="#estratégias-metodológicas">Estratégias Metodológicas</a></li>
+                <li><a href="#cronograma">Cronograma</a></li>
+                <li><a href="#avaliacao">Avaliação</a></li>
+                <li><a href="#material-complementar">Material Complementar</a></li>
+                </div>
+
+                <h2 id="objetivos">Objetivos</h2>
+                {% assign array_size = page.objectives | map: "" | join: "," | size %}
+                {% if array_size > 0 %}
+                <p>São objetivos da disciplina:</p>
+                <ul>{% for item in page.objectives %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ul>
+                {% else %}
+                {{ page.objectives | markdownify }}
+                {% endif %}
+                <h2 id="pré-requisitos">Pré-requisitos</h2>
+                <p>Embora os pré-requisitos não sejam obrigatórios, o seu domínio auxiliará muito na evolução do aprendizado:</p>
+                <ul>{% for item in page.requirements %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ul>
+
+                <h2 id="competências">Competências Trabalhadas</h2>
+                <p>As competências trabalhadas na disciplina são:</p>
+                <ul>{% for item in page.competences %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ul>
+
+                <h2 id="unidades-de-aprendizagem">Unidades de Aprendizagem</h2>
+                <ul>{% for item in page.learning_units %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ul>
+
+                <h2 id="estratégias-metodológicas">Estratégias Metodológicas</h2>
+                {{ page.strategy }}
+                <h2 id="cronograma">Cronograma</h2>
+                <table>
+                  {% assign counter = 1 %}
+                  <thead><tr><th style="text-align: center">Aula</th><th style="text-align:left">Conteúdo Programado</th><th style="text-align: center">Data</th></tr></thead>
+                  <tbody>
+                    {% for date in page.calendar %}
+                    <tr>
+                        {% assign class_day = date.day | date: "%Y-%m-%d" %}
+                        <td style="text-align: center"><strong>{% if date.url %}<a href="{{ date.url }}">{% endif %}{{ counter }}{% if date.url%}</a>{% endif %}</strong>{% assign counter = counter | plus: 1 %}</td>
+                        <td style="text-align: left">{% unless date.lecture %}<i>{% endunless %}{{ date.topics | join: ". " | append: "." | markdownify | remove: '<p>' | remove: '</p>' }}{% unless date.lecture %}</i>{% endunless %}</td>
+                        <td style="text-align: center">{% if date.url %}<a href="{{ date.url }}">{% endif %}{{ date.day | date: "%d/%m" }}{% if date.url%}</a>{% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+
+                <h2 id="avaliacao">Procedimentos e Critérios de Avaliação</h2>
+                <p>A nota final será composta por trabalhos/exercícios e prova, que serão desenvolvidos durante as aulas e em atividades extraclasse.</p>
+                <p>O grau 1 será composto por <code>G1 = {% for item in page.grading.g1 %}<a {% if item.url %}href="{{ item.url}}"{% endif %}>{{ item.label }}</a>({{ item.weight }}){% unless forloop.last %} + {% endunless %}{% endfor %}</code></p>
+                <p>O grau 2 será composto por <code>G2 = {% for item in page.grading.g2 %}<a {% if item.url %}href="{{ item.url}}"{% endif %}>{{ item.label }}</a>({{ item.weight }}){% unless forloop.last %} + {% endunless %}{% endfor %}</code></p>
+                <p>A nota final será a média (M) dada pela regra <code>M = (G1 + G2) / 2</code></p>
+                <p>A recuperação será realizada com a aplicação de uma prova escrita. A nota desta substituirá a nota mais baixa e a média (M) será recalculada.</p>
+                <p>Para obter a aprovação, o aluno deve obter uma média (M) igual ou superior a <strong>6</strong>, com frequência igual ou superior à <strong>75%</strong>.</p>
+                <p>A frequência será medida a partir de chamada nominal, realizada em todas as aulas.</p>
+
+                <h2 id="material-complementar">Material Complementar</h2>
+                {% if page.resources.online.size > 0 %}
+                <h3>Recursos <em>Online</em></h3>
+                <ol>{% for item in page.resources.online %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ol>
+                {% endif %}
+                {% if page.resources.tools.size > 0 %}
+                <h3>Ferramentas utilizadas na disciplina</h3>
+                <ol>{% for item in page.resourses.tools %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ol>
+                {% endif %}
+                {% if page.resources.bibliography.size > 0 %}
+                <h3>Bibliografia</h3>
+                <ol>{% for item in page.resourses.bibliography %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ol>
+                {% endif %}
+
+                {% assign page_list = site.pages | where_exp: "item", "item.title != nil" | where_exp: "item", "item.date != nil" | where_exp: "item", "item.layout != 'section'" | where_exp: "item", "item.layout != 'lecture'" | sort: "date" | reverse  %}
+                {% if page.sections %}
+                    {% assign filtered_list = page_list | where_exp: "item", "page.sections contains item.section" %}
+                {% else %}
+                    {% assign filtered_list = page_list%}
+                {% endif %}
+                {% if filtered_list.size != 0 %}
+                {% if page.cards == nil %}
+
+                <h1>{{ site.data.lang['Posts_Relacionados'][page.lang] | default: "Posts Relacionados" }}</h1>
+                {% else %}
+                <h1>{{ site.data.lang['Posts_Recentes'][page.lang] | default: "Posts Recentes" }}</h1>
+                {% endif %}
+                <div id="by-posts">
+                    <ul>
+                        {% for linkto in filtered_list %}
+                            <li>
+                                <a href="{{ linkto.url }}">{{ linkto.title | strip | markdownify | remove: '<p>' | remove: '</p>' }}</a> <div class="last-update">{{ linkto.date }}</div> {% if linkto.lang and linkto.lang != "pt" %}<div class="lang-code">({{ linkto.lang }})</div>{% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+       </div>
+       <div id="footer">
+        {% include footer.html %}
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    </body>
+</html>
