@@ -21,7 +21,7 @@ extra_styles:
 * [Estratégias Metodológicas](#estratégias-metodológicas)
 * [Cronograma](#cronograma) 
 * [Avaliação](#avaliacao)
-* [Material Complementar](#materia-complementar)
+* [Material Complementar](#material-complementar)
 </div>
 {::options parse_block_html="false" /}
 
@@ -89,11 +89,11 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias ou em gru
 | [**10**](lectures/analise-algoritmos/lecture-10) | Grafos. Problema do menor caminho. | [9/10](lectures/analise-algoritmos/lecture-10) |
 | [**11**](lectures/analise-algoritmos/lecture-11) | Procura em Strings. | [16/10](lectures/analise-algoritmos/lecture-11) |
 | **12** | _Evento da Universidade_ | 23/10 |
-| **13** | Projeto e análise de algoritmos: Divisão e Conquista, Algoritmos Gulosos. | 30/10 |
-| **14** | Programação Dinâmica | 6/11 |
+| [**13**](lectures/analise-algoritmos/lecture-13) | Programação Dinâmica. | [30/10](lectures/analise-algoritmos/lecture-11) |
+| **14** | Projeto e análise de algoritmos: Divisão e Conquista, Algoritmos Gulosos. | 6/11 |
 | **15** | Intratabilidade e Complexidade de Algoritmos. | 13/11 |
 | **16** | Algoritmos P, NP, NP-hard e NP-complete. Redução de algoritmos. Outras classes de algoritmos e problemas. | 20/11 |
-| **17** | Exercícios e Revisão. (**Entrega T3**) | 27/11 |
+| **17** | Exercícios e Revisão. (**Entrega T2**) | 27/11 |
 | **18** | **Avaliação P1** | 4/12 |
 | **19** | Entrega de Resultados e revisão | 11/12 |
 | **20** | **Avaliação de Recuperação** | 18/12 |
