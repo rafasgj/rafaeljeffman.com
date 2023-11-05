@@ -90,7 +90,7 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias ou em gru
 | [**11**](lectures/analise-algoritmos/lecture-11) | Procura em Strings. | [16/10](lectures/analise-algoritmos/lecture-11) |
 | **12** | _Evento da Universidade_ | 23/10 |
 | [**13**](lectures/analise-algoritmos/lecture-13) | Programação Dinâmica. | [30/10](lectures/analise-algoritmos/lecture-11) |
-| **14** | Projeto e análise de algoritmos: Divisão e Conquista, Algoritmos Gulosos. | 6/11 |
+| [**14**](lectures/analise-algoritmos/lecture-14) | Projeto e análise de algoritmos: Divisão e Conquista, Algoritmos Gulosos. | [6/11](lectures/analise-algoritmos/lecture-14) |
 | **15** | Intratabilidade e Complexidade de Algoritmos. | 13/11 |
 | **16** | Algoritmos P, NP, NP-hard e NP-complete. Redução de algoritmos. Outras classes de algoritmos e problemas. | 20/11 |
 | **17** | Exercícios e Revisão. (**Entrega T2**) | 27/11 |
