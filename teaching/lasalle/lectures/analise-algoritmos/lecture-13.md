@@ -180,7 +180,7 @@ while not frontier.empty():
 ## Questões
 
 1. **Projeto**: Implementar o algoritmo $A^\*$ para encontrar o caminho entre dois pontos em um mapa, levando em consideraçãoo custo de locomoção nesse mapa. O mapa é um _grid_ definido como uma série de valores inteiros. Se o valor for positivo ou igual a zero, representa o custo (esforço) de passar pelo terreno. Se o valor for negativo (_-1_), significa que é impossível passar pelo terreno.
-2. Crie uma interface e representação da resposta interessante para a utilização do sistema implementado no ** item 1**.
+2. Crie uma interface e representação da resposta interessante para a utilização do sistema implementado no **item 1**.
 
 ## Recursos para essa aula
 

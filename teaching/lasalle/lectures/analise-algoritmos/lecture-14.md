@@ -61,7 +61,7 @@ institution:
 
 * Dadas três listas ordenadas $\\{L_1, L_2, L_3\\}$, com comprimentos respectivos $\\{m_1, m_2, m_3\\}$, qual a ordem que as listas devem ser intercaladas para que o número de comparações seja o menor possível?
 * O caso mais simples do problema é a intercalação de duas listas $\\{L_a, L_B\\}$. O tamanho da lista resultante é $m_a + m_b$, e o número máximo de comparações para a intercalação de duas listas $\\{L_a, L_b\\}$ é $m_a + m_b - 1$.
-* Assumindo que três listas de tamanhos $\{\15, 10, 5\\}$, podemos intercalar as listas seguindo as ordens:
+* Assumindo que três listas de tamanhos $\\{15, 10, 5\\}$, podemos intercalar as listas seguindo as ordens:
     * $L_1 \rightarrow L_2, \(L_1 + L_2\) \rightarrow L_3$
     * $L_1 \rightarrow L_3, \(L_1 + L_3\) \rightarrow L_2$
     * $L_2 \rightarrow L_3, \(L_2 + L_3\) \rightarrow L_1$
@@ -84,7 +84,7 @@ institution:
 * A escolha das duas listas menores tem complexidade $O(n)$ para uma lista, ou $O(\log{n})$ para um _heap_ binário
 * A intercalação das listas executa $m_a + m_b - 1$ comparações
 : Como estamos interessados no pior caso (análise pessimista), assimos que todas as listas tem o mesmo tamnho $m$, e o número de operações para a intercalação é $2m - 1$
-* A adição da lista ao conjunto de lista tem complexidade $O(1)
+* A adição da lista ao conjunto de lista tem complexidade $O(1)$
 
 * Com isso temos o seguinte cálculo para a complexidade de tempo:
     * **Com arrays**
