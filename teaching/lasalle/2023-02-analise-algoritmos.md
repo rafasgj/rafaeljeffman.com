@@ -91,10 +91,10 @@ Serão utilizadas aulas expositivas, exercícios práticos individuias ou em gru
 | **12** | _Evento da Universidade_ | 23/10 |
 | [**13**](lectures/analise-algoritmos/lecture-13) | Programação Dinâmica. | [30/10](lectures/analise-algoritmos/lecture-13) |
 | [**14**](lectures/analise-algoritmos/lecture-14) | Projeto e análise de algoritmos: Divisão e Conquista, Algoritmos Gulosos. | [6/11](lectures/analise-algoritmos/lecture-14) |
-| **15** | Intratabilidade e Complexidade de Algoritmos. Algoritmos P, NP, NP-hard, NP-Complete e EXP. Algoritmos não-computáveis. | 13/11 |
+| [**15**](lectures/analise-algoritmos/lecture-15) | Intratabilidade e Complexidade de Algoritmos. Algoritmos P, NP, NP-hard, NP-Complete e EXP. Algoritmos não-computáveis. | [13/11](lectures/analise-algoritmos/lecture-14) |
 | **16** | Exercícios e Revisão. | 20/11 |
-| **17** | Exercícios e Revisão. (**Entrega T2**) | 27/11 |
-| **18** | **Avaliação P1** | 4/12 |
+| **17** | Exercícios e Revisão. | 27/11 |
+| **18** | **Avaliação P1** (Data final para entrega [T2](lectures/analise-algoritmos/trabalho-02) | 4/12 |
 | **19** | Entrega de Resultados e revisão | 11/12 |
 | **20** | **Avaliação de Recuperação** | 18/12 |
 
