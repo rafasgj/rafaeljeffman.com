@@ -105,7 +105,7 @@ A nota final será composta por trabalhos/exercícios e prova, que serão desenv
 
 O grau 1 será composto por `G1 = T1 (3,0) + A1(4,0) + E1(3,0)`
 
-O grau 2 (G2) será composto por `G2= T2(3,0) + P1(4,0) + E2(3,0)`
+O grau 2 (G2) será composto por `G2= T2(3,0) + P1(4,0) + E2(3,0)` ([_link_ para o T2](lectures/analise-algoritmos/trabalho-02))
 
 A nota final será a média (M) dada pela regra `M = (G1 + G2) / 2`
 
