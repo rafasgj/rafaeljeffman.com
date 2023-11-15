@@ -54,10 +54,10 @@ institution:
                     j = kmp_next[j]
                 i += 1
                 j += 1
-                if x[i] == x[j]:
+                if w[i] == w[j]:
                     kmp_next[i] = kmp_next[j]
                 else:
-                    kmp_nex[i] = j
+                    kmp_next[i] = j
             return kmp_next
 
         def match(S, w):
