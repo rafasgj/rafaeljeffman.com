@@ -70,8 +70,8 @@ Implementação dos componentes de um compilador para uma máquina virtual de pi
 | G1 | [Implementação de um avaliador de expressões aritméticas com atribuição e acesso a variáveis.](trabalho-02) | 2,0 |
 | G1 | [Definição de uma gramática livre de contexto para uma linguagem procedural Turing-complete.](trabalho-03) | 1,0 |
 | G2 | [Implementação de um parser para uma gramática livre de contexto.](trabalho-04) | 1,5 |
-| G2 | Geração de uma árvore de derivação com uso tabela de símbolos, para uma gramática livre de contexto. | 1,5 |
-| G2 | Geração de código alvo para uma máquina virtual de pilha simplificada. | 2,0 |
+| G2 | [Geração de uma árvore de derivação com uso tabela de símbolos, para uma gramática livre de contexto.](trabalho-05) | 1,5 |
+| G2 | [Geração de código alvo para uma máquina virtual de pilha simplificada.](trabalho-06) | 2,0 |
 
 
 ## Procedimentos e Critérios de Avaliação {#avaliacao}
