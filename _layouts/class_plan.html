@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'pt' }}" dir="ltr">
+    <head>
+        {% include common_head.html page = page %}
+        {% include styles.html %}
+        {% for css in page.extra_styles %}
+        <link rel="stylesheet" href="/css/{{ css }}.css">
+        {% endfor %}
+    </head>
+    <body>
+        {% include header.html lang=page.lang %}
+        <div id="con">
+            <!-- h1 class="section-title"  -->
+            {% if page.title and page.title != "/none" %}
+            <div id="section-title">{{ page.title | prepend: "# " | markdownify }}
+            {% assign year = page.start | date: "%Y" %}
+            {% assign month = page.start | date: "%m" %}
+            {% if page.month <= 6 %}{% assign semester="1" %}{% else %}{% assign semester="2" %}{% endif%}
+            <div id="section-subtitle">{{ page.institution | append: ' - ' | append: year | append: '/' | append: semester | prepend: "## " | markdownify }}</div>
+            </div>
+            {% endif %}
+            <div id="cardboard">
+                {% for item in page.cards %}
+                <div class="card">
+                    <div class="card-title"><a href="{{ item.link }}">{{ item.title }}</a></div>
+                    <div class="card-abstract">{{ item.content | markdownify }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div id="contents">
+                {% include class_summary.md  %}
+
+                <h2 id="objetivos">Objetivos</h2>
+                <p>São objetivos da disciplina:</p>
+                <ul>
+                {% for objective in page.objectives %}
+                    <li>{{ objective | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                {% endfor %}
+                </ul>
+
+                {% if page.requirements %}
+                <h2 id="pré-requisitos">Pré-requisitos</h2>
+                <p>Embora os pré-requisitos não sejam obrigatórios, o seu domínio auxiliará muito na evolução do aprendizado:</p>
+                <ul>
+                {% for requirement in page.requirements %}
+                    <li>{{ requirement | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                {% endfor %}
+                </ul>
+                {% endif %}
+
+                <h2 id="competências">Competências trabalhadas</h2>
+                <p>As competências trabalhadas na disciplina são:</p>
+                <ul>
+                {% for competence in page.competences %}
+                    <li>{{ competence | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                {% endfor %}
+                </ul>
+
+                <h2 id="unidades-de-aprendizagem">Unidades de Aprendizagem</h2>
+                <p>As unidades de aprendizagem abordadas na disciplina são:</p>
+                <ul>
+                {% for unity in page.learning_unities %}
+                    <li>{{ unity | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                {% endfor %}
+                </ul>
+
+                <h2 id="estratégias-metodológicas">Estratégias metodológicas</h2>
+                <p>Aulas expositivas, debates em grupo e exercícios práticos.</p>
+
+                <h2 id="cronograma">Cronograma</h2>
+                <table>
+                <thead><tr><th>Aula</th><th>Conteúdo Programado</th><th>Data</th></tr></thead>
+                <tbody>
+                {% assign week = 604800 %}
+                {% for lecture in page.lectures %}
+                <tr>
+                    <td align="center">{% if lecture.lecture %}<a href="/teaching/{{ page.institution | downcase }}/lectures/{{ page.nickname }}/lecture-{{ forloop.index | plus: 100 | slice: 1, 2 }}">{% endif %}<strong>{{ forloop.index | plus: 100 | slice: 1, 2 }}</strong>{% if lecture.lecture %}</a>{% endif %}</td>
+                    <td align="left">
+                    <ul style="margin: 0 !important">
+                    {% for topic in lecture.topics %}
+                    <li style="list-style: none">{{ topic | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                    {% endfor %}
+                    </ul>
+                    </td>
+                    {% assign days_to_add = week | times: forloop.index0 %}
+                    {% assign lecture_date = page.start | date: "%s" | plus: days_to_add %}
+                    <td align="center">{% if lecture.lecture %}<a href="/teaching/{{ page.institution | downcase }}/lectures/{{ page.nickname }}/lecture-{{ forloop.index | plus: 100 | slice: 1, 2 }}">{% endif %}{{ lecture_date | date: "%d/%m" }}{% if lecture.lecture %}</a>{% endif %}</td>
+                </tr>
+                {%endfor%}
+                </tbody>
+                </table>
+                {{ content }}
+
+                <h2 id="avaliacao">Procedimento e critérios de avaliação</h2>
+                <p>A nota final será composta por trabalhos/exercícios e prova, que serão desenvolvidos durante as aulas e em atividades extraclasse.</p>
+                <p>O grau 1 será composto por <code>G1 = {% for grade in page.grading['g1'] %}{{ grade[0] | capitalize }}({{ grade[1] }}){%unless forloop.last %} + {% endunless %}{% endfor %}</code></p>
+                <p>O grau 2 será composto por <code>G2 = {% for grade in page.grading['g2'] %}{{ grade[0] | capitalize }}({{ grade[1] }}){%unless forloop.last %} + {% endunless %}{% endfor %}</code></p>
+                <p>A nota final será a média (M) dada pela regra <code>M = (G1 + G2) / 2</code></p>
+                <p>A recuperação será realizada com a aplicação de uma prova escrita. A nota desta substituirá a nota mais baixa e a média (M) será recalculada.</p>
+                <p>Para obter a aprovação, o aluno deve obter uma média (M) igual ou superior a **6**, com frequência igual ou superior à 75%. A frequência será medida a partir de chamada nominal, realizada em todas as aulas.</p>
+
+                {% if page.references %}
+                <h2 id="material-complementar">Material Complementar</h2>
+                {% for group in page.references %}
+                    <h3>{{ group[0] | capitalize }}</h3>
+                    <ul>
+                    {% for entry in group[1] %}
+                    <li>{{ entry | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endfor %}
+                {% endif %}
+
+                {% assign page_list = site.pages | where_exp: "item", "item.title != nil" | where_exp: "item", "item.date != nil" | where_exp: "item", "item.layout != 'section'" | where_exp: "item", "item.layout != 'lecture'" | sort: "date" | reverse  %}
+                {% if page.sections %}
+                    {% assign filtered_list = page_list | where_exp: "item", "page.sections contains item.section" %}
+                {% else %}
+                    {% assign filtered_list = page_list%}
+                {% endif %}
+                {% if filtered_list.size != 0 %}
+                {% if page.cards == nil %}
+                <h1>{{ site.data.lang['Posts_Relacionados'][page.lang] | default: "Posts Relacionados" }}</h1>
+                {% else %}
+                <h1>{{ site.data.lang['Posts_Recentes'][page.lang] | default: "Posts Recentes" }}</h1>
+                {% endif %}
+                <div id="by-posts">
+                    <ul>
+                        {% for linkto in filtered_list %}
+                            <li>
+                                <a href="{{ linkto.url }}">{{ linkto.title | strip | markdownify | remove: '<p>' | remove: '</p>' }}</a> <div class="last-update">{{ linkto.date }}</div> {% if linkto.lang and linkto.lang != "pt" %}<div class="lang-code">({{ linkto.lang }})</div>{% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+       </div>
+       <div id="footer">
+        {% include footer.html %}
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    </body>
+</html>
