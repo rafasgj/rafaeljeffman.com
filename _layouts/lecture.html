@@ -99,6 +99,12 @@
                 {% break %}{% endif %}{% endfor %}{% endif %}{% endif %}{% endfor %}
                 </ul>
                 </div>
+                <script language="javascript">
+                var divul = document.querySelector('#posts-relacionados > ul');
+                if (divul.children.length == 0) {
+                    document.querySelector('#posts-relacionados').style.display = 'none';
+                }
+                </script>
 
                 {{ content }}
         </div>
