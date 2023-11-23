@@ -28,6 +28,6 @@ Deve ser entregue um link para um repositório público do Git (recomenda-se o [
 
 # Recursos para esse trabalho
 
-* [Implementando um compilador com Python e PLY](teaching/lasalle/compilers/python_ply_compiler.html)
+* [Implementando um compilador com Python e PLY](/teaching/lasalle/compilers/python_ply_compiler)
 * [PLY - Python Lex-Yacc](https://ply.readthedocs.io/en/latest/index.html)
 
