@@ -85,9 +85,9 @@ Aulas expositivas, exemplos de desenvolvimento, e exercícios práticos.
 | **14** | _Feriado_ | 2/11 |
 | **15** | Consistência e Replicação. Apresentação parcial dos trabalhos (**T2**) | 9/11 |
 | **16** | Tolerância a falhas. Segurança. | 16/11 |
-| **17** | Implementação dos trabalhos. | 23/11 |
-| **18** | Apresentação dos sistemas implementados (**T2**) | 20/11 |
-| **19** | Prova **P2** | 7/12 |
+| [**17**](lectures/sistemas-distribuidos/lecture-17) | Exercícios e Revisão. | [23/11](lectures/sistemas-distribuidos/lecture-17) |
+| **18** | Prova **P2** | 30/11 |
+| **19** | Apresentação dos sistemas implementados (**T2**) | 7/12 |
 | **20** | Divulgação de Resultados, Revisão para Recuperação | 14/12 |
 | **21** | Prova de Recuperação. | 21/12 |
 
