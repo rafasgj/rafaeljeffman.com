@@ -13,8 +13,8 @@ sections:
 <!--
 * [Complexidade de Algoritmos e Avaliação de Desempenho](2023-02-analise-algoritmos)
 * [Sistemas Distribuídos](2023-02-sistemas-distribuidos)
-* [Desenvolvimento para Dispositivos Móveis](2023-02-mobile)
 -->
+* [Desenvolvimento para Dispositivos Móveis](mobile)
 * [Laboratório de Engengaria de Software](engswlab)
 
 ### Tutorias
