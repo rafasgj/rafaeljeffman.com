@@ -33,7 +33,7 @@ Cursos que ministrei em instituições de ensino superior:
     * Linguagens Formais e Autômatos
         * [2023/2 <small>(tutoria)</small>](lasalle/tutoria/automata)
     * Sistemas Distribuídos
-        * [2023/2](lasalle/2023-02-sistemas-distribuidos)
+        * [2023/2](lasalle/2023/sistemas-distribuidos)
     * EAD
         * 2023/2
         : Banco de Dados Aplicado

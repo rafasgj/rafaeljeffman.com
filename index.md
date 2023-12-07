@@ -21,9 +21,9 @@ cards:
     link: /teaching/lasalle
     content: |
       * [Complexidade de Algoritmos e Análise de Desempenho](/teaching/lasalle/2023-02-analise-algoritmos)
-      * [Laboratório de Engenharia de Software](/teaching/lasalle/2023-02-engswlab)
-      * [Sistemas Distribuídos](/teaching/lasalle/2023-02-sistemas-distribuidos)
-      * [Desenvolvimento para Dispositivos Móveis](/teaching/lasalle/2023-02-mobile)
+      * [Laboratório de Engenharia de Software](/teaching/lasalle/2023/engswlab)
+      * [Sistemas Distribuídos](/teaching/lasalle/2023/sistemas-distribuidos)
+      * [Desenvolvimento para Dispositivos Móveis](/teaching/lasalle/2023/mobile)
   - title: Unilasalle - Tutorias
     link: /teaching/lasalle
     content: |
