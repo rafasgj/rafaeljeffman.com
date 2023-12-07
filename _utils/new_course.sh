@@ -1,17 +1,18 @@
-#!/bin/sh
+#!/bin/bash
 
-if [ $# -lt 3 ]
+if [ $# -lt 4 ]
 then
-    echo "usage: new_course.sh COURSE INSTITUTION NICKNAME [STARTDATE]"
+    echo "usage: new_course.sh COURSE INSTITUTION NICKNAME STARTDATE [LECTURE_COUNT]"
     exit 1
 fi
 
-TOPDIR=$(dirname $(dirname $(basename "$0")))
+TOPDIR=$(dirname $(dirname $(realpath "$0")))
 
-DISCIPLINA=$1
-INSTITUTION=$2
-NICKNAME="$(echo $3 | tr '[:upper:]' '[:lower:]')"
-STARTDATE=${4:-"$(expr $(date "+$Y") + 1)-01-01"}
+DISCIPLINA="$1"
+INSTITUTION="$2"
+NICKNAME="$(echo $3 | tr '[:upper:]' '[:lower:]':-)"
+STARTDATE="${4}"
+LECTURES="${5:-20}"
 
 YEAR=$(echo ${STARTDATE} | cut -d "-" -f 1)
 
@@ -47,45 +48,11 @@ grading:
     p2: 6.0
 references:
 lectures:
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
-    lecture: false
----
 EOF
+
+for i in $(seq ${LECTURES})
+do
+    echo -e "  - topics:\n    - \n    lecture: false" >> "${TARGETDIR}/${NICKNAME}.md"
+done
+
+echo "---" >> "${TARGETDIR}/${NICKNAME}.md"
