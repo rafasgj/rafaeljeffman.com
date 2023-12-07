@@ -82,7 +82,7 @@
                     <td align="left">
                     <ul style="margin: 0 !important">
                     {% for topic in lecture.topics %}
-                    <li style="list-style: none">{{ topic | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                    <li style="list-style: none">{{ topic | markdownify | remove: '<p>' | remove: '</p>' | strip }}.</li>
                     {% endfor %}
                     </ul>
                     </td>
