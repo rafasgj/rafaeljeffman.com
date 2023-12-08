@@ -50,7 +50,7 @@ contexto, julgue os itens a seguir.
 A alternativa que lista apenas os itens corretos é:
 
 * 1, 3 e 4
-* 2, 3 e 5
+* 2, 3 e 4
 * 3, 4 e 5
 * 1, 2, 3 e 4
 * 2, 3, 4 e 5
