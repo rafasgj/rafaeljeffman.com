@@ -19,7 +19,9 @@ lectures=(
     [sistemas-distribuidos]="Sistemas Distribuídos"
     [mobile]="Desenvolvimento para Dispositivos Móveis"
     [compiler]="Compiladores"
-    [automata]="Linguagens Formais e Autômatos"
+    [formais]="Linguagens Formais e Autômatos"
+    [ia]="Inteligência Artificial"
+    [paradigmas]="Paradigmas de Programação"
 )
 
 nick=$1
@@ -30,10 +32,10 @@ institution=${5:-"Universidade LaSalle Canoas"}
 
 
 BASEDIR="$(dirname $0)/.."
-LECTURE="teaching/lasalle/lectures/${nick}"
+LECTURE="teaching/lasalle/lectures/${year}/${nick}"
 LECTURE_DIR="${BASEDIR}/${LECTURE}"
 
-next_lecture=$({ echo "lecture-00.md" ; ls -1 "${LECTURE_DIR}" || die "Invalid lecture directory: ${LECTURE_DIR}" ; } | tail -n 1 | xargs basename -s .md | cut -d- -f2)
+next_lecture=$({ echo "lecture-00.md" ; ls -1 "${LECTURE_DIR}" || die "Invalid lecture directory: ${LECTURE_DIR}" ; } | sed -e "/index/d" | tail -n 1 |  xargs basename -s .md | cut -d- -f2)
 
 next_lecture=$(printf "lecture-%02d.md" $(echo "1 + ${next_lecture}" | bc -l))
 

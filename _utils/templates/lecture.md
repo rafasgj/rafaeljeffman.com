@@ -5,8 +5,8 @@ layout: lecture
 last_occurrence: 
 copy: @YEAR@
 institution:
-  name: Universidade LaSalle Canoas
-  link: /teaching/lasalle/2023-02-@NICK@
+  name: @INSTITUTION@
+  link: /teaching/lasalle/@YEAR@/@NICK@
 ---
 
 ## Assunto
@@ -25,9 +25,9 @@ institution:
 
 ## Recursos para essa aula
 
+### Bibliografia
+
 ### Videos
 
 ### Tutoriais
-
-### Bibliografia
 

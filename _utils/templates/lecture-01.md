@@ -1,70 +1,64 @@
 ---
-title: Apresentação da Disciplina
+itle: Apresentação da Disciplina
 subtitle: @DISCIPLINA@
 layout: lecture
 last_occurrence: 
 copy: @YEAR@
 institution:
   name: @INSTITUTION@
-  link: /teaching/lasalle/2023-02-@NICK@
+  link: /teaching/lasalle/@YEAR@/@NICK@
 ---
 
-## Conteúdo Geral (pré-intervalo)
+## Agenda
 
 1. Apresentação da disciplina
-    1. Objetivos da Disciplina
-    2. Pré-requisitos da disciplina
-    3. Competências Trabalhadas
-    4. Unidades de Aprendizagem
-    5. Estratégias Metodológicas
-    6. Cronograma
-    7. Avaliação
-    8. Atividade de Extensão
 2. Dinâmica das aulas
-    0. A aula é uma democracia, com poder moderador...
-    1. -> 19:15: Dúvidas sobre trabalhos pendentes ou sobre a disciplina
-    2. 19:15 - 20:00: Exposição e discussão de conteúdo
-    3. 20:00 - 20:15: Dúvidas sobre o conteúdo apresentado
-    4. 20:15 - 20:45: Intervalo + Chamada
-    5. 20:45 - 21:30: Exposição e discussão de conteúdo, resolução de exercícios
-    6. 21:30 - 22:00: Material para próxima aula, dúvidas gerais 
+    1. $\rightarrow$ 19:15: Dúvidas sobre trabalhos pendentes ou sobre a disciplina
+    2. 19:15 - 20:10: Exposição e discussão de conteúdo
+    4. 20:15 - 20:30: Intervalo
+    5. 20:30: Chamada
+    5. 20:45 - 21:45: Exposição e discussão de conteúdo, resolução de exercícios
+    6. 21:45 - 22:00: Material para próxima aula, dúvidas gerais 
 3. Apresentação do Professor
-4. Apresentação dos Alunos
-    1. Por que você escolheu esse curso?
-    2. Você trabalha na área de TI? Faz ou fez estágio?
-    3. Que linguagens de programação você conhece?
-    4. Qual é o melhor sistema/linguagem/ambiente? Por que?
+4. Apresentação dos Alunos (LEX)
+    1. Em qual semestre do curso você se posiciona?
+    2. Por que você escolheu esse curso?
+    3. Você trabalha ou trabalhou na área de TI? Qual cargo você ocupa (ou ocupou)?
+    4. Quais linguagens de programação você consegue programar?
     5. O que você espera dessa disciplina?
-5. Organização para a Vida Acadêmica
-    1. Métodos de aprendizado
-        1. Notas de Cornell
-        2. Resumos
-        3. Flashcards
-        4. Preparação de apresentações
-    2. Métodos de organização
-        1. TODO list
-        2. Pomodoro
-        3. Bullet Journal
-        4. GTD
-        5. SCRUM, Kabnan board, ...
+5. Organize-se, você tem pouco tempo e muitas atividades!
+    1. TODO-list
+    2. Bullet Journal
+    3. Pomodoro
+    4. GTD
+6. Avaliação
+    * Trabalhos práticos utilizando a linguagem de programação Python.
+    * Pesquisa e apresentação sobre tópico relacionado à disciplina.
+    * Provas G1 e G2.
+    * Prova de substituição de grau.
 
-## Conteúdo específico (pós-intervalo)
-
-8. Overview do conteúdo específico e pré-requisitos
-9. Sugestão de pesquisa para a próxima aula
+## Revisão de Conteúdos
 
 ## Questões
 
-## Recursos para essa aula
+## Recursos para essa disciplina
 
-### Videos
+### Bibliografia
 
-1. [Aula Inaugural dos Cursos de TI e Inovação Unilasalle 2022/2](https://www.youtube.com/watch?v=pxsdiyHgZHs)
-2. [Motivação para Estudar - Prof. Clóvis de Barros Filho](https://www.youtube.com/watch?v=TRPBY_lxJfE)
+1. Livro principal...
+
+### Recursos Online
+
+1. [The Python Tutorial](https://docs.python.org/3/tutorial/)
 
 ### Tutoriais do Git
 
 10. [Pro Git](https://git-scm.com/book/pt-br/v2) (Tradução parcial do livro para português do Brasil)
 11. [Git - Guia prático](https://rogerdudler.github.io/git-guide/index.pt_BR.html): Um guia bem direto, sem muita explica    ção.
 12. [Github - Início Rápido](https://docs.github.com/pt/get-started/quickstart)
+
+### Videos
+
+1. [Aula Inaugural dos Cursos de TI e Inovação Unilasalle 2022/2](https://www.youtube.com/watch?v=pxsdiyHgZHs)
+2. [Motivação para Estudar - Prof. Clóvis de Barros Filho](https://www.youtube.com/watch?v=TRPBY_lxJfE)
 
