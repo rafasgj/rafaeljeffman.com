@@ -110,7 +110,7 @@
                 {% if page.references %}
                 <h2 id="material-complementar">Material Complementar</h2>
                 {% for group in page.references %}
-                    <h3>{{ group[0] | capitalize }}</h3>
+                    <h3>{{ group[0] | markdownify | remove: '<p>' | remove: '</p>' | capitalize }}</h3>
                     <ol>
                     {% for entry in group[1] %}
                     <li>{{ entry | markdownify | remove: '<p>' | remove: '</p>' }}</li>
