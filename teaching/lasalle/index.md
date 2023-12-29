@@ -15,7 +15,7 @@ sections:
 * Desenvolvimento para Dispositivos Móveis (EAD)
 * Segurança Computacional (EAD)
 * Banco de Dados Aplicado (EAD)
-* [Compiladores](tutoria/compiladores) (Tutoria)
+* [Compiladores](2023/compiladores) (Tutoria)
 * [Linguagens Formais e Autômatos](tutoria/automata) (Tutoria)
 
 ## 2022/2

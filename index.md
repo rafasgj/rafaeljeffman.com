@@ -27,6 +27,6 @@ cards:
   - title: Unilasalle - Tutorias
     link: /teaching/lasalle
     content: |
-      * [Compiladores](/teaching/lasalle/tutoria/compiladores)
+      * [Compiladores](/teaching/lasalle/2023/compiladores)
       * [Linguagens Formais e Autômatos](/teaching/lasalle/tutoria/automata)
 ---
