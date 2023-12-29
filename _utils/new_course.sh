@@ -1,8 +1,15 @@
 #!/bin/bash
 
+mode="class_plan"
+if [ "$1" == "-t" ]
+then
+    mode="tutor"
+    shift 1
+fi
+
 if [ $# -lt 4 ]
 then
-    echo "usage: new_course.sh COURSE INSTITUTION NICKNAME STARTDATE [LECTURE_COUNT]"
+    echo "usage: new_course.sh [-t] COURSE INSTITUTION NICKNAME STARTDATE [LECTURE_COUNT]"
     exit 1
 fi
 
@@ -29,7 +36,7 @@ title: ${DISCIPLINA}
 institution: ${INSTITUTION}
 nickname: ${NICKNAME}
 start: ${STARTDATE}
-layout: class_plan
+layout: ${mode}
 section: ${INSTITUTION}
 sections:
 extra_styles:
@@ -39,6 +46,13 @@ objectives:
 requirements:
 competences:
 learning_unities:
+references:
+EOF
+
+if [ "${mode}" != "tutor" ]
+then
+
+cat << EOF >>"${TARGETDIR}/${NICKNAME}.md"
 grading:
   g1:
     t1: 4.0
@@ -46,7 +60,6 @@ grading:
   g2:
     t2: 4.0
     p2: 6.0
-references:
 lectures:
 EOF
 
@@ -54,5 +67,27 @@ for i in $(seq ${LECTURES})
 do
     echo -e "  - topics:\n    - \n    lecture: false" >> "${TARGETDIR}/${NICKNAME}.md"
 done
+
+else  # mode != tutor
+
+cat << EOF >>"${TARGETDIR}/${NICKNAME}.md"
+grading:
+  - name: g1
+    deliverables:
+    - code: t1
+      weight: 10.0
+      brief: "Implement ..."
+      url: lecture/t1
+      due: 9
+  - name: g2
+    deliverables:
+    - code: t2
+      weight: 10.0
+      brief: "Write an article ..."
+      url: lecture/t2
+      due: 19
+EOF
+
+fi
 
 echo "---" >> "${TARGETDIR}/${NICKNAME}.md"

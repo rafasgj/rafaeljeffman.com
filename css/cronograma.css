@@ -1,5 +1,6 @@
 table {
   border-collapse: collapse;
+  margin: 0 auto;
 }
 thead, tr {
   border: thin solid black;
@@ -12,16 +13,15 @@ tr > td > strong {
 
 td:nth-child(1), th:nth-child(1) {
   padding-left: 1ch;
-  width: 4ch;
+  max-width: 4ch;
 }
 
-td:nth-child(2), th:nth-child(2) {
-  max-width: 55ch;
+td:nth-last-child(2), th:nth-last-child(2) {
+  width: 100% !important;
 }
 
-td:nth-child(3), th:nth-child(3) {
-  width: 10ch;
-  min-width: 10ch;
+td:nth-last-child(1), th:nth-last-child(1) {
+  min-width: 6ch;
 }
 
 td, th {
