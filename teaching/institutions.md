@@ -31,7 +31,7 @@ Cursos que ministrei em instituições de ensino superior:
     * Laboratório de Engenharia de Software
         * [2023/2](lasalle/2023/engswlab)
     * Linguagens Formais e Autômatos
-        * [2023/2 <small>(tutoria)</small>](lasalle/tutoria/automata)
+        * [2023/2 <small>(tutoria)</small>](lasalle/2023/automata)
     * Sistemas Distribuídos
         * [2023/2](lasalle/2023/sistemas-distribuidos)
     * EAD
