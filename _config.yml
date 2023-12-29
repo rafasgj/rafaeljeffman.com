@@ -20,5 +20,3 @@ exclude:
   - build_image
   - Gemfile
   - Gemfile.lock
-  - Dockerfile
-  - jekyll.sh
