@@ -21,7 +21,7 @@ Cursos que ministrei em instituições de ensino superior:
 
 * [Universidade LaSalle Canoas](lasalle) (2022-) [site institucional <i class="fa-solid fa-globe" style="font-size: 70%; vertical-align: baseline;"></i>](https://unilasalle.edu.br/canoas){:target="\_blank" class="last-update blue"}
     * Complexidade de Algoritmos e Avaliação de Desempenho
-        * [2023/2](lasalle/2023-02-analise-algoritmos)
+        * [2023/2](lasalle/2023/analise-algoritmos)
     * Compiladores
         * [2022/2](lasalle/2022-02-compiladores)
         * [2023/2 <small>(tutoria)</small>](lasalle/tutoria/compiladores)

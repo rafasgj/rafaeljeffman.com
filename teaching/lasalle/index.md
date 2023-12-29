@@ -7,7 +7,7 @@ sections:
 
 ## 2023/2
 
-* [Complexidade de Algoritmos e Avaliação de Desempenho](2023-02-analise-algoritmos)
+* [Complexidade de Algoritmos e Avaliação de Desempenho](2023/analise-algoritmos)
 * [Sistemas Distribuídos](2023/sistemas-distribuidos)
 * [Desenvolvimento para Dispositivos Móveis](2023/mobile)
 * [Laboratório de Engengaria de Software](2023/engswlab)

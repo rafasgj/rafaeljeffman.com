@@ -10,9 +10,7 @@ sections:
 
 ### Presencial
 
-<!--
-* [Complexidade de Algoritmos e Avaliação de Desempenho](2023-02-analise-algoritmos)
--->
+* [Complexidade de Algoritmos e Avaliação de Desempenho](analise-algoritmos)
 * [Sistemas Distribuídos](sistemas-distribuidos)
 * [Desenvolvimento para Dispositivos Móveis](mobile)
 * [Laboratório de Engengaria de Software](engswlab)

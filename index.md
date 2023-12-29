@@ -20,7 +20,7 @@ cards:
   - title: Unilasalle - Presencial
     link: /teaching/lasalle
     content: |
-      * [Complexidade de Algoritmos e Análise de Desempenho](/teaching/lasalle/2023-02-analise-algoritmos)
+      * [Complexidade de Algoritmos e Análise de Desempenho](/teaching/lasalle/2023/analise-algoritmos)
       * [Laboratório de Engenharia de Software](/teaching/lasalle/2023/engswlab)
       * [Sistemas Distribuídos](/teaching/lasalle/2023/sistemas-distribuidos)
       * [Desenvolvimento para Dispositivos Móveis](/teaching/lasalle/2023/mobile)

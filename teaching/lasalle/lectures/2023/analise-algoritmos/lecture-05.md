@@ -6,7 +6,8 @@ last_occurrence: 2023-08-28
 copy: 2023
 institution:
   name: Universidade LaSalle Canoas
-  link: /teaching/lasalle/2023-02-analise-algoritmos
+  link: /teaching/lasalle/2023/analise-algoritmos
+  link: /teaching/lasalle/2023/analise-algoritmos
 ---
 
 ## Assuntos
