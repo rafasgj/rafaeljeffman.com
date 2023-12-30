@@ -1,0 +1,45 @@
+.page-tags {
+    border-radius: 25px 5px;
+    color: #f0f0f0;
+    background-color: #a39;
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px 15px;
+    margin: 3px 0px;
+    font-size: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 20px;
+    font-family: "Yanone Kaffeesatz";
+    font-weight: 600;
+}
+
+ul.tags > li {
+    list-style: none;
+    display: inline-block;
+    margin: 7px auto;
+    line-height: 20px;
+}
+
+ul.tags {
+    margin: 0 auto;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    border: #555 solid thin;
+}
+
+ul.target-pages > li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: 110%;
+}
+
+#post_title {
+    margin-bottom: 1ch;
+}
+
+#post_title a {
+    border-bottom: solid thin #444;
+    margin-right: 10px;
+}
