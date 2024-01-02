@@ -12,7 +12,7 @@ date: 2023-09-27
 
 > **Nota**: Tanto a [documentação oficial do Raspberry Pi](https://www.raspberrypi.com/software/), quanto a do Sistema Operacional que você escolheu continua sendo a melhor fonte de informação sobre a instalação do sistema, tente, antes de seguir qualquer coisa dita aqui, utilizar os documentos oficiais.
 
-Desde o Fedora 37, o Raspberry Pi é uma plataforma oficialmente suportada, incluindo aceleração de hardware para vídeo.  Versões anteriores do Fedora, apesar de não oficialmente suportadas, também funcionavam com o Raspberry Pi 4. Os passos aqui descritos foram testados com a versão "_Minimal_" do Fedora 35 e 36 e com a versão "_Server_" do Fedora 38.
+Desde o Fedora 37, o Raspberry Pi é uma plataforma oficialmente suportada, incluindo aceleração de hardware para vídeo.  Versões anteriores do Fedora, apesar de não oficialmente suportadas, também funcionavam com o Raspberry Pi 4. Os passos aqui descritos foram testados com a versão "_Minimal_" do Fedora 35, 36 e 39, e com a versão "_Server_" do Fedora 38.
 
 Embora eu prefira utilizar o Fedora no Raspberry que outras distribuições, a instalação tem uma desvantagem que é a necessidade de um teclado e monitor para configurar a instalação no primeiro _boot_. Até o momento não achei uma forma de fazer isso de forma automatizada.
 
