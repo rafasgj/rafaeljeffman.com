@@ -145,7 +145,7 @@ $$ A = B \iff A \subseteq B \land B \subseteq A $$
 A partir da definição da igualdade de conjuntos, podemos demonstrar que elementos repetidos não influenciam na definição do conjunto, uma vez que, mesmo que existam elementos repetidos, a condição $A \subseteq B \land B \subseteq A$ continua válida, como mostra a imagem:
 
 <div class="image">
-    <svg height="250" width="500" class="teaching-svg">
+    <svg width="400" height="250" class="teaching-svg">
         <!-- Conjunto B -->
         <ellipse cx="310" cy="140" rx="55" ry="100" fill="#f0f0f0" stroke="#222" />
         <text style="font-size:80%;" x="300" y="20">B</text>
@@ -234,6 +234,8 @@ $$ A \cup B = \{ x \:|\: x \in A \lor x \in B \} $$
         <use xlink:href="#circle_right" stroke-width="1.5" stroke="#222" fill="url(#gradient-fill)" mask="url(#mask_right)" />
         <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="url(#gradient-fill)" mask="url(#mask_left)" />
         <use xlink:href="#circle_left" stroke-width="1.5" stroke="" fill="url(#gradient-fill)" clip-path="url(#clip_right)" />
+        <text x="70" y="105" font-weight="bolder" font-size="150%">A</text>
+        <text x="200" y="105" font-weight="bolder" font-size="150%">B</text>
     </g>
 </svg>
 
@@ -251,6 +253,8 @@ $$ A \cup B = \{ x \:|\: x \in A \land x \in B \} $$
         <use xlink:href="#circle_left" id="center" fill="url(#gradient-fill)" clip-path="url(#clip_right)"/>
         <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="none"/>
         <use xlink:href="#circle_right" stroke-width="1.5" stroke="#222" fill="none"/>
+        <text x="70" y="105" font-weight="bolder" font-size="150%">A</text>
+        <text x="200" y="105" font-weight="bolder" font-size="150%">B</text>
     </g>
 </svg>
 
@@ -265,6 +269,8 @@ $$ \thicksim\! A = \{ x \:|\: x \in U \land x \notin A \} $$
         <use xlink:href="#circle_right" stroke-width="1.5" stroke="#222" fill="url(#gradient-fill)" mask="url(#mask_right)" />
         <use xlink:href="#circle_left" stroke-width="1.5" stroke="#bbb" fill="#fff" mask="url(#mask_left)" />
         <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="#fff" clip-path="url(#clip_right)" />
+        <text x="70" y="105" font-weight="bolder" font-size="150%">A</text>
+        <text x="200" y="105" font-weight="bolder" font-size="150%">B</text>
     </g>
 </svg>
 
@@ -284,6 +290,8 @@ $$
         <use xlink:href="#circle_right" stroke-width="1.5" stroke="#bbb" fill="#fff" mask="url(#mask_right)" />
         <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="url(#gradient-fill)" mask="url(#mask_left)" />
         <use xlink:href="#circle_right" stroke-width="1.5" stroke="#222" fill="#fff" clip-path="url(#clip_left)" />
+        <text x="70" y="105" font-weight="bolder" font-size="150%">A</text>
+        <text x="200" y="105" font-weight="bolder" font-size="150%">B</text>
     </g>
 </svg>
 
