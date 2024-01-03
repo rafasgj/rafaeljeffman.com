@@ -21,12 +21,6 @@
             tex: {
                 packages: {'[+]': ['physics']},
                 inlineMath: [['$', '$'], ['\\(', '\\)']]
-            },
-            chtml: {
-                fontCache: 'global'
-            },
-            svg: {
-                fontCache: 'global'
             }
         };
         </script>
@@ -38,14 +32,12 @@
         </script>
         <!-- /MathJax configuration -->
         <!-- Highlight.js configuration -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/atom-one-light.min.css">
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"
-            integrity="sha384-a4pIV46KBffvdjRuStQik2G6mPrTxdtAiZFQCdpsP4fyplWNoQ7fXlLMiIGcAP+M"
-            crossorigin="anonymous"
-            >
-        </script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/go.min.js"></script> -->
+        <!-- styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
+        <!-- script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <!-- languages -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/dockerfile.min.js"></script>
         <!-- /Highlight.js configuration -->
     </head>
     <body>
@@ -112,7 +104,7 @@
         <div id="footer">
             {% include footer.html %}
         </div>
-<!-- After loading page text, highlight code blocks. -->
-        <script>hljs.highlightAll();</script>
+        <!-- After loading page text, highlight code blocks. -->
+        <script>hljs.highlightAll();</script> 
     </body>
 </html>
