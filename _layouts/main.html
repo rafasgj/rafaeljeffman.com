@@ -83,6 +83,14 @@
                 {% assign page_related = page.related | default: empty_array %}
                 {% assign related = page.tags | concat: page_related | concat: session_array %}
                 {% assign sections = related | join: "," | downcase | split: "," | sort | uniq %}
+                {% if page.abstract %}
+                <div id="abstract" style="display:block; margin: -1em auto 1.5em  auto !important; text-align:justify;width:100%;">
+                    <h2 style="font-size:85% !important;font-weight:bolder;">{{ site.data.lang["Resumo"][page.lang] | default: "Resumo"}}</h2>
+                    <span style="font-size: 85% !important">
+                    {{ page.abstract | markdownify | remove: "<p>" | remove: "</p>" }}
+                    </span>
+                </div>
+                {% endif %}
                 <div id="posts-relacionados">
                 <h2>{{ site.data.lang["Posts_Relacionados"][page.lang] | default: "Posts Relacionados" }}</h2>
                 <ul>
@@ -97,7 +105,6 @@
                     document.querySelector('#posts-relacionados').style.display = 'none';
                 }
                 </script>
-
                 {{ content }}
 
         </div>
