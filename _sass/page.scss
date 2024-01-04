@@ -464,8 +464,11 @@ embed.pdf-doc {
 div#posts-relacionados {
     float: right;
     max-width: 25ch;
+    max-height: 25vh;
+    overflow-y: auto;
     margin: 0 0 0 30px;
     padding: 0px;
+    padding-right: 1ch;
     font-size: 75%;
 }
 div#posts-relacionados h2 {
