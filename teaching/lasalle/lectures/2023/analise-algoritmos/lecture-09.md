@@ -70,7 +70,7 @@ institution:
         * É uma representação _esparsa_, pois representa apenas as arestas necessárias, em grafos esparsos.
         * Exemplo de grafos esparsos: grafo planar ($\|E\| \le 3\|V\|-6$, para $\|V\| \ge 3$), árvores, lista encadeada.
     * Matrix de adjacências
-        * Matriz $V\timesV$ com cada célula $(i, j)$ representando uma aresta entre os vértices $i$ e $j$.
+        * Matriz $V\times{V}$ com cada célula $(i, j)$ representando uma aresta entre os vértices $i$ e $j$.
         * O custo de armazenamento é $\Theta(\|V\|^2)$.
         * É uma representação _densa_, pois representa grafos densamente conectados.
         * Exemplo de grafos densos: grafo completo.
