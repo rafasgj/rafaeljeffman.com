@@ -2,7 +2,7 @@
 
 usage() {
     cat <<EOF
-usage: new_page.sh [-h] [-l LAYOUT] FILENAME [TITLE [SUBTITLE [SECTION]]]
+usage: new_page.sh [-h] [-l LAYOUT] FILENAME [TITLE SECTION [[SUBTITLE]]]
 EOF
 }
 
@@ -28,9 +28,13 @@ fi
 FILENAME=${1}
 shift
 
-TITLE=${1:-$(read -p "Title: "; echo ${REPLY})}
-SUBTITLE=${2:-$(read -n 200 -p "Subtitle: "; echo ${REPLY})}
+NEED_SUBTITLE="NO"
+[ -z "${1}" ] && NEED_SUBTITLE="" || NEED_SUBTITLE="NO"
+
+echo -e "Press <Enter> for empty fields.\n"
 SECTION=${2:-$(read -n 200 -p "Section: "; echo ${REPLY})}
+TITLE=${1:-$(read -p "Title: "; echo ${REPLY})}
+SUBTITLE=${3:-$([ -z "${NEED_SUBTITLE}" ] && read -n 200 -p "Subtitle: "; echo ${REPLY})}
 
 cat <<EOF >${FILENAME}
 ---
