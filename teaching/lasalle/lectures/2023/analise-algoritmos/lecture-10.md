@@ -94,7 +94,7 @@ institution:
                     dist[i][j] ← dist[i][k] + dist[k][j]
                 end if
     ```
-* Complexidade de tempo: $O(|V|^3)
+* Complexidade de tempo: $O(|V|^3)$
 * O algoritmo pode ser modificado adicionando-se uma matriz que armazena o vértice anterior do caminho, obtendo assim, além do menor custo, qual o caminho percorrido.
 
 
