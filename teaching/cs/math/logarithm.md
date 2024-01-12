@@ -1,13 +1,13 @@
 ---
 layout: main
-section: Conceitos Básicos
+section: Matemática para Computação
 tags:
   - ciência da computação
   - conceitos básicos
   - matemática
   - logaritmos
 title: Propriedades dos Logaritmos
-subtitle: Conceitos de Matemática para Ciência da Computação
+subtitle: Conceitos básicos de matemática para computação
 copy: 2023
 date: 2023-08-03
 abstract:

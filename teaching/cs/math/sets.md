@@ -1,23 +1,22 @@
 ---
 layout: main
-section: Conceitos Básicos
+section: Matemática para Computação
 tags:
   - ciência da computação
   - conceitos básicos
   - conjuntos
-  - relações
-  - funções
-title: Conceitos básicos sobre conjuntos e relações
+title: Conjuntos
+subtitle: Conceitos básicos de matemática para computação
 copy: 2022-2023
 date: 2023-08-01
 abstract: |-
-  Os conceitos de conjuntos e relações são muito utilizados em ciência da
-  computação. Neste artigo são tratados os conceitos básicos de conjuntos
-  e relações com foco no uso destes conceitos nas disciplinas de linguagens
-  formais e bancos de dados.
+  Os conceitos de conjuntos e suas operaçõe são muito utilizados em ciência
+  da computação. Neste artigo são tratados os conceitos básicos de conjuntos
+  e suas operações, com foco no uso destes conceitos nas disciplinas de
+  linguagens formais e bancos de dados.
 ---
 
-Em diversas áreas da ciência da computação é importante entender conceitos de conjuntos e relações, como nas linguagens formais ou nos bancos de dados. Aqui são apresentados alguns desses conceitos, a nomenclatura e as convenções adotadas nos textos que disponibilizo.
+Em diversas áreas da ciência da computação é importante entender conceitos de conjuntos, como nas linguagens formais ou nos bancos de dados. Aqui são apresentados alguns desses conceitos, além das principais operações de conjuntos.
 
 
 ## Conjuntos
@@ -403,4 +402,16 @@ O complemento da intersecção de dois conjuntos é a união dos complementos de
 
 $$
 \thicksim\! (A \cap B) = \; \thicksim\! A \; \cup \thicksim\! B
+$$
+
+
+### Conjunto universo e conjunto vazio.
+
+Podemos obter o conjunto universo $U$ e o conjunto vazio $\varnothing$ a partir da união ou intersecção de um conjunto com o seu complemento:
+
+$$
+\begin{align}
+& A \cup \thicksim A = U \\
+& A \cap \thicksim A = \varnothing
+\end{align}
 $$
