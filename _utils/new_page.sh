@@ -6,6 +6,18 @@ usage: new_page.sh [-h] [-l LAYOUT] FILENAME [TITLE SECTION [[SUBTITLE]]]
 EOF
 }
 
+read_data() {
+    if [ -z "${PRINTED}" ] && [ "$#" -eq 1 ]
+    then
+        PRINTED="yes"
+        >&2 echo -e "Press <Enter> for empty fields.\n"
+    fi
+    name=$1
+    declare -n var_name=$1
+    shift
+    [ "$#" -gt 0 ] && var_name="$*" || read -e -n 200 -p "${name}: " ${!var_name}
+}
+
 if [ "$1" == "-h" ]
 then
     usage
@@ -27,14 +39,14 @@ fi
 
 FILENAME=${1}
 shift
+mkdir -p "$(dirname ${FILENAME})"
 
 NEED_SUBTITLE="NO"
 [ -z "${1}" ] && NEED_SUBTITLE="" || NEED_SUBTITLE="NO"
 
-echo -e "Press <Enter> for empty fields.\n"
-SECTION=${2:-$(read -n 200 -p "Section: "; echo ${REPLY})}
-TITLE=${1:-$(read -p "Title: "; echo ${REPLY})}
-SUBTITLE=${3:-$([ -z "${NEED_SUBTITLE}" ] && read -n 200 -p "Subtitle: "; echo ${REPLY})}
+read_data SECTION $2
+read_data TITLE $1
+[ -n "$1" ] && [ -z "$3" ] || read_data SUBTITLE $3
 
 cat <<EOF >${FILENAME}
 ---
