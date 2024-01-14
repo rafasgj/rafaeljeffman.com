@@ -3,6 +3,7 @@ layout: main
 section: Matemática para Computação
 tags:
   - ciência da computação
+  - matemática
   - conceitos básicos
   - conjuntos
 title: Conjuntos
