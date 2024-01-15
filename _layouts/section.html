@@ -29,8 +29,15 @@
             <div id="contents">
                 {{ content }}
                 {% assign page_list = site.pages | where_exp: "item", "item.title != nil" | where_exp: "item", "item.date != nil" | where_exp: "item", "item.layout != 'section'" | where_exp: "item", "item.layout != 'lecture'" | sort: "date" | reverse  %}
+                {% assign lowercase_sections = page.sections | join: "#" | downcase | split: '#' %}
                 {% if page.sections %}
-                    {% assign filtered_list = page_list | where_exp: "item", "page.sections contains item.section" %}
+                    {% assign filtered_list = "" | split: "" %}
+                    {% for item in page_list %}
+                        {% assign lowercase_section = item.section | downcase %}
+                        {% if lowercase_sections contains lowercase_section %}
+                            {% assign filtered_list = filtered_list | push: item %}
+                        {% endif %}
+                    {% endfor %}
                 {% else %}
                     {% assign filtered_list = page_list%}
                 {% endif %}
