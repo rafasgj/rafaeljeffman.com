@@ -19,14 +19,13 @@ abstract: |-
 
 Em diversas áreas da ciência da computação é importante entender conceitos de conjuntos, como nas linguagens formais ou nos bancos de dados. Aqui são apresentados alguns desses conceitos, além das principais operações de conjuntos.
 
-
 ## Conjuntos
 
-Um conjunto é uma estrutura que armazena elementos sem repetição e sem qualquer ordenação. Um conjunto pode ter zero ou mais elementos distintos. Se um elemento $a$ é um elemento do conjunto $A$, dizemos que _$a$ pertence ao conjunto $A$_, e denotamos a pertinência por:
+Um conjunto é um grupo de objetos representado como uma unidade. É  uma estrutura que armazena elementos de qualquer tipo, sem repetição e sem qualquer ordenação. Um conjunto pode ter zero ou mais elementos distintos. Se um elemento $a$ é um elemento do conjunto $A$, dizemos que _$a$ pertence ao conjunto $A$_, e denotamos a pertinência por:
 
 $$ a \in A $$
 
-Graficamente esta relação entre o elemento $a$ e o conjunto $A$ pode ser vista como:
+Uma forma de representação que facilita a visualização de conjuntos é o _diagrama de Venn_. Graficamente a pertinência de um elemento $a$ ao conjunto $A$ pode ser vista como:
 
 <div class="image">
     <svg height="200" width="100" class="teaching-svg">
@@ -41,7 +40,7 @@ Caso queria se afirmar que _$a$ não pertence ao conjunto $A$_, utilizamos:
 
 $$ a \notin A $$
 
-Graficamente esta relação entre o elemento $a$ e o conjunto $A$ pode ser vista como:
+O _diagrama de Venn_ para esta relação entre o elemento $a$ e o conjunto $A$ é:
 
 <div class="image">
     <svg height="200" width="160" class="teaching-svg">
@@ -76,7 +75,7 @@ Esta definição de conjunto pode ser interpretada como o _conjunto de todos os 
 
 A forma geral para a definição de um conjunto em relação a uma propriedade $p$ é:
 
-$$ \{ x \:|\: x \in A \land p(x) \} \hspace{2em} \text{ou} \hspace{2em} \{ x \in A \:|\: p(x) \} $$
+$$ \{ x \:|\: x \in A \land P(x) \} \hspace{2em} \text{ou} \hspace{2em} \{ x \in A \:|\: P(x) \} $$
 
 
 ### Continência
@@ -314,15 +313,15 @@ O produto cartesiano de dois conjuntos é o conjunto de pares ordenados $(a, b)$
 
 $$ A \times B = \{ (a, b) \:|\: a \in A \land b \in B \} $$
 
-O produto cartesiano pode ser _multidimensional_, como em
+Esta não é uma operação comutativa. Note que a ordem dos elementos é importante, e $A \times B \neq B \times A$.
+
+A operação pode ser _multidimensional_, ou seja, executada sobre múltipos conjuntos, como em
 
 $$ A \times B \times C = \{(a,b,c) \:|\: a \in A \land b \in B \land c \in C\} $$
 
-O produto cartesiano não é uma operação comutativa. Note que a ordem dos elementos é importante, e $A \times B \neq B \times A$.
-
 Esta operação também não é associativa. Seja o conjunto $A = \\{1\\}$, então $(A \times A) \times A$ resulta em $\\{(1, 1), 1\\}$, enquanto $A \times (A \times A)$ resulta em $\\{1, (1, 1)\\}$.
 
-É usual usar _expoentes_ quando do produto cartesiano de um conjunto com ele mesmo, como em $R^2 = R \times R$, ou $R^3 = R \times R \times R$.
+É usual usar _expoentes_ quando do produto cartesiano de um conjunto com ele mesmo, como em $\mathbb{R}^2 = \mathbb{R} \times \mathbb{R}$, ou $\mathbb{R}^3 = \mathbb{R} \times \mathbb{R} \times \mathbb{R}$.
 
 
 ### Propriedades das operações sobre conjuntos
