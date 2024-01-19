@@ -155,8 +155,16 @@ h6 {
   }
 }
 
-ul.lettered { list-style-type: upper-alpha; }
+ul.lettered {
+  list-style-type: upper-alpha;
+  margin-bottom: 1em;
+}
 ul.lettered li::marker { font-weight: 400; }
+ul.lowerlettered {
+  list-style-type: lower-alpha;
+  margin-bottom: 1em;
+}
+ul.lowerlettered li::marker { font-weight: 400; }
 
 span.bibtex {
     display:block;
