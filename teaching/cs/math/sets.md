@@ -52,7 +52,7 @@ O _diagrama de Venn_ para esta relação entre o elemento $a$ e o conjunto $A$ �
 </div>
 
 
-### Definição de Conjuntos
+## Definição de Conjuntos
 
 Uma forma de definir um conjunto é listar todos os elementos do conjunto, por exemplo
 
@@ -78,7 +78,7 @@ A forma geral para a definição de um conjunto em relação a uma propriedade $
 $$ \{ x \:|\: x \in A \land P(x) \} \hspace{2em} \text{ou} \hspace{2em} \{ x \in A \:|\: P(x) \} $$
 
 
-### Continência
+## Continência
 
 Se todos os elementos de um conjunto $A$ são elementos de um conjunto $B$, afirma-se que _$A$ está contido em $B$_, e denota-se por:
 
@@ -114,7 +114,7 @@ Graficamente um subconjunto $A$ de um subconjunto $B$ pode ser visto como:
 </div>
 
 
-### Subconjunto próprio
+## Subconjunto próprio
 
 Dados os conjuntos $A$ e $B$ e as relações:
 
@@ -135,7 +135,7 @@ Alternativamente, dizemos que _$B$ contém propriamente $A$_, utilizando:
 $$ B \supset A $$
 
 
-### Igualdade de conjuntos
+## Igualdade de conjuntos
 
 Dois conjuntos são iguais se e somente se todos os elementos de um conjunto também pertence ao outro conjunto:
 
@@ -182,7 +182,7 @@ A partir da definição da igualdade de conjuntos, podemos demonstrar que elemen
 Como não existe elemento $x$ em $A$ tal que $x \notin B$ ou em $B$ tal que $x \notin A$, os conjuntos são iguais, logo, a repetição de elementos não altera o conjunto.
 
 
-### Conjunto vazio
+## Conjunto vazio
 
 Um conjunto importante é o conjunto que não contém nenhum elemento, o **conjunto vazio**, $\\{\\ \\}$, usualmente representado pelo símbolo $\varnothing$.
 
@@ -191,12 +191,12 @@ Um conjunto vazio não representa _nada_, ele representa um conjunto sem nenhum 
 O conjunto vazio está contido que qualquer conjunto $A$. Podemos demonstrar isso a partira da definição de subconjunto e da _regra da implicação_. É necessário que a condição $x \in \varnothing \Longrightarrow x \in A$ seja verdadeira, e como o antecedente $x \in \varnothing$ é _**falso**_ para qualquer $x$, a condição será verdadeira, logo $\varnothing \subseteq A$.
 
 
-### Operações sobre conjuntos
+## Operações sobre conjuntos
 
 As principais operações sobre conjuntos são a união, a diferença, o complemento, o conjunto das partes e o produto cartesiano. O resultado de uma operação sobre conjuntos será outro conjunto.
 
 
-#### União
+### União
 
 Sejam $A$ e $B$ conjuntos, a união ($\cup$) dos conjuntos resultará em um conjunto com todos os elementos de $A$ e de $B$.
 
@@ -239,7 +239,7 @@ $$ A \cup B = \{ x \:|\: x \in A \lor x \in B \} $$
 </svg>
 
 
-#### Intersecção
+### Intersecção
 
 Sejam $A$ e $B$ conjuntos, a intersecção ($\cap$) dos conjuntos resultará em um conjunto contendo apenas os elementos presente tanto em $A$ quanto em $B$.
 
@@ -257,7 +257,7 @@ $$ A \cup B = \{ x \:|\: x \in A \land x \in B \} $$
     </g>
 </svg>
 
-#### Complemento
+### Complemento
 
 Dado um conjunto fixo $U$, denominado _conjunto universo_, o complemento de um conjunto $A$ é formado por todos os elementos de $U$ que não existem em $A$.
 
@@ -273,7 +273,7 @@ $$ \thicksim\! A = \{ x \:|\: x \in U \land x \notin A \} $$
     </g>
 </svg>
 
-#### Diferença
+### Diferença
 
 A diferença entre os conjuntos $A$ e $B$ é um cojunto com os elementos existentes em $A$ que não existem em $B$.
 
@@ -294,7 +294,7 @@ $$
     </g>
 </svg>
 
-#### Conjunto das Partes
+### Conjunto das Partes
 
 O conjunto das partes (ou _conjunto potência_) de um conjunto $A$ é o conjunto de todos os subconjuntos de $A$.
 
@@ -307,7 +307,7 @@ Podemos definir o conjunto das partes como:
 $$ 2^A = \mathcal{P}(A) = \{ S \:|\: S \subseteq A \} $$
 
 
-#### Produto Cartesiano
+### Produto Cartesiano
 
 O produto cartesiano de dois conjuntos é o conjunto de pares ordenados $(a, b)$, sendo que $a \in A$ e $b \in B$.
 
@@ -320,16 +320,16 @@ A operação pode ser _multidimensional_, ou seja, executada sobre múltipos con
 $$ A \times B \times C = \{(a,b,c) \:|\: a \in A \land b \in B \land c \in C\} $$
 
 Esta operação também não é associativa. Seja o conjunto $A = \\{1\\}$, então $(A \times A) \times A$ resulta em $\\{(1, 1), 1\\}$, enquanto $A \times (A \times A)$ resulta em $\\{1, (1, 1)\\}$.
-
+L
 É usual usar _expoentes_ quando do produto cartesiano de um conjunto com ele mesmo, como em $\mathbb{R}^2 = \mathbb{R} \times \mathbb{R}$, ou $\mathbb{R}^3 = \mathbb{R} \times \mathbb{R} \times \mathbb{R}$.
 
 
-### Propriedades das operações sobre conjuntos
+## Propriedades das operações sobre conjuntos
 
 As propriedades analisadas, a seguir, presupõe a existência do universo $U$ e dos conjuntos $A$, $B$ e $C$.
 
 
-#### Idempotência
+### Idempotência
 
 O resultado da união ou intersecção de um conjunto com ele mesmo é o próprio conjunto.
 
@@ -341,7 +341,7 @@ $$
 $$
 
 
-#### Comutativa
+### Comutativa
 
 As operações de intersecção e união são comutativas.
 
@@ -353,7 +353,7 @@ $$
 $$
 
 
-#### Associativa
+### Associativa
 
 A ordem das operações de união e intersecção pode ser qualquer:
 
@@ -371,7 +371,7 @@ $$
 $$
 
 
-#### Distributiva
+### Distributiva
 
 A união de conjuntos é distributiva sobre a intersecção, e a intersecção de conjuntos é distributiva sobre a união.
 
@@ -383,14 +383,14 @@ $$
 $$
 
 
-#### Duplo Complemento
+### Duplo Complemento
 
 O complemento do complemento de um conjunto $A$, em relação ao universo $U$, é o próprio conjunto.
 
 $$ \thicksim\! ( \thicksim\! A ) = A $$
 
 
-#### DeMorgan
+### Lei de DeMorgan
 
 O complemento da união de dois conjuntos é a intersecção dos complementos desses conjuntos.
 
@@ -405,7 +405,7 @@ $$
 $$
 
 
-### Conjunto universo e conjunto vazio.
+## Conjunto universo e conjunto vazio.
 
 Podemos obter o conjunto universo $U$ e o conjunto vazio $\varnothing$ a partir da união ou intersecção de um conjunto com o seu complemento:
 
