@@ -517,7 +517,7 @@ system for you:
 
 ```
 > wget
-        -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
+        -Uri https://raw.githubusercontent.com/ansible/ansible-documentation/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
         -OutFile configure_ansible.ps1
 > .\configure_ansible.ps1
 ```
