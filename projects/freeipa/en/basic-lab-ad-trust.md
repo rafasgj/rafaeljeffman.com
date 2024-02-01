@@ -11,10 +11,18 @@ title: Creating a test lab for FreeIPA-AD trust
 lang: en
 copy: 2022
 date: 2022-04-19
-description: >
-  Automate the creation of a trust bettwen FreeIPA and Windows
-  Server Active Directory using Ansible and ansible-freeipa.
+abstract: >
+  A commom use of FreeIPA is to integrate it with Microsoft Active Directory,
+  so that a trust between FreeIPA realm and AD realm is created and users
+  from AD can log into FreeIPA hosts. This document shows the creation of a
+  lab to test FreeIPA-AD trust using regular tools, and how the lab creation
+  can be automated unsing ansible-freeipa.
 ---
+
+> **Note**: This document and the accompanying playbooks may be updated
+  once Ansible, ansible-freeipa or FreeIPA force a change in behavior.
+  For example, the playbooks that confgure the Windows Server have
+  changed due to deprecations on the Ansible side.
 
 [FreeIPA] is an integrated Identity and Authentication solution for
 Linux/UNIX networked environments. Microsoft's [Active Directory] (AD)
@@ -62,26 +70,26 @@ the automated installation using [Ansible].
 For the automated installation, you will also need Ansible, and a few
 of its collections:
    * [ansible-freeipa]
-   * [linux-system-roles]
    * ansible.windows
+   * microsoft.ad
    * community.windows
    * community.general
 
-[ansible-freeipa] and [linux-system-roles] can be installed either as
-packages or [Ansible Galaxy] collections. The other collections are
-available with the Ansible package,  but must be individually installed
-(e.g. through Galaxy) if using `ansible-core`.
+[ansible-freeipa] can be installed either from packages or using
+[Ansible Galaxy] collections. You may use a
+[requirements file](https://github.com/rjeffman/freeipa-ad-trust/blob/main/requirements.yml)
+to ease handling dependencies.
 
-The playbooks are
+The playbooks shown here, dependencies and an example inventory file are
 [available in a Github repository](https://github.com/rjeffman/freeipa-ad-trust).
 
 > **NOTE**: While I was creating this environment, in the Ansible
-controller, _Linux System Roles_ was installed using Fedora packages,
-the other collections were installed using [Ansible Galaxy], and the
-_master_ branch of ansible-freeipa_ was used (either the Ansible Galaxy
-or the RPM packages should work). I didn't care to fix the
-playbooks so that they were readily usable in every situation. You may
-need to adapt the playbooks for your own use (i.e. use fully qualified
+controller, `ansible-freeipa` was being used from my local repository,
+which is usually close to the tip of development, and it behaves like it
+was installed through RPM packages. The other collections were installed
+using [Ansible Galaxy]. I didn't care to fix the playbooks so that they
+were readily usable in every situation. You may need to adapt the
+playbooks for your own use (i.e. use fully qualified
 collection names - FQCN - for roles/modules/actions).
 
 
@@ -448,23 +456,28 @@ all:
   children:
     winserver:
       hosts:
-        server.ad.ipa.test:
+        ad_server:
+          ansbile_host: "{{  winserver_hostname }}"
           ansible_connection: winrm
           ansible_winrm_server_cert_validation: ignore
           ansible_user: "Administrator"
           ansible_password: "{{ winserver_admin_password }}"
     ipaserver:
       hosts:
-        server.lin.ipa.test:
+        ipa_first_server:
+          ansible_host: "{{ ipasesrver_hostname }}"
           ansible_user: root
       vars:
         # DNS configuration
         ipaserver_setup_dns: true
         ipaserver_no_forwarders: true
+        # DNSSEC must be disabled
+        ipaserver_no_dnssec_validation: true
         # trust configuration
         ipaserver_setup_adtrust: true
-        # disable 'allow all' HBAC rule
-        # ipaserver_no_hbac_allow: false
+        ipaserver_netbios_name: LIN
+        # set to true to disable 'allow all' HBAC rule
+        ipaserver_no_hbac_allow: true
   vars:
     # passwords
     ipaadmin_password: SomeADMINpassword
@@ -476,11 +489,11 @@ all:
     # client configuration
     ipaclient_mkhomedir: true
     ipaclient_no_ntp: true
-    # hostnames
+    # Linux host
     ipaserver_hostname: server.lin.ipa.test
-    winserver_hostname: server.ad.ipa.test
-    # IP address
     ipaserver_ip: 192.168.122.251
+    # Windows host
+    winserver_hostname: server.ad.ipa.test
     winserver_ip: 192.168.122.252
     # Windows vars
     winserver_admin_password: SomeW1Npassword
@@ -556,7 +569,7 @@ create the trust with FreeIPA. The Windows VM will reboot twice.
     ansible.windows.win_reboot:
       msg: "Reboot after name and timezone changes."
       pre_reboot_delay: 15
-    when: hostname.reboot_required or hostname.reboot_required
+    when: hostname.reboot_required
 
   - name: Install AD feature
     ansible.windows.win_feature:
@@ -566,28 +579,21 @@ create the trust with FreeIPA. The Windows VM will reboot twice.
       state: present
 
   - name: Install DNS feature and configure first AD Domain
-    ansible.windows.win_domain:
-      dns_domain_name: "{{ winserver_domain }}"
-      safe_mode_password: "{{ winserver_dsrm_password }}"
+    microsoft.ad.domain:
       install_dns: true
+      dns_domain_name: "{{ winserver_domain }}"
       domain_netbios_name: "{{ winserver_netbios_name }}"
-    register: status
-
-  - name: Reboot server
-    win_reboot:
-      msg: "Reboot after AD Domain installation."
-      pre_reboot_delay: 15
-    when: status.changed
+      safe_mode_password: "{{ winserver_dsrm_password }}"
+      reboot: true
 
   - name: Add IPA DNS forward zone
-    ansible.windows.win_command: |
-      dnscmd 127.0.0.1 /ZoneAdd {{ ipaserver_domain }} /Forwarder {{ ipaserver_ip }}
+    ansible.windows.win_shell: 'Add-DnsServerConditionalForwarderZone -Name "{{ ipaserver_domain }}" -MasterServers {{ ipaserver_ip }}'
     register: result
-    failed_when:
-      result.failed and "DNS_ERROR_FORWARDER_ALREADY_EXISTS" not in result.stdout
+    failed_when: result.failed and "ResourceExists" not in result.stderr
+    changed_when: not result.failed
 
   - name: Add jdoe test user.
-    community.windows.win_domain_user:
+    microsoft.ad.user:
       # 'name' will be the user SAM account name and identity.
       name: jdoe
       upn: "jdoe@{{ winserver_domain }}"
@@ -597,6 +603,7 @@ create the trust with FreeIPA. The Windows VM will reboot twice.
       password_expired: false
       password: SomeUS3Rpassword
       update_password: on_create
+      state: present
 ```
 {% endraw %}
 
@@ -636,7 +643,8 @@ but creating the trust.
 # ---------------------
 - name: Deploy IPA with support to AD.
   hosts: ipaserver
-  become: true
+  become: false
+  gather_facts: true
 
   roles:
   - role: ipaserver
@@ -731,7 +739,7 @@ This step can also be automated with the following playbook:
       path: /etc/krb5.conf
       insertbefore: "kdc = {{ ipaserver_hostname }}:88"
       block: |
-        auth_to_local = RULE:[1:$1@$0](^.*@AD_DOMAIN$)s/@AD_DOMAIN/@ad_domain/
+        auth_to_local = RULE:[1:$1@$0](^.*@A{{ winserver_realm }}$)s/@A{{ winserver_realm }}/@{{ winserver_domain }}/
         auth_to_local = DEFAULT
 
   - name: Restart Kerberos KDC
@@ -768,7 +776,6 @@ complexity.
 [ansible]: https://ansible.com
 [ansible-freeipa]: https://github.com/freeipa/ansible-freeipa
 [git repository]: https://github.com/freeipa/ansible-freeipa
-[linux-system-roles]: https://linux-system-roles.github.io
 [libvirt]: https://libvirt.org
 [kvm]: https://www.linux-kvm.org
 [ansible galaxy]: https://galaxy.ansible.com
