@@ -1,0 +1,15 @@
+---
+- name: Setup external IdP
+  hosts: ipaserver
+  become: false
+  gather_facts: false
+
+  tasks:
+  - name: Ensure an external provider for Github is available, using 'id' instead of 'login'
+    ipaidp:
+      ipaadmin_password: SomeADMINpassword
+      name: github_idp
+      provider: github
+      client_id: 481789d5cd3ca6b3f03f
+      secret: 979a1511df376e371c407760619148b82a2c4a6d
+      idp_user_id: 'id'

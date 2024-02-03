@@ -1,0 +1,27 @@
+---
+- name: Ensure a user can use Github as an external IdP
+  hosts: ipaserver
+  become: false
+  gather_facts: false
+  vars:
+    github_login: rafasgj
+      
+  tasks:
+  - name: Retrieve Gitbhub user id
+    ansible.builtin.uri:
+      url: "https://api.github.com/users/{{ github_login }}"
+      method: GET
+      headers:
+        Accept: "application/vnd.github.v3+json"
+    register: user_data
+
+  - name: Ensure user exists with IdP configuration
+    ipauser:
+      ipaadmin_password: SomeADMINpassword
+      name: rafasgj
+      first: Rafael
+      last: Jeffman
+      userauthtype: idp
+      idp: github_idp
+      idp_user_id: "{{ user_data.json.id }}"
+
