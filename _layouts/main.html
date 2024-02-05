@@ -73,9 +73,9 @@
                       {% endfor %}
                       <ul>
                     </div>
-                    {% if page.date %}
+                    {% if page.date or page.last_update %}
                         <div class="last-update">
-                            {{ site.data.lang["Ultima_atualizacao"][page.lang] | default: "Última atualização" }}: {{ page.date }}
+                            {{ site.data.lang["Ultima_atualizacao"][page.lang] | default: "Última atualização" }}: {{ page.last_update | default: page.date }}
                         </div>
                     {% endif %}
                 </div>

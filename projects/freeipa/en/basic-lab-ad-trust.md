@@ -9,8 +9,9 @@ tags:
   - Ansible
 title: Creating a test lab for FreeIPA-AD trust
 lang: en
-copy: 2022
+copy: 2022-2024
 date: 2022-04-19
+last_update: 2024-02-05
 abstract: >
   A commom use of FreeIPA is to integrate it with Microsoft Active Directory,
   so that a trust between FreeIPA realm and AD realm is created and users
@@ -19,10 +20,12 @@ abstract: >
   can be automated unsing ansible-freeipa.
 ---
 
-> **Note**: This document and the accompanying playbooks may be updated
-  once Ansible, ansible-freeipa or FreeIPA force a change in behavior.
-  For example, the playbooks that confgure the Windows Server have
-  changed due to deprecations on the Ansible side.
+> **Note**: This document and
+  [the accompanying playbooks](https://github.com/rjeffman/freeipa-ad-trus)
+  may be updated once Ansible, ansible-freeipa or FreeIPA force a change
+  in behavior. For example, the playbooks that confgure the Windows Server
+  have changed due to deprecations on the Ansible side.
+{:class="notebox"}
 
 [FreeIPA] is an integrated Identity and Authentication solution for
 Linux/UNIX networked environments. Microsoft's [Active Directory] (AD)
@@ -163,6 +166,9 @@ virt-install \
     * On `Settings > Network & Internet > Change adapter Options`:
         * Double-click `Ethernet Instance 0`
         * Click `Properties`
+        * Ensure `Internet Protocol Version 6 (TPC/IPv6)` in unchecked.
+          (As of the time of the last revision of this document, IPv6 should
+          be disabled on the Windows side.)
         * Select `Internet Protocol Version 4 (TPC/IPv4)` and click
           `Properties`
             * Set the IP address (the values are the ones I used):
@@ -560,6 +566,13 @@ create the trust with FreeIPA. The Windows VM will reboot twice.
     community.windows.win_timezone:
       timezone: "{{ winserver_timezone }}"
 
+  - name: Disable ms_tcpip6 for all Interfaces
+    community.windows.win_net_adapter_feature:
+      interface: '*'
+      state: disabled
+      component_id:
+      - ms_tcpip6
+
   - name: Change the Window hostname
     ansible.windows.win_hostname:
       name: "server"
@@ -770,6 +783,15 @@ Automating the creation of such an environment can be achieved, and
 brings a reproducible configuration, helping to reduce some of the
 complexity.
 
+
+## Acknowledgments
+
+Since the first version of of this documents, it has been expanded with
+several fixes and enhancements proposed by [@t-woerner](https://github.com/t-woerner).
+
+## References
+
+1. [FreeIPA-AD Trust Playbook Repo](https://github.com/rjeffman/freeipa-ad-trust)
 
 <!-- links -->
 [FreeIPA]: https://freeipa.org

@@ -493,3 +493,17 @@ svg {
     display: block !important;
     margin: auto !important;
 }
+
+/* A different, more muted, blockquote element. */
+.notebox {
+  max-width: 80%;
+  border: solid thin #555;
+  background: transparent;
+  margin: 5px 50px 20px 20px;
+  padding: 15px;
+}
+.notebox * {
+  margin: 0;
+  font-size: 18px !important;
+  text-align: justify;
+}
