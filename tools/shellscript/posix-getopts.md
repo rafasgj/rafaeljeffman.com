@@ -3,8 +3,9 @@ layout: main
 section: Shellscript
 tags:
   - linux
-  - shell script
+  - shellscript
   - posix
+  - getopts
 title: Argumentos de linha de comando
 copy: 2022
 date: 2022-06-12

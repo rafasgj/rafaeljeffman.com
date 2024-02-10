@@ -1,9 +1,9 @@
 ---
 layout: main
-section: Shell Script
+section: Shellscript
 tags:
   - linux
-  - shell script
+  - shellscript
 title: Conceitos Básicos de Programação Shell
 copy: 2022
 date: 2022-06-12
