@@ -11,13 +11,18 @@ tags:
 lang: en
 copy: 2024
 date: 2024-01-28
-abstract:
+abstract: |-
+    [FreeIPA] provides an integrated identity management solution for POSIX-alike
+    environments and for some time now support the integration with external
+    identity providers (IdP) for an OAuth-like autentication. This document shows
+    how to automate the integration of external IdP and FreeIPA using
+    [ansible-freeipa]. Github is used as the identity provider.
 ---
 ## FreeIPA, identities and identity providers
 
 [FreeIPA] provides an integrated identity management solution for POSIX-alike environments, and this environment influenced the way users and groups are represented and implemented. The POSIX model is based on applications usually interfacing inside a shell session, initiated by the users represented by the POSIX identity.
 
-With the move to web and mobile oriented user interfaces, the POSIX user consumption patter have become less prominent, and POSIX identities may be relegated to be a support mechanims for running isolated applications. 
+With the move to web and mobile oriented user interfaces, the POSIX user consumption pattern have become less prominent, and POSIX identities may be relegated to be a support mechanism for running isolated applications. 
 
 Usage shift does not mean that one model superseeded the other. The same users need to access both operating sysetm-level applications and be able to authenticate as application-lever identities. This is tipycall achieved by forming a single sign-on environment where a user would authenticate once and then the fact of authentication is consumed by other services for a certain amount of time, regardless of how the applications that represent these services are operating.
 
@@ -67,7 +72,7 @@ This will create an idp object stored in the FreeIPA LDAP database with the foll
   External IdP user identifier attribute: login
 ```
 
-Once the IdP object is setup, we can create or modify users to use the extenal entity to provide the identity. Users that will login using an external IdP must have the proper authentication type.
+Once the IdP object is set up, we can create or modify users to use the extenal entity to provide the identity. Users that will authenticate using an external IdP must have the proper authentication type.
 
 ```bash
 ipa user-add rafasgj \
@@ -151,7 +156,7 @@ Last login: Sat Feb 1 03:28:32 from 192.168.122.1
 
 The [ansible-freeipa idp module](https://github.com/freeipa/ansible-freeipa/blob/master/README-idp.md) allows a custom creation of the configuration for an external IdP provider. Currently, it is recommended that one of the preset providers (Keycloak, Github, Google, Microsoft Identity, Okta) are used, and, if needed, modified.
 
-As we want to replicate the previous setup, first, let's create the external IdP entry fr Github, but as it poses an issue with the default user identification attribute, we change it from `login` (which may not be unique) to `id` which is guaranteed to be unique over time:
+As we want to replicate the previous setup, first, let's create the external IdP entry for Github, but as it poses an issue with the default user identification attribute, we change it from `login` (which may not be unique) to `id` which is guaranteed to be unique over time:
 
 [](/files/freeipa/01-setup-idp.yml){:class="download fa-solid fa-download"}
 {% raw %}
@@ -173,6 +178,8 @@ As we want to replicate the previous setup, first, let's create the external IdP
       idp_user_id: 'id'
 ```
 {% endraw %}
+
+Also note that `idp_user_id`, in this case, is the attribute name used to identify the user in the external IdP.
 
 The user configuration should be simple, but as we're not using the Github login anymore, we need to find out the Github user id. Thankfully, Github provides this information in an easyly accessible way (once you can parse JSON data):
 
@@ -208,20 +215,24 @@ The user configuration should be simple, but as we're not using the Github login
 ```
 {% endraw %}
 
-And that's all that is required to replicate the external IdP and user configuration and the user can now log into FreeIPA hosts.
+Again, note that we use `idp_user_id` for the `user identification` and in this case it is the value of the attribute that identifies the user. Unfortunatelly, FreeIPA uses the same attribute name in both cases, with is confusing. In the contex of _external IdP_ the `idp_user_id` in the name of the attribute that identifies the user, and is the context fo the _user object_, it is the value that identifies the user using the selected attribute.
+
+This is all that is required to replicate the external IdP and user configuration, alloweing the user to log into FreeIPA hosts.
 
 ## Wrap Up
 
 Some recomendations can be found on FreeIPA official documentation, some that you should not forget are:
 * Administrators must thoroughly check all URLs they add when creating the IdP server
 * Users must check that the presented device authorization URL is correct and that the authentication happens over  asecure channel (usually https) with valid certificates.
+* When using Github as an external IdP you should override the default attribute that identifies users from `login` to `id`.
 
 Automating the few steps to configure the use of external IdP may sound as overkill, but, given the recomendations shown before, ensuring that the configuration is reproducible will aid to security and all the details were polished.
 
 ## References
 
-1. [FreeIPA external IdP design document]
-2. [FreeIPA IdP API]
+1. [FreeIPA external IdP design document](https://freeipa.readthedocs.io/en/latest/designs/external-idp/external-idp.html)
+2. [FreeIPA IdP API and an external identity provider integration](https://freeipa.readthedocs.io/en/latest/designs/external-idp/idp-api.html)
+3. [FreeIPA Workshop - Authentication against external Identity Providers](https://freeipa.readthedocs.io/en/latest/workshop/12-external-idp-support.html) (uses Keycloak as IdP)
 3. [ansible-freeipa idp module](https://github.com/freeipa/ansible-freeipa/blob/master/README-idp.md)
 4. [ansible-freeipa user module](https://github.com/freeipa/ansible-freeipa/blob/master/README-user.md)
 5. [Github - Creating an OAuth application](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app)
