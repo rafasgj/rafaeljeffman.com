@@ -41,7 +41,7 @@ learning_unities:
   - Realização de simulações e experimentos práticos de linguagens formais, solucionando problemas de forma individual e cooperativa
 references:
   "bibilografia":
-    - "Menezes, Paulo Blath. **Linguagers Formais e Autômatos**. 6<sup>a</sup> ed. Bookman, 2011."
+    - "Menezes, Paulo Blath. **Linguagens Formais e Autômatos**. 6<sup>a</sup> ed. Bookman, 2011."
     - "Sipser, Michael. **Introdução à Teoria da Computação**. Tradução da 2<sup>a</sup>. ed. americana. Cengage Learning, 2005."
 grading:
   - name: g1
