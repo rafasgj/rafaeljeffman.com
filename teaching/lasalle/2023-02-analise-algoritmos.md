@@ -1,7 +1,5 @@
 ---
+layout: refresh
+comment: This page is kept for keeping old LEX2 links alive.
+link: 2023/analise-algoritmos
 ---
-<html>
-<head>
-<meta http-equiv="refresh" content="0; url=/teaching/lasalle/2023/analise-algoritmos">
-</head>
-</html>

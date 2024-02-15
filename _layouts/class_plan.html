@@ -78,7 +78,7 @@
                 {% assign week = 604800 %}
                 {% for lecture in page.lectures %}
                 <tr>
-                    <td align="center">{% if lecture.lecture %}<a href="/teaching/{{ page.institution | downcase }}/lectures/{{ page.start | date: "%Y" }}/{{ page.nickname }}/lecture-{{ forloop.index | plus: 100 | slice: 1, 2 }}">{% endif %}<strong>{{ forloop.index | plus: 100 | slice: 1, 2 }}</strong>{% if lecture.lecture %}</a>{% endif %}</td>
+                    <td align="center">{% if lecture.lecture %}<a href="lectures/{{ page.nickname }}/lecture-{{ forloop.index | plus: 100 | slice: 1, 2 }}">{% endif %}<strong>{{ forloop.index | plus: 100 | slice: 1, 2 }}</strong>{% if lecture.lecture %}</a>{% endif %}</td>
                     <td align="left">
                     <ul style="margin: 0 !important; padding: 0 !important;">
                     {% for topic in lecture.topics %}
@@ -88,7 +88,7 @@
                     </td>
                     {% assign days_to_add = week | times: forloop.index0 %}
                     {% assign lecture_date = page.start | date: "%s" | plus: days_to_add %}
-                    <td align="center">{% if lecture.lecture %}<a href="/teaching/{{ page.institution | downcase }}/lectures/{{ page.start | date: "%Y" }}/{{ page.nickname }}/lecture-{{ forloop.index | plus: 100 | slice: 1, 2 }}">{% endif %}{{ lecture_date | date: "%d/%m" }}{% if lecture.lecture %}</a>{% endif %}</td>
+                    <td align="center">{% if lecture.lecture %}<a href="lectures/{{ page.nickname }}/lecture-{{ forloop.index | plus: 100 | slice: 1, 2 }}">{% endif %}{{ lecture_date | date: "%d/%m" }}{% if lecture.lecture %}</a>{% endif %}</td>
                 </tr>
                 {%endfor%}
                 </tbody>

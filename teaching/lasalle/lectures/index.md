@@ -1,4 +1,4 @@
 ---
 layout: redirect
-url: /teaching/lasalle
+link: /teaching/lasalle
 ---
