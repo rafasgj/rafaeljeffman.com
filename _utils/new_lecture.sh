@@ -18,10 +18,11 @@ lectures=(
     [engswlab]="Laboratório de Engenharia de Software"
     [sistemas-distribuidos]="Sistemas Distribuídos"
     [mobile]="Desenvolvimento para Dispositivos Móveis"
-    [compiler]="Compiladores"
-    [formais]="Linguagens Formais e Autômatos"
+    [compilers]="Compiladores"
+    [automata]="Linguagens Formais e Autômatos"
     [ia]="Inteligência Artificial"
     [paradigmas]="Paradigmas de Programação"
+    [compsec]="Segurança Computacional"
 )
 
 nick=$1
@@ -29,7 +30,6 @@ title=${2:-''}
 year=${3:-$(date +"%Y")}
 name=${4:-${lectures[${nick}]}}
 institution=${5:-"Universidade LaSalle Canoas"}
-
 
 BASEDIR="$(dirname $0)/.."
 LECTURE="teaching/lasalle/lectures/${year}/${nick}"
