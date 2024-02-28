@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'pt' }}" dir="ltr">
+    <head>
+        {% include common_head.html page = page %}
+        {% include styles.html %}
+        {% for css in page.extra_styles %}
+        <link rel="stylesheet" href="/css/{{ css }}.css">
+        {% endfor %}
+    </head>
+    <body>
+        {% include header.html lang=page.lang %}
+        <div id="con">
+            <div id="section-title">
+            {{ site.data.institutions[page.institution].name | prepend: "# " | markdownify }}
+            <!--
+            {% if page.subtitle %}
+            <div id="section-subtitle">{{ page.subtitle | prepend: "## " | markdownify }}</div>
+            {% endif %}
+            -->
+            </div>
+
+            <div id="cardboard">
+                {% for item in page.cards %}
+                <div class="card">
+                    <div class="card-title"><a href="{{ item.link }}">{{ item.title }}</a></div>
+                    <div class="card-abstract">{{ item.content | markdownify }}</div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div id="contents">
+                <p>Lista de disciplinas que {% if page.current %}ministro ou{% endif %} ministrei na <a href="{{ site.data.institutions[page.institution].url }}" taget="_blank">{{ site.data.institutions[page.institution].name }}</a>.</p>
+                <div id="courses" style="margin-bottom: 5em">
+                {% for year in site.data.institutions[page.institution].years %}
+                    {% for semester in year.semesters %}
+                    <h2>{{ year.id }}/{{ semester.id }}</h2>
+                        {% if semester.courses.in_person %}
+                            <h3>Presencial</h3>
+                            <ul>
+                            {% for course in semester.courses.in_person %}
+                                <li><a href="/teaching/{{ page.institution }}/{{ year.id }}/{{ course }}">{{ site.data.courses[course] }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {% if semester.courses.tutor %}
+                            <h3>Tutoria</h3>
+                            <ul>
+                            {% for course in semester.courses.tutor %}
+                                <li><a href="/teaching/{{ page.institution }}/{{ year.id }}/{{ course }}">{{ site.data.courses[course] }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {% if semester.courses.virtual %}
+                            <h3>EAD</h3>
+                            <ul>
+                            {% for course in semester.courses.virtual %}
+                                <li>{{ site.data.courses[course] }}</li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+                </div>
+
+                {% assign page_list = site.pages | where_exp: "item", "item.title != nil" | where_exp: "item", "item.date != nil" | where_exp: "item", "item.layout != 'section'" | where_exp: "item", "item.layout != 'lecture'" | sort: "date" | reverse  %}
+                {% assign lowercase_sections = site.data.institution[page.institution].sections | join: "#" | downcase | split: '#' %}
+                {% if site.data.institutions[page.institution].sections %}
+                    {% assign filtered_list = "" | split: "" %}
+                    {% for item in page_list %}
+                        {% assign lowercase_section = item.section | downcase %}
+                        {% if lowercase_sections contains lowercase_section %}
+                            {% assign filtered_list = filtered_list | push: item %}
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    {% assign filtered_list = page_list%}
+                {% endif %}
+                {% if filtered_list.size != 0 %}
+                {% if page.cards == nil %}
+                <h1>{{ site.data.lang['Posts_Relacionados'][page.lang] | default: "Posts Relacionados" }}</h1>
+                {% else %}
+                <h1>{{ site.data.lang['Posts_Recentes'][page.lang] | default: "Posts Recentes" }}</h1>
+                {% endif %}
+                <div id="by-posts">
+                    <ul>
+                        {% for linkto in filtered_list %}
+                            <li>
+                                <a href="{{ linkto.url }}">{{ linkto.title | strip | markdownify | remove: '<p>' | remove: '</p>' }}</a> <div class="last-update">{{ linkto.date }}</div> {% if linkto.lang and linkto.lang != "pt" %}<div class="lang-code">({{ linkto.lang }})</div>{% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+       </div>
+       <div id="footer">
+        {% include footer.html %}
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    </body>
+</html>

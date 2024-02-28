@@ -1,0 +1,58 @@
+---
+lasalle:
+  name: Universidade LaSalle Canoas
+  url: https://www.unilasalle.edu.br/canoas
+  sections:
+    - LaSalle
+  years:
+    # - id: 202_
+    #   semesters:
+    #   - id:
+    #     courses:
+    #       in_person:
+    #       -
+    #       virtual:
+    #       -
+    #       tutor:
+    #       -
+    #       advisor:
+    #       -
+    - id: 2024
+      semesters:
+      - id: 1
+        courses:
+          in_person:
+            - ia
+            - compiladores
+            - automata
+            - paradigmas
+          virtual:
+            - mobile
+          tutor:
+            - analise-algoritmos
+            - mobile
+    - id: 2023
+      semesters:
+      - id: 2
+        courses:
+          in_person:
+            - analise-algoritmos
+            - sistemas-distribuidos
+            - engswlab
+            - mobile
+          virtual:
+            - ia-ead
+            - mobile
+            - seccomp
+            - bd-ead
+          tutor:
+            - automata
+            - compiladores
+    - id: 2022
+      semesters:
+      - id: 2
+        courses:
+          in_person:
+            - compiladores
+            - mobile
+...

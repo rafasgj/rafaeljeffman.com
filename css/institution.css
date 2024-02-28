@@ -1,0 +1,13 @@
+h3 { margin: 0; }
+h2 ~ h3 {
+    margin: 0;
+    margin-left: 50px;
+}
+h3 ~ ul {
+    margin: 0;
+    margin-left: 125px;
+    margin-bottom: 15px;
+}
+div#courses {
+    margin-bottom: 5em;
+}
