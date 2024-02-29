@@ -2,8 +2,9 @@
 title: Logica Booleana
 subtitle: 
 layout: main
-section: Matemática para Computação
-sections: []
+section: Lógica
+sections:
+  - Lógica
 tags:
   - lógica
   - lógica booleana
