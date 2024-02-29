@@ -2,6 +2,7 @@
 
 # Binary Search tree implementation
 
+
 def insert(root, key, balance_fn=lambda node: node):
     if root:
         root_key, left, right, *_ = root
@@ -36,7 +37,7 @@ def remove(root, key, balance_fn=lambda node: node):
         result = (root_key, remove(left, key, balance_fn), right, *extra)
     elif key > root_key:
         result = (root_key, left, remove(right, key, balance_fn), *extra)
-    else: # found key
+    else:  # found key
         # simple cases
         if not (left or right):
             return None
@@ -80,6 +81,7 @@ def is_bst(root):
 
 # utility functions
 
+
 def to_string(root):
     """Convert a tree to a string."""
     if root is None:
@@ -91,6 +93,7 @@ def to_string(root):
 
 
 # AVL implementation
+
 
 def avl_fix(node):
     """Ensure a node is a valid AVL node."""
@@ -132,7 +135,9 @@ def is_avl(root):
 
     return eval8(root)
 
+
 # Tree rotation
+
 
 def rotate_left(node):
     """Rotate a tree to the left."""
@@ -140,7 +145,10 @@ def rotate_left(node):
         return None
     k, left, root, _ = node
     root_key, j, right, _ = root
-    return update_height((root_key, update_height((k, left, j, -1)), right, -1))
+    return update_height(
+        (root_key, update_height((k, left, j, -1)), right, -1)
+    )
+
 
 def rotate_right(node):
     """Rotate a tree to the right."""
@@ -148,10 +156,13 @@ def rotate_right(node):
         return None
     k, root, right, _ = node
     root_key, left, j, _ = root
-    return update_height((root_key, left, update_height((k, j, right, -1)), -1))
+    return update_height(
+        (root_key, left, update_height((k, j, right, -1)), -1)
+    )
 
 
 # Node height functions
+
 
 def node_height(node):
     """Retrieve node height based on a "height cache" stored on the node."""
@@ -175,6 +186,7 @@ def height_diff(node):
 
 
 # Binary tree traversals.
+
 
 def pre_order(root, visit):
     """Binary tree pre-order traversal."""
@@ -206,9 +218,10 @@ def post_order(root, visit):
 # Just a test script...
 
 if __name__ == "__main__":
+
     def main():
         """Example program entry point."""
-        elements = [1,2,3,4,5,6,7,8,9,11,10,12]
+        elements = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 10, 12]
         tree = None
         for elem in elements:
             tree = insert(tree, elem, avl_fix)
@@ -216,23 +229,24 @@ if __name__ == "__main__":
         def print_node(node):
             k, *_ = node
             print(f"{k} ", end="")
+
+        print("in-order visiting")
         in_order(tree, print_node)
 
-        print()
+        print("string representation")
         print(to_string(tree))
 
-        print()
+        print("search for node key 11")
         print(search(tree, 11))
 
-        print()
+        print("remove code with key 5")
         print(to_string(remove(tree, 5)))
-        print()
+        print("remove code with key 11")
         print(to_string(remove(tree, 11)))
-        print()
+        print("remove code with key 4")
         print(to_string(remove(tree, 4)))
-        print()
+        print("remove code with key 9, use avl_fix")
         print(to_string(remove(tree, 9, avl_fix)))
-
         assert is_avl(remove(tree, 9)) is False
         assert is_avl(remove(tree, 9, avl_fix)) is True
 
