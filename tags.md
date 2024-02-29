@@ -3,7 +3,7 @@ title: Tags
 layout: section
 sections: []
 ---
-{% assign page_list = site.pages | where_exp: "item", "item.title != nil" | where_exp: "item", "item.date != nil" | where_exp: "item", "item.layout != 'section'" | where_exp: "item", "item.tags != nil" | sort: "date" | reverse  %}
+{% assign page_list = site.pages | where_exp: "item", "item.title != nil" | where_exp: "item", "item.date != nil" | where_exp: "item", "item.tags != nil" | sort: "date" | reverse  %}
 
 <ul class="tags">
 {% assign page_tags = page_list | map: "tags" | join: ", " | downcase | split: ", " | sort_natural | uniq %}
