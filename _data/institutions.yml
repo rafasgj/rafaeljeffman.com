@@ -1,4 +1,15 @@
 ---
+senai:
+  name: Faculdade de Tecnologia SENAI Porto Alegre
+  url: https://www.senairs.org.br/unidades/senai-porto-alegre
+  sections: []
+  years:
+    - id: 2021
+      semesters:
+      - id: 1
+        courses:
+          in_person:
+          - soca
 lasalle:
   name: Universidade LaSalle Canoas
   url: https://www.unilasalle.edu.br/canoas
