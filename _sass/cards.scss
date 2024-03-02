@@ -43,3 +43,7 @@ $card_max: 1600px;
         padding: 2px;
     }
 }
+
+#section-title ~ #cardboard {
+    padding-top: 2em;
+}
