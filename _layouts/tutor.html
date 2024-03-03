@@ -89,7 +89,7 @@
                         <td align="center">{{ deliverable.code | capitalize }}</td>
                         <td align="center">{{ deliverable.weight }}</td>
                         <td align="left">
-                        {% if deliverable.url %}<a href="{{ deliverable.url }}">{% endif %}{{ deliverable.brief }}{% if deliverable.url %}</a>{% endif %}
+                        {% if deliverable.url %}<a href="{{ deliverable.url }}">{% endif %}{{ deliverable.brief | markdownify | remove: "<p>" | remove: "</p>" }}{% if deliverable.url %}</a>{% endif %}
                         </td>
                         {% assign due_week = deliverable.due | default: 0 %}
                         {% assign days_to_add = week | times: due_week %}
