@@ -38,6 +38,10 @@ learning_unities:
 references:
   "Bibliografia":
     - "SEBESTA, Robert. [**Conceitos de Lingagens de Programação**](https://integrada.minhabiblioteca.com.br/reader/books/9788582604694){:target='_blank'}. 11<sup>a</sup>. Ed. Bookman.Porto Alegre, 2018."
+    - "Miran Lipovača. [Learn You a Haskell for Great Good! A Beginner's Guide](http://learnyouahaskell.com/chapters)"
+    - "Bryan O'Sullivan, John Goerzen e Don Steward. [Real World Haskell](http://book.realworldhaskell.org/read) - O'Reilly"
+  "Recursos _online":
+    - "[Paradigmas de Linguagem de Programação](https://www.youtube.com/playlist?list=PL8lS5-l2_3cfYaFDK_zBCZQo70h4orszf) - canal _Tu quer saber mais?_ do YouTube."
 grading:
   g1:
     t1: 3.0
