@@ -2,7 +2,11 @@
 title: Ciência da Computação
 layout: section
 sections:
-  - Conceitos Básicos
+  - Ciência da Computação
 ---
 
-* [Conceitos Básicos](basics)
+Notas sobre alguns temas que leciono:
+
+* [Conceitos Matemáticos em Ciênica da Computação](math)
+* [Lógica Booleana](logic/boolean)
+* [Grafos](graphs)
