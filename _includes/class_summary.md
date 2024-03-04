@@ -10,7 +10,7 @@
 <li><a href="#cronograma">Cronograma</a>
 <li><a href="#avaliacao">Avaliação</a>
 {% if page.references %}
-<li><a href="#material-complementar">Material Complementar</a>
+<li><a href="#material-complementar">Recursos</a>
 {% endif %}
 <ul>
 </div>
