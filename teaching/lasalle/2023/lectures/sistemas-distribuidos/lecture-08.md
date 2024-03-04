@@ -2,7 +2,7 @@
 title: Exercícios
 subtitle: Sistemas Distribuídos
 layout: lecture
-last_occurrence: 
+last_occurrence: 2023-21-09
 copy: 2023
 institution:
   name: Universidade LaSalle Canoas
