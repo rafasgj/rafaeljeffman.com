@@ -11,17 +11,23 @@ institution:
 
 ## Agenda
 
-1. Apresentação da disciplina
-    1. Plano de Ensino (previsão)
-    2. Avaliação
-        * Baseada em entregas individuais
-        1. Exercícios
-        2. Trabalhos de implementação
-        3. Provas G1 e G2
-        4. Prova de substituição de grau
-    3. Logística da Disciplina
-        * Ferramentas: Lápis, papel e caneta
-        * Outras ferramentas: Python, Git, Github
+1. Plano de Ensino (previsão)
+2. Avaliação
+    * Baseada em entregas individuais
+    1. Exercícios
+    2. Trabalhos de implementação
+    3. Provas G1 e G2
+    4. Prova de substituição de grau
+    5. ChatGPT e assemelhados
+3. Logística da Disciplina
+    * Divisão da aula
+        * Solução de dúvidas, correção de exercícios (15 min)
+        * Exposição de conteúdo (1h)
+        * Intervalo (30 min)
+        * Exposição de conteúdo / Exercícios (1h)
+        * Preparação para a próxima aula (15 min)
+    * Ferramentas: Computador de inteligência natural, lápis, papel e caneta
+    * Outras ferramentas: Python, Git, Github
 2. Dinâmica das aulas
     1. Dúvidas
     2. Exibição de contúdo e exercícios em 2 períodos (2+2 _pomodoros_)
