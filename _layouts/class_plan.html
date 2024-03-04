@@ -69,7 +69,11 @@
                 </ul>
 
                 <h2 id="estratégias-metodológicas">Estratégias metodológicas</h2>
-                <p>Aulas expositivas, debates em grupo e exercícios práticos.</p>
+                {% if page.methodology %}
+                {{  page.methodology | markdownify }}
+                {% else %}
+                <p>Aulas expositivas, atividades de pesquisa relacionadas às unidades de aprendizagem, exemplos práticos e exercícios individuais ou em grupo.</p>
+                {% endif %}
 
                 <h2 id="cronograma">Cronograma</h2>
                 <table>
