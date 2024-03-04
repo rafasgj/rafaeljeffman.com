@@ -40,11 +40,18 @@ institution:
     3. Você trabalha ou trabalhou na área de TI? Qual cargo você ocupa (ou ocupou)?
     4. Quais linguagens de programação você consegue programar?
     5. O que você espera dessa disciplina?
+    6. O que te atrapalha para estudar?
+    7. O que tu gosta que o professor faça em aula?
+    8. O que tu não gosta que o professor faça em aula?
 5. Organize-se, você tem pouco tempo e muitas atividades!
     1. Bullet Journal
     2. TODO-list
     3. Pomodoro
     4. GTD
+
+* Qual é o teu objetivo?
+* O que tu faz para atingir o teu objetivo?
+{:class="lettered" style="font-size:150%"}
 
 ## Revisão de Conteúdos
 
