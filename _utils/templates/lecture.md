@@ -1,6 +1,7 @@
 ---
+section: @DISCIPLINA@
 title: @TITLE@
-subtitle: @DISCIPLINA@
+subtitle:
 layout: lecture
 last_occurrence: 
 copy: @YEAR@

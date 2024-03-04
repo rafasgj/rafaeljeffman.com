@@ -1,6 +1,6 @@
 ---
+section: Linguagens Formais e Autômatos
 title: Apresentação da Disciplina
-subtitle: Linguagens Formais e Autômatos
 layout: lecture
 last_occurrence: 2024-03-07
 copy: 2024
