@@ -31,56 +31,67 @@ learning_unities:
   - Compreensão das técnicas de aprendizagem de máquina para resolução de problemas de forma cooperativa e crítica
 references:
   bibliografia:
-    - "RUSSEL, Stuart J.; NORVIG, Peter. [**Inteligência artificial : uma abordagem moderna.**](https://integrada.minhabiblioteca.com.br/reader/books/9788595159495){:target='_blank'}. 4. ed. LTC. Rio de Janeiro, 2022."
+    - "RUSSEL, Stuart J.; NORVIG, Peter. [**Inteligência artificial : uma abordagem moderna.**](https://integrada.minhabiblioteca.com.br/reader/books/9788595159495){:target='\_blank'}. 4. ed. LTC. Rio de Janeiro, 2022."
+    - "LUGER, George F. **Inteligência Artificial**. 6. ed. Pearson. São Paulo. 2013."
+    - "MINSKY, Marvin. **The Society of Mind**. Simon & Schuster, Inc. New York. 1988."
+    - "HAYKIN, Salmon. **Redes Neurais**. 2<sup>a</sup> Ed. Bookman. Porto Alegre. 2001."
+    - "MINSKY, Marvin; PAPERT, Seymour A. **Perceptrons: Expanded Edition**. 4<sup>th</sup> print. MIT Press. Massachussets. 1988"
+    - "KOHONEN, Teuvo. **Self-Organizing Maps**. 2<sup>nd</sup> Ed. Springer. Alemanha. 1997."
+    - "GOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. [**Depp Learning**](https://www.deeplearningbook.org){:target='\_blank'}. MIT Press. 2016."
   "Recursos Online":
-    - "[Artificial Inteligence - MIT, 2010](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010)"
+    - "[Artificial Inteligence - MIT, 2010](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010){:target='\_blank'}"
 grading:
   g1:
-    t1: 5.0
+    t1: 2.5
+    t2: 2.5
     p1: 5.0
   g2:
-    t2: 5.0
+    t3: 5.0
     p2: 5.0
 lectures:
   - topics:
     - Apresentação da Disciplina
-    - Plano de Ensino
-    - Avaliação
-    lecture: false
+    - O que é a Inteligência Artificial?
+    lecture: true
   - topics:
     - Raciocínio
-    - Sistemas especialistas baseados em regras
     - Solução de Problemas
+    - Sistemas especialistas baseados em regras
     lecture: false
   - topics:
     - "Algoritmos de Busca: Busca em Profundidade, Hill Climbing, Beam Search"
+    lecture: false
+  - topics:
     - "Algoritmos de Busca: Ótima, Branch and Bound, A*"
-    lecture: false
-  - topics:
-    lecture: false
-  - topics:
     - "Algoritmos de Busca: Jogos, Minimax, Alpha-Beta"
+    lecture: false
+  - topics:
+    - Revisão de conteúdos
+    - Implementação do **T1**
+    lecture: false
+  - topics:
     - Interpretação de Desenhos de Linhas
-    lecture: false
-  - topics:
     - Restrições de Busca
-    - Redução de Domínio
+    - Data limite para entrega do **T1**
     lecture: false
   - topics:
+    - Redução de Domínio
     - Reconhecimento visual de objetos
     - Exercícios
     lecture: false
   - topics:
     - Revisão de conteúdos
-    - Data limite para entrega do **T1**
+    - Implementação do **T2**
     lecture: false
   - topics:
     - Prova **G1**
+    - Data limite para entrega do **T1**
     lecture: false
   - topics:
     - Introdução a aprendizagem de máquinas
     - _Nearest Neighbors_
     - ID-trees
+    - Divulgação dos resultados do **G1**.
     lecture: false
   - topics:
     - Redes Neurais e Deep Learning
@@ -99,11 +110,12 @@ lectures:
     - Inferência Probabilística
     lecture: false
   - topics:
-    - Aula para desenvolvimento do **T2**
+    - Aula para desenvolvimento do **T3**
     lecture: false
   - topics:
     - Exercícios
     - Revisão
+    - Data limite para a entrega do **T3**
     lecture: false
   - topics:
     - Prova **G2**
