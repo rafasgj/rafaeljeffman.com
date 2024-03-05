@@ -44,32 +44,32 @@ grading:
       weight: 4.0
       brief: Implementação de um analisador recursivo descendente para uma gramática de expressões aritméticas.
       due: 6
-      url: "/teaching/lasalle/tutoria/2023/compiladores/trabalho-01"
+      url: "tutoria/compiladores/trabalho-01"
     - code: T2
       weight: 4.0
       brief: Implementação de um avaliador de expressões aritméticas com atribuição e acesso a variáveis.
       due: 8
-      url: "/teaching/lasalle/tutoria/2023/compiladores/trabalho-02"
+      url: "tutoria/compiladores/trabalho-02"
     - code: T3
       weight: 2.0
       brief: Definição de uma gramática livre de contexto para uma linguagem procedural Turing-complete.
       due: 9
-      url: "/teaching/lasalle/tutoria/2023/compiladores/trabalho-03"
+      url: "tutoria/compiladores/trabalho-03"
   - name: g2
     deliverables:
     - code: T4
       weight: 3.0
       brief: Implementação de um parser para uma gramática livre de contexto.
       due: 12
-      url: "/teaching/lasalle/tutoria/2023/compiladores/trabalho-04"
+      url: "tutoria/compiladores/trabalho-04"
     - code: T5
       weight: 3.0
       brief: Geração de uma árvore de derivação com uso tabela de símbolos, para uma gramática livre de contexto.
       due: 16
-      url: "/teaching/lasalle/tutoria/2023/compiladores/trabalho-05"
+      url: "tutoria/compiladores/trabalho-05"
     - code: T6
       weight: 4.0
       brief: Geração de código alvo para uma máquina virtual de pilha simplificada.
       due: 19
-      url: "/teaching/lasalle/tutoria/2023/compiladores/trabalho-06"
+      url: "tutoria/compiladores/trabalho-06"
 ---

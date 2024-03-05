@@ -1,6 +1,6 @@
 ---
 title: T6 - Geração de Código Alvo
-subtitle: Compiladores
+section: Compiladores
 layout: lecture
 last_occurrence: "2023/02"
 copy: 2023

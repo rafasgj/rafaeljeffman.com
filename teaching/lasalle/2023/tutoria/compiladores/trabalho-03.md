@@ -1,6 +1,6 @@
 ---
 title: T3 - Definição de Gramática Livre de Contexto para uma Linguagem de Programação
-subtitle: Compiladores
+section: Compiladores
 layout: lecture
 last_occurrence: "2023/02"
 copy: 2023

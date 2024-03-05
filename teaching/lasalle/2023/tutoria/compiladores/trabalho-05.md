@@ -1,6 +1,6 @@
 ---
 title: T5 - Árvore de Derivação e Escopo
-subtitle: Compiladores
+section: Compiladores
 layout: lecture
 last_occurrence: "2023/02"
 copy: 2023

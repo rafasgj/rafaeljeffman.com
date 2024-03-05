@@ -1,6 +1,6 @@
 ---
-title: T1 - Analisador recursivo descendente
-subtitle: Compiladores
+title: T2 - Analisador de expressão com tabela de símbolos
+section: Compiladores
 layout: lecture
 last_occurrence: "2023/02"
 copy: 2023
@@ -11,8 +11,7 @@ institution:
 
 ## Objetivo
 
-Compreender as estruturas básicas de implementação de um parser.
-
+Entender o processo de definição de uma linguagem de programação simples e a implementação utilizando tabelas de símbolos.
 
 ## Tarefas
 
@@ -38,17 +37,21 @@ $$<br/><br/>
 
 onde $+$ representa a operação de soma, $-$ representa a operação de subtração, $\*$ representa a operação de multiplicação e $/$ representa a operação de divisão; e que $[a-z]$ representa um conjunto de caracters ASCII iniciado em $a$ e terminado em $z$, e que $a^{*}$ representa zero ou mais repetições do caracter $a$.
 
-Implemente um avaliador de expressões aritméticas utilizando a gramática apresentada. Para implementar o avaliador, utilize um analisador sintático recursivo descendente para realizar a análise sintática da expressão.
+Alterar a gramática para que seja possível realizar operações de potenciação com o operador $\^$, por exemplo $2\^5 = 32$, e operações de atribuição de valores a identificadores, onde os identificadores podem ser definidos como $id \rightarrow [\_a-zA-Z][\_a-zA-Z0-9]^{\*}$, e que esses identificadores possam ser utilizados nas expressões, por exemplo $a = 2 * 3 + 4\ /\ b$.
 
-Responda também às seguintes questões:
-* Para a gramática apresentada quais são os conjuntos **FIRST** e **FOLLOW**? 
+Altere a [implementação do trabalho T1](trabalho-01) para que o avaliador de expressões utilize a nova gramática. O novo avaliador deve aceitar múltiplas expressões, sendo que cada expressão deve ser definida em uma linha, por exemplo:
+```nohl
+b = 18 * 2
 
+```
 
 ## Artefatos
 
 Deve ser entregue apenas o _link_ para um repositório público no [Github](https://github.com) ou outro serviço de armazenamento de repositórios [Git](https://git-scm.org).
 
 O repositório deverá conter a implementação do trabalho, e um arquivo README (sugere-se o formato Markdown e um arquivo README.md) contendo instruções para a execução do sistema.
+
+A nova gramática deve estar descrita no arquivo README do repositório.
 
 Caso o trabalho inclua questões a serem respondidas, essas questões devem ser respondidas no README.
 
