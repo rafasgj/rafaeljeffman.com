@@ -1,6 +1,6 @@
 ---
 title: Aquiteturas e Processos Distribuídos
-subtitle: Sistemas Distribuídos
+section: Sistemas Distribuídos
 layout: lecture
 last_occurrence: 2023-08-24
 copy: 2023

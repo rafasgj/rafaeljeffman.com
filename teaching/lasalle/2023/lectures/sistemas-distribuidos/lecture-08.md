@@ -1,6 +1,6 @@
 ---
 title: Exercícios
-subtitle: Sistemas Distribuídos
+section: Sistemas Distribuídos
 layout: lecture
 last_occurrence: 2023-21-09
 copy: 2023

@@ -1,6 +1,6 @@
 ---
 title: Comunicação Orientada a Fluxo e Sincronização em _Threads_
-subtitle: Sistemas Distribuídos
+section: Sistemas Distribuídos
 layout: lecture
 last_occurrence: 2023-09-14
 copy: 2023

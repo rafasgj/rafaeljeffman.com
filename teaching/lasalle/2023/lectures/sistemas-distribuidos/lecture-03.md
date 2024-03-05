@@ -1,6 +1,6 @@
 ---
 title: Aula prática sobre virtualização
-subtitle: Sistemas Distribuídos
+section: Sistemas Distribuídos
 layout: lecture
 last_occurrence: 2023-08-17
 copy: 2023

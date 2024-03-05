@@ -1,6 +1,6 @@
 ---
 title: Exercícios e Revisão
-subtitle: Sistemas Distribuídos
+section: Sistemas Distribuídos
 layout: lecture
 last_occurrence: 2023-11-23
 copy: 2023

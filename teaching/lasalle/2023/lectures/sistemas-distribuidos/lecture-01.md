@@ -1,6 +1,6 @@
 ---
 title: Apresentação da Disciplina
-subtitle: Sistemas Distribuídos
+section: Sistemas Distribuídos
 layout: lecture
 last_occurrence: 2023-08-04
 copy: 2023

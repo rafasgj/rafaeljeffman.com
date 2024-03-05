@@ -1,6 +1,6 @@
 ---
 title: Processos Distribuídos e Comunicação
-subtitle: Sistemas Distribuídos
+section: Sistemas Distribuídos
 layout: lecture
 last_occurrence: 
 copy: 2023
