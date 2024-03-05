@@ -1,6 +1,6 @@
 ---
 title: Recursão, Método Master e Árvores Binárias de Pesquisa
-subtitle: Complexidade de Algoritmos e Análise de Desempenho
+section: Complexidade de Algoritmos e Análise de Desempenho
 layout: lecture
 last_occurrence: 2023-09-11
 copy: 2023

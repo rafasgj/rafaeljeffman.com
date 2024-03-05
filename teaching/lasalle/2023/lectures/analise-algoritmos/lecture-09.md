@@ -1,6 +1,6 @@
 ---
 title: Grafos - Parte 1
-subtitle: Complexidade de Algoritmos e Análise de Desempenho
+section: Complexidade de Algoritmos e Análise de Desempenho
 layout: lecture
 last_occurrence: 2023-10-02
 copy: 2023

@@ -1,6 +1,6 @@
 ---
 title: T2 - Implementação de algoritmo utilizando progração dinâmica
-subtitle: Análise de Alogoritmo
+section: Complexidade de Algoritmos e Análise de Desempenho
 layout: lecture
 last_occurrence: "2023/02"
 copy: 2023

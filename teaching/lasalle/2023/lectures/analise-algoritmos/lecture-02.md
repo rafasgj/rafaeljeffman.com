@@ -1,6 +1,6 @@
 ---
 title: Revisão de Conceitos
-subtitle: Complexidade de Algoritmos e Análise de Desempenho
+section: Complexidade de Algoritmos e Análise de Desempenho
 layout: lecture
 last_occurrence: 2023-08-14
 copy: 2023

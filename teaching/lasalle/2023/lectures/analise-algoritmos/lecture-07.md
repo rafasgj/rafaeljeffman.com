@@ -1,6 +1,6 @@
 ---
 title: _Hashing_ e Tabelas _Hash_ (_Hashtables_)
-subtitle: Complexidade de Algoritmos e Análise de Desempenho
+section: Complexidade de Algoritmos e Análise de Desempenho
 layout: lecture
 last_occurrence: 2023-09-18
 copy: 2023

@@ -1,6 +1,6 @@
 ---
 title: Programação Dinâmica
-subtitle: Complexidade de Algoritmos e Análise de Desempenho
+section: Complexidade de Algoritmos e Análise de Desempenho
 layout: lecture
 last_occurrence: 2023-10-30
 copy: 2023

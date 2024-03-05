@@ -1,6 +1,6 @@
 ---
 title: Procura em _Strings_
-subtitle: Complexidade de Algoritmos e Análise de Desempenho
+section: Complexidade de Algoritmos e Análise de Desempenho
 layout: lecture
 last_occurrence: 2023-10-16
 copy: 2023

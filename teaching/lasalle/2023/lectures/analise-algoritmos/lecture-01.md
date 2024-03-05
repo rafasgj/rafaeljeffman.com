@@ -1,6 +1,6 @@
 ---
 title: Apresentação da Disciplina
-subtitle: Complexidade de Algoritmos e Análise de Desempenho
+section: Complexidade de Algoritmos e Análise de Desempenho
 layout: lecture
 last_occurrence: 2023-08-07
 copy: 2023
