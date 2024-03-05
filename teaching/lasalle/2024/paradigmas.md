@@ -57,7 +57,7 @@ lectures:
     - Linguagens de Programação
     - Processo de desenvolvimento de programas
     - Qualidades desejáveis em linguagens de programação
-    lecture: false
+    lecture: true
   - topics:
     - Sintaxe e semântica
     - Processadores de linguagens
