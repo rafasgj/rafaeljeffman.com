@@ -97,6 +97,12 @@ extra_styles:
 3. O que você lembra de álgebra linear e probabilidade e estatística?
 4. Na sua opinião quais os impactos que a Inteligência Artificial pode trazer para o mundo? Qual o raciocínio utilizado para chegar na sua conclusão? Quais os dados que apoiam a sua conclusão?
 
+### Exercícios de Programação
+
+1. Implemente uma lista encadeada em Python
+2. Implemente uma árvore binária de pesquisa em Python
+3. Implemente uma função que verifique se um grafo é ou não conectado em Python
+
 ## Recursos para essa disciplina
 
 ### Bibliografia
