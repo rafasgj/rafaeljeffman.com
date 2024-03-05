@@ -32,7 +32,7 @@ name=${4:-${lectures[${nick}]}}
 institution=${5:-"Universidade LaSalle Canoas"}
 
 BASEDIR="$(dirname $0)/.."
-LECTURE="teaching/lasalle/lectures/${year}/${nick}"
+LECTURE="teaching/lasalle/${year}/lectures/${nick}"
 LECTURE_DIR="${BASEDIR}/${LECTURE}"
 mkdir -p "${LECTURE_DIR}"
 
