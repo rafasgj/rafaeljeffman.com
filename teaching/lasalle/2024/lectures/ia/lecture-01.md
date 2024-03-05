@@ -112,7 +112,7 @@ extra_styles:
 3. HAYKIN, Salmon. **Redes Neurais**. 2<sup>a</sup> Ed. Bookman. Porto Alegre. 2001.
 4. MINSKY, Marvin; PAPERT, Seymour A. **Perceptrons: Expanded Edition**. 4<sup>th</sup> print. MIT Press. Massachussets. 1988 
 5. KOHONEN, Teuvo. **Self-Organizing Maps**. 2<sup>nd</sup> Ed. Springer. Alemanha. 1997.
-6. GOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. [**Depp Learning**](https://www.deeplearningbook.org){:target='\_blank'}. MIT Press. 2016.
+6. GOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. [**Deep Learning**](https://www.deeplearningbook.org){:target='\_blank'}. MIT Press. 2016.
 
 ### Recursos Online
 
