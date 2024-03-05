@@ -27,7 +27,7 @@ extra_styles:
 2. Dinâmica das aulas
     1. Dúvidas
     2. Exibição de contúdo e exercícios em 2 períodos (2+2 _pomodoros_)
-    3. Intervalo de 20 minutes
+    3. Intervalo de 20 minutos
     4. Chamada após o intervalo
 3. Apresentação do Professor
 4. Apresentação dos Alunos (LEX)
