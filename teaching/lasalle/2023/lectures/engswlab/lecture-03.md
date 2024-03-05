@@ -1,6 +1,6 @@
 ---
 title: Casos de Uso
-subtitle: Laboratório de Engenharia de Software
+section: Laboratório de Engenharia de Software
 layout: lecture
 last_occurrence: 2023-08-22
 copy: 2023

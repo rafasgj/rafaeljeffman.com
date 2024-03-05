@@ -1,6 +1,6 @@
 ---
 title: Projeto de Desenvolvimento G2
-subtitle: Lab. de Engenharia de Software
+section: Lab. de Engenharia de Software
 layout: lecture
 copy: 2023
 last_occurrence: 2023

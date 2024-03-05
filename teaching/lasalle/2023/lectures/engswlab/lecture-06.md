@@ -1,6 +1,6 @@
 ---
 title: Controle de Versão e Metodologias Ágeis
-subtitle: Laboratório de Engenharia de Software
+section: Laboratório de Engenharia de Software
 layout: lecture
 last_occurrence: 2023-09-12
 copy: 2023

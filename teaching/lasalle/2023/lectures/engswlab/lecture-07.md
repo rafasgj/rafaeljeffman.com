@@ -1,6 +1,6 @@
 ---
 title: Exercícios
-subtitle: Laboratório de Engenharia de Software
+section: Laboratório de Engenharia de Software
 layout: lecture
 last_occurrence: 2023-09-19
 copy: 2023

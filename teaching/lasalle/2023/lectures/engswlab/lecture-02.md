@@ -1,6 +1,6 @@
 ---
 title: Engenharia de Requisitos
-subtitle: Laboratório de Engenharia de Software
+section: Laboratório de Engenharia de Software
 layout: lecture
 last_occurrence: 2023-08-15
 copy: 2023
