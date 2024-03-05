@@ -1,6 +1,6 @@
 ---
 title: Introdução ao React
-subtitle: Desenvolvimento para dispositivos móveis
+section: Desenvolvimento para dispositivos móveis
 layout: lecture
 last_occurrence: 2023-08-19
 copy: 2023

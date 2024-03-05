@@ -1,6 +1,6 @@
 ---
 title:  Uso de mockups. Manipulação de dados e atualização de tela com React.
-subtitle: Desenvolmimento para Dispositivos Móveis
+section: Desenvolmimento para Dispositivos Móveis
 layout: lecture
 last_occurrence: 
 copy: 2023

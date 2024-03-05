@@ -1,6 +1,6 @@
 ---
 title: Apresentação da Disciplina
-subtitle: Desenvolvimento para dispositivos móveis
+section: Desenvolvimento para dispositivos móveis
 layout: lecture
 date: 2023-08-02
 last_occurrence: 2023-08-03

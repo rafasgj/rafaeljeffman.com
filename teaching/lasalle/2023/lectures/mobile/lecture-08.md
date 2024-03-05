@@ -1,6 +1,6 @@
 ---
 title: Interfaces utilizando listas.
-subtitle: Desenvolvimento para Dispositivos Móveis
+section: Desenvolvimento para Dispositivos Móveis
 layout: lecture
 last_occurrence: 2023-09-22
 copy: 2023

@@ -1,6 +1,6 @@
 ---
 title: Ambientes de Desenvolvimento para dispositivos móveis
-subtitle: Desenvolvimento para Dispositivos Móveis
+section: Desenvolvimento para Dispositivos Móveis
 layout: lecture
 last_occurrence: 2023-07-08
 copy: 2023
