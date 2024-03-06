@@ -34,7 +34,7 @@ institution:
     3. Intervalo de 20 minutos
     4. Chamada após o intervalo
 3. Apresentação do Professor
-4. Apresentação dos Alunos (LEX)
+4. [Apresentação dos Alunos](https://forms.gle/JSzpZpr2krttj8Sp7) (LEX)
     1. Em qual semestre do curso você se posiciona?
     2. Por que você escolheu esse curso?
     3. Você trabalha ou trabalhou na área de TI? Qual cargo você ocupa (ou ocupou)?
