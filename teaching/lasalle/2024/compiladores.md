@@ -53,14 +53,14 @@ lectures:
     - Compiladores, Interpretadores e Transpiladores
     - Máquinas Virtuais
     - Ambientes de Execução
-    - Sintaxe e semântica
-    lecture: false
+    lecture: true
   - topics:
     - Revisão de Linguagens Formais
     - Revisão de Estruturas de Dados
     - Projeto a ser desenvolvido
     - Avaliação dos trabalhos
     - Git e Github
+    - Sintaxe e semântica
     lecture: false
   - topics:
     - Projeto de Linguagem de Programação
@@ -70,28 +70,28 @@ lectures:
     lecture: false
   - topics:
     - Gramáticas livres de contexto
-    - "Entrega **T1**"
     - "Especificação **T2**"
     lecture: false
   - topics:
     - Tradução direcionada por sintaxe
+    - "Data limite para entrega **T1**"
     lecture: false
   - topics:
     - Análise sintática Top-Down
     - Analisador Preditivo Descendente
-    - "Entrega **T2**"
     - "Especificação **T3**"
     lecture: false
   - topics:
     - "Prova **P1**"
+    - "Data limite para entrega **T2**"
     lecture: false
   - topics:
     - Análise sintática Bottom-Up
-    - "Entrega do **T3**"
     - "Especificação do **T4**"
     lecture: false
   - topics:
     - "_Feriado_"
+    - "Data limite para a entrega do **T3**"
     lecture: false
   - topics:
     - Introdução à análise sintática
