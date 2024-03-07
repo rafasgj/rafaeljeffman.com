@@ -34,7 +34,7 @@ institution:
     3. Intervalo de 20 minutos
     4. Chamada após o intervalo
 3. Apresentação do Professor
-4. [Apresentação dos Alunos](https://forms.gle/JSzpZpr2krttj8Sp7) (LEX)
+4. [Apresentação dos Alunos](https://forms.gle/vA8uhSMoVs2qTAWVA) (LEX)
     1. Em qual semestre do curso você se posiciona?
     2. Por que você escolheu esse curso?
     3. Você trabalha ou trabalhou na área de TI? Qual cargo você ocupa (ou ocupou)?
@@ -108,6 +108,18 @@ A relativa simplicidade dos modelos apresentados pela teoria dos autômatos é e
 
 Veja a página sobre [Conjuntos](/teaching/cs/math/sets)
 
+### Lógica Booleana
+
+Veja a página sobre [lógica booleana](/teaching/cs/logic/boolean)
+
+
+### Grafos
+
+> Uma ótima introdução a grafos pode ser encontrada no [Cap. 09 do livro Fundamentals of Computer Science](http://infolab.stanford.edu/~ullman/focs/ch09.pdf){:target="\_blank"}
+
+Veja a página [conceitos sobre Grafos](/teaching/cs/graphs).
+
+
 ### Sequências e Uplas
 
 Uma **sequência** é uma lista de objetos em uma ordem arbitrária. Em geral, descrevemos a lista entre parênteses:
@@ -133,13 +145,6 @@ Note que a definição de uma sequência pode ser utilizada para demonstrar que 
 ### Funções e Relações
 
 Veja a página [Funções e Relações](/teaching/cs/math/functions).
-
-### Grafos
-
-> Uma ótima introdução a grafos pode ser encontrada no [Cap. 09 do livro Fundamentals of Computer Science](http://infolab.stanford.edu/~ullman/focs/ch09.pdf){:target="\_blank"}
-
-Veja a página [conceitos sobre Grafos](/teaching/cs/graphs).
-
 
 ### Cadeias e Linguagens
 
@@ -176,12 +181,9 @@ $$
 Uma **linguagem** é um conjunto de cadeias.
 
 
-### Lógica Booleana
-
-Veja a página sobre [lógica booleana](/teaching/cs/logic/boolean)
-
-
 ## Questões
+
+## Conjuntos
 
 1. Forneça uma descrição informal para os seguintes conjuntos:
     * $\\{1, 3, 5, 7, \dots\\}$
@@ -213,7 +215,14 @@ Veja a página sobre [lógica booleana](/teaching/cs/logic/boolean)
 
 4. Se um conjunto $A$ tem $a$ elementos e um conjunto $B$ tem $b$ elementos, quantos elementos estão em $A \times B$? Explique a sua resposta.
 
-5. ...
+
+## Exercícios de Programação
+
+1. Implemente uma lista encadeada em Python
+2. Implemente uma árvore binária de pesquisa em Python
+3. Implemente uma função que verifique se um grafo é ou não conectado em Python
+4. Implemente um programa em Python que abra um arquivo texto e crie um histograma das palavras existentes no texto. Você pode testar o programa no livro [Dom Casmurro](/files/lasalle/domcasmurro.txt).
+
 
 ## Preparação para a próxima aula
 
