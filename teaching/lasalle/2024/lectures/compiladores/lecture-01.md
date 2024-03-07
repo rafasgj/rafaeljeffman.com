@@ -83,7 +83,7 @@ extra_styles:
     * Loader, Linker
 * Fases de um compilador
 
-![Fases de compilação](/images/compiler_sebesta.png)
+![Fases de compilação](/images/compiler_sebesta.png){:style="max-width: 80vw !important; min-height: 700px !important;"}
 
 
 ## Revisão de Conteúdos
