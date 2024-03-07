@@ -1,0 +1,28 @@
+\documentclass[tikz,convert={outfile=../images/\jobname.svg}]{standalone}
+\usetikzlibrary{automata, arrows.meta, positioning}
+\begin{document} 
+\begin{tikzpicture}[
+    thick,
+    node distance={35mm},
+    auto
+]
+
+% nodes
+\node[state] (1) {1};
+\node[state] (2) [node distance=3cm, right of= 1]  {2};
+\node[state] (3) [node distance=2cm, below of= 1] {3};
+\node[state] (4) [node distance=2cm, below of= 2] {4};
+
+% path
+\path
+    (1) edge (2)
+    (1) edge (3)
+    (1) edge (4)
+    (2) edge (3)
+    (2) edge (4)
+    (3) edge (4)
+    ;   
+
+\end{tikzpicture} 
+\end{document}
+

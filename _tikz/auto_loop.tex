@@ -1,0 +1,16 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{graphs, arrows.meta, quotes} % , positioning}
+\begin{document} 
+
+\tikzset{every loop/.style={}}
+
+\tikz[
+    line width=1.5mm,
+    arrows/.style={length=10mm}
+]
+\graph[simple, no placement, nodes={font=\Large, minimum size=12mm, circle, draw, thick}, edges={draw, thick}] {
+    1[at={(0:0)}] --[loop,"a"'] 1;
+};
+
+\end{document}
+

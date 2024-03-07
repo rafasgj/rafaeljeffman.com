@@ -13,6 +13,7 @@ feed:
 exclude:
   - _todo/
   - _utils/
+  - _tikz/
   - .vendor/
   - .pre-commit-config.yaml
   - .gitignore

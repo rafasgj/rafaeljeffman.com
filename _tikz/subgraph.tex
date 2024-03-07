@@ -1,0 +1,14 @@
+\documentclass[tikz,convert={outfile=../images/\jobname.svg}]{standalone}
+\usetikzlibrary{graphs, graphs.standard}
+
+\begin{document}
+
+\tikz \graph [nodes={circle,draw}, radius=2cm] {
+    subgraph K_n [n=6, clockwise];
+    1 -- [thick, red] 2;
+    2 -- [thick, red] 3;
+    3 -- [thick, red] 5;
+    5 -- [thick, red] 2;
+};
+
+\end{document}

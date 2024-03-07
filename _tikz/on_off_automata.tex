@@ -1,0 +1,19 @@
+\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+\usetikzlibrary{automata, arrows.meta, positioning}
+\begin{document} 
+\begin{tikzpicture}[
+    thick,
+    node distance={35mm},
+    auto
+]
+
+\node[state, initial, initial text = {}, minimum size=1.8cm] (q0) {Ligado}; 
+\node[state, minimum size=1.8cm] (q1) [right of=q0] {Desligado};
+
+\path[->]
+    (q0) edge [bend left] node {off} (q1)
+    (q1) edge [bend left] node {on} (q0)
+    ;
+
+\end{tikzpicture} 
+\end{document}

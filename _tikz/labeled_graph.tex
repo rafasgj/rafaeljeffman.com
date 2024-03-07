@@ -1,0 +1,22 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{graphs, arrows.meta, quotes} % , positioning}
+\begin{document} 
+
+\tikz[
+    line width=1.5mm,
+    arrows/.style={length=10mm}
+]
+\graph[simple, no placement, nodes={font=\Large, minimum size=12mm, circle, draw, thick}, edges={draw, thick}] {
+    1[at={(0:0)}] --["a"] 2[at={(4,0)}];
+    1 --["b"] 3[at={(0, 2.5)}];
+    1 --["c", near start] 4[at={(4, 2.5)}];
+    3 --["d", near start] 2;
+    3 --["e"] 4;
+    2 --["f"] 4;
+    6[at={(6, 4.25)}] --["g"] 4;
+    5[at={(2, 4.25)}] --["h"] 6;
+    2 --[bend right, "i"'] 6;
+};
+
+\end{document}
+
