@@ -16,31 +16,40 @@ extra_styles:
 1. Apresentação da disciplina
     1. Plano de Ensino (previsão)
     2. Avaliação
-        * Baseada em entregas individuais
         1. Exercícios
         2. Trabalhos de implementação
         3. Provas G1 e G2
         4. Prova de substituição de grau
+        5. ChatGPT e assemelhados
     3. Logística da Disciplina
-        * Ferramentas Princais: Lápis, papel e caneta
+        * Dinâmica das aulas
+            1. Dúvidas
+            2. Exibição de conteúdo e exercícios em 2 períodos (2+2 _pomodoros_)
+            3. Intervalo de 20 minutos
+            4. Chamada após o intervalo
+        * Ferramentas: Computador de inteligência natural, lápis, papel e caneta
         * Outras ferramentas: Python, Git, Github
-2. Dinâmica das aulas
-    1. Dúvidas
-    2. Exibição de contúdo e exercícios em 2 períodos (2+2 _pomodoros_)
-    3. Intervalo de 20 minutos
-    4. Chamada após o intervalo
-3. Apresentação do Professor
-4. Apresentação dos Alunos (LEX)
+2. Apresentação do Professor
+3. Apresentação dos Alunos (LEX)
     1. Em qual semestre do curso você se posiciona?
     2. Por que você escolheu esse curso?
     3. Você trabalha ou trabalhou na área de TI? Qual cargo você ocupa (ou ocupou)?
     4. Quais linguagens de programação você consegue programar?
     5. O que você espera dessa disciplina?
-5. Organize-se, você tem pouco tempo e muitas atividades!
+    6. O que te atrapalha para estudar?
+    7. O que tu gosta que o professor faça em aula?
+    8. O que tu não gosta que o professor faça em aula?
+4. Organize-se, você tem pouco tempo e muitas atividades!
     1. Bullet Journal
     2. TODO-list
     3. Pomodoro
     4. GTD
+
+
+* Qual é o teu objetivo?
+* O que tu faz para atingir o teu objetivo?
+{:class="lettered" style="font-size:150%"}
+
 
 ## Inteligência Artificial
 
@@ -73,7 +82,7 @@ extra_styles:
         <a title="File:ELIZA conversation.jpg, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png"><img alt="ELIZA conversation" src="https://upload.wikimedia.org/wikipedia/commons/7/79/ELIZA_conversation.png"></a>
     * 70s
         * Sistemas Especialistas
-            * _Mycyn system_ (75): identificava bacterias causando infecções e recomendava o uso de antibióticos com a dosagem ajustada ao peso do paciente. A taxa de aceitação dos resultados do sistema, por especialistas era comparável (até maior) a taxa de recomendações de outros especialistas humanos. O sistema nunca entrou em operação por causa de questões éticas e legais acerca do uso de computadores na medicina, principalmente em relação à responsabilidade dos médicos no caso de diagnóstico errado do computador. O sistema influenciou uma série de outros sistemas baseados em regras.
+            * _Mycyn system_ (75): identificava bactérias causando infecções e recomendava o uso de antibióticos com a dosagem ajustada ao peso do paciente. A taxa de aceitação dos resultados do sistema, por especialistas era comparável (até maior) a taxa de recomendações de outros especialistas humanos. O sistema nunca entrou em operação por causa de questões éticas e legais acerca do uso de computadores na medicina, principalmente em relação à responsabilidade dos médicos no caso de diagnóstico errado do computador. O sistema influenciou uma série de outros sistemas baseados em regras.
     * Fim dos 70s, início dos 80s
         : Primeiro inverno da IA. Poder de processamento limitado, intratabilidade e explosão combinatorial, raciocínio e senso comum
     * 80s
@@ -129,7 +138,7 @@ extra_styles:
 11. [Git - Guia prático](https://rogerdudler.github.io/git-guide/index.pt_BR.html){:target="\_blank"}: Um guia bem direto, sem muita explicação.
 12. [Github - Início Rápido](https://docs.github.com/pt/get-started/quickstart){:target="\_blank"}
 
-### Videos
+### Vídeos
 
 1. [Aula Inaugural dos Cursos de TI e Inovação Unilasalle 2022/2](https://www.youtube.com/watch?v=pxsdiyHgZHs){:target="\_blank"}
 2. [Motivação para Estudar - Prof. Clóvis de Barros Filho](https://www.youtube.com/watch?v=TRPBY_lxJfE){:target="\_blank"}

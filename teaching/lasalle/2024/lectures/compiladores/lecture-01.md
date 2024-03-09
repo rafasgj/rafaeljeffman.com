@@ -14,31 +14,25 @@ extra_styles:
 
 ## Agenda
 
-1. Plano de Ensino (previsão)
-2. Avaliação
-    * Baseada em entregas individuais
-    1. Exercícios
-    2. Trabalhos de implementação
-    3. Provas G1 e G2
-    4. Prova de substituição de grau
-    5. ChatGPT e assemelhados
-3. Logística da Disciplina
-    * Divisão da aula
-        * Solução de dúvidas, correção de exercícios (15 min)
-        * Exposição de conteúdo (1h)
-        * Intervalo (30 min)
-        * Exposição de conteúdo / Exercícios (1h)
-        * Preparação para a próxima aula (15 min)
-    * Ferramentas: Computador de inteligência natural, lápis, papel e caneta
-    * Outras ferramentas: Python, Git, Github
-    * Mais ferramentas importantes: [PLY (Python Lex-Yacc)](http://www.dabeaz.com/ply/)
-2. Dinâmica das aulas
-    1. Dúvidas
-    2. Exibição de contúdo e exercícios em 2 períodos (2+2 _pomodoros_)
-    3. Intervalo de 20 minutos
-    4. Chamada após o intervalo
-3. Apresentação do Professor
-4. [Apresentação dos Alunos](https://forms.gle/yYRXLrj8hLqzKf1T7) (LEX)
+1. Apresentação da disciplina
+    1. Plano de Ensino (previsão)
+    2. Avaliação
+        1. Exercícios
+        2. Trabalhos de implementação
+        3. Provas G1 e G2
+        4. Prova de substituição de grau
+        5. ChatGPT e assemelhados
+    3. Logística da Disciplina
+        * Dinâmica das aulas
+            1. Dúvidas
+            2. Exibição de conteúdo e exercícios em 2 períodos (2+2 _pomodoros_)
+            3. Intervalo de 20 minutos
+            4. Chamada após o intervalo
+        * Ferramentas: Computador de inteligência natural, lápis, papel e caneta
+        * Outras ferramentas: Python, Git, Github
+        * Mais ferramentas importantes: [PLY (Python Lex-Yacc)](http://www.dabeaz.com/ply/)
+2. Apresentação do Professor
+3. Apresentação dos Alunos (LEX)
     1. Em qual semestre do curso você se posiciona?
     2. Por que você escolheu esse curso?
     3. Você trabalha ou trabalhou na área de TI? Qual cargo você ocupa (ou ocupou)?
@@ -47,7 +41,7 @@ extra_styles:
     6. O que te atrapalha para estudar?
     7. O que tu gosta que o professor faça em aula?
     8. O que tu não gosta que o professor faça em aula?
-5. Organize-se, você tem pouco tempo e muitas atividades!
+4. Organize-se, você tem pouco tempo e muitas atividades!
     1. Bullet Journal
     2. TODO-list
     3. Pomodoro
@@ -115,7 +109,7 @@ extra_styles:
 
 1. Livro do Dragão, Capítulo 1
 2. Capítulo 1 do livro
-    * SEBESTA, Robert. [**Conceitos de Lingagens de Programação**](https://integrada.minhabiblioteca.com.br/reader/books/9788582604694){:target="\_blank"}. 11<sup>a</sup>. Ed. Bookman.Porto Alegre, 2018.
+    * SEBESTA, Robert. [**Conceitos de Linguagens de Programação**](https://integrada.minhabiblioteca.com.br/reader/books/9788582604694){:target="\_blank"}. 11<sup>a</sup>. Ed. Bookman.Porto Alegre, 2018.
 
 
 ## Material para a próxima aula
@@ -145,7 +139,7 @@ extra_styles:
 11. [Git - Guia prático](https://rogerdudler.github.io/git-guide/index.pt_BR.html){:target="\_blank"}: Um guia bem direto, sem muita explicação.
 12. [Github - Início Rápido](https://docs.github.com/pt/get-started/quickstart){:target="\_blank"}
 
-### Videos
+### Vídeos
 
 1. [Aula Inaugural dos Cursos de TI e Inovação Unilasalle 2022/2](https://www.youtube.com/watch?v=pxsdiyHgZHs){:target="\_blank"}
 2. [Motivação para Estudar - Prof. Clóvis de Barros Filho](https://www.youtube.com/watch?v=TRPBY_lxJfE){:target="\_blank"}

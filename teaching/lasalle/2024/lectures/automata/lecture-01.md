@@ -11,30 +11,24 @@ institution:
 
 ## Apresentação da disciplina
 
-1. Plano de Ensino
-2. Avaliação
-    * Baseada em entregas individuais
-    1. Exercícios
-    2. Trabalhos de implementação
-    3. Provas G1 e G2
-    4. Prova de substituição de grau
-    5. ChatGPT e assemelhados
-3. Logística da Disciplina
-    * Divisão da aula
-        * Solução de dúvidas, correção de exercícios (15 min)
-        * Exposição de conteúdo (1h)
-        * Intervalo (30 min)
-        * Exposição de conteúdo / Exercícios (1h)
-        * Preparação para a próxima aula (15 min)
-    * Ferramentas: Computador de inteligência natural, lápis, papel e caneta
-    * Outras ferramentas: Python, Git, Github
-2. Dinâmica das aulas
-    1. Dúvidas
-    2. Exibição de conteúdo e exercícios em 2 períodos (2+2 _pomodoros_)
-    3. Intervalo de 20 minutos
-    4. Chamada após o intervalo
-3. Apresentação do Professor
-4. [Apresentação dos Alunos](https://forms.gle/vA8uhSMoVs2qTAWVA) (LEX)
+1. Apresentação da disciplina
+    1. Plano de Ensino (previsão)
+    2. Avaliação
+        1. Exercícios
+        2. Trabalhos de implementação
+        3. Provas G1 e G2
+        4. Prova de substituição de grau
+        5. ChatGPT e assemelhados
+    3. Logística da Disciplina
+        * Dinâmica das aulas
+            1. Dúvidas
+            2. Exibição de conteúdo e exercícios em 2 períodos (2+2 _pomodoros_)
+            3. Intervalo de 20 minutos
+            4. Chamada após o intervalo
+        * Ferramentas: Computador de inteligência natural, lápis, papel e caneta
+        * Outras ferramentas: Python, Git, Github
+2. Apresentação do Professor
+3. Apresentação dos Alunos (LEX)
     1. Em qual semestre do curso você se posiciona?
     2. Por que você escolheu esse curso?
     3. Você trabalha ou trabalhou na área de TI? Qual cargo você ocupa (ou ocupou)?
@@ -43,19 +37,16 @@ institution:
     6. O que te atrapalha para estudar?
     7. O que tu gosta que o professor faça em aula?
     8. O que tu não gosta que o professor faça em aula?
-5. Organize-se, você tem pouco tempo e muitas atividades!    
+4. Organize-se, você tem pouco tempo e muitas atividades!
     1. Bullet Journal
     2. TODO-list
     3. Pomodoro
     4. GTD
-    
+
+
 * Qual é o teu objetivo?
 * O que tu faz para atingir o teu objetivo?
 {:class="lettered" style="font-size:150%"}
-
-<!--
-Formulário: https://forms.gle/ftfAfqGZgMHCjcNKA
--->
 
 --------
 
@@ -73,7 +64,7 @@ Outras questões que surgem ao longo dessa disciplina são:
 
 Durante os anos de 1930-1950, matemáticos estavam preocupados em responder a questão "o que é computável?".
 
-Nesse período foram criadas as bases para o que hoje chamamos de Ciência da Computação. Foram estudados problemas como verificação de programas e a verificação da veracidade matemática (que não são computáveis), e foram criados modelos computacionais, como os automatos finitos e a Máquina de Turing, na tentativa de formalizar o problema.
+Nesse período foram criadas as bases para o que hoje chamamos de Ciência da Computação. Foram estudados problemas como verificação de programas e a verificação da veracidade matemática (que não são computáveis), e foram criados modelos computacionais, como os autômatos finitos e a Máquina de Turing, na tentativa de formalizar o problema.
 
 Desde os anos 1960, o principal problema que tentamos responder é "o que é computável na prática?", onde obtemos formas de medir o tempo ou o espaço necessário para se chegar a uma solução de um problema que sabemos ser computável. Utilizando os mesmos formalismos, tentamos entender por que alguns problemas podem ser resolvidos de forma eficiente (como a ordenação de elementos) e outros são tão complexos que se tornam intratáveis (como o problema do Caixeiro Viajante).
 
@@ -130,7 +121,7 @@ $$
 
 Em um conjunto, a ordem e a repetição de objetos não são relevantes, mas em uma sequência sim. A lista $\(14, 93, 22\)$ não é igual a lista $\(93, 14, 22\)$, nem a lista $\(a, b, c\)$ é igual a lista $\(a, a, b, b, b, c\)$.
 
-Como no casos dos conjuntos, sequências poder ser finitas ou infinitas. As sequências finitas são frequentemente chamadas de **uplas**. Uma sequência com $k$ elementos é uma _k-upla_, logo, a sequência $\(1, 2, 3\)$ é uma _3-upla_, e a sequência $\(a, b\)$ uma 2-upla. Uma _2-upla_ é normalmente chamada de **par*.
+Como no casos dos conjuntos, sequências poder ser finitas ou infinitas. As sequências finitas são frequentemente chamadas de **uplas**. Uma sequência com $k$ elementos é uma _k-upla_, logo, a sequência $\(1, 2, 3\)$ é uma _3-upla_, e a sequência $\(a, b\)$ uma 2-upla. Uma _2-upla_ é normalmente chamada de **par**.
 
 Sequências e conjuntos não precisam ser homogêneos, podendo conte qualquer tipo de objeto, como em
 
@@ -244,7 +235,7 @@ Uma **linguagem** é um conjunto de cadeias.
 
 1. [MIT 18.040j Theory of Computation](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/){:target="\_blank"} - Michael Sipser
 2. [MIT 6.042j Mathematics for Computer Science 2019](https://openlearninglibrary.mit.edu/courses/course-v1:OCW+6.042J+2T2019/course/){:target="\_blank"} - _Unit 1 - Proofs_ (2019)
-3. [MIT 6.042j Mathematics for Computer Science 2010](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010){:target="\_blank"} - Inclui video aulas (2010)
+3. [MIT 6.042j Mathematics for Computer Science 2010](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010){:target="\_blank"} - Inclui vídeo aulas (2010)
 4. [Stanford CS154 - Introduction to the Theory of Computation 2020](https://www.youtube.com/playlist?list=PLjG2IDGftWft9Y11xC0sfgeT5jyTJqB-i){:target="\_blank"} - Omer Reingold (2020)
 
 ### Tutoriais Python
@@ -264,7 +255,7 @@ Uma **linguagem** é um conjunto de cadeias.
 2. [Git - Guia prático](https://rogerdudler.github.io/git-guide/index.pt_BR.html){:target="\_blank"}: Um guia bem direto, sem muita explicação.
 3. [Github - Início Rápido](https://docs.github.com/pt/get-started/quickstart){:target="\_blank"}
 
-### Videos
+### Vídeos
 
 1. [Aula Inaugural dos Cursos de TI e Inovação Unilasalle 2022/2](https://www.youtube.com/watch?v=pxsdiyHgZHs){:target="\_blank"}
 2. [Motivação para Estudar - Prof. Clóvis de Barros Filho](https://www.youtube.com/watch?v=TRPBY_lxJfE){:target="\_blank"}
