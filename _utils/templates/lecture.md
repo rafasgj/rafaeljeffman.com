@@ -16,12 +16,13 @@ institution:
     * Subitem
 2. Another item
 
-
-## Questões
+### Questões
 
 1. Questão sobre o assunto.
 2. Outra questão sobre o assunto.
 3. Ideia de implementação sobre o assunto.
+
+## Preparação para a próxima aula
 
 
 ## Recursos para essa aula
