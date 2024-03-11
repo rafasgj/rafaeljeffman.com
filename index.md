@@ -29,9 +29,9 @@ cards:
     link: /teaching/lasalle
     content: |
       * [Inteligência Artificial](/teaching/lasalle/2024/ia)
-      * [Linguagens Formais e Autômatos](/teaching/lasalle/2024/automata)
-      * [Compiladores](/teaching/lasalle/2024/compiladores)
       * [Paradigmas de Programação](/teaching/lasalle/2024/paradigmas)
+      * [Compiladores](/teaching/lasalle/2024/compiladores)
+      * [Linguagens Formais e Autômatos](/teaching/lasalle/2024/automata)
   - title: Unilasalle - Tutorias
     link: /teaching/lasalle
     content: |
