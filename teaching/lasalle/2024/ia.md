@@ -54,11 +54,14 @@ lectures:
     - O que é a Inteligência Artificial?
     lecture: true
   - topics:
-    - Raciocínio
-    - Solução de Problemas
-    - Sistemas especialistas baseados em regras
-    lecture: false
+    - Sistemas inteligentes
+    - Multidisciplinariedade e fundamentos da Inteligência Artificial
+    - Estado da Arte
+    - Riscos e Benefícios da Inteligência Artificial
+    lecture: true
   - topics:
+    - Agentes Inteligentes
+    - Árvores E-Ou, Árvores de Objetivos 
     - "Algoritmos de Busca: Busca em Profundidade, Hill Climbing, Beam Search"
     lecture: false
   - topics:
