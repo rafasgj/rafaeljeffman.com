@@ -42,6 +42,8 @@ references:
     - "Bryan O'Sullivan, John Goerzen e Don Steward. [Real World Haskell](http://book.realworldhaskell.org/read) - O'Reilly"
   "Recursos _online":
     - "[Paradigmas de Linguagem de Programação](https://www.youtube.com/playlist?list=PL8lS5-l2_3cfYaFDK_zBCZQo70h4orszf) - canal _Tu quer saber mais?_ do YouTube."
+  "Tutoriais":
+    - "[O manual do iniciante em C](https://www.freecodecamp.org/portuguese/news/o-manual-do-iniciante-em-c-aprenda-o-basico-sobre-a-linguagem-de-programacao-c-em-apenas-algumas-horas/): aprenda o básico sobre a linguagem de programação C em apenas algumas horas"
 grading:
   g1:
     t1: 3.0
@@ -56,44 +58,45 @@ lectures:
     - Apresentação da Disciplina
     - Linguagens de Programação
     - Processo de desenvolvimento de programas
-    - Qualidades desejáveis em linguagens de programação
     lecture: true
   - topics:
+    - Qualidades desejáveis em linguagens de programação
     - Sintaxe e semântica
     - Processadores de linguagens
     - Compilação e interpretação
     - Máquinas virtuais
-    - Revisão de estruturas de dados, algoritmos e programação
-    - Lingagens de Programação Imperativas (C e ASM)
-    lecture: false
+    lecture: true
   - topics:
+    - Lingagens de Programação Imperativas
     - Modelo de memória de C
-    - Implementação de um array dinâmico genérico em C
-    - O problema da Posse de Ponteiros
+    - Implementação de um array dinâmico em C
     lecture: false
   - topics:
-    - Programação genérica em C++
-    - Geração de código em C++
+    - Geração de código
+    - Ponteiros em C
+    - Tipos de Dados Genéricos em C.
+    - Pilhas e Filas
     lecture: false
   - topics:
     - Lógica de Predicados
     - Programação em Lógica
     - Linguagem de programação Prolog
-    - "Prazo final para a entrega do **T1**"
     lecture: false
   - topics:
     - Provas de teoremas
-    - Processamento de linguagem natural
+    - Algoritmos em Prolog
+    - Motor de inferência em Prolog
+    - "Prazo final para a entrega do **T1**"
     lecture: false
   - topics:
     - Exemplos e exercícios em Prolog.
     lecture: false
   - topics:
     - Exercícios e revisão
-    - "Prazo final para a entrega do **T2**"
     lecture: false
   - topics:
     - "Prova **P2**"
+    - "Prazo final para a entrega do **T2**"
     lecture: false
   - topics:
     - Tipos de dados primitivos, estruturados e compostos"
