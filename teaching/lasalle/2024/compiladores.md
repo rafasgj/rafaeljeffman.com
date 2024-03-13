@@ -45,7 +45,8 @@ references:
     - "AHO, Alfred V.; LAM, Monica S.; SETHI, Ravi; ULLMAN, Jeffrey B. **Compilers: Principles, Techniques, & Tools** 2<sup>a</sup> Ed. Addisson Wesley. 2006. (_Livro do Dragão Roxo_)"
     - "LOUDEN, Kenneth C. [**Compiladores : princípios e práticas**](https://integrada.minhabiblioteca.com.br/reader/books/9788522128532){:target='_blank'}. Cengage Learning, 2004."
   "recursos online":
-    - "[CS143 Compilers](https://web.stanford.edu/class/cs143/) (Stanford)"
+    - "[CS143 Compilers](https://web.stanford.edu/class/cs143/) (Stanford - en)"
+    - "[CS143 Compiles - video aulas](https://www.youtube.com/watch?v=SNWHmnWzJAI&list=PLoCMsyE1cvdUZRe1udlyjpzTww1U5olL2) (Stanford - en) - Os vídeos são legendados automaticamente pelo YouTube, porém a legenda é bem boa, mesmo no caso da tradução automática para português, que é bem aceitável."
 lectures:
   - topics:
     - Apresentação da disciplina
@@ -55,30 +56,32 @@ lectures:
     - Ambientes de Execução
     lecture: true
   - topics:
-    - Revisão de Linguagens Formais
     - Revisão de Estruturas de Dados
+    - Estrutura de um compilador
+    - Características de Linguagens de Programação
+    - Sintaxe e semântica
+    lecture: true
+  - topics:
+    - Análise léxica
+    - Implementação de um analisador léxico
     - Projeto a ser desenvolvido
     - Avaliação dos trabalhos
     - Git e Github
-    - Sintaxe e semântica
-    lecture: false
-  - topics:
-    - Projeto de Linguagem de Programação
-    - Análise léxica
-    - Implementação de um analisador léxico
     - "Especificação **T1**"
     lecture: false
   - topics:
     - Gramáticas livres de contexto
-    - "Especificação **T2**"
-    lecture: false
-  - topics:
+    - Projeto de Linguagem de Programação
     - Tradução direcionada por sintaxe
-    - "Data limite para entrega **T1**"
     lecture: false
   - topics:
     - Análise sintática Top-Down
     - Analisador Preditivo Descendente
+    - "Data limite para entrega **T1**"
+    - "Especificação **T2**"
+    lecture: false
+  - topics:
+    - Exercícios de Revisão
     - "Especificação **T3**"
     lecture: false
   - topics:

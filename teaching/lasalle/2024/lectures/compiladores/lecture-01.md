@@ -100,7 +100,8 @@ extra_styles:
 1. Implemente uma lista encadeada em Python
 2. Implemente uma árvore binária de pesquisa em Python
 3. Implemente uma função que verifique se um grafo é ou não conectado em Python
-4. Implemente um programa em Python que abra um arquivo texto e crie um histograma das palavras existentes no texto, ignorando pontuações, números de capítulos, etc. Você pode testar o programa no livro [Dom Casmurro](/files/lasalle/domcasmurro.txt).
+4. <span id="exercicio-histograma-texto">Implemente</span> um programa em Python que abra um arquivo texto e crie um histograma das palavras existentes no texto, ignorando pontuações, números de capítulos, etc. Você pode testar o programa no livro [Dom Casmurro](/files/lasalle/domcasmurro.txt)
+
     * Quão eficiente é o seu programa em relação ao tempo de processamento?
     * Quão eficiente é o seu programa em relação ao uso de memória?
 
@@ -135,9 +136,10 @@ extra_styles:
 
 ### Tutoriais do Git
 
-10. [Pro Git](https://git-scm.com/book/pt-br/v2){:target="\_blank"} (Tradução parcial do livro para português do Brasil)
-11. [Git - Guia prático](https://rogerdudler.github.io/git-guide/index.pt_BR.html){:target="\_blank"}: Um guia bem direto, sem muita explicação.
-12. [Github - Início Rápido](https://docs.github.com/pt/get-started/quickstart){:target="\_blank"}
+1. [Pro Git](https://git-scm.com/book/pt-br/v2){:target="\_blank"} (Tradução parcial do livro para português do Brasil)
+2. [Git - Guia prático](https://rogerdudler.github.io/git-guide/index.pt_BR.html){:target="\_blank"}: Um guia bem direto, sem muita explicação.
+3. [Github - Início Rápido](https://docs.github.com/pt/get-started/quickstart){:target="\_blank"}
+4. [Git Tutorial](https://www.w3schools.com/git/default.asp) (W3Schools - en)
 
 ### Vídeos
 
