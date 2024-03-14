@@ -52,7 +52,7 @@ references:
   bibliografia:
     - "SIPSER, Michael. [**Introdução a Teoria da Computação**](https://integrada.minhabiblioteca.com.br/#/books/9788522108862/){:target='_blank'}. Cengage Learning. 2015"
     - "Menezes, Paulo Blath. [**Linguagens Formais e Autômatos**](https://integrada.minhabiblioteca.com.br/reader/books/9788577807994){:_target='_blank'}. 6<sup>a</sup> ed. Bookman, 2011."
-    - "HOPCROFT, John E.; ULLMAN, Jeffrey D.; MOTWANI, Rajeev. **Introdução à Teoria de Autômatos, Linguagens e Computação**. Tradução da 2<sup>a</sup> Ed. Elsevier, 2002."
+    - "<span id='hopcroft'>HOPCROFT, John E.; ULLMAN, Jeffrey D.; MOTWANI, Rajeev</span>. **Introdução à Teoria de Autômatos, Linguagens e Computação**. Tradução da 2<sup>a</sup> Ed. Elsevier, 2002."
     - "LEHMAN, Eric; LEIGHTON, F. Thomson; MAYER, Albert R. [**Mathematics for Computer Science**](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf). MIT. 2015"
     - "AHO & ULLMAN. [**Foundations of Computer Science**](http://infolab.stanford.edu/~ullman/focs.html) - fora de catálogo."
   "recursos _online_":
@@ -72,7 +72,7 @@ lectures:
   - topics:
     - Revisão de conceitos básicos
     - Demonstrações e Provas
-    lecture: false
+    lecture: true
   - topics:
     - Demonstrações e Provas
     lecture: false

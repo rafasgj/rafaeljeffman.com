@@ -218,9 +218,9 @@ Uma **linguagem** é um conjunto de cadeias.
 ## Preparação para a próxima aula
 
 1. [Livro do Sipser](#sipser), seções [`0.3`](https://integrada.minhabiblioteca.com.br/reader/books/9788522108862/pageid/39){:target="\_blank"} e [`0.4`](https://integrada.minhabiblioteca.com.br/reader/books/9788522108862/pageid/43){:target="\_blank"} .
-2. [Livro do Hopcroft](#hopcroft), capítulo 1.
+2. [Livro do Hopcroft](#hopcroft), capítulo 1, seções 1.1 até 1.4.
 3. Aulas 1 e 2 de [MIT 6.042j Mathematics for Computer Science 2010](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/){:target="\_blank"}
-4. Aulas .... de [MIT 6.042j Mathematics for Computer Science 2019](https://openlearninglibrary.mit.edu/courses/course-v1:OCW+6.042J+2T2019/course/){:target="\_blank"}
+4. Videos "Intro to Proofs" partes 1 e 2, de [MIT 6.042j Mathematics for Computer Science 2019](https://openlearninglibrary.mit.edu/courses/course-v1:OCW+6.042J+2T2019/course/){:target="\_blank"}
 
 ## Recursos para essa disciplina
 

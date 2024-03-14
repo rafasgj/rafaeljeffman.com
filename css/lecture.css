@@ -3,6 +3,6 @@ img {
     text-align: center;
     display: block;
     max-height: 50vh;
-    max-width: 60vw;
+    max-width: 72ch;
     min-width: 20vw;
 }
