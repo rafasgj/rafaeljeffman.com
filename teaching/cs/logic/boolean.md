@@ -47,7 +47,7 @@ Todas as operações booleanas podem ser representadas utilizando-se apenas as o
 
 $$
 \begin{align}
-\text{P} \lor \text{Q} & & & \lnot(\lnot\text{P}\land\text{Q}) \\
+\text{P} \lor \text{Q} & & & \lnot(\lnot\text{P}\land\lnot\text{Q}) \\
 \text{P} \to \text{Q} & & &  \lnot\text{P}\lor\text{Q} \\
 \text{P} \leftrightarrow \text{Q} & & & (\text{P}\to\text{Q})\land(\text{Q}\to\text{P}) \\
 \text{P} \oplus \text{Q} & & & \lnot(\text{P}\leftrightarrow\text{Q})
