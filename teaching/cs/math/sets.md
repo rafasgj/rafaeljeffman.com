@@ -94,7 +94,7 @@ Para que um conjunto $A$ seja subconjunto do conjunto $B$ é necessário que a s
 
 $$ x \in A \Longrightarrow x \in B $$
 
-Graficamente um subconjunto $A$ de um subconjunto $B$ pode ser visto como:
+Graficamente um subconjunto $A$ de um conjunto $B$ pode ser visto como:
 
 <div class="image">
     <svg height="175" width="185" class="teaching-svg">
@@ -120,7 +120,7 @@ Dados os conjuntos $A$ e $B$ e as relações:
 
 $$
 \begin{eqnarray}
-A \in B & \\
+A \subseteq B & \\
 b \notin A & \\
 b \in B
 \end{eqnarray}
@@ -265,11 +265,11 @@ $$ \thicksim\! A = \{ x \:|\: x \in U \land x \notin A \} $$
 
 <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     <g>
-        <use xlink:href="#circle_right" stroke-width="1.5" stroke="#222" fill="url(#gradient-fill)" mask="url(#mask_right)" />
-        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#bbb" fill="#fff" mask="url(#mask_left)" />
-        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#222" fill="#fff" clip-path="url(#clip_right)" />
-        <text x="70" y="105" font-weight="bolder" font-size="150%">A</text>
-        <text x="200" y="105" font-weight="bolder" font-size="150%">B</text>
+        <rect x="0" y="0" width="100%" height="100%" id="universe" fill="" stroke="" />
+        <use xlink:href="#universe" stroke-width="1.5" stroke="#222" fill="url(#gradient-fill)" />
+        <use xlink:href="#circle_left" stroke-width="1.5" stroke="#bbb" fill="#fff" />
+        <text x="85" y="105" font-weight="bolder" font-size="150%">A</text>
+        <text x="220" y="105" font-weight="bolder" font-size="150%">U</text>
     </g>
 </svg>
 
