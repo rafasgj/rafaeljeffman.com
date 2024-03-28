@@ -62,5 +62,11 @@ date: $(date +"%Y-%m-%d")
 abstract:
 ---
 
+* What to accomplish?
+* Why is it needded?
+* How to do it?
+* When to do it?
+* Wrap up / Action items
+
 EOF
 
