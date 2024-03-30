@@ -18,11 +18,7 @@ read_data() {
     [ "$#" -gt 0 ] && var_name="$*" || read -e -n 200 -p "${name}: " ${!var_name}
 }
 
-if [ "$1" == "-h" ]
-then
-    usage
-    exit 0
-fi
+[[ " $* " =~ " -h " ]] && usage && exit 0
 
 LAYOUT='main'
 if [ "$1" == "-l" ]

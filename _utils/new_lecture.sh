@@ -9,6 +9,7 @@ die() {
     exit 1
 }
 
+[[ " $* " =~ " -h " ]] && usage && exit 0
 
 [ "$#" -lt 1 ] || [ "$#" -gt 5 ] && usage && exit 1
 
