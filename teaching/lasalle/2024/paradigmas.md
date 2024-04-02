@@ -67,12 +67,14 @@ lectures:
     - Máquinas virtuais
     lecture: true
   - topics:
-    - Lingagens de Programação Imperativas
-    - Modelo de memória de C
-    - Implementação de um array dinâmico em C
+    - Pesquisa sobre Lingagens de Programação Imperativas
     lecture: false
   - topics:
-    - Geração de código
+    - Linguagem de programação C
+    - Modelo de memória de C
+    - Implementação de um array dinâmico em C
+    lecture: true
+  - topics:
     - Ponteiros em C
     - Tipos de Dados Genéricos em C.
     - Pilhas e Filas
@@ -87,9 +89,6 @@ lectures:
     - Algoritmos em Prolog
     - Motor de inferência em Prolog
     - "Prazo final para a entrega do **T1**"
-    lecture: false
-  - topics:
-    - Exemplos e exercícios em Prolog.
     lecture: false
   - topics:
     - Exercícios e revisão
