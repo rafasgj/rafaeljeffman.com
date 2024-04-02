@@ -194,7 +194,7 @@ Os _arrays_ são áreas contíguas de memória utilizados para armazenar valores
 
 ```c
 char digitos[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-int fibonacci = { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 };
+int fibonacci[] = { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 };
 ```
 
 A inicialização de variáveis é obrigatória no caso do uso do qualificador `const`:
