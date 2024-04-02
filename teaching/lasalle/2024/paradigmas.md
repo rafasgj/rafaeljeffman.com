@@ -78,7 +78,7 @@ lectures:
     - Ponteiros em C
     - Tipos de Dados Genéricos em C.
     - Pilhas e Filas
-    lecture: false
+    lecture: true
   - topics:
     - Lógica de Predicados
     - Programação em Lógica
