@@ -62,26 +62,34 @@ lectures:
     - Sintaxe e semântica
     lecture: true
   - topics:
-    - Análise léxica
-    - Implementação de um analisador léxico
-    - Projeto a ser desenvolvido
     - Avaliação dos trabalhos
     - Git e Github
+    - Exercício Git, Github e Pull Request
+    lecture: false
+  - topics:
+    - Revisão de Automatos Finitos, Linguagens Regulares e Expressões Regulares
+    - Análise léxica
+    lecture: false
+  - topics:
+    - Python PLY
+    - Implementação de um analisador léxico
+    - Projeto a ser desenvolvido no Semestre
+    - Gramáticas livres de contexto
+    - BNF
+    - Projeto de Linguagem de Programação
     - "Especificação **T1**"
     lecture: false
   - topics:
-    - Gramáticas livres de contexto
-    - Projeto de Linguagem de Programação
-    - Tradução direcionada por sintaxe
-    lecture: false
-  - topics:
+    - Introdução à análise sintática
+    - Parsers
+    - Árvores de Derivação
     - Análise sintática Top-Down
     - Analisador Preditivo Descendente
-    - "Data limite para entrega **T1**"
     - "Especificação **T2**"
     lecture: false
   - topics:
     - Exercícios de Revisão
+    - "Data limite para entrega **T1**"
     - "Especificação **T3**"
     lecture: false
   - topics:
@@ -89,18 +97,15 @@ lectures:
     - "Data limite para entrega **T2**"
     lecture: false
   - topics:
-    - Análise sintática Bottom-Up
-    - "Especificação do **T4**"
-    lecture: false
-  - topics:
     - "_Feriado_"
-    - "Data limite para a entrega do **T3**"
     lecture: false
   - topics:
-    - Introdução à análise sintática
-    - Divulgação de resultados **G1**
-  - topics:
     - Análise sintática Bottom-Up
+    - Tradução direcionada por sintaxe
+    - Divulgação de resultados **G1**
+    - "Data limite para a entrega do **T3**"
+    - "Especificação do **T4**"
+  - topics:
     lecture: false
   - topics:
     - Análise semântica
@@ -124,7 +129,7 @@ lectures:
     - Alocação de Registradores
     lecture: false
   - topics:
-    - Implementação dos trablahos
+    - Implementação dos trabalhos
     lecture: false
   - topics:
     - "Prova **P2**"
