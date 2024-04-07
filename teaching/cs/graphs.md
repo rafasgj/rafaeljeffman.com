@@ -12,19 +12,10 @@ lang: pt
 copy: 2024
 date: 2024-02-19
 abstract:
-extra-styles:
+extra_styles:
   - lecture
+  - tikzimage
 ---
-<style>
-img {
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-    max-height: 40vh;
-    max-width: 60vw;
-    min-width: 20vw;
-}
-</style>
 <!--
 > Este artigo é um de uma série contendo:
 >  * [Grafos: Conceitos](graphs)

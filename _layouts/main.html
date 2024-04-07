@@ -11,6 +11,9 @@
         {% endif %}
 
         {% include styles.html %}
+        {% for css in page.extra_styles %}
+        <link rel="stylesheet" href="/css/{{ css }}.css">
+        {% endfor %}
     
         <!-- MathJax configuration -->
         <script>

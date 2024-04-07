@@ -1,0 +1,8 @@
+img {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    max-height: 40vh;
+    max-width: 60vw;
+    min-width: 20vw;
+}
