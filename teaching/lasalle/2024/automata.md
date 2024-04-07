@@ -75,13 +75,13 @@ lectures:
     lecture: true
   - topics:
     - Demonstrações e Provas
-    lecture: false
+    lecture: true
   - topics:
     - _Feriado_
     lecture: false
   - topics:
+    - Gramáticas e Linguagens
     - Automatos Finitos Determinísticos
-    - Prazo final para entrega do T1
     lecture: false
   - topics:
     - Automatos Finitos não-Determinísticos
@@ -90,49 +90,50 @@ lectures:
   - topics:
     - Lema do Bombeamento
     - Propriedades das Linguagens Regulares
-    - Prazo final para entrega do T2
+    - Solução de problemas como reconhecimento de linguagens
     lecture: false
   - topics:
     - Gramáticas Livres de Contexto
+    - Prazo final para entrega do T2
     lecture: false
   - topics:
     - Automatos de Pilha
     - Propriedades das lingagens Livres de Contexto
-    - Prazo final para entrega da T3
     lecture: false
   - topics:
     - Prova G1 (P1)
+    - Prazo final para entrega da T3
     lecture: false
   - topics:
     - Máquinas universais
-    - Prazo final para entrega do T4
     lecture: false
   - topics:
     - _Feriado_
     lecture: false
   - topics:
     - Decidibilidade
-    - Problema da Correspondência de Post
+    - Redutibilididade
     lecture: false
   - topics:
-    - Redutibilididade
+    - Problema da Correspondência de Post
     - Teorema de Rice
+    - Prazo final para entrega do T4
     lecture: false
   - topics:
     - Cálculo Lambda
     - Teorema da Recursão
-    - Prazo final para entrega do T5
     lecture: false
   - topics:
     - Complexidade computacional
     - Criptografia
+    - Prazo final para entrega do T5
     lecture: false
   - topics:
     - Exercícios de revisão
-    - Prazo final para entrega do T6
     lecture: false
   - topics:
     - Prova G2 (P2)
+    - Prazo final para entrega do T6
     lecture: false
   - topics:
     - Divulgação de resultados
