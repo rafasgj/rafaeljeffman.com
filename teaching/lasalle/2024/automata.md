@@ -82,7 +82,7 @@ lectures:
   - topics:
     - Gramáticas e Linguagens
     - Automatos Finitos Determinísticos
-    lecture: false
+    lecture: true
   - topics:
     - Automatos Finitos não-Determinísticos
     - Expressões Regulares
