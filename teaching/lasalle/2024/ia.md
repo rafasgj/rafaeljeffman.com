@@ -37,7 +37,7 @@ references:
     - "HAYKIN, Salmon. **Redes Neurais**. 2<sup>a</sup> Ed. Bookman. Porto Alegre. 2001."
     - "MINSKY, Marvin; PAPERT, Seymour A. **Perceptrons: Expanded Edition**. 4<sup>th</sup> print. MIT Press. Massachussets. 1988"
     - "KOHONEN, Teuvo. **Self-Organizing Maps**. 2<sup>nd</sup> Ed. Springer. Alemanha. 1997."
-    - "GOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. [**Depp Learning**](https://www.deeplearningbook.org){:target='\_blank'}. MIT Press. 2016."
+    - "GOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. [**Deep Learning**](https://www.deeplearningbook.org){:target='\_blank'}. MIT Press. 2016."
   "Recursos Online":
     - "[Artificial Inteligence - MIT, 2010](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010){:target='\_blank'}"
 grading:
@@ -66,10 +66,13 @@ lectures:
     lecture: false
   - topics:
     - "Algoritmos de Busca: Ótima, Branch and Bound, A*"
+    lecture: false
+  - topics:
     - "Algoritmos de Busca: Jogos, Minimax, Alpha-Beta"
     lecture: false
   - topics:
-    - Revisão de conteúdos
+    - Revisão dos Algoritmos de Busca 
+    - Exercícios
     - Implementação do **T1**
     lecture: false
   - topics:
@@ -80,15 +83,15 @@ lectures:
   - topics:
     - Redução de Domínio
     - Reconhecimento visual de objetos
-    - Exercícios
     lecture: false
   - topics:
     - Revisão de conteúdos
+    - Exercícios
     - Implementação do **T2**
     lecture: false
   - topics:
     - Prova **G1**
-    - Data limite para entrega do **T1**
+    - Data limite para entrega do **T2**
     lecture: false
   - topics:
     - Introdução a aprendizagem de máquinas
@@ -108,8 +111,6 @@ lectures:
     lecture: false
   - topics:
     - Representações
-    lecture: false
-  - topics:
     - Inferência Probabilística
     lecture: false
   - topics:
