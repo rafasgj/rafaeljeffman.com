@@ -61,6 +61,8 @@ lectures:
     lecture: true
   - topics:
     - Agentes Inteligentes
+    lecture: false
+  - topics:
     - Árvores E-Ou, Árvores de Objetivos 
     - "Algoritmos de Busca: Busca em Profundidade, Hill Climbing, Beam Search"
     lecture: false
@@ -70,28 +72,23 @@ lectures:
   - topics:
     - "Algoritmos de Busca: Jogos, Minimax, Alpha-Beta"
     - "[Especificação do **T1**](lectures/ia/trabalho-01)"
-    lecture: false
+    lecture: true
   - topics:
     - Revisão dos Algoritmos de Busca 
     - Exercícios
     - "Implementação do [**T1**](lectures/ia/trabalho-01)"
     lecture: false
   - topics:
-    - Interpretação de Desenhos de Linhas
     - Restrições de Busca
+    - Interpretação de Desenhos de Linhas
     lecture: false
   - topics:
     - Redução de Domínio
     - Reconhecimento visual de objetos
-    lecture: false
-  - topics:
-    - Revisão de conteúdos
-    - Exercícios
     - Implementação do **T2**
     lecture: false
   - topics:
     - Prova **G1**
-    - Data limite para entrega do **T2**
     lecture: false
   - topics:
     - Introdução a aprendizagem de máquinas
