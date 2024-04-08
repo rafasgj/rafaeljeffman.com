@@ -69,16 +69,16 @@ lectures:
     lecture: false
   - topics:
     - "Algoritmos de Busca: Jogos, Minimax, Alpha-Beta"
+    - "[Especificação do **T1**](lectures/ia/trabalho-01)"
     lecture: false
   - topics:
     - Revisão dos Algoritmos de Busca 
     - Exercícios
-    - Implementação do **T1**
+    - "Implementação do [**T1**](lectures/ia/trabalho-01)"
     lecture: false
   - topics:
     - Interpretação de Desenhos de Linhas
     - Restrições de Busca
-    - Data limite para entrega do **T1**
     lecture: false
   - topics:
     - Redução de Domínio

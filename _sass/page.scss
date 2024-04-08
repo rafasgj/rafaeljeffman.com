@@ -36,6 +36,13 @@ body {
     }
 }
 
+@media print {
+  * {
+    max-width: 250vh !important;
+    min-width: 100vh !important;
+  }
+}
+
 blockquote {
     background: $blockquote-bg;
     color: $blockquote-fg;
