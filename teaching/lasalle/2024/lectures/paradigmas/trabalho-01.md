@@ -39,7 +39,7 @@ Compreender o processo de desenvolvimento utilizando liguagens imperativas/proce
     * `void Lista_last(Lista* lista, void* dest)`
     * `void Lista_current(Lista* lista, void* dest)`
     * `void Lista_next(Lista* lista, void* dest)`
-    * `void Lista_remove(Lista* lista, void* valor)`
+    * `void Lista_remove(Lista* lista, void* chave, int (*cmp)(void*,void*))`
     * `void Lista_removeCurrent(Lista* lista)`
     * `void Lista_insertAfter(Lista* lista, void* dado)`
 * Será fornecido um sistema para a compilação e testes automatizados, assim como um _arquivo header_ com as funções que devem ser implementadas.
@@ -55,7 +55,7 @@ Compreender o processo de desenvolvimento utilizando liguagens imperativas/proce
 As tarefas extras são opcionais, e deve ser indicado no _pull request_ se elas foram realizadas.
 
 * Modificar a estrutura para uma lista duplamente encadeada e adicionar os procedimentos:
-    * `void Lista_previous(Lista* lista)`
+    * `void Lista_previous(Lista* lista, void* dest)`
     * `void Lista_insertBefore(Lista* lista, void* dado)`
 
 
@@ -64,7 +64,7 @@ As tarefas extras são opcionais, e deve ser indicado no _pull request_ se elas 
 * A nota será atribuída baseada nos resultados dos testes automatizados.
 * O trabalho tem peso **3.0** na nota do **G1**, sendo **2.5** para a implementação, **0.5** para o teste de vazamento de memória com o `valgrind` e **0.5** para as tarefas extras caso todas sejam concluídas com sucesso.
 
-## Entrego do trabalho
+## Entrega do trabalho
 
 Um único aluno do grupo de alunos que trabalhou na execução do trabalho deverá criar um _pull request_ contra o repositório original do trabalho. O título do _pull request_ é livre, porém o corpo deve conter os **nomes completos** de todos os alunos do grupo, e a informação se as tarefas extras foram ou não executadas.
 
