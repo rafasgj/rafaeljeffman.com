@@ -35,27 +35,33 @@ Comparar os algoritmos de busca em espaços de resposta, aplicados na busca pelo
         * goal: um inteiro representando um nó do grafo
     * O retorno das funções deve ser uma tupla contendo, pela ordem:
         * inteiro com o número de nós do grafo analizados.
-        * inteiro com o comprimento do caminho encontrado.
+        * _float_ com o comprimento do caminho encontrado.
         * lista de inteiros representando o caminho de `start` a `goal`
     * As assinaturas das funções devem ser:
         ```python
-        def dfs(graph, start: int, goal: int) -> (int, int, [int]):
+        def dfs(graph, start: int, goal: int) -> (int, float, [int]):
             """Busca em graph, um caminho entre start e goal usando busca em profundidade."""
 
-        def bfs(graph, start: int, goal: int) -> (int, int, [int]):
+        def bfs(graph, start: int, goal: int) -> (int, float, [int]):
             """Busca em graph, um caminho entre start e goal usando busca em largura."""
 
-        def branch_and_bound(graph, start: int, goal: int) -> (int, int, [int]):
+        def branch_and_bound(graph, start: int, goal: int) -> (int, float, [int]):
             """Busca em graph, um caminho entre start e goal usando Branch and Bound."""
 
-        def a_star(graph, start: int, goal: int) -> (int, int, [int]):
+        def a_star(graph, start: int, goal: int) -> (int, float, [int]):
             """Busca em graph, um caminho entre start e goal usando A*."""
 
-        def dijkstra(graph, start: int, goal: int) -> (int, int, [int]):
+        def dijkstra(graph, start: int, goal: int) -> (int, float, [int]):
             """Busca em graph, um caminho entre start e goal usando Dijkstra."""
 ```
 
-6. Implementar uma função para a leitura de um grafo no seguinte formato:
+6. Implementar uma função para a leitura de um grafo com a seguinte interface
+    ```python
+    def read_graph(filename: string) -> Graph
+        """Le a estrutura do grafo a partir de um arquivo."""
+```
+    * A estrutura do grafo pode ser definida como desejado (recomenda-se listas de adjacências)
+7. O formato do arquivo a ser lido é: 
 ```
     <número de nós no grafo>
     <nó> <latitude> <longitude>  # repete para cada nó do grafo
@@ -63,7 +69,7 @@ Comparar os algoritmos de busca em espaços de resposta, aplicados na busca pelo
     <nó> <nó> <custo_da_aresta> # repete para cada aresta do grafo
 ```
 
-7. Serão fornecidos testes automatizados para a avaliação do trabalho. Os testes podem ser executadosu utilizando o utilitário `behave` ou o utilitário `tox`, que podem ser instalados em um ambiente virtual do Python.
+8. Serão fornecidos testes automatizados para a avaliação do trabalho. Os testes podem ser executadosu utilizando o utilitário `behave` ou o utilitário `tox`, que podem ser instalados em um ambiente virtual do Python.
 
 ## Entrega do trabalho
 
