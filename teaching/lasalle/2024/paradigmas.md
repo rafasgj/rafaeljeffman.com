@@ -80,22 +80,25 @@ lectures:
     - Pilhas e Filas
     lecture: true
   - topics:
-    - Lógica de Predicados
+    - Git e Github
+    - Compilação em C
+    - Testes em C
+    - "[Exercício de implementação](https://github.com/exercicios-programacao/paradigmas-t0)"
+    - "Especificação do [trabalho **T1**](lectures/paradigmas/trabalho-01)"
+    lecture: false
+  - topics:
     - Programação em Lógica
+    - Lógica de Predicados
     - Linguagem de programação Prolog
+    - Unificação e motor de inferência
     lecture: false
   - topics:
     - Provas de teoremas
     - Algoritmos em Prolog
-    - Motor de inferência em Prolog
-    - "Prazo final para a entrega do **T1**"
-    lecture: false
-  - topics:
-    - Exercícios e revisão
+    - Exercícios
     lecture: false
   - topics:
     - "Prova **P2**"
-    - "Prazo final para a entrega do **T2**"
     lecture: false
   - topics:
     - Tipos de dados primitivos, estruturados e compostos"
@@ -158,8 +161,8 @@ basic_plan:
   - Concurrent Programming with Python: (2 aulas)
       - Threads vs. Assinchronous Programming
 homeworks:
-  - Generic Hashtable in C
-  - Deduction evaluator in Prolog
-  - Self Organizing Map in Haskell ?
+  - Generic Linked List in C
+  - ??? in Prolog
+  - ??? in Haskell
   - Thread application in Python.
 ---
