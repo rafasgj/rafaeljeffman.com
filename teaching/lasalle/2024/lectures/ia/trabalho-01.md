@@ -2,7 +2,7 @@
 title: T1 - Algoritmos de Pesquisa
 section: Inteligência Artificial
 layout: lecture
-last_occurence: "2024/01"
+last_occurrence: "2024-1"
 copy: 2024
 institution:
   name: Universidade Lasalle Canoas
