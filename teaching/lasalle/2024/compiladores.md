@@ -62,9 +62,9 @@ lectures:
     - Sintaxe e semântica
     lecture: true
   - topics:
-    - Avaliação dos trabalhos
     - Git e Github
     - Exercício Git, Github e Pull Request
+    - Exemplos de leitura de arquivos texto em Python
     lecture: false
   - topics:
     - Revisão de Automatos Finitos, Linguagens Regulares e Expressões Regulares
@@ -73,54 +73,48 @@ lectures:
   - topics:
     - Python PLY
     - Implementação de um analisador léxico
-    - Projeto a ser desenvolvido no Semestre
     - Gramáticas livres de contexto
-    - BNF
-    - Projeto de Linguagem de Programação
-    - "Especificação **T1**"
     lecture: false
   - topics:
-    - Introdução à análise sintática
-    - Parsers
+    - Gramáticas livres de contexto
     - Árvores de Derivação
+    - BNF
+    - Projeto de Linguagem de Programação
+    - Parsers
     - Análise sintática Top-Down
     - Analisador Preditivo Descendente
-    - "Especificação **T2**"
+    - "[Especificação **T1**](lectures/compiladores/trabalho-01)"
+    lecture: false
+  - topics:
+    - FIRST e FOLLOW
+    - Análise sintática Bottom-Up
+    - Tradução direcionada por sintaxe
+    - "Especificação **T2** e **T3**"
     lecture: false
   - topics:
     - Exercícios de Revisão
-    - "Data limite para entrega **T1**"
-    - "Especificação **T3**"
-    lecture: false
-  - topics:
-    - "Prova **P1**"
-    - "Data limite para entrega **T2**"
+    - "Especificação do **T4**"
     lecture: false
   - topics:
     - "_Feriado_"
     lecture: false
   - topics:
-    - Análise sintática Bottom-Up
-    - Tradução direcionada por sintaxe
-    - Divulgação de resultados **G1**
-    - "Data limite para a entrega do **T3**"
-    - "Especificação do **T4**"
-  - topics:
-    lecture: false
+    - "Prova **P1**"
   - topics:
     - Análise semântica
     - Verificação de tipos
     lecture: false
   - topics:
+    - Geração de código intermediário
+    lecture: false
+  - topics:
     - Ambientes de execução
-    - Geração de código alvo
     - "Especificação do **T5**"
     lecture: false
   - topics:
     - Geração de código alvo
     lecture: false
   - topics:
-    - Código intermediário
     - Otimização local de código
     - "Entrega do **T4**"
     lecture: false

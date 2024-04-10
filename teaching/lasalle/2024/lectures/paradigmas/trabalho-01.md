@@ -1,6 +1,6 @@
 ---
 title: T1 - Linguagen imperativa/procedural.
-subtitle:  Linguagem de programação C.
+subtitle:  Linguagem de Programação C.
 section: Paradigmas de Programação
 layout: lecture
 last_occurrence: "2024-1"
@@ -26,7 +26,7 @@ Compreender o processo de desenvolvimento utilizando liguagens imperativas/proce
 
 ## Tarefas
 
-* Criar um `fork` do projeto [`paradigmas_2024_t1`](https://github.com/exercicios-programacao/paradigmas_2024_t1)
+* Criar um _fork_ do projeto [`paradigmas_2024_t1`](https://github.com/exercicios-programacao/paradigmas_2024_t1)
 * Implementar uma lista encadeada genérica com a seguinte interface de programação:
     * `void Lista_new(Lista* lista, int data_size, void (*free_data)(void*))`
     * `void Lista_delete(Lista* lista)`
