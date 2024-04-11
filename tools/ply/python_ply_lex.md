@@ -196,7 +196,7 @@ Este artigo é parte de uma série de artigos sobre a implementação de um comp
 
 Arquivo fonte completo do analisador léxico para a linguagem de avaliação de expressões aritméticas:
 
-[](code/compiler/lexer.py){:class="download fa-solid fa-download"}
+[](compiler/lexer.py){:class="download fa-solid fa-download"}
 ```python
 # MIT No Attribution
 #

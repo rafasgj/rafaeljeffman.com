@@ -17,7 +17,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THESOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 
-"""Logo language Lexer."""
+"""Lexer implementation with PLY."""
 
 from ply import lex
 
