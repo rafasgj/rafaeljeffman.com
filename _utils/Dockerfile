@@ -13,4 +13,4 @@ ENV PATH=/usr/local/bundle/bin:/usr/local/bundle/gems/bin:/usr/local/sbin:/usr/l
 RUN mkdir -p "/usr/local/bundle"
 
 WORKDIR "/srv/jekyll"
-ENTRYPOINT ["/bin/sh", "-c", "bundle install && bundle exec jekyll server --trace --host 0.0.0.0"]
+ENTRYPOINT ["/bin/sh", "-c", "bundle install && bundle exec jekyll server --incremental --trace --host 0.0.0.0"]

@@ -10,7 +10,7 @@ TAG="$(whoami)/site_server"
 
 existing=$(podman images -f reference="localhost/${TAG}" --format "{{ .Repository }}")
 
-[ -z "${existing}" ] && podman build -t "${TAG}" "${SCRIPTDIR}"
+[ -z "${existing}" ] || [ "$1" == "-b" ] && podman build -t "${TAG}" "${SCRIPTDIR}"
 
 podman run \
     --volume "${TOPDIR}:/srv/jekyll:Z" \
