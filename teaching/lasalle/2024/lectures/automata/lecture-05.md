@@ -132,8 +132,8 @@ Para deixar a representação gráfica mais simples, não incluimos o estado de 
 ## Preparação para a próxima aula
 
 1. [Capítulo 1](https://integrada.minhabiblioteca.com.br/reader/books/9788522108862/pageid/53){:target="\_blank"} até a seção 1.4 do livro [**Introdução a Teoria da Computação**](https://integrada.minhabiblioteca.com.br/reader/books/9788522108862){:id="sipser" target="\_blank"}
-2. Capítulo 2 e capítulo 3 do livro [Linguages Formais e Autômatos](https://integrada.minhabiblioteca.com.br/reader/books/9788577807994){:target="\_blank"}  de Paulo Blauth Menezes.
-3. Capítulos 2 e 3 do [Livro do Hopcroft](/teaching/lasalle/2024/automata#hopcroft)
+2. Capítulo 2 e capítulo 3 (até a seção 3.5) do livro [Linguages Formais e Autômatos](https://integrada.minhabiblioteca.com.br/reader/books/9788577807994){:target="\_blank"}  de Paulo Blauth Menezes.
+3. Capítulos 2 e 4 (menos a seção 4.1) do [Livro do Hopcroft](/teaching/lasalle/2024/automata#hopcroft)
 
 ## Recursos para essa aula
 
