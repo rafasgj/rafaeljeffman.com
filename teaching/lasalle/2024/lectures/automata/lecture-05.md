@@ -84,7 +84,7 @@ $$
 Onde $S\implies^+ w$ é a aplicação recursiva das regras de produção da gramática $G$, iniciando em $S$ até que $w$ seja gerado.
 
 
-## Automato Finito
+## Autômato Finito
 
 Estudar a teoria da computação a partir de uma máquina complexa como um computador real insere um número muito grande de variáveis para que seja possível construir uma teoria matemática manejável, sobre o o que é computação e o que é um computador. Ao invés disso, utilizamos **modelos computacionais**, que simplificam a forma como descrevemos uma máquina.
 
