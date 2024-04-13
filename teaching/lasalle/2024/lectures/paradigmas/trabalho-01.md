@@ -14,6 +14,7 @@ institution:
 
 Compreender o processo de desenvolvimento utilizando liguagens imperativas/procedurais, desenvolvendo uma estrutura de dados genérica com a linguagem de programação C.
 
+
 ## Pré-requisitos
 
 * Todos os alunos necessitarão de contas no site [Github](https://github.com)
@@ -23,6 +24,7 @@ Compreender o processo de desenvolvimento utilizando liguagens imperativas/proce
     * `make`
     * `Catch2`
     * `valgrind`
+
 
 ## Tarefas
 
@@ -48,6 +50,7 @@ Compreender o processo de desenvolvimento utilizando liguagens imperativas/proce
         * Para executar os testes automatizados utilize `make test`.
         * Para executar os testes das tarefas extras utilize `make test_extra`.
         * Para executar o teste do `valgrind` utilize `make memtest`.
+* Apenas arquivos dentro do diretório `src` podem ser modificados.
 
 
 ### Tarefas Extras
@@ -64,6 +67,7 @@ As tarefas extras são opcionais, e deve ser indicado no _pull request_ se elas 
 * A nota será atribuída baseada nos resultados dos testes automatizados.
 * O trabalho tem peso **3.0** na nota do **G1**, sendo **2.5** para a implementação, **0.5** para o teste de vazamento de memória com o `valgrind` e **0.5** para as tarefas extras caso todas sejam concluídas com sucesso.
 
+
 ## Entrega do trabalho
 
 Um único aluno do grupo de alunos que trabalhou na execução do trabalho deverá criar um _pull request_ contra o repositório original do trabalho. O título do _pull request_ é livre, porém o corpo deve conter os **nomes completos** de todos os alunos do grupo, e a informação se as tarefas extras foram ou não executadas.
@@ -76,9 +80,11 @@ No [LEX](https://lex2.unilasalle.edu.br){:target="\_blank"}, todos os alunos do 
 
 A data máxima de entrega é dia **27 de abril de 2024**.
 
+
 # Observações
 
 * O trabalho poderá ser realizado em grupos de até 3 (três) alunos.
+* Se você não possui os componentes instalados na sua máquina, [uma VM Linux](https://drive.google.com/file/d/1oY3aHO0NabcRK0WEt9LyS1OwhzHaSs-_/view?usp=sharing) para o [VirtualBox](https://www.virtualbox.org/) é disponibilizada com todas as ferramentas necessárias para que você possa implementar o trabalho.
 * Todo código utilizado em aula pode ser utilizado no trabalho.
 * Em caso de plágio, a nota atribuída ao tabalho será 0 (zero).
 
