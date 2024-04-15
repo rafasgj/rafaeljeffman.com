@@ -77,7 +77,7 @@ lectures:
     - Revisão dos Algoritmos de Busca 
     - Exercícios
     - "Implementação do [**T1**](lectures/ia/trabalho-01)"
-    lecture: false
+    lecture: true
   - topics:
     - Restrições de Busca
     - Interpretação de Desenhos de Linhas

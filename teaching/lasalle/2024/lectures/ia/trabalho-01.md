@@ -85,6 +85,8 @@ A data máxima de entrega é dia **04 de maio de 2024**.
 
 ## Observações
 
+* Não é permitida a alteração de qualquer arquivo fora do diretório `src`.
+* Não é permitida a utilização de qualquer biblioteca externa.
 * O trabalho pode ser realizado em grupos de até quatro alunos.
 * Será fornecida uma função para calcular a distância entre duas coordenadas em uma esfera (latitude, longitude).
 * Todo código fornecido em aula pode ser utilizado no trabalho.
