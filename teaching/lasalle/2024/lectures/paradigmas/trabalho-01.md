@@ -28,7 +28,7 @@ Compreender o processo de desenvolvimento utilizando liguagens imperativas/proce
 
 ## Tarefas
 
-* Criar um _fork_ do projeto [`paradigmas_2024_t1`](https://github.com/exercicios-programacao/paradigmas_2024_t1)
+* Criar um _fork_ do projeto [`paradigmas_2024_t1`](https://github.com/exercicios-programacao/paradigmas-2024-t1)
 * Implementar uma lista encadeada genérica com a seguinte interface de programação:
     * `void Lista_new(Lista* lista, int data_size, void (*free_data)(void*))`
     * `void Lista_delete(Lista* lista)`
@@ -36,17 +36,16 @@ Compreender o processo de desenvolvimento utilizando liguagens imperativas/proce
     * `int Lista_size(Lista* lista)`
     * `void Lista_pushFront(Lista* lista, void* valor)`
     * `void Lista_pushBack(Lista* lista, void* valor)`
-    * `void Lista_search(Lista* lista, void* chave, int (*cmp)(void*,void*))`
-    * `void Lista_first(Lista* lista, void* dest)`
-    * `void Lista_last(Lista* lista, void* dest)`
+    * `int Lista_search(Lista* lista, void* chave, void* dest, int (*cmp)(void*,void*))`
+    * `void Lista_first(Lista* lista)`
+    * `void Lista_last(Lista* lista)`
+    * `int Lista_next(Lista* lista)`
     * `void Lista_current(Lista* lista, void* dest)`
-    * `void Lista_next(Lista* lista, void* dest)`
     * `void Lista_remove(Lista* lista, void* chave, int (*cmp)(void*,void*))`
-    * `void Lista_removeCurrent(Lista* lista)`
     * `void Lista_insertAfter(Lista* lista, void* dado)`
 * Será fornecido um sistema para a compilação e testes automatizados, assim como um _arquivo header_ com as funções que devem ser implementadas.
     * O sistema de compilação utilizará o `make`, o sistema de testes automatizados o `Catch2` e a ferramenta `valgrind`.
-        * Para compilar o programa utilize `make`.
+        * Para compilar o programa utilize `make` (ou `make -k`).
         * Para executar os testes automatizados utilize `make test`.
         * Para executar os testes das tarefas extras utilize `make test_extra`.
         * Para executar o teste do `valgrind` utilize `make memtest`.
@@ -58,7 +57,8 @@ Compreender o processo de desenvolvimento utilizando liguagens imperativas/proce
 As tarefas extras são opcionais, e deve ser indicado no _pull request_ se elas foram realizadas.
 
 * Modificar a estrutura para uma lista duplamente encadeada e adicionar os procedimentos:
-    * `void Lista_previous(Lista* lista, void* dest)`
+    * `void Lista_removeCurrent(Lista* lista)`
+    * `int Lista_previous(Lista* lista)`
     * `void Lista_insertBefore(Lista* lista, void* dado)`
 
 
@@ -84,6 +84,7 @@ A data máxima de entrega é dia **27 de abril de 2024**.
 # Observações
 
 * O trabalho poderá ser realizado em grupos de até 3 (três) alunos.
+* Apenas arquivos dentro do diretório `src` podem ser alterados.
 * Se você não possui os componentes instalados na sua máquina, [uma VM Linux](https://drive.google.com/file/d/1oY3aHO0NabcRK0WEt9LyS1OwhzHaSs-_/view?usp=sharing) para o [VirtualBox](https://www.virtualbox.org/) é disponibilizada com todas as ferramentas necessárias para que você possa implementar o trabalho.
 * Todo código utilizado em aula pode ser utilizado no trabalho.
 * Em caso de plágio, a nota atribuída ao tabalho será 0 (zero).
