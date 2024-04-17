@@ -86,14 +86,14 @@ lectures:
     - "[Especificação **T1**](lectures/compiladores/trabalho-01)"
     lecture: false
   - topics:
+    - Implementação do analisador léxico.
+    lecture: false
+  - topics:
+    - Revisão das gramáticas livres de contexto.
     - FIRST e FOLLOW
     - Análise sintática Bottom-Up
     - Tradução direcionada por sintaxe
     - "Especificação **T2** e **T3**"
-    lecture: false
-  - topics:
-    - Exercícios de Revisão
-    - "Especificação do **T4**"
     lecture: false
   - topics:
     - "_Feriado_"
@@ -103,6 +103,7 @@ lectures:
   - topics:
     - Análise semântica
     - Verificação de tipos
+    - "Especificação do **T4**"
     lecture: false
   - topics:
     - Geração de código intermediário

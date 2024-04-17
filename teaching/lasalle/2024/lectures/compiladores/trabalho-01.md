@@ -26,10 +26,11 @@ Para esse experimento, será implementado um analisador léxico para um subconju
 
 ## Tarefas
 
-1. Criar um _fork_ do projeto [`compiladores_2024_t1`](https://github.com/exercicios-programacao/compiladores_2024_t1)
+1. Criar um _fork_ do projeto [`compiladores_2024_t1`](https://github.com/exercicios-programacao/compiladores-2024-t1)
 2. Deve ser criado um "módulo" com o nome `lexer` com uma função `lexer` que irá retornar um objeto que realizará as operações da análise léxica.
 3. O analisador léxico deve ser capaz de reconhecer diversos _tokens_. A lista a seguir mostra as construções que devem ser reconhecidas, associadas com o tipo do _token_:
     * identificadores (`ID`), por exemplo, nomes de funções e variáveis, devem começar com uma letra ou o carectere de "sublinhado" (`_`), seguidos de um número qualquer de letras, números ou "sublinhado".
+    * Apenas caracteres alfanuméricos no conjunto ASCII-7 são aceitos na definição de identificadores.
     * Literais:
         * números inteiros (`123`), com tipo `LIT_INT`
         * números de ponto flutuante (`3.1425`) e números de ponto flutuante em notação científica (`1.24e-14`), com tipo `LIT_REAL`
@@ -99,13 +100,14 @@ Para esse experimento, será implementado um analisador léxico para um subconju
             * `,` (`OP_COMMA`)
             * `;` (`OP_EOC`)
             * `.` (`OP_PERIOD`)
+            * `:` (`OP_COLON`)
 4. O analisador léxico implementado deve controlar também o número da linha sendo processada no arquivo.
 5. Os _tokens_ retornados pelo analisazdor léxico devem conter:
     * A string extraída
     * O tipo do token (de acordo com as tabelas anteriores)
     * A linha em que o token foi encontrado
     * E a representação do valor do token quando for adequado.
-6. No caso do processamento encontrar um erro léxiro, deve ser gerada uma exceção com o caracter que gerou o erro, o número da linha onde ocorreu o erro, e a posição do caracter na linha onde ocorreu o erro.
+6. No caso do processamento encontrar um erro léxico, deve ser gerada uma exceção com o caracter que gerou o erro, o número da linha onde ocorreu o erro, e a posição do caracter na linha onde ocorreu o erro.
 7. Serão fornecidos testes automatizados para a avaliação do trabalho. Os testes podem ser executadosu utilizando o utilitário `behave` ou o utilitário `tox`, que podem ser instalados em um ambiente virtual do Python.
 
 ## Entrega do trabalho
@@ -118,12 +120,12 @@ Na data limite, o _pull request_ receberá um _label_ de `AVALIADO`, um comentá
 
 No `LEX`, **todos** os alunos do grupo devem inserir, até a data limite, o link para o _pull request_ de entrega do trabalho.
 
-A data máxima de entrega é dia **27 de maio de 2024**.
+A data máxima de entrega é dia **1 de maio de 2024**.
 
 ## Observações
 
-* Os testes não podem ser modificados.
-* O trabalho pode ser realizado em grupos de até dois alunos.
+* Nenhum arquivo fora do diretório `src` pode ser modificado.
+* O trabalho pode ser realizado em dupla.
 * Todo código fornecido em aula pode ser utilizado no trabalho.
 * Em caso de plágio, a nota atribuída ao trabalho será 0 (zero).
 
