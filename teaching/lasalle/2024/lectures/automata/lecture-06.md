@@ -48,7 +48,7 @@ Ao longo do texto provaremos essas afirmações.
 
 Vimos a [definição de autômatos finitos determinísticos](lecture-05#autômato-finito) na última aula.
 
-É importante frisar que a relação de transição $\gamma: Q\times\Sigma\rightarrow{Q}$ retorna um único estado possível. É essa característica que determina que o autômato finito tenha um comportamento determinístico, pois dado um estado $q \in Q$ e um símbolo $\alpha \in \Sigma$, só existe, no máximo, um estado $q^\prime \in Q$ que é resultado dessa relação.
+É importante frisar que a relação de transição $\delta: Q\times\Sigma\rightarrow{Q}$ retorna um único estado possível. É essa característica que determina que o autômato finito tenha um comportamento determinístico, pois dado um estado $q \in Q$ e um símbolo $\alpha \in \Sigma$, só existe, no máximo, um estado $q^\prime \in Q$ que é resultado dessa relação.
 
 Um autômato finito determinístico pode decidir (reconhecer) se uma palavra pertence a lingugem que ele define se, iniciando no estado $q_0$, e trocando de estado pela aplicação da relação de transição para cada símbolo da entrada, na ordem e m que se apresentam, o estado resultante seja $q_n \in F$ (onde $F$ é o conjunto de estados finais ou de aceitação).
 
@@ -64,14 +64,14 @@ Um automato finito não-determinístico reconhece uma palavra se qualquer caminh
 
 Un NFA pode ter, em um mesmo estado, várias transições com o mesmo símbolo, para outros estados. Pode também ter transições envolvendo a palavra vazia.
 
-Formalmente, um autômato finito não-determinístico é definido como uma 5-upla $(Q, \Sigma, \gamma, q_0, F)$, onde:
+Formalmente, um autômato finito não-determinístico é definido como uma 5-upla $(Q, \Sigma, \delta, q_0, F)$, onde:
 * $Q$ é o conjunto de estados do autômato;
 * $\Sigma$ é o alfabeto sobre a qual a linguagem é definida;
-* $\gamma: Q\times\Sigma\rightarrow\mathcal{P}(Q)$ é a função de transição;
+* $\delta: Q\times\Sigma\rightarrow\mathcal{P}(Q)$ é a função de transição;
 * $q_0 \in Q$ é o estado inicial;
 * $F \subseteq Q$ é o conjunto de estados de acitação.
 
-Note que a diferença de um NFA para um DFA é a definição da relação de transição ($\gamma), pois agora o resultado dessa relação é um conjunto de estados em $Q$.
+Note que a diferença de um NFA para um DFA é a definição da relação de transição ($\delta), pois agora o resultado dessa relação é um conjunto de estados em $Q$.
 
 ![NFA-e](/images/nfa-e.svg)
 

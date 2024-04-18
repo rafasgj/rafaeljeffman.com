@@ -98,14 +98,14 @@ Um automato finito pode ser definido formalemente como uma 5-upla $M = (\Sigma, 
 
 * $\Sigma$ é um alfabeto
 * $Q$ é um conjunto de estados de $M$
-* $\gamma$ é uma relação que define as regras de transição definida por $\gamma: (Q \times \Sigma) \rightarrow Q$, ou seja, $\gamma$ é uma função onde dado um estado pertencente a $Q$ e um símbolo do alfabeto $\Sigma$ resulta em um estado de $Q$.
+* $\delta$ é uma relação que define as regras de transição definida por $\delta: (Q \times \Sigma) \rightarrow Q$, ou seja, $\delta$ é uma função onde dado um estado pertencente a $Q$ e um símbolo do alfabeto $\Sigma$ resulta em um estado de $Q$.
 * $q_0$ é um estado e $q_0 \in Q$.
 * $F$ é o conjunto de estados finais (ou de aceitação) e $F \subseteq Q$.
 
 Seja $M = (\Sigma, Q, S, q_0, F)$ um autômato finito e suponha que $w = w_{1}w_{2}\dots{w}_n$ seja uma cadeia de caracteres ond cada $w_i$ pertence ao alfabeto $\Sigma$, então $M$ **aceita** $w$ se existe uma sequência de estados $r_0, r_1, \dots, r_n \in Q$ com três condições:
 
 1. $r_0 = q_0$, ou seja, a máquina começa no estado inicial
-2. $\gamma(r_i, w_{i+1}) = r_{i+1}$, para i = 0, $\dots$, n-1. (A máquina troca de estados conforme a função de trasição.)
+2. $\delta(r_i, w_{i+1}) = r_{i+1}$, para i = 0, $\dots$, n-1. (A máquina troca de estados conforme a função de trasição.)
 3. $r_n \in F$, que diz que a o último estado atingido é um estado final
 
 Dizemos que $M$ **reconhece a linguagem** $A$ se $A = \\{w \| M\\:\text{aceita}\\:w\\}$.
@@ -118,7 +118,7 @@ A linguagem aceita pelo autômato é composta por todas as palavras iniciadas e 
 
 Note que para todo símbolo para o qual não há transição a partir de um estado, o autômato deveria ser direcionado a um estado de erro $e$, tal que $e \notin F$, e nesse estado todo símbolo em $\Sigma$ leva novamente a $e$.
 
-Para deixar a representação gráfica mais simples, não incluimos o estado de erro, e assumimos que quando não existe uma transição $\gamma(q_n, \alpha)$ para um estado $q_n \in Q$ e um símbolo $\alpha \in \Sigma$, o autômato $M$ não aceita a palavra.
+Para deixar a representação gráfica mais simples, não incluimos o estado de erro, e assumimos que quando não existe uma transição $\delta(q_n, \alpha)$ para um estado $q_n \in Q$ e um símbolo $\alpha \in \Sigma$, o autômato $M$ não aceita a palavra.
 
 
 ### Questões
