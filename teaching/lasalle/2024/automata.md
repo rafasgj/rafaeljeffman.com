@@ -89,7 +89,8 @@ lectures:
     - Expressões regulares
     - Lema do Bombeamento
     - Solução de problemas como reconhecimento de linguagens
-    lecture: false
+    - Especificação dos trabalhos [T1](lectures/automata/trabalho-01) e [T2](lectures/automata/trabalho-02).
+    lecture: true
   - topics:
     - Gramáticas Livres de Contexto
     - Automatos de Pilha
@@ -136,4 +137,11 @@ lectures:
   - topics:
     - Prova de substituição de grau
     lecture: false
+homework:
+    - T1: DFA evaluation
+    - T2: NFA->DFA conversion
+    - T3: Exercises
+    - T4: GLC definition (for a simple prgramming language)
+    - T5: Regex->DFA conversion
+    - T6: Turing Machine implementation
 ---
