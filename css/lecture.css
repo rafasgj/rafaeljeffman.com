@@ -6,3 +6,12 @@ img {
     max-width: 72ch;
     min-width: 20vw;
 }
+
+img.inline {
+    display: inline !important;
+    margin: 0 0px;
+    vertical-align: bottom;
+    width: auto !important;
+    min-width: 1px !important;
+    max-height: 2em !important;
+}
