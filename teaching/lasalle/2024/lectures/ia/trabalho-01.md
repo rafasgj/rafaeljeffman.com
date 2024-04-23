@@ -20,7 +20,7 @@ Comparar os algoritmos de busca em espaços de resposta, aplicados na busca pelo
 
 ## Tarefas
 
-1. Criar um _fork_ do projeto [`algoritmos_busca_ia_2024`](https://github.com/exercicios-programacao/algoritmos_busca_ia_2024).
+1. Criar um _fork_ do projeto [`ia-2024-t1`](https://github.com/exercicios-programacao/ia-2024-t1).
 2. Implementar os algoritmos de busca vistos em aula:
     * Busca em profundidade
     * Busca em largura
