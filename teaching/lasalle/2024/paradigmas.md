@@ -87,15 +87,17 @@ lectures:
     - "Especificação do [trabalho **T1**](lectures/paradigmas/trabalho-01)"
     lecture: false
   - topics:
-    - Programação em Lógica
-    - Lógica de Predicados
-    - Linguagem de programação Prolog
-    - Unificação e motor de inferência
+    - Revisão de organização de dados em memória
+    - Implementação do trabalho.
     lecture: false
   - topics:
-    - Provas de teoremas
-    - Algoritmos em Prolog
-    - Exercícios
+    - Introdução a Programação em Lógica
+    - Implementação do trabalho.
+    lecture: false
+  - topics:
+    - Lógica de Predicados
+    - Prolog
+    - Processamento de listas com Prolog.
     lecture: false
   - topics:
     - "Prova **P2**"
@@ -107,9 +109,6 @@ lectures:
     - Checagem de tipos
     - Programação Funcional em Haskell
     - _Divulgação de resultados do G1_
-    lecture: false
-  - topics:
-    - Programação Funcional em Haskell
     lecture: false
   - topics:
     - Programação Funcional em Haskell
