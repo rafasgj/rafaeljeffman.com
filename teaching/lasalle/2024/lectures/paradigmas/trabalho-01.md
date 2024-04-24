@@ -78,7 +78,7 @@ Na data limite, o _pull request_ receberá um _label_ de **AVALIADO**, um coment
 
 No [LEX](https://lex2.unilasalle.edu.br){:target="\_blank"}, todos os alunos do grupo devem inserir, até a data limite, o link para o _pull request_ de entrega do trabalho.
 
-A data máxima de entrega é dia **27 de abril de 2024**.
+A data máxima de entrega é dia **04 de maio de 2024**.
 
 
 # Observações

@@ -68,7 +68,7 @@ Na data limite, o _pull request_ receberá um _label_ de `AVALIADO`, um comentá
 
 No `LEX`, **todos** os alunos do grupo devem inserir, até a data limite, o link para o _pull request_ de entrega do trabalho.
 
-A data máxima de entrega é dia **28 de maio de 2024**.
+A data máxima de entrega é dia **28 de abril de 2024**.
 
 ## Observações
 
