@@ -1,0 +1,22 @@
+\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+\usetikzlibrary{automata, arrows.meta, positioning}
+\begin{document} 
+\begin{tikzpicture}[
+    thick,
+    node distance={25mm},
+    auto
+]
+
+\node[state] (qi) {$q_i$}; 
+\node[state] (x) [above right of =qi] {$x$}; 
+\node[state] (qj) [below right of=x] {$q_j$}; 
+
+\path[->]
+    (qi) edge []  node {$r_1$} (x)
+    (qi) edge []  node {$r_4$} (qj)
+    (x) edge [loop right]  node {$r_2$} (x)
+    (x) edge []  node {$r_3$} (qj)
+    ;
+
+\end{tikzpicture} 
+\end{document}

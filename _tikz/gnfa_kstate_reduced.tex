@@ -1,0 +1,18 @@
+\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+\usetikzlibrary{automata, arrows.meta, positioning}
+\begin{document} 
+\begin{tikzpicture}[
+    thick,
+    node distance={25mm},
+    auto
+]
+
+\node[state] (qi) {$q_i$}; 
+\node[state] (qj) [right=4cm] {$q_j$}; 
+
+\path[->]
+    (qi) edge []  node {$r_1(r_2)^*r_3 \cup r_4$} (qj)
+    ;
+
+\end{tikzpicture} 
+\end{document}

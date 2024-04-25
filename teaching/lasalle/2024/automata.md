@@ -86,17 +86,19 @@ lectures:
     - Liguagens Regulares e Autômatos Finitos
     lecture: true
   - topics:
+    - Conversão de automatos finitos não-determinísticos em automatos finitos determinísticos
     - Expressões regulares
-    - Lema do Bombeamento
-    - Solução de problemas como reconhecimento de linguagens
     - Especificação dos trabalhos [T1](lectures/automata/trabalho-01) e [T2](lectures/automata/trabalho-02).
-    lecture: true
+    lecture: false 
   - topics:
+    - Fecho das linguagens regulares
+    - Lema do Bombeamento
     - Gramáticas Livres de Contexto
     - Automatos de Pilha
-    - Propriedades das linguagens Livres de Contexto
-    lecture: false
+    lecture: true
   - topics:
+    - Propriedades das linguagens Livres de Contexto
+    - Solução de problemas como reconhecimento de linguagens
     - Exercícios de revisão
     lecture: false
   - topics:
