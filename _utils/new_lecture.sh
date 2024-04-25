@@ -37,7 +37,7 @@ LECTURE="teaching/lasalle/${year}/lectures/${nick}"
 LECTURE_DIR="${BASEDIR}/${LECTURE}"
 mkdir -p "${LECTURE_DIR}"
 
-next_lecture=$({ echo "lecture-00.md" ; ls -1 "${LECTURE_DIR}" || die "Invalid lecture directory: ${LECTURE_DIR}" ; } | sed -e "/index/d" | tail -n 1 |  xargs basename -s .md | cut -d- -f2)
+next_lecture=$({ echo "lecture-00.md" ; ls -1 "${LECTURE_DIR}"/lecture-*.* || die "Invalid lecture directory: ${LECTURE_DIR}" ; } | sed -e "/index/d" | tail -n 1 |  xargs basename -s .md | cut -d- -f2)
 
 next_lecture=$(printf "lecture-%02d.md" $(echo "1 + ${next_lecture}" | bc -l))
 
