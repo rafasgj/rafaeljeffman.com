@@ -287,7 +287,7 @@ A necessidade de lembrar um código como o _token_ de accesso é uma grande difi
 
 Para isso, precisamos alterar a URL que o Git utiliza para acessar o repositório no Github, e utilizaremos a chave de acesso gerada anteriormente, e definir a configuração do repositório remoto na nossa cópia local com o comando `git remote':
 
-> `git remote set-url origin https://USERNAME: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@github.com/rafasgj/github-pr-tutorial   `
+> `git remote set-url origin https://USERNAME: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@github.com/exercicio-programacao/github-pr-tutorial   `
 
 Lembre-se de, no comando anterior, utilizar o seu nome de usuário do Github no lugar de `USERNAME` e o código gerado para a sua _token_ de acesso.
 
