@@ -85,7 +85,7 @@ lectures:
   - topics:
     - Redução de Domínio
     - Reconhecimento visual de objetos
-    - Implementação do **T2**
+    - "[Especificação do **T2**](lectures/ia/trabalho-02)"
     lecture: false
   - topics:
     - Prova **G1**
