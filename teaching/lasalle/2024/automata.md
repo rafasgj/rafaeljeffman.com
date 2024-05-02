@@ -97,21 +97,21 @@ lectures:
     - Automatos de Pilha
     lecture: true
   - topics:
+    - Exercícios de revisão (online devido a eventos climáticos)
+    lecture: true
+  - topics:
     - Propriedades das linguagens Livres de Contexto
-    - Solução de problemas como reconhecimento de linguagens
-    - Exercícios de revisão
+    - Autômatos de Pilha
     lecture: false
   - topics:
     - Prova G1 (P1)
     lecture: false
   - topics:
     - Máquinas universais
+    - Decidibilidade
     lecture: false
   - topics:
     - _Feriado_
-    lecture: false
-  - topics:
-    - Decidibilidade
     lecture: false
   - topics:
     - Redutibilididade
@@ -119,22 +119,23 @@ lectures:
   - topics:
     - Problema da Correspondência de Post
     - Teorema de Rice
+    lecture: false
+  - topics:
     - Cálculo Lambda
     - Teorema da Recursão
     lecture: false
   - topics:
-    - Complexidade computacional
-    - Criptografia
-    - Linguagens de programação e compiladores
-    lecture: false
-  - topics:
-    - Exercícios de revisão
+    - Exercícios de Revisão
     lecture: false
   - topics:
     - Prova G2 (P2)
     lecture: false
   - topics:
     - Divulgação de resultados
+    - Complexidade computacional
+    - Criptografia
+    - Linguagens de programação e compiladores
+    - Solução de problemas como reconhecimento de linguagens
     lecture: false
   - topics:
     - Prova de substituição de grau

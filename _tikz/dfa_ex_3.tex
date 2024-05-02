@@ -1,0 +1,24 @@
+\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+\usetikzlibrary{automata, arrows.meta, positioning}
+\begin{document} 
+\begin{tikzpicture}[
+    thick,
+    node distance={25mm},
+    auto
+]
+
+\node[state, initial, accepting, initial text = {}] (q0) {$q_0$}; 
+\node[state] (q1) [right of=q0] {$q_1$}; 
+\node[state, accepting] (q2) [right of=q1] {$q_2$}; 
+\node[state] (q3) [below of=q1] {$q_3$};
+
+\path[->]
+    (q0) edge [] node [below] {a} (q1)
+    (q1) edge [] node [below] {b} (q2)
+    (q1) edge [] node [left] {a} (q3)
+    (q2) edge [bend right] node [above] {a} (q1)
+    (q3) edge [bend right] node [below right] {a} (q2)
+    ;
+
+\end{tikzpicture} 
+\end{document}
