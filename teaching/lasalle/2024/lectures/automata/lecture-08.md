@@ -45,7 +45,7 @@ Por conveniência, vamos assumir uma forma especial do GNFA, onde:
 **Lema:** Todo GNFA $G$ tem uma expressão regular $R$ equivalente.
 
 **Prova:** Por indução do número de estados $k$ de $G$.
-* Base: $k = 2 : G = \rightarrow\bigcirc\overset{r}{\rightarrow}\bigodot$
+* Base: $k = 2 \: G = \rightarrow\bigcirc\overset{r}{\rightarrow}\bigodot$
     * Lembre-se que $G$ está na forma especial
     * $R = r$
 * Passo de Indução ($k > 2$)
