@@ -88,45 +88,47 @@ lectures:
     - "[Especificação do **T2**](lectures/ia/trabalho-02)"
     lecture: false
   - topics:
-    - Prova **G1**
+    - Aula convertida em exercícios domiciliares devido a enchentes no RS
     lecture: false
   - topics:
-    - Introdução a aprendizagem de máquinas
-    - _Nearest Neighbors_
-    - ID-trees
-    - Divulgação dos resultados do **G1**.
+    - Aula convertida em exercícios domiciliares devido a enchentes no RS
     lecture: false
   - topics:
-    - Redes Neurais e Deep Learning
+    - Retorno as aulas _online_
+    - Revisão de conteúdos
     lecture: false
   - topics:
+    - Revisão da solução de problemas por busca em espaços
+    - Aproximação de Funções
+    - Aprendizado de máquina
+    lecture: false
+  - topics:
+    - Classificação de elementos
+    - Problemas linearmente separáveis
+    - Funções de avaliação
     - Algoritmos Genéticos
-    - Support Vector Machines
     lecture: false
   - topics:
-    - _Boosting_
+    - Redes neurais artificiais
+    - Perceptron
+    - Problema do XOR
+    - Classificação vs. Aproximação
+    - Multi-layer Perceptron
     lecture: false
   - topics:
-    - Representações
-    - Inferência Probabilística
+    - _Deep learning_
     lecture: false
   - topics:
-    - Aula para desenvolvimento do **T3**
+    - _Reinforcement Learning_
     lecture: false
   - topics:
-    - Exercícios
-    - Revisão
-    - Data limite para a entrega do **T3**
-    lecture: false
-  - topics:
-    - Prova **G2**
-    lecture: false
-  - topics:
-    - Divulgação de Resultados
-    - Mercado de trabalho para IA
     - Revisão do conteúdo
     lecture: false
   - topics:
-    - Prova de substituição de grau
+    - Prova **G2**
+    - Prazo final para a entrega dos trabalhos de pesquisa
+    lecture: false
+  - topics:
+    - Apresentação do trabalho sobre deep learning (MNIST database)
     lecture: false
 ---

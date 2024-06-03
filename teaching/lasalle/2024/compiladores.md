@@ -99,43 +99,42 @@ lectures:
     - "_Feriado_"
     lecture: false
   - topics:
-    - "Prova **P1**"
+    - Aula convertida em exercícios domiciliares devido a enchentes no RS
+    lecture: false
+  - topics:
+    - Aula convertida em exercícios domiciliares devido a enchentes no RS
+    lecture: false
+  - topics:
+    - Retorno das aulas _online
+    - Revisão de conteúdos
+    lecture: false
+  - topics:
+    - Gramáticas Livres de contexto
+    - Árvores de derivação
+    - Associação de regras a GLC
+    lecture: false
   - topics:
     - Análise semântica
     - Verificação de tipos
-    - "Especificação do **T4**"
     lecture: false
   - topics:
     - Geração de código intermediário
     lecture: false
   - topics:
-    - Ambientes de execução
-    - "Especificação do **T5**"
-    lecture: false
-  - topics:
     - Geração de código alvo
     lecture: false
   - topics:
-    - Otimização local de código
-    - "Entrega do **T4**"
+    - Revisão
     lecture: false
   - topics:
-    - Otimização global
-    - Alocação de Registradores
+    - "Prova **P1**"
     lecture: false
   - topics:
-    - Implementação dos trabalhos
+    - Correção e revisão.
     lecture: false
   - topics:
     - "Prova **P2**"
-    - "Entrega dos projetos (**T5**)"
-    lecture: false
-  - topics:
-    - Apresentação dos projetos
-    - Divulgação de Resultados
-    lecture: false
-  - topics:
-    - Prova de Substituição de Grau
+    - Apresentação dos trabalhos de pesquisa
     lecture: false
 ---
 
