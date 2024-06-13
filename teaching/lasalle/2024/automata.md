@@ -100,45 +100,43 @@ lectures:
     - Exercícios de revisão (online devido a eventos climáticos)
     lecture: true
   - topics:
-    - Propriedades das linguagens Livres de Contexto
-    - Autômatos de Pilha
+    - Aula convertida em exercícios domiciliares devido a enchentes no RS.
     lecture: false
   - topics:
-    - Prova G1 (P1)
+    - Aula convertida em exercícios domiciliares devido a enchentes no RS.
     lecture: false
   - topics:
-    - Máquinas universais
-    - Decidibilidade
+    - Retorno as aulas online. Revisão de conteúdos.
     lecture: false
   - topics:
     - _Feriado_
     lecture: false
   - topics:
-    - Redutibilididade
+    - Gramáticas Livres de Contexto
     lecture: false
   - topics:
-    - Problema da Correspondência de Post
-    - Teorema de Rice
+    - Propriedades das Linguagens Livres de Contexto
+    - Lema do bombeamento para linguagens livres de contexto
     lecture: false
   - topics:
-    - Cálculo Lambda
-    - Teorema da Recursão
+    - Revisão das Linguagens Livres de Contexto
+    - Máquinas universais
+    - Decidibilidade
     lecture: false
   - topics:
-    - Exercícios de Revisão
+    - Problemas indecidíveis
+    - Redutibilidade
+    - Exercícios
+    lecture: false
+  - topics:
+    - Exercícios de revisão
+    lecture: false
+  - topics:
+    - Prova G2 (P1)
+    - Correção da Prova e Exercícios de Revisão.
     lecture: false
   - topics:
     - Prova G2 (P2)
-    lecture: false
-  - topics:
-    - Divulgação de resultados
-    - Complexidade computacional
-    - Criptografia
-    - Linguagens de programação e compiladores
-    - Solução de problemas como reconhecimento de linguagens
-    lecture: false
-  - topics:
-    - Prova de substituição de grau
     lecture: false
 homework:
     - T1: DFA evaluation
