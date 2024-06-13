@@ -22,7 +22,7 @@ Pra facilitar a conversão do de um automato finito em uma expressão regular va
 
 Um autômato Finito Não-Determinístico Generalizado é semelhante a um NFA, mas permite o uso de expressões regulares como símbolo de ativação das transições.
 
-![GNFA](/images/gnfa.svg)
+![GNFA](/images/gnfa.svg){:style="min-width: 50% !important;"}
 
 A diferença na computação de um GNFA é que ao invés de ler um único símbolo, a transição irá consumir toda uma string.
 
@@ -31,7 +31,7 @@ A aceitação ou rejeição de uma entrada é a mesma do NFA, se houver qualquer
 Por conveniência, vamos assumir uma forma especial do GNFA, onde:
 * Existe apenas um estado de aceitação, separado do estado inicial.
 
-![GNFA Conveniente](/images/gnfa_convenient.svg){:style="min-width:55ch !important;"}
+![GNFA Conveniente](/images/gnfa_convenient.svg){:style="min-width:80% !important;"}
 
 * Devem existir transições de entrada e saída entre todos os estados do autômato:
     * o estado inicial só possui transições de saída.
@@ -56,8 +56,8 @@ Por conveniência, vamos assumir uma forma especial do GNFA, onde:
         * reconstruir todos os caminhos que passavam por $x$
         * Faço o mesmo para todo par de estados $q_i, q_j$
 
-![GNFA with k states](/images/gnfa_kstate.svg){:style="margin: 0px; display:inline; max-width: 6ch !important; max-height: 15ch !important;"}
-![GNFA with k states](/images/gnfa_kstate_reduced.svg){:style="margin: spx; display:inline; max-height: 7ch !important; min-height: 3ch !important;"}
+![GNFA with k states](/images/gnfa_kstate.svg){:style="margin: 0px; display:inline; min-width: 40% !important; max-height: 15ch !important;"}
+![GNFA with k states](/images/gnfa_kstate_reduced.svg){:style="margin: 5px; display:inline; max-height: 15ch !important; min-height: 7ch !important;"}
 {:style="text-align:center"}
 
 <!--
@@ -94,7 +94,7 @@ Dado o alfabeto $\Sigma = \\{0, 1\\}$:
 
 **Informalmente**: $A$ é regular se cada cadeia longa em $A$ pode ser bombeada e o resultado continua em $A$.
 
-![Pumping lemma](/images/pumping_lemma.png)
+![Pumping lemma](/images/pumping_lemma.png){:style="max-width:100% !important"}
 
 **Prova**: Seja $M$ um DFA que reconhece $A$, seja $p$ o número de estados em $M$, escolha $s \in A$ onde $\|s\| \ge p$
 * $M$ vai, obrigatoriamente repetir um estado $q_j$ quando avaliar $s$, porque $s$ é muito longa.
