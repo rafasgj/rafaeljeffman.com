@@ -117,7 +117,7 @@ lectures:
   - topics:
     - Propriedades das Linguagens Livres de Contexto
     - Lema do bombeamento para linguagens livres de contexto
-    lecture: false
+    lecture: true
   - topics:
     - Revisão das Linguagens Livres de Contexto
     - Máquinas universais
