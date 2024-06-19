@@ -122,7 +122,7 @@ lectures:
     lecture: false
   - topics:
     - Geração de código alvo
-    lecture: false
+    lecture: true
   - topics:
     - Revisão
     lecture: false
