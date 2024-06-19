@@ -40,6 +40,7 @@ references:
     - "GOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. [**Deep Learning**](https://www.deeplearningbook.org){:target='\_blank'}. MIT Press. 2016."
   "Recursos Online":
     - "[Artificial Inteligence - MIT, 2010](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010){:target='\_blank'}"
+    - "[MIT 6.s191: Introduction to Deeep Learning - MIT, 2024](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI){:target='\_blank'}"
 grading:
   g1:
     t1: 2.5
