@@ -100,13 +100,14 @@ lectures:
     - Exercícios de revisão (online devido a eventos climáticos)
     lecture: true
   - topics:
-    - Aula convertida em exercícios domiciliares devido a enchentes no RS.
+    - Aula transformada em exercícios domiciliares devido aos eventos climáticos
     lecture: false
   - topics:
-    - Aula convertida em exercícios domiciliares devido a enchentes no RS.
+    - Aula transformada em exercícios domiciliares devido aos eventos climáticos
     lecture: false
   - topics:
-    - Retorno as aulas online. Revisão de conteúdos.
+    - Retorno às aulas _online_
+    - Revisão de conteúdo
     lecture: false
   - topics:
     - _Feriado_
@@ -132,11 +133,13 @@ lectures:
     - Exercícios de revisão
     lecture: false
   - topics:
-    - Prova G2 (P1)
-    - Correção da Prova e Exercícios de Revisão.
+    - "**Prova G2 (P2a)**"
+    - Correção da prova
+    - Revisão de conteúdo
     lecture: false
   - topics:
-    - Prova G2 (P2)
+    - "**Prova G2 (P2b)**"
+    - "**Prova de Substituição**"
     lecture: false
 homework:
     - T1: DFA evaluation
