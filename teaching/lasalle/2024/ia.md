@@ -38,14 +38,15 @@ references:
     - "MINSKY, Marvin; PAPERT, Seymour A. **Perceptrons: Expanded Edition**. 4<sup>th</sup> print. MIT Press. Massachussets. 1988"
     - "KOHONEN, Teuvo. **Self-Organizing Maps**. 2<sup>nd</sup> Ed. Springer. Alemanha. 1997."
     - "GOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. [**Deep Learning**](https://www.deeplearningbook.org){:target='\_blank'}. MIT Press. 2016."
+    - "HASHID, Tariq. [**Make yor own neural network**](https://www.amazon.com.br/Make-Your-Neural-Network-English-ebook/dp/B01EER4Z4G/ref=sr_1_1?crid=2YHFKYIJNDLRP&dib=eyJ2IjoiMSJ9.tUKszkw5VJLCRysV4V7SHkJgLSxCP6VXQdTBYKXnmPTNbB3Hp1hlxQ6J2OsoRxL-6fBM1RsM0tfF9oRQTau0pt7u9o9eVRfvtl-Pe8Qjioaxcxj8wcjXw5zmTQ_JKcI1OJc4FATFKeWAHKqS0CYzyK2ANz7MMfe3EP-TeovfZglQxUk81CpuBcVJTaPBEiYz_qPNI6EDSSppaozRAJ07gJTR8-oNUN_sfEMy5zBn9SOiuS9V9qlpBA8_JEZ-1JBr0_SdAvZkW7eDyJoP9K1SJZDnkXAyjKxU9eB59jiG2Qs.Rn5Mm1qG333Ajwn7vaXXMZTqXCN1zjO4HvViHOA_O-k&dib_tag=se&keywords=make+your+own+neural+network&qid=1719170585&sprefix=make+your+own+%2Caps%2C246&sr=8-1){:target='\_blank'}."
+    - "HASHID, Tariq. [**Make yor first GAN with PyTorch**](https://www.amazon.com.br/Make-Your-First-PyTorch-English-ebook/dp/B085Z96M9P?ref_=ast_author_dp&dib=eyJ2IjoiMSJ9.JWABkOdtN8asbytllWpxcNVhpn0iUq4wJI4Pzgad4sBJlzdaWu3GKrR3lc6X4XWzalq6TtX4DlN6g0oGoW3pruKhIQ6d4jKDJoelT_WT_TzD1IwnCqV6jB-pu5jJ1VPFheAqyDpFyKzzXloQ-CaWvA.7IfSmigpPcHOC1tuPawh19b2pcjGmHpZ1ULswjLtT6U){:target='\_blank'}."
   "Recursos Online":
     - "[Artificial Inteligence - MIT, 2010](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010){:target='\_blank'}"
     - "[MIT 6.s191: Introduction to Deeep Learning - MIT, 2024](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI){:target='\_blank'}"
 grading:
   g1:
-    t1: 2.5
-    t2: 2.5
-    p1: 5.0
+    t1: 5.0
+    t2: 5.0
   g2:
     t3: 5.0
     p2: 5.0
@@ -121,15 +122,17 @@ lectures:
     lecture: false
   - topics:
     - _Reinforcement Learning_
+    - Inteligência Artificial Generativa
     lecture: false
   - topics:
     - Revisão do conteúdo
     lecture: false
   - topics:
-    - Prova **G2**
-    - Prazo final para a entrega dos trabalhos de pesquisa
+    - Prova **G2a**
+    - Prazo final para a entrega dos trabalhos do G1
     lecture: false
   - topics:
-    - Apresentação do trabalho sobre deep learning (MNIST database)
+    - Prova **G2s**
+    - Prova de Substituição de grau.
     lecture: false
 ---

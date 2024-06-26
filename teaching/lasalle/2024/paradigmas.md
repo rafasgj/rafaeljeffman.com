@@ -91,64 +91,54 @@ lectures:
     - Implementação do trabalho.
     lecture: false
   - topics:
-    - Introdução a Programação em Lógica
+    - Mapeamento de memória em C
     - Implementação do trabalho.
     lecture: false
   - topics:
     - Lógica de Predicados
-    - Prolog
-    - Processamento de listas com Prolog.
+    - Introdução a programação lógica
     lecture: false
   - topics:
-    - "Prova **P2**"
+    - Exercícios e revisão de conteúdo.
     lecture: false
   - topics:
-    - Tipos de dados primitivos, estruturados e compostos"
-    - "Tipos de dados: representação, equivalência, compatibilidade, conversão"
-    - Tipos de dados definidos pelo usuário
-    - Checagem de tipos
-    - Programação Funcional em Haskell
-    - _Divulgação de resultados do G1_
+    - Aula transformada em exercícios domiciliares devido a eventos climáticos
     lecture: false
   - topics:
-    - Programação Funcional em Haskell
+    - Aula transformada em exercícios domiciliares devido a eventos climáticos
     lecture: false
   - topics:
-    - Exercícios em Haskell
+    - Retomada das aulas no modelo _online_.
+    - Revisão de conteúdos
     lecture: false
   - topics:
-    - Programação modular
-    - Programação orientada a objetos (Java, Io e Python)
-    - Revisitando tipos abstratos de dados
-    - Divisão de responsabilidades
-    - Estado e comportamento de objetos
-    - Herança
-    - Interface e Implementação
-    - SOLID
-    - OOP com classes e protótipos
+    - Tipos de Dados
+    - Tipos Abstratos de Dados
+    - Introdução a Programação Funcional
     lecture: false
   - topics:
-    - Exercícios sobre programação orientada a objetos
-    - "Prazo final para a entrega do **T3**"
+    - Introdução a Haskell
     lecture: false
   - topics:
-    - Programação concorrente
+    - Funções e processamento de listas
     lecture: false
   - topics:
-    - Programação concorrente
-    - Exercícios de Programação concorrente
+    - "_Folding_ em Haskell"
+    - Tipos de dados e Registros
+    - "_Typeclassess_"
+    - Algoritmos e Estruturas de Dados em Haskell
     lecture: false
   - topics:
-    - "Prova **P2**"
-    - "Prazo final para a entrega do **T4**"
+    - Revisão de conteúdo
     lecture: false
   - topics:
-    - Programação distribuída
-    - O futuro da programação
-    - Divulgação de Resultados
-    - Revisão para a substituição de grau
+    - "Prova **P2a**"
+    - Correção da prova
+    - Revisão de conteúdo
+    - "Data limite para entrega dos trabalhos do **G1**"
     lecture: false
   - topics:
+    - "Prova **P2b**"
     - Prova de substituição de grau
     lecture: false
 basic_plan:

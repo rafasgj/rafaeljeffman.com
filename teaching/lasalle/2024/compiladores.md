@@ -124,17 +124,19 @@ lectures:
     - Geração de código alvo
     lecture: true
   - topics:
-    - Revisão
+    - Exemplo de implementação de um compilador
+    lecture: false
+  - topics:
+    - Revisão e exercícios
     lecture: false
   - topics:
     - "Prova **P1**"
-    lecture: false
-  - topics:
-    - Correção e revisão.
+    - Correção da Prova
+    - "Data limite para entrega dos trabalhos do **G1**"
     lecture: false
   - topics:
     - "Prova **P2**"
-    - Apresentação dos trabalhos de pesquisa
+    - Prova de substituição
     lecture: false
 ---
 
