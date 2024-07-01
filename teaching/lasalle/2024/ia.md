@@ -125,8 +125,8 @@ lectures:
     - Inteligência Artificial Generativa
     lecture: false
   - topics:
-    - Revisão do conteúdo
-    lecture: false
+    - Exercícios de revisão
+    lecture: true
   - topics:
     - Prova **G2a**
     - Prazo final para a entrega dos trabalhos do G1
