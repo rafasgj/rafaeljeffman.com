@@ -130,7 +130,7 @@ lectures:
     lecture: false
   - topics:
     - Revisão de conteúdo
-    lecture: false
+    lecture: true
   - topics:
     - "Prova **P2a**"
     - Correção da prova
