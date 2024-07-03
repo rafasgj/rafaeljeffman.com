@@ -128,7 +128,7 @@ lectures:
     lecture: false
   - topics:
     - Revisão e exercícios
-    lecture: false
+    lecture: true
   - topics:
     - "Prova **P1**"
     - Correção da Prova
