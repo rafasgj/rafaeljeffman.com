@@ -159,9 +159,11 @@ A partir da análise da solução, avalie as asserções a seguir e a relação 
 
 1. A eliminação da variàvel `cont` e das linhas 4, 7, 13 e 16 causa erro de sincronismo entre os processos,
 
-**PORQUE**{:style="text-align: center; margin: auto 0; width: 100%;"}
+**PORQUE**
+{:style="text-align: center; margin: auto 0; width: 100%;"}
 
 2. A variável `cont` é responsável pelo controle de acesso à sção crítica do código.
+{:start="2"}
 
 A respeito dessas asserções, assinale a opção correta.
 

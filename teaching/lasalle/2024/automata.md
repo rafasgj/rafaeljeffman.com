@@ -127,11 +127,10 @@ lectures:
   - topics:
     - Problemas indecidíveis
     - Redutibilidade
-    - Exercícios
     lecture: false
   - topics:
     - Exercícios de revisão
-    lecture: false
+    lecture: true
   - topics:
     - "**Prova G2 (P2a)**"
     - Correção da prova
