@@ -93,7 +93,7 @@ lectures:
     - FIRST e FOLLOW
     - Análise sintática Bottom-Up
     - Tradução direcionada por sintaxe
-    - "Especificação **T2** e **T3**"
+    - "Especificação [**T2**](lectures/compiladores/trabalho-02)"
     lecture: false
   - topics:
     - "_Feriado_"
@@ -132,7 +132,7 @@ lectures:
   - topics:
     - "Prova **P1**"
     - Correção da Prova
-    - "Data limite para entrega dos trabalhos do **G1**"
+    - "Data limite para entrega dos trabalhos do **G1** ([**T1**](lectures/compiladores/trabalho-01) e [**T2**](lectures/compiladores/trabalho-02))"
     lecture: false
   - topics:
     - "Prova **P2**"

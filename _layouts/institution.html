@@ -46,7 +46,7 @@
                             <h3>Tutoria</h3>
                             <ul>
                             {% for course in semester.courses.tutor %}
-                                <li><a href="/teaching/{{ page.institution }}/{{ year.id }}/{{ course }}">{{ site.data.courses[course] }}</a></li>
+                                <li><a href="/teaching/{{ page.institution }}/{{ year.id }}/tutoria/{{ course }}">{{ site.data.courses[course] }}</a></li>
                             {% endfor %}
                             </ul>
                         {% endif %}

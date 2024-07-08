@@ -17,8 +17,8 @@ sections:
 
 ### Tutorias
 
-* [Compiladores](compiladores) (Tutoria)
-* [Linguagens Formais e Autômatos](automata) (Tutoria)
+* [Compiladores](tutoria/compiladores) (Tutoria)
+* [Linguagens Formais e Autômatos](tutoria/automata) (Tutoria)
 
 ### Ensino a Distância
 
