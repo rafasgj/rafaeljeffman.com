@@ -8,6 +8,8 @@ copy: 2024
 institution:
   name: Universidade LaSalle Canoas
   link: /teaching/lasalle/2024/compiladores
+extra_styles:
+  - lecture
 ---
 
 <style>
@@ -56,6 +58,10 @@ apresentada.
 * a gramática gera a sentença apresentada, porém o analisador léxico transmitirá uma mensagem de erro
 {:class="lettered"}
 
+<details><summary>Resposta...</summary>
+<p>A resposta correta é a letra <b>B</b>, pois o erro ocorre devido a uma divisão por zero na expressão <kbd>b - b</kbd>, e é necessária a avaliação do comportamento do código para que o erro seja detectado.</p>
+</details>
+
 ## Questão 2
 
 Em um compilador, um analisador sintático descendente preditivo pode ser implementado com o auxílio de uma tabela construída a partir de uma gramática livre de contexto. Essa tabela, chamada tabela LL(k), indica a regra de produção a ser aplicada olhando-se o k-ésimo próximo símbolo lido, chamado _lookahead_(k). Pro motivo de eficiência, normalmente busca-se utilizar k=1. Considere a gramática livre de contexto G = ({X, Y, Z}, {a, b, c, d, e}, P, X), em que P é composto pelas seguintes regras de produção (onde `&` é a palavra vazia):
@@ -82,6 +88,10 @@ Considerando que o processo de construção dessa tabela LL(1), a partir da gram
 * da presença de duas regras de produção com um único terminal no corpo.
 * da presença de duas regras de produção com o mesmo não-terminal na cabeça.
 {:class="lettered"}
+
+<details><summary>Resposta...</summary>
+<p>A resposta correta é a letra <b>B</b>, pois o indetermismo de saber qual regra utilizar, nesse caso, torna a gramática ambígua, ou seja, permite a criação de árvores de derivação diferentes para a mesma construção sintática.</p>
+</details>
 
 ## Questão 3
 
@@ -114,6 +124,10 @@ A gramática que especifica uma linguagem que não permita herança múltipla e 
 * `<classdecl> "class" <id> ["extends" <id>] ["implements" <id> ("," <id>)*] <classbody>`
 * `<classdecl> "class" <id> ["extends" <id>] "implements" <id> ("," <id>)* <classbody>`
 {:class="lettered"}
+
+<details><summary>Resposta...</summary>
+<p>A resposta correta é a letra <b>B</b>. Essa pergunta requer atenção aos grupos que estão associados as regras de repetição e quais elementos são ou não opcionais.</p>
+</details>
 
 ## Questão 4
 
@@ -174,11 +188,30 @@ A respeito dessas asserções, assinale a opção correta.
 * Ambas as proposições são falsas.
 {:class="lettered"}
 
+<details><summary>Resposta...</summary>
+<p>A resposta correta é <b>E</b>, a variável <kbd>cont</kbd> controla a quantidade de elementos no array. A variável <kbd>vez</kbd> é que controla o sincronismo e acesso à seção crítica.</p>
+</details>
+
 ## Questão 5
 
 Utilizando o código intermediário de três endereçoes numerado, mostre o código gerado para a seginte instrução:
 
 ```nohl
-if a < 3 and b  > 10 and a < b then verdadeiro() else falso() ;
+if a < 3 and b > 10 and a < b then verdadeiro() else falso() ;
 ```
 
+<details>
+    <summary>Resposta...</summary>
+<code><pre>
+100: t1 = a < 3
+101: ifFalse t1 goto 108
+102: t2 = b > 10
+103: ifFalse t2 goto 108
+104: t3 = a < b
+105: ifFalse t3 goto 108
+106: call 'verdadeiro'
+107: goto 109
+108: call 'falso'
+109: ...
+</pre></code>
+</details>

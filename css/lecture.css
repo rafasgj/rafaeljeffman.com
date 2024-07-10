@@ -15,3 +15,20 @@ img.inline {
     min-width: 1px !important;
     max-height: 2em !important;
 }
+
+
+details {
+  font-size: 80% ! important;
+  color: #00d;
+  width: 80%;
+  margin: 0 auto;
+}
+details[open] {
+  border: thin solid dashed;
+}
+details > *:not(summary) {
+  color: #222;
+  padding-left: 2em;
+  margin: 3px;
+  font-size: 85%;
+}
