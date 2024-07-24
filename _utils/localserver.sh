@@ -27,6 +27,9 @@ fi
 podman run \
     --volume "${TOPDIR}:/srv/jekyll:${VOLOPT}" \
     --volume "${TOPDIR}/.vendor/bundle:/usr/local/bundle:${VOLOPT}" \
+    --detach \
+    --rm \
+    --read-only \
     -p ${1:-4000}:4000 \
     "${TAG}"
 
