@@ -25,16 +25,4 @@ cards:
   #   link: /tools
   #   content: |
   #     * [Criando sites estáticos com Jekyll e Podman](/tools/jekyll-podman)
-  - title: Unilasalle - Presencial
-    link: /teaching/lasalle
-    content: |
-      * [Inteligência Artificial](/teaching/lasalle/2024/ia)
-      * [Paradigmas de Programação](/teaching/lasalle/2024/paradigmas)
-      * [Compiladores](/teaching/lasalle/2024/compiladores)
-      * [Linguagens Formais e Autômatos](/teaching/lasalle/2024/automata)
-  - title: Unilasalle - Tutorias
-    link: /teaching/lasalle
-    content: |
-      * [Complexidade de Algoritmos e Análise de Desempenho](/teaching/lasalle/2024/analise-algoritmos)
-      * [Desenvolvimento para Dispositivos Móveis](/teaching/lasalle/2024/mobile)
 ---

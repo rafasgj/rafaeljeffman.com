@@ -8,7 +8,6 @@ sections:
 
 ## 2024/01
 
-
 ### Presencial
 
 * [Compiladores](compiladores)
@@ -16,14 +15,12 @@ sections:
 * [Inteligência Artitficial](ia)
 * [Paradigmas de Linguagens de Programação](paradigmas)
 
-
 ### Tutorias
 
-* [Complexidade e Análise de Algoritmosa](analise-algoritmos)
-* [Desenvolvimento para Dispositivos Móveis](mobile)
-
+* [Complexidade de Algoritmos e Avalição de Desempenho](tutoria/analise-algoritmos)
+* [Desenvolvimento para Dispositivos Móveis](tutoria/mobile)
 
 ### Ensino a Distância
 
-* [Desenvolvimento para Dispositivos Móveis](mobile)
+* Desenvolvimento para Dispositivos Móveis
 

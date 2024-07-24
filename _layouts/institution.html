@@ -32,7 +32,8 @@
                 <p>Lista de disciplinas que {% if page.current %}ministro ou{% endif %} ministrei na <a href="{{ site.data.institutions[page.institution].url }}" taget="_blank">{{ site.data.institutions[page.institution].name }}</a>.</p>
                 <div id="courses" style="margin-bottom: 5em">
                 {% for year in site.data.institutions[page.institution].years %}
-                    {% for semester in year.semesters %}
+                    {% assign semester_list = year.semesters | sort: "id" | reverse %}
+                    {% for semester in semester_list %}
                     <h2>{{ year.id }}/{{ semester.id }}</h2>
                         {% if semester.courses.in_person %}
                             <h3>Presencial</h3>

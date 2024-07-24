@@ -16,18 +16,6 @@ lasalle:
   sections:
     - LaSalle
   years:
-    # - id: 202_
-    #   semesters:
-    #   - id:
-    #     courses:
-    #       in_person:
-    #       -
-    #       virtual:
-    #       -
-    #       tutor:
-    #       -
-    #       advisor:
-    #       -
     - id: 2024
       semesters:
       - id: 1
