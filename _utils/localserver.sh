@@ -30,6 +30,7 @@ podman run \
     --detach \
     --rm \
     --read-only \
+    --name jekyll_server \
     -p ${1:-4000}:4000 \
-    "${TAG}"
-
+    "${TAG}" \
+    bundle exec jekyll serve --trace --incremental
