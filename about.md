@@ -25,6 +25,7 @@ Alguma coisa um pouco mais pessoal, com visões de mundo bem particulares, comid
     <!--
     <li><a target="_blank" href="https://twitter.com/rafasgj"><span class="fa-brands fa-twitter huge"></span></a></li>
     -->
+    <li><a target="_blank" href="https://mastodon.sociial/@rafasgj"><span class="fa-brands fa-mastodon huge"></span></a></li>
     <li><a target="_blank" href="https://instagram.com/rafasgj"><span class="fa-brands fa-instagram huge"></span></a></li>
     <li><a target="_blank" href="https://github.com/rafasgj"><span class="fa-brands fa-github huge"></span></a></li>
 </ul>
