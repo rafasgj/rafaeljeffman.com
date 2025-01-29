@@ -1,4 +1,15 @@
 {% assign lang_path = site.data.lang["_lang_prefix"][lang]  %}
+<li><a href="/projects">{{ site.data.lang['Projetos'][lang] | default: "Projetos" }}</a>
+  <ul>
+    <li><a href="/projects/t/{{ lang_path }}">&tau;</a></li>
+    <li><a href="/projects/ipalab-config/{{ lang_path }}">ipalab-config</a></li>
+    <li><a href="/projects/freeipa/{{ lang_path }}">FreeIPA</a></li>
+    <li><a href="/projects/logovm/{{ lang_path }}">LogoVM</a></li>
+    <!--
+    <li><a href="/projects/fpi/{{ lang_path }}">f/π</a></li>
+    -->
+  </ul>
+</li>
 <li><a href="/teaching">{{ site.data.lang['Ensino'][lang] | default: "Ensino" }}</a>
   <ul>
     <li><a href="/teaching/cs">Ciência da Computação</a>
@@ -13,16 +24,6 @@
       ul>
       </ul>
     </li>
-    -->
-  </ul>
-</li>
-<li><a href="/projects">{{ site.data.lang['Projetos'][lang] | default: "Projetos" }}</a>
-  <ul>
-    <li><a href="/projects/freeipa/{{ lang_path }}">FreeIPA</a></li>
-    <li><a href="/projects/logovm/{{ lang_path }}">LogoVM</a></li>
-    <li><a href="/projects/t/{{ lang_path }}">&tau;</a></li>
-    <!--
-    <li><a href="/projects/fpi/{{ lang_path }}">f/π</a></li>
     -->
   </ul>
 </li>
