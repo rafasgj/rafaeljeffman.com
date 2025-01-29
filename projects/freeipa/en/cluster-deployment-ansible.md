@@ -214,12 +214,9 @@ On ansible-freeipa prior to 1.9.0 one would have to configure the DNS resolution
 
 Starting with version 1.9.0, the ansible-freeipa's `ipaclient` role allows one to configure the host DNS resolver to use a specific set of nameservers by setting the variables `ipaclient_configure_dns_resolver` and `ipaclient_dns_servers`. This will work with `systemd-resolved`, `NetworkManager` or plain `/etc/resolv.conf`.
 
-Acconding to the oficial documentation, `ipaclient_all_ip_addresses` "defines if DNS A/AAAA records for each IP address on the client will be created", and, if the target node has a single IP this has the effect of adding the host IP to the embedded DNS database, and this is needed to finish `ipareplica` deployment, as it will allow replication to take place, finishing replica setup. 
-
 For more information on the `ipareplica` role options, [see the offical documentation](https://github.com/freeipa/ansible-freeipa/tree/master/roles/ipareplica).
 
 Now that our network has some redundancy, we can add some clients to it.
-
 
 ## Adding IPA clients
 
