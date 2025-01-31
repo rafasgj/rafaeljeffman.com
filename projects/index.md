@@ -5,6 +5,14 @@ sections:
   - FreeIPA
   - LogoVM
 cards:
+  - title: ipalab-config
+    link: /projects/ipalab-config
+    content: |-
+        [ipalab-config](https://pypi.org/p/ipalab-config) é uma ferramenta para
+        a criação de ambientes de execução complexos do FreeIPA utilizando
+        _containers rootless_. Embora os ambientes não sejam oficialmente
+        suportados, podem ser utilizados para experimentar novas _features_ e
+        configurações ou para desenvolvimento.
   - title: FreeIPA e ansible-freeipa
     link: /projects/freeipa
     content: |-

@@ -10,7 +10,7 @@ sections:
 
 Although FreeIPA does not officially support the use of containers, it is possible to run and test it within these environments.
 
-Development is [done on Github](https://github.com/rjeffman/ipalab-config), and you cant install it using `pip` from [PyPi](https://pypi.org/project/ipalab-config)(it is suggested that Python's virtual environments are used).
+Development is [done on Github](https://github.com/rjeffman/ipalab-config), and you cant install it using `pip` from [PyPi](https://pypi.org/project/ipalab-config) (it is suggested that Python's virtual environments are used).
 
 Although not a direct dependency, you'll need [podman-compose](https://github.com/containers/podman-compose) to start the environment, and you'll probably will be using [Ansible](https://ansible.com) to deploy FreeIPA and other nodes.
 
