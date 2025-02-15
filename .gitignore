@@ -4,6 +4,8 @@ _site
 .jekyll-metadata
 vendor
 .vendor
+bundle
+.bundle
 Gemfile.lock
 
 # python files
