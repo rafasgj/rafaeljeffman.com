@@ -64,7 +64,7 @@ $ podman run --name mongo-container \
     docker.io/library/mongo:latest
 ```
 
-Ao executarmos o comando `run` do podman, um _container_ será criado com o nome fornecido em `--name`, utilizando a imagem especificada (`docker.io/library/mongo:lates` no exemplo). O uso do argumento `-d` em conjunto com o argumento `-t` permite que o _container_ continue executando em _background_ após a sua criação e inicialização. Sem isso, o _container_ irá encerrar e parar a execução.  
+Ao executarmos o comando `run` do podman, um _container_ será criado com o nome fornecido em `--name`, utilizando a imagem especificada (`docker.io/library/mongo:lates` no exemplo). O uso do argumento `-d` em conjunto com o argumento `-t` permite que o _container_ continue executando em _background_ após a sua criação e inicialização. Sem isso, o _container_ irá encerrar e parar a execução.
 
 O parâmetro `--volume` é muito importante pois permite utilizar a mesma base de dados caso o _container_ precise ser recriado novamente. Para apagar a base de dados, basta apagar o diretório `data`, recriá-lo, e executar os passos de importação dos dados novamente.
 

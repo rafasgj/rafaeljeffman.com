@@ -19,7 +19,7 @@ abstract: |-
     Windows, utilizando ferramentas de linha de comando.
 ---
 
-O [MongoDB](https://mongodb.com){:target="\_blank"} é um dos principais bancos de dados orientados a documentos do mercado, e, apesar de 2018 utilizar uma licença proprietária, até o momento mantém uma versão _community_ que permite o seu uso para desenvolvimento sem custos.
+O [MongoDB](https://mongodb.com){:target="\_blank"} é um dos principais bancos de dados orientados a documentos do mercado, e, apesar de, desde 2018, utilizar uma licença proprietária, até o momento mantém uma versão _community_ que permite o seu uso para desenvolvimento, sem custos.
 
 Nesse artigo, mostro como instalar o MongoDB no Windows, e, para testar a instalação, realizar uma importação de dados CSV e executar uma consulta ao banco. Para os testes do procedimento foi utilizado o Windows 11, porém as instruções devem funcionar em qualquer versão a partir do Windows 8.
 
