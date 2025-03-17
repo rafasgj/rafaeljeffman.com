@@ -50,7 +50,7 @@ about 10 minutes to have the environment running.
 
 The software required to run this environment is:
 
-* [ipalab-config](https://pypi.org/p/ipalab-config) (at least, version 0.10.1)
+* [ipalab-config](https://pypi.org/p/ipalab-config) (at least, version 0.11.2)
 * [podman-compose](https://github.com/containers/podman-compose)
 * [podman](https://podman.io)
 * [Ansible](https://ansible.com)
@@ -60,10 +60,10 @@ Before starting the environment, install the requirements with:
 ```nohl
 $ python3 -m venv /tmp/ipalab
 $ source /tmp/ipalab/bin/activate
-$ pip install "ipalab-config>=0.10.1" "podman-compose>=1.3.0"
+$ pip install "ipalab-config>=0.11.2" "podman-compose>=1.3.0"
 ```
 
-Note that the minimum version for `ipalab-config` is `0.10.1`, and this
+Note that the minimum version for `ipalab-config` is `0.11.2`, and this
 experiment will not work with previous versions.
 
 If you don't have `podman` and `ansible` installed, you can install them
@@ -180,15 +180,13 @@ $ ansible-galaxy collection install freeipa.ansible_freeipa
 With the collection installed, deploy the FreeIPA server with:
 
 ```nohl
-$ ansible-playbook -i inventory.yaml playbooks/install-cluster.yml
+$ ansible-playbook ${HOME}/.ansible/collections/ansible_collections/freeipa/ansible_freeipa/playbooks/install-cluster.yml -i inventory.yml
 ```
 
-> Note: It is possible to install `ansible-freeipa` as an RPM in Fedora,
-CentOS, RHEL and similar Linux distributions. Up to version 1.14.z, on
-most of the platforms, the RPM package does not install the collection,
-but the modules and roles. In this case, the provided playbook will not
-work without adaptation. It is preferable, at this time, to use the
-Galaxy collection.
+> There's currently an open isuse with ansible-freeipa, where the
+playbooks do not work directly. Once the issue is fixed, it would
+be possible to deploy the cluster with
+`ansible-playbook freeipa.ansible_freeipa.install_cluster -i inventory.yml`
 
 ### Configuring the Trust
 
@@ -196,14 +194,16 @@ Before creating the trust, the `server` host must be able to resolve
 some DNS records from `addc`. To allow this, add a DNS forward zone
 with a forwarder to the AD DC node.
 
-As the commands will be executed in the server node, start a shell:
+As the commands will be executed in the server node, start a shell and
+obtain a TGT for admin:
 
 ```nohl
-$ podman exec -it server bash
+[server]# podman exec -it server bash
+[server]# kinit admin <<< SomeADMINpassword
 ```
 
 ```nohl
-$ ipa dnsforwardzone-add ad.ipa.test. --forwarder 192.168.13.250
+[server]# ipa dnsforwardzone-add ad.ipa.test. --forwarder 192.168.13.250
 ```
 
 With the forwarder zone in place, you can create the trust wit;h
@@ -212,7 +212,34 @@ With the forwarder zone in place, you can create the trust wit;h
 $ ipa trust-add ad.ipa.test --admin=Administrator --password <<< Secret123
 ```
 
+> Note: with this setup, a two way trust is also possible.
+Add `--two-way True` to the above command to setup a two way trust.
+
 After this commands, you can start using the IPA-AD trust.
+
+### Testing the trust
+
+Start a shell on the Samba AD DC node:
+
+``nohl
+[dc]# podman exec -it addc bash
+```
+
+Create some users on the Active Directory database:
+
+```nohl
+[dc]# samba-tool user add jdoe joesecret
+[dc]# samba-tool user add anne annesecret
+
+```
+
+Now, on the IPA server side, you can see that the users
+are visible:
+
+```nohl
+[server]# getent passwod jdoe@ad.ipa.test
+[server]# getent passwod anne@ad.ipa.test
+```
 
 ### Cleaning Up
 
@@ -232,9 +259,9 @@ variables are optional, but `subnet` is useful when defining specific
 IP addresses for the host (unless you remember that the default `subnet`
 CIDR is `192.168.159.0/24`).
 
-The `lab_name` is mostly useful as documentation, but it also defines
+The `lab\_name` is mostly useful as documentation, but it also defines
 the name of the output directory and the name of the `pod` created to
-contain the containers. Having different `lab_name` allows the creation
+contain the containers. Having different `lab\_name` allows the creation
 of different environments on the same host.
 
 ```yaml
@@ -282,7 +309,7 @@ command: /usr/sbin/init
 The only package added to the image is `systemd`, and the entry point
 (`command`) is set to use systemd on the start of the container. The
 actual package installation for Samba AD DC is done through the
-provided Ansible playbook, found in `playbooks/deploy_addc.yml`. An
+provided Ansible playbook, found in `playbooks/deploy\_addc.yml`. An
 advantage of this method is to allow easy deployment and configuration
 through Ansible variables (on the `vars` section), on through any other
 means to modify the running image.
