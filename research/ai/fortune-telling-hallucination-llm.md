@@ -23,7 +23,7 @@ machine learning algorithms that it gives an answer based on the training
 data, even if the input parameters describe a new pattern, never known by
 the model.
 
-The goal of this exeperiment is to evaluate how LLM models respond to queries
+The goal of this experiment is to evaluate how LLM models respond to queries
 it might not have seen during training, and how can the answer be improved
 with the use of _retrieval-augmented generation_(RAG) and the model context
 protocol (MCP).
@@ -40,21 +40,21 @@ train the models, it is expected that the model will give a wrong answer,
 that is, it will hallucinate. It is also expected that by providing specific
 data on the matter will improve its answer.
 
-## Ramalama
+## RamaLama
 
-[Ramalama](https://ramalama.ai) simplifies running AI models locally, through
+[RamaLama](https://ramalama.ai) simplifies running AI models locally, through
 the use of containers. It brings the same language from the container world to
 deploying AI models. It also detects hardware capabilities, making it easier
 to setup an efficient environment for inference use.
 
-After [installing Ramalama], you run you model in a similar fashion as using
+After [installing RamaLama], you run you model in a similar fashion as using
 containers:
 
 ```nohl
 $ ramalama run granite3.3
 ```
 
-If not avaiable locally, a container image and/or and the model will be pulled
+If not available locally, a container image and/or and the model will be pulled
 from the repository (like [quay.io](https://quay.io) and [Ollama](https://ollama.com/library)), and a chatbot prompt will be started, so you can query the model.
 
 You can also run the model to be served as a REST API with:
@@ -83,7 +83,7 @@ other techniques, using a smaller model was a conscious decision.
 
 The Granite model used has 8 Billion parameters, and its context size is
 128K. It took 1:40 minutes to
-[give an answer to the query](/files/research/ai/granite-raw.md)). The
+[give an answer to the query](/files/research/ai/granite-raw.md). The
 answer looks like a step-by-step procedure, which makes sense due to the
 nature of the question.
 
@@ -118,17 +118,18 @@ The model used for testing DeepSeek R1 was the one with 7 Billion parameters
 and context size of 128K tokens. This model has less parameters than the
 Granite model due to issue on running the 8 Billion parameters model.
 
-Using the raw DeeSeek R1 model took `2:10` minutes to
+Using the raw DeepSeek R1 model took `2:10` minutes to
 [give an answer](/files/research/ai/deepseek-raw.md). As with the Granite
 model, it provided a step-by-step procedure, but in this case it was
-completelly bogus from the start.
+completely bogus from the start.
 
 Installation of ansible-freeipa included a command that would never work. It
 changed the name of FreeIPA. It "created" an inexistent software `Ansible Broadword`.
 
-If you take a deep breath and read through it uncarefully, you realize that
-the text is somewhat well written, but it looks like "fortune telling". It
-simply adds some generic output based on managing services and Ansible.
+If you take a deep breath and read through it without giving much attention,
+you realize that the text is somewhat well written, but it looks like
+"fortune telling". It simply adds some generic output based on managing
+services and Ansible.
 
 When running the same question against the model, it starts with a similar answer
 as on the first round, but soon it changes into creating an invalid Ansible
@@ -158,15 +159,15 @@ provide the wanted knowledge to the system.
 ## Retrieval-augmented Generation (RAG)
 
 Retrieval-augmented generation (RAG) is a technique that allows new information
-to be used by pre-trained language models. It is expected that the model does not
-answer a query if it is not part of this new information. The new information
-provided to the model is based on a vector database that is
+to be used by previously trained language models. It is expected that the model
+does not answer a query if it is not part of this new information. The new
+information provided to the model is based on a vector database that is
 constructed from a set of documents that are organized in a vector database,
 and is used along with the user query, augmenting it, so that the generated
 output incorporates the given data. It is expected that a model will not respond
-to user queries that do not refer to the specified set of documenst.
+to user queries that do not refer to the specified set of documents.
 
-With Ramalama, you create an OCI image to contain the processed rag data:
+With RamaLama, you create an OCI image to contain the processed rag data:
 
 ```nohl
 $ ramalama rag FILES/DIRECTORIES IMAGE_NAME
@@ -175,7 +176,7 @@ $ ramalama rag FILES/DIRECTORIES IMAGE_NAME
 After creating the image you pass the parameter `--rag IMAGE_NAME` to the `run`
 command when running the model prompt.
 
-One advantage of using Ramalama for creating the RAG image is that is supports
+One advantage of using RamaLama for creating the RAG image is that is supports
 AsciiDoc and Markdown as document formats, so the data used will be ansible-freeipa's
 main README file and the `ipaserver` role README file will be used. Both files with
 be stored in a directory `knowledge`.
@@ -201,18 +202,18 @@ ramalama run --rag localhost/ansible_freeipa_rag MODEL
 
 ### Granite with RAG
 
-First test after adding RAG data is to ask somethnig that is not on the
+First test after adding RAG data is to ask something that is not on the
 augmented knowledge, like "How to achieve a speed greater than the speed of light?",
-to what Ramalama using Granite answered in a very good way. So the expectation
+to what RamaLama using Granite answered in a very good way. So the expectation
 that it would only answer things that is present within the augmented data is not
 true.
 
-When we try with something that it should not know ("What is [ipalab-config](https://github.com/rjeffman/ipalab-config)?"), it correctly answers that the term does not appear in the provided docuementation, or in any common context related to IPA or Ansible.
+When we try with something that it should not know ("What is [ipalab-config](https://github.com/rjeffman/ipalab-config)?"), it correctly answers that the term does not appear in the provided documentation, or in any common context related to IPA or Ansible.
 
 Back to the original query ("How can I deploy FreeIPA using ansible-freeipa?"),
 it took 45 seconds to start to provide an answer, but failed to finish the text.
 
-Until if started to write garabage (infitinet punctuation characters) it provided similar responses as without the RAG for installing Ansible (not really correct), but this time, the inventory and playbook files it tried to create were clearly based on the ansible-freeipa documentation.
+Until if started to write garbage (punctuation characters) it provided similar responses as without the RAG for installing Ansible (not really correct), but this time, the inventory and playbook files it tried to create were clearly based on the ansible-freeipa documentation.
 
 Hallucination was not better, in any way.
 
@@ -285,7 +286,7 @@ to service accounts.
 ```
 
 For the target question on using ansible-freeipa, the model simply throws text
-that makes no sense, with invalid YAML files, playboks that look like Python code,
+that makes no sense, with invalid YAML files, playbooks that look like Python code,
 some `openssl` commands that has nothing to do with the task.
 
 It clearly picked up some keywords and try to add text around it, and failed
@@ -293,7 +294,7 @@ It clearly picked up some keywords and try to add text around it, and failed
 
 ## Working out the prompt
 
-The query choosen for this experiment was thought on a way that it would
+The query chosen for this experiment was thought on a way that it would
 force the models to hallucinate. It was designed without keywords from the
 IPA or ansible-freeipa domain, giving the models a harder time to produce
 a correct output.
@@ -327,7 +328,7 @@ The output using Granite 3.3 and RAG becomes:
 >
 > Make sure to include the necessary modules and variables in your role and inventory files to properly configure and manage the IPA servers.
 
-This output clearly comes from the augmented data, and altough it is not complete (it would be nice that an example inventory file was provided), it is correct, but still somewhat generic.
+This output clearly comes from the augmented data, and although it is not complete (it would be nice that an example inventory file was provided), it is correct, but still somewhat generic.
 
 ## Conclusions and Future Work
 
@@ -353,13 +354,14 @@ the problem domain. Prompt queries must consider the problem domain, but, someti
 users are new to the domain, and the answers provided should give guidance.
 
 Another way that the model can be extended is by implementing
-[Model Context Protocol](https://modelcontextprotocol.io) servers, enabling other tools to provide data for the
-languagem model, for example, by running command against these tools and use
+[Model Context Protocol](https://modelcontextprotocol.io) servers, enabling
+other tools to provide data for the
+language model, for example, by running command against these tools and use
 the command output as context for the answer.
 
 When choosing a model to be used, there are two parameters that are very
 important, the model size (usually in "billions of parameters", around 8B
-for this experiment) and the context window size (128K for this experiemnt).
+for this experiment) and the context window size (128K for this experiment).
 Both parameters are related to the model "memory". The model parameter size is,
 somewhat, related to the long term memory of the model, allowing to recover
 data it was trained with. The context window size is the short term memory, and
@@ -368,8 +370,8 @@ output. When the context window is too small, it is easier for the model to
 hallucinate and diverge from the original query.
 
 A problem on using larger models and larger context windows comes in the
-hardware requirements for runing the model, even if it is for inference only.
-This experiment was executed on an Intel i7 11-th gen 3GHz CPU, with 32Gb of
+hardware requirements for running the model, even if it is for inference only.
+This experiment was executed on an Intel i7 11<sup>th</sup> gen 3GHz CPU, with 32Gb of
 memory and with no GPU support for running the model. This does impose severe
 limitations on the models that can be used and on the response time.
 
@@ -380,7 +382,7 @@ the tools around these issues and improve user experience.
 
 ## References
 
-1. [Ramalama](https://github.com/containers/ramalama)
+1. [RamaLama](https://github.com/containers/ramalama)
 2. [Ollama Library](https://ollama.com/library)
 3. [Simplify AI data integration with RamaLama and RAG](https://developers.redhat.com/articles/2025/04/03/simplify-ai-data-integration-ramalama-and-rag#putting_the_rag_served_model_into_production)
 4. [Model Context Protocol](https://modelcontextprotocol.io)
