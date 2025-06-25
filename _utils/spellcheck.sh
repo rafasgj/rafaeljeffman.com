@@ -5,7 +5,7 @@ SCRIPT_DIR="$(realpath "${DIRECTORY}")"
 
 
 
-while [ -n "$1" ]
+while [ -f "$1" ]
 do
     filename="$1"
     shift
@@ -31,6 +31,3 @@ do
         printf "%s\n" "${LIST[@]}"
     fi
 done
-exit
-            -e '/\$\$/,/\$\$/d' \
-            -e 's/\$\$[^\$]*\$\$//' \
